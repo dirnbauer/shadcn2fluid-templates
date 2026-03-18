@@ -1,14 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect x="4" y="8" width="24" height="22" rx="3" fill="#1a1a2e" stroke="#4a4a6a" stroke-width="2"/>
-  <circle cx="16" cy="15" r="4" fill="#6366f1"/>
-  <rect x="8" y="22" width="16" height="3" rx="1" fill="#fff"/>
-  <rect x="36" y="8" width="24" height="22" rx="3" fill="#1a1a2e" stroke="#4a4a6a" stroke-width="2"/>
-  <circle cx="48" cy="15" r="4" fill="#10b981"/>
-  <rect x="40" y="22" width="16" height="3" rx="1" fill="#fff"/>
-  <rect x="4" y="34" width="24" height="22" rx="3" fill="#1a1a2e" stroke="#4a4a6a" stroke-width="2"/>
-  <circle cx="16" cy="41" r="4" fill="#f59e0b"/>
-  <rect x="8" y="48" width="16" height="3" rx="1" fill="#fff"/>
-  <rect x="36" y="34" width="24" height="22" rx="3" fill="#1a1a2e" stroke="#4a4a6a" stroke-width="2"/>
-  <circle cx="48" cy="41" r="4" fill="#ec4899"/>
-  <rect x="40" y="48" width="16" height="3" rx="1" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+  <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+  <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+  <rect x="14" y="14" width="7" height="7" rx="1.5"/>
 </svg>
