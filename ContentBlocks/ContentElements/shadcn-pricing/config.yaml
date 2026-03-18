@@ -1,0 +1,93 @@
+name: shadcn2fluid/pricing
+title: ShadCN Pricing
+description: Pricing tables with featured plans and CTA buttons
+group: common
+prefixFields: false
+fields:
+  - identifier: section_layout
+    type: Select
+    renderType: selectSingle
+    label: Template Layout
+    items:
+      - label: Full Width
+        value: full-width
+      - label: Two Columns
+        value: two-columns
+      - label: Stacked
+        value: stacked
+    default: stacked
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: headline
+    type: Text
+    label: Section Headline
+
+  - identifier: subheadline
+    type: Textarea
+    label: Section Subheadline
+    rows: 2
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Plan Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '3'
+
+  - identifier: plans
+    type: Collection
+    label: Pricing Plans
+    minItems: 1
+    maxItems: 4
+    fields:
+      - identifier: badge_text
+        type: Text
+        label: Badge Text
+
+      - identifier: name
+        type: Text
+        label: Plan Name
+        required: true
+
+      - identifier: price
+        type: Text
+        label: Price
+        required: true
+
+      - identifier: billing_period
+        type: Text
+        label: Billing Period
+        description: e.g. per month or per seat
+
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+
+      - identifier: features
+        type: Textarea
+        label: Features (one per line)
+        rows: 6
+
+      - identifier: is_featured
+        type: Checkbox
+        label: Featured Plan
+        default: 0
+
+      - identifier: button_text
+        type: Text
+        label: Button Text
+        default: Get Started
+
+      - identifier: button_link
+        type: Link
+        label: Button Link

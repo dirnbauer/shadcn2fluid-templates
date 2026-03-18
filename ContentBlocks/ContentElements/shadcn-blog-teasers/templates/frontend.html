@@ -1,0 +1,64 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<section class="shadcn-section shadcn-section--{data.section_layout -> f:or(alternative: 'stacked')} shadcn-blog-teasers">
+    <div class="shadcn-section__container">
+        <f:if condition="{data.eyebrow} || {data.headline} || {data.subheadline}">
+            <header class="shadcn-section__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="shadcn-section__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.headline}">
+                    <h2 class="shadcn-section__headline">{data.headline}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="shadcn-section__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="shadcn-section__body">
+            <div class="shadcn-blog-teasers__grid shadcn-blog-teasers__grid--cols-{data.columns -> f:or(alternative: '3')}">
+                <f:for each="{data.posts}" as="post">
+                    <article class="shadcn-blog-teasers__item shadcn-card">
+                        <f:if condition="{post.image}">
+                            <div class="shadcn-blog-teasers__image-wrapper">
+                                <f:for each="{post.image}" as="fileReference">
+                                    <img src="{f:uri.image(image: fileReference, maxWidth: 960)}" alt="{post.title}" class="shadcn-blog-teasers__image"/>
+                                </f:for>
+                            </div>
+                        </f:if>
+
+                        <div class="shadcn-card__content">
+                            <div class="shadcn-blog-teasers__meta-row">
+                                <f:if condition="{post.category}">
+                                    <span class="shadcn-blog-teasers__category">{post.category}</span>
+                                </f:if>
+                                <f:if condition="{post.meta}">
+                                    <span class="shadcn-blog-teasers__meta">{post.meta}</span>
+                                </f:if>
+                            </div>
+
+                            <h3 class="shadcn-blog-teasers__title">
+                                <f:if condition="{post.link.url}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{post.link}">{post.title}</f:link.typolink>
+                                    </f:then>
+                                    <f:else>
+                                        {post.title}
+                                    </f:else>
+                                </f:if>
+                            </h3>
+
+                            <f:if condition="{post.excerpt}">
+                                <p class="shadcn-blog-teasers__excerpt">{post.excerpt}</p>
+                            </f:if>
+                        </div>
+                    </article>
+                </f:for>
+            </div>
+        </div>
+    </div>
+</section>
+
+</html>

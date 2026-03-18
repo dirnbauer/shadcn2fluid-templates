@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<section class="shadcn-section shadcn-section--{data.section_layout -> f:or(alternative: 'full-width')} shadcn-gallery">
+    <div class="shadcn-section__container">
+        <f:if condition="{data.eyebrow} || {data.headline} || {data.subheadline}">
+            <header class="shadcn-section__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="shadcn-section__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.headline}">
+                    <h2 class="shadcn-section__headline">{data.headline}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="shadcn-section__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="shadcn-section__body">
+            <div class="shadcn-gallery__grid shadcn-gallery__grid--cols-{data.columns -> f:or(alternative: '3')}">
+                <f:for each="{data.items}" as="item">
+                    <article class="shadcn-gallery__item shadcn-card">
+                        <f:if condition="{item.link.url}">
+                            <f:then>
+                                <f:link.typolink parameter="{item.link}" class="shadcn-gallery__media-link">
+                                    <f:for each="{item.image}" as="fileReference">
+                                        <img src="{f:uri.image(image: fileReference, maxWidth: 960)}" alt="{item.title}" class="shadcn-gallery__image"/>
+                                    </f:for>
+                                </f:link.typolink>
+                            </f:then>
+                            <f:else>
+                                <f:for each="{item.image}" as="fileReference">
+                                    <img src="{f:uri.image(image: fileReference, maxWidth: 960)}" alt="{item.title}" class="shadcn-gallery__image"/>
+                                </f:for>
+                            </f:else>
+                        </f:if>
+
+                        <f:if condition="{item.title} || {item.description}">
+                            <div class="shadcn-card__content">
+                                <f:if condition="{item.title}">
+                                    <h3 class="shadcn-gallery__title">{item.title}</h3>
+                                </f:if>
+                                <f:if condition="{item.description}">
+                                    <p class="shadcn-gallery__description">{item.description}</p>
+                                </f:if>
+                            </div>
+                        </f:if>
+                    </article>
+                </f:for>
+            </div>
+        </div>
+    </div>
+</section>
+
+</html>

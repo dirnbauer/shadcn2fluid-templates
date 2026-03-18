@@ -1,0 +1,56 @@
+name: shadcn2fluid/navbar
+title: ShadCN Navbar
+description: Marketing navigation bar with brand, links, and CTA
+group: common
+prefixFields: false
+fields:
+  - identifier: layout
+    type: Select
+    renderType: selectSingle
+    label: Template Layout
+    items:
+      - label: Full Width
+        value: full-width
+      - label: Two Columns
+        value: two-columns
+      - label: Stacked
+        value: stacked
+    default: full-width
+
+  - identifier: brand
+    type: Text
+    label: Brand Text
+    required: true
+
+  - identifier: brand_link
+    type: Link
+    label: Brand Link
+
+  - identifier: nav_items
+    type: Collection
+    label: Navigation Items
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+
+      - identifier: link
+        type: Link
+        label: Link
+
+  - identifier: secondary_button_text
+    type: Text
+    label: Secondary Button Text
+
+  - identifier: secondary_button_link
+    type: Link
+    label: Secondary Button Link
+
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
