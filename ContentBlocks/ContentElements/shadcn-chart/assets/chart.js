@@ -1,7 +1,5 @@
 (() => {
     const SVG_NS = 'http://www.w3.org/2000/svg';
-    const CHART_WIDTH = 500;
-    const CHART_HEIGHT = 300;
     const CHART_SELECTOR = '.shadcn-chart[data-chart-data]';
     const numberFormatter = new Intl.NumberFormat();
 
@@ -63,6 +61,12 @@
             return;
         }
 
+        const svgRect = svg.getBoundingClientRect();
+        const W = Math.round(svgRect.width)  || 500;
+        const H = Math.round(svgRect.height) || 300;
+
+        svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
         let rawData;
         try {
             rawData = JSON.parse(container.dataset.chartData ?? '[]');
@@ -76,8 +80,8 @@
         const fillType = container.dataset.fillType === 'solid' ? 'solid' : 'gradient';
         const chartId = container.dataset.chartId || 'chart';
         const padding = { top: 20, right: 20, bottom: 40, left: 50 };
-        const chartWidth = CHART_WIDTH - padding.left - padding.right;
-        const chartHeight = CHART_HEIGHT - padding.top - padding.bottom;
+        const chartWidth = W - padding.left - padding.right;
+        const chartHeight = H - padding.top - padding.bottom;
         const values = chartData.map((point) => point.value);
         const maxValue = Math.max(...values, 0) * 1.1 || 1;
         const valueRange = maxValue || 1;
@@ -99,7 +103,7 @@
         });
 
         const linePath = buildPath(chartPoints);
-        const bottomY = CHART_HEIGHT - padding.bottom;
+        const bottomY = H - padding.bottom;
         const areaPath = `${linePath} L${chartPoints[chartPoints.length - 1].x},${bottomY} L${chartPoints[0].x},${bottomY} Z`;
         const fragment = document.createDocumentFragment();
         const defs = createSvgElement('defs');
@@ -125,7 +129,7 @@
                 gridGroup.append(createSvgElement('line', {
                     x1: padding.left,
                     y1: line.y,
-                    x2: CHART_WIDTH - padding.right,
+                    x2: W - padding.right,
                     y2: line.y,
                     class: 'shadcn-chart__grid-line',
                 }));
@@ -193,15 +197,11 @@
             });
 
             circle.addEventListener('mouseenter', () => {
-                const svgRect = svg.getBoundingClientRect();
-                const scaleX = svgRect.width / CHART_WIDTH;
-                const scaleY = svgRect.height / CHART_HEIGHT;
-
                 tooltipLabel.textContent = point.label;
                 tooltipValue.textContent = numberFormatter.format(point.value);
                 tooltip.style.display = 'block';
-                tooltip.style.left = `${point.x * scaleX}px`;
-                tooltip.style.top = `${(point.y * scaleY) - 10}px`;
+                tooltip.style.left = `${point.x}px`;
+                tooltip.style.top = `${point.y - 10}px`;
             });
 
             circle.addEventListener('mouseleave', () => {
