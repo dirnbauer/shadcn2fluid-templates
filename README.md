@@ -5,7 +5,7 @@
 <h1 align="center">🎨 ShadCN to Fluid Templates</h1>
 
 <p align="center">
-  <strong>The most beautiful UI components for TYPO3 — without writing a single line of JavaScript.</strong>
+  <strong>The most beautiful UI components for TYPO3 — pure Fluid templates, zero frameworks.</strong>
 </p>
 
 <p align="center">
@@ -38,7 +38,7 @@ Now you can.
 
 | ❌ What You Don't Need | ✅ What You Get |
 |------------------------|-----------------|
-| React/Vue/JavaScript | Pure HTML output |
+| React/Vue/Alpine | Pure HTML + vanilla JS |
 | npm/webpack/vite | Zero build step |
 | JavaScript frameworks | Server-side rendering |
 | Complex toolchains | Just install and use |
@@ -52,18 +52,19 @@ Your editors get beautiful, modern content elements. Your developers get clean, 
 
 ## 🚀 Features
 
-### 🎯 8 Production-Ready Content Elements
+### 🎯 9 Production-Ready Content Elements
 
 Every content element you need for a modern website:
 
 - **Hero Sections** — 3 variants: Centered, Split, Background
-- **Accordion / FAQ** — Pure CSS, no JavaScript required
-- **Alert / Callout** — 5 styles: Default, Info, Success, Warning, Error
+- **Accordion / FAQ** — Pure CSS with `<details>`/`<summary>`, no JS required
+- **Alert / Callout** — 5 styles: Default, Info, Success, Warning, Destructive
 - **Cards** — 3 layouts: Basic, Image, Horizontal
 - **Call to Action** — 4 variants: Centered, Split, Banner, Inline
-- **Feature Grid** — Showcase features with icons
-- **Testimonials** — Customer quotes with ratings
-- **Text with Media** — Flexible text/image layouts
+- **Area Chart** — SVG charts with gradient fill, grid lines, and tooltips (vanilla JS)
+- **Feature Grid** — Showcase features with icons in 2/3/4-column grids
+- **Testimonials** — Customer quotes with star ratings and author photos
+- **Text with Media** — 4 layouts: Media Right, Left, Above, Below
 
 ### 🎨 Full Theming with tweakcn
 
@@ -171,6 +172,20 @@ Showcase your benefits. Icons + titles + descriptions in a responsive grid.
 
 Social proof that builds trust. With star ratings and author photos.
 
+### Area Chart
+
+Interactive SVG area chart with gradient fills, grid lines, and hover tooltips. Data is entered as JSON — no external charting library needed, just vanilla JavaScript.
+
+```json
+[
+  {"label": "Jan", "value": 186},
+  {"label": "Feb", "value": 305},
+  {"label": "Mar", "value": 237}
+]
+```
+
+5 color themes (Primary, Blue, Green, Orange, Red), optional grid lines, gradient or solid fill, and 3 height presets.
+
 ### Text with Media
 
 The workhorse of content pages. Flexible text and media combinations.
@@ -228,7 +243,7 @@ Full documentation is included in the `/Documentation` folder:
 
 - **[Installation Guide](Documentation/Installation/Index.md)** — Get up and running
 - **[Configuration](Documentation/Configuration/Index.md)** — TypoScript and settings
-- **[Content Elements](Documentation/ContentElements/Index.md)** — All 8 elements explained
+- **[Content Elements](Documentation/ContentElements/Index.md)** — All 9 elements explained
 - **[Theming Guide](Documentation/Theming/Index.md)** — Complete theming reference
 - **[Component Partials](Documentation/Partials/Index.md)** — Reusable Fluid components
 - **[Extending](Documentation/Extending/Index.md)** — Create your own elements
@@ -312,7 +327,7 @@ For major changes, open an issue first.
 
 ## 💬 Support
 
-- **Issues:** [GitHub Issues](https://github.com/webconsulting/shadcn2fluid-templates/issues)
+- **Issues:** [GitHub Issues](https://github.com/dirnbauer/shadcn2fluid-templates/issues)
 
 ---
 

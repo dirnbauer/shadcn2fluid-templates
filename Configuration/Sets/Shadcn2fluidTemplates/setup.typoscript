@@ -16,5 +16,3 @@ page {
         shadcnComponents.media = all
     }
 }
-
-# Alpine.js is loaded via the sitepackage

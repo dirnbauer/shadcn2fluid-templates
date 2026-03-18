@@ -17,11 +17,6 @@ page {
         shadcnComponents.media = all
     }
 
-    # Alpine.js - required for interactive components (Chart, etc.)
-    includeJSFooterlibs {
-        alpinejs = https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js
-        alpinejs.external = 1
-    }
 }
 
 # Optional: Custom theme override
