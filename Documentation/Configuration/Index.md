@@ -1,165 +1,77 @@
 # Configuration
 
-This chapter covers the configuration options for ShadCN to Fluid Templates.
+## Site set
 
-## TypoScript Configuration
+The extension is configured through the TYPO3 site set in:
 
-The extension provides TypoScript constants for customization.
+`Configuration/Sets/Shadcn2fluidTemplates/`
 
-### Available Constants
+The set loads the bundled CSS automatically when it is attached to a site.
 
-```typoscript
-# Custom theme CSS file (overrides default theme)
-plugin.tx_shadcn2fluid_templates.settings.customThemeCss =
-```
+## Bundled assets
 
-### CSS Inclusion
-
-The extension automatically includes these CSS files via TypoScript setup:
-
-```typoscript
-page {
-    includeCSS {
-        # Base theme variables (from tweakcn)
-        shadcnTheme = EXT:shadcn2fluid_templates/Resources/Public/Css/shadcn-theme.css
-
-        # Component styles
-        shadcnComponents = EXT:shadcn2fluid_templates/Resources/Public/Css/components.css
-    }
-}
-```
-
-## Custom Theme Configuration
-
-### Option 1: Custom Theme File
-
-Create a custom theme CSS file and configure it via TypoScript constants:
-
-```typoscript
-# In your site's TypoScript constants
-plugin.tx_shadcn2fluid_templates.settings.customThemeCss = fileadmin/css/my-custom-theme.css
-```
-
-### Option 2: Override via Site Package
-
-In your site package's CSS, override the CSS custom properties:
-
-```css
-/* EXT:your_site_package/Resources/Public/Css/theme-override.css */
-:root {
-    --primary: oklch(0.5 0.2 250);
-    --primary-foreground: oklch(1 0 0);
-    /* ... more overrides */
-}
-```
-
-Then include it after the extension's CSS in your TypoScript:
+The set includes:
 
 ```typoscript
 page.includeCSS {
-    siteThemeOverride = EXT:your_site_package/Resources/Public/Css/theme-override.css
-    siteThemeOverride.after = shadcnComponents
+    shadcnTheme = EXT:shadcn2fluid_templates/Resources/Public/Css/shadcn-theme.css
+    shadcnComponents = EXT:shadcn2fluid_templates/Resources/Public/Css/components.css
 }
 ```
+
+The chart content element loads its JavaScript with `f:asset.script`, so no inline JavaScript setup is needed in TypoScript.
+
+## Custom theme override
+
+The site set exposes one TypoScript constant:
+
+```typoscript
+plugin.tx_shadcn2fluid_templates.settings.customThemeCss =
+```
+
+Example:
+
+```typoscript
+plugin.tx_shadcn2fluid_templates.settings.customThemeCss = EXT:site_package/Resources/Public/Css/shadcn-theme.css
+```
+
+If set, the file is loaded after the bundled theme and component CSS.
 
 ## Page TSconfig
 
-The extension includes Page TSconfig for content element configuration:
-
-**File:** `Configuration/page.tsconfig`
-
-This configures:
-- Content element icons
-- Wizard positioning
-- Field configurations
-
-### Custom Page TSconfig
-
-To customize content element behavior, add to your site's Page TSconfig:
+The extension auto-loads `Configuration/page.tsconfig` and configures workspace preview handling:
 
 ```typoscript
-# Example: Restrict ShadCN elements to specific page types
-[page["doktype"] == 1]
-    mod.wizards.newContentElement.wizardItems.common {
-        elements {
-            shadcn2fluid_hero.hidden = 0
-        }
-    }
-[end]
+options.workspaces.previewPageId.tt_content = field:pid
 ```
 
-## Content Block Configuration
+This keeps workspace previews for content elements on the correct page in TYPO3 14.
 
-Each content element is configured via YAML files in `ContentBlocks/ContentElements/*/config.yaml`.
+## Content Blocks
 
-### Field Display Conditions
+Each element is defined in:
 
-Many fields use `displayCond` to show/hide based on other field values:
+`ContentBlocks/ContentElements/*/config.yaml`
 
-```yaml
-# Example: Image field only shown for non-centered variants
-- identifier: hero_image
-  type: File
-  displayCond: 'FIELD:variant:!=:centered'
-```
+The extension relies on Content Blocks as the single source of truth for:
 
-### Customizing Field Labels
+- field definitions
+- backend form structure
+- content element registration
+- frontend template wiring
 
-Override field labels via TCA overrides in your site package:
+## Reusable partials
 
-```php
-// EXT:your_site_package/Configuration/TCA/Overrides/tt_content.php
-$GLOBALS['TCA']['tt_content']['columns']['shadcn2fluid_hero_headline']['label'] = 'My Custom Label';
-```
+Reusable Fluid partials live in:
 
-## Fluid Template Paths
+`Resources/Private/Partials/Components/`
 
-### Registering Additional Partial Paths
+To use them in your own Fluid setup, register the partial path in your site package.
 
-To use the ShadCN component partials in your own templates:
+## Extension Manager settings
 
-```typoscript
-lib.contentElement {
-    partialRootPaths {
-        100 = EXT:shadcn2fluid_templates/Resources/Private/Partials/
-    }
-}
-```
+There are no Extension Manager settings. Configuration is handled through the site set, TypoScript, CSS overrides, and Content Block definitions.
 
-### Using in Standalone Fluid Templates
+## Next step
 
-```html
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true">
-
-{namespace shadcn=Webconsulting\Shadcn2fluidTemplates\ViewHelpers}
-
-<!-- Use the Button partial -->
-<f:render partial="Components/Button" arguments="{
-    link: 'https://example.com',
-    text: 'Click Me',
-    variant: 'default',
-    size: 'lg'
-}"/>
-
-</html>
-```
-
-## Extension Configuration
-
-The extension does not require any settings in the Extension Manager. All configuration is done via TypoScript and CSS.
-
-## Cache Configuration
-
-Content blocks are cached by TYPO3's standard caching mechanism. No additional cache configuration is required.
-
-For development, you may want to disable caching:
-
-```typoscript
-# Development only!
-config.no_cache = 1
-```
-
----
-
-**Next:** [Content Elements](../ContentElements/Index.md)
+Continue with [Workspaces](../Workspaces/Index.md).
