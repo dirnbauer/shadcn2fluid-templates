@@ -29,7 +29,7 @@
     'muted': 'shadcn-muted'
 }, default: 'shadcn-p')}"/>
 
-<f:variable name="htmlTag" value="{tag -> f:or(default: 'p')}"/>
+<f:variable name="htmlTag" value="{tag -> f:or(alternative: 'p')}"/>
 
 <f:switch expression="{htmlTag}">
     <f:case value="h1">

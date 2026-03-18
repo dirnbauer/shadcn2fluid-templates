@@ -49,7 +49,7 @@
         </a>
     </f:then>
     <f:else>
-        <button type="{type -> f:or(default: 'button')}"
+        <button type="{type -> f:or(alternative: 'button')}"
                 class="shadcn-btn {variantClass} {sizeClass} {class}"
                 {f:if(condition: disabled, then: 'disabled')}>
             {text}
