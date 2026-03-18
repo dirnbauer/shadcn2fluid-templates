@@ -166,11 +166,16 @@
         });
         fragment.append(xAxisGroup);
 
-        fragment.append(createSvgElement('path', {
+        const areaElement = createSvgElement('path', {
             d: areaPath,
             class: 'shadcn-chart__area',
-            fill: fillType === 'gradient' ? `url(#gradient-${chartId})` : null,
-        }));
+        });
+
+        if (fillType === 'gradient') {
+            areaElement.style.fill = `url(#gradient-${chartId})`;
+        }
+
+        fragment.append(areaElement);
 
         fragment.append(createSvgElement('path', {
             d: linePath,

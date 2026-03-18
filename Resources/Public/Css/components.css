@@ -26,7 +26,7 @@
 }
 
 .shadcn-btn:focus-visible {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
@@ -38,32 +38,32 @@
 
 /* Button variants */
 .shadcn-btn--default {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .shadcn-btn--default:hover {
-  background-color: hsl(var(--primary) / 0.9);
+  background-color: color-mix(in oklch, var(--primary) 90%, transparent);
 }
 
 .shadcn-btn--secondary {
-  background-color: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
 }
 
 .shadcn-btn--secondary:hover {
-  background-color: hsl(var(--secondary) / 0.8);
+  background-color: color-mix(in oklch, var(--secondary) 80%, transparent);
 }
 
 .shadcn-btn--outline {
-  border: 1px solid hsl(var(--input));
-  background-color: hsl(var(--background));
+  border: 1px solid var(--input);
+  background-color: var(--background);
   color: inherit;
 }
 
 .shadcn-btn--outline:hover {
-  background-color: hsl(var(--accent));
-  color: hsl(var(--accent-foreground));
+  background-color: var(--accent);
+  color: var(--accent-foreground);
 }
 
 .shadcn-btn--ghost {
@@ -72,22 +72,22 @@
 }
 
 .shadcn-btn--ghost:hover {
-  background-color: hsl(var(--accent));
-  color: hsl(var(--accent-foreground));
+  background-color: var(--accent);
+  color: var(--accent-foreground);
 }
 
 .shadcn-btn--destructive {
-  background-color: hsl(var(--destructive));
-  color: hsl(var(--destructive-foreground));
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
 }
 
 .shadcn-btn--destructive:hover {
-  background-color: hsl(var(--destructive) / 0.9);
+  background-color: color-mix(in oklch, var(--destructive) 90%, transparent);
 }
 
 .shadcn-btn--link {
   background-color: transparent;
-  color: hsl(var(--primary));
+  color: var(--primary);
   text-underline-offset: 4px;
 }
 
@@ -136,24 +136,24 @@
 }
 
 .shadcn-badge--default {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .shadcn-badge--secondary {
-  background-color: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
 }
 
 .shadcn-badge--outline {
-  border: 1px solid hsl(var(--border));
+  border: 1px solid var(--border);
   background-color: transparent;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .shadcn-badge--destructive {
-  background-color: hsl(var(--destructive));
-  color: hsl(var(--destructive-foreground));
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
 }
 
 /* ============================================
@@ -161,9 +161,9 @@
    ============================================ */
 .shadcn-card {
   border-radius: var(--radius);
-  border: 1px solid hsl(var(--border));
-  background-color: hsl(var(--card));
-  color: hsl(var(--card-foreground));
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  color: var(--card-foreground);
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
@@ -184,7 +184,7 @@
 
 .shadcn-card__description {
   font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   margin: 0;
 }
 
@@ -242,7 +242,7 @@
 
 .shadcn-lead {
   font-size: 1.25rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   margin: 0;
 }
 
@@ -259,7 +259,7 @@
 
 .shadcn-muted {
   font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 /* ============================================
@@ -267,7 +267,7 @@
    ============================================ */
 .shadcn-separator {
   flex-shrink: 0;
-  background-color: hsl(var(--border));
+  background-color: var(--border);
 }
 
 .shadcn-separator--horizontal {
@@ -369,7 +369,7 @@
 
 .shadcn-hero--centered .shadcn-hero__subheadline {
   font-size: 1.125rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   max-width: 36rem;
 }
 
@@ -445,7 +445,7 @@
 
 .shadcn-hero--split .shadcn-hero__subheadline {
   font-size: 1.125rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .shadcn-hero--split .shadcn-hero__image-wrapper {
@@ -500,7 +500,8 @@
 .shadcn-hero--background .shadcn-hero__overlay {
   position: absolute;
   inset: 0;
-  background-color: hsl(var(--background) / var(--overlay-opacity, 0.6));
+  background-color: var(--background);
+  opacity: var(--overlay-opacity, 0.6);
 }
 
 .shadcn-hero--background .shadcn-hero__container {
@@ -538,7 +539,7 @@
 
 .shadcn-hero--background .shadcn-hero__subheadline {
   font-size: 1.125rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 @media (min-width: 768px) {
@@ -632,7 +633,7 @@
 }
 
 .shadcn-card__description {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   margin: 0;
   line-height: 1.6;
 }
@@ -666,7 +667,7 @@
 }
 
 .shadcn-accordion__item {
-  border-bottom: 1px solid hsl(var(--border));
+  border-bottom: 1px solid var(--border);
 }
 
 .shadcn-accordion__trigger {
@@ -687,7 +688,7 @@
 }
 
 .shadcn-accordion__trigger:hover {
-  color: hsl(var(--primary));
+  color: var(--primary);
 }
 
 .shadcn-accordion__title {
@@ -706,7 +707,7 @@
 
 .shadcn-accordion__content {
   padding-bottom: 1rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   line-height: 1.7;
 }
 
@@ -720,9 +721,9 @@
   gap: 0.75rem;
   width: 100%;
   border-radius: var(--radius);
-  border: 1px solid hsl(var(--border));
+  border: 1px solid var(--border);
   padding: 1rem;
-  background-color: hsl(var(--background));
+  background-color: var(--background);
 }
 
 .shadcn-alert__icon {
@@ -744,7 +745,7 @@
 
 .shadcn-alert__description {
   font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   line-height: 1.5;
 }
 
@@ -797,12 +798,12 @@
 }
 
 .shadcn-alert--destructive {
-  border-color: hsl(var(--destructive));
-  background-color: hsl(var(--destructive) / 0.1);
+  border-color: var(--destructive);
+  background-color: color-mix(in oklch, var(--destructive) 10%, transparent);
 }
 
 .shadcn-alert--destructive .shadcn-alert__icon {
-  color: hsl(var(--destructive));
+  color: var(--destructive);
 }
 
 /* ============================================
@@ -828,7 +829,7 @@
 
 .shadcn-features__subheadline {
   font-size: 1.125rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   margin: 0;
 }
 
@@ -904,8 +905,8 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius);
-  background-color: hsl(var(--primary) / 0.1);
-  color: hsl(var(--primary));
+  background-color: color-mix(in oklch, var(--primary) 10%, transparent);
+  color: var(--primary);
   flex-shrink: 0;
 }
 
@@ -930,11 +931,11 @@
 }
 
 .shadcn-feature__title a:hover {
-  color: hsl(var(--primary));
+  color: var(--primary);
 }
 
 .shadcn-feature__description {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   margin: 0;
   line-height: 1.6;
 }
@@ -966,7 +967,7 @@
 }
 
 .shadcn-testimonial__star {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .shadcn-testimonial__star--filled {
@@ -988,7 +989,7 @@
 .shadcn-testimonial__quote-mark {
   font-size: 4rem;
   font-family: Georgia, serif;
-  color: hsl(var(--primary) / 0.2);
+  color: color-mix(in oklch, var(--primary) 20%, transparent);
   position: absolute;
   top: -1rem;
   left: -1rem;
@@ -1032,7 +1033,7 @@
 
 .shadcn-testimonial__author-role {
   font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 /* ============================================
@@ -1131,7 +1132,7 @@
 
 .shadcn-cta__description {
   font-size: 1.125rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   margin: 0;
 }
 
@@ -1158,25 +1159,25 @@
 
 /* CTA Background Styles */
 .shadcn-cta--bg-muted {
-  background-color: hsl(var(--muted));
+  background-color: var(--muted);
 }
 
 .shadcn-cta--bg-primary {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .shadcn-cta--bg-primary .shadcn-cta__description {
-  color: hsl(var(--primary-foreground) / 0.8);
+  color: color-mix(in oklch, var(--primary-foreground) 80%, transparent);
 }
 
 .shadcn-cta--bg-gradient {
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%);
-  color: hsl(var(--primary-foreground));
+  background: linear-gradient(135deg, var(--primary) 0%, color-mix(in oklch, var(--primary) 80%, transparent) 100%);
+  color: var(--primary-foreground);
 }
 
 .shadcn-cta--bg-gradient .shadcn-cta__description {
-  color: hsl(var(--primary-foreground) / 0.8);
+  color: color-mix(in oklch, var(--primary-foreground) 80%, transparent);
 }
 
 /* ============================================
@@ -1254,7 +1255,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: hsl(var(--primary));
+  color: var(--primary);
   margin-bottom: 0.5rem;
 }
 
@@ -1272,7 +1273,7 @@
 }
 
 .shadcn-textmedia__text {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   line-height: 1.7;
 }
 
@@ -1314,7 +1315,7 @@
 }
 
 .shadcn-prose a {
-  color: hsl(var(--primary));
+  color: var(--primary);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -1358,7 +1359,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: hsl(var(--primary));
+  color: var(--primary);
   margin-bottom: 0.75rem;
 }
 
@@ -1379,7 +1380,7 @@
 .shadcn-section__description {
   font-size: 1.0625rem;
   line-height: 1.7;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   margin: 0;
 }
 
@@ -1458,8 +1459,8 @@
 }
 
 .shadcn-pricing__plan--featured {
-  border-color: hsl(var(--primary));
-  box-shadow: 0 0 0 1px hsl(var(--primary));
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
 }
 
 .shadcn-pricing__badge {
@@ -1488,7 +1489,7 @@
 
 .shadcn-pricing__billing-period,
 .shadcn-pricing__plan-description {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .shadcn-pricing__plan-description {
@@ -1509,11 +1510,11 @@
   align-items: flex-start;
   gap: 0.75rem;
   line-height: 1.5;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .shadcn-pricing__feature-icon {
-  color: hsl(var(--primary));
+  color: var(--primary);
   flex-shrink: 0;
   margin-top: 0.125rem;
 }
@@ -1570,9 +1571,9 @@
   justify-content: center;
   min-height: 6rem;
   padding: 1.25rem;
-  border: 1px solid hsl(var(--border));
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  background-color: hsl(var(--card));
+  background-color: var(--card);
   text-decoration: none;
 }
 
@@ -1633,7 +1634,7 @@
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.04em;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .shadcn-stats__label {
@@ -1643,7 +1644,7 @@
 }
 
 .shadcn-stats__description {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   margin: 0.5rem 0 0;
   line-height: 1.6;
 }
@@ -1675,7 +1676,7 @@
   flex-direction: column;
   gap: 0.25rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid hsl(var(--border));
+  border-bottom: 1px solid var(--border);
 }
 
 .shadcn-contact__list-item:last-child {
@@ -1688,16 +1689,16 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .shadcn-contact__list-value {
-  color: hsl(var(--foreground));
+  color: var(--foreground);
   text-decoration: none;
 }
 
 .shadcn-contact__list-value:hover {
-  color: hsl(var(--primary));
+  color: var(--primary);
 }
 
 .shadcn-contact__form {
@@ -1729,17 +1730,17 @@
 .shadcn-contact__input,
 .shadcn-contact__textarea {
   width: 100%;
-  border: 1px solid hsl(var(--input));
+  border: 1px solid var(--input);
   border-radius: calc(var(--radius) - 2px);
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background-color: var(--background);
+  color: var(--foreground);
   padding: 0.75rem 0.875rem;
   font: inherit;
 }
 
 .shadcn-contact__input:focus,
 .shadcn-contact__textarea:focus {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
@@ -1751,7 +1752,7 @@
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .shadcn-contact__actions {
@@ -1813,13 +1814,13 @@
 }
 
 .shadcn-team__role {
-  color: hsl(var(--primary));
+  color: var(--primary);
   font-weight: 500;
   margin: 0.5rem 0 0;
 }
 
 .shadcn-team__bio {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   line-height: 1.6;
   margin: 1rem 0 0;
 }
@@ -1854,15 +1855,15 @@
   width: 0.875rem;
   height: 0.875rem;
   border-radius: 9999px;
-  background-color: hsl(var(--primary));
-  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.14);
+  background-color: var(--primary);
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--primary) 14%, transparent);
 }
 
 .shadcn-timeline__line {
   width: 1px;
   flex: 1;
   margin-top: 0.5rem;
-  background-color: hsl(var(--border));
+  background-color: var(--border);
 }
 
 .shadcn-timeline__content {
@@ -1874,7 +1875,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: hsl(var(--primary));
+  color: var(--primary);
   margin-bottom: 0.75rem;
 }
 
@@ -1911,8 +1912,8 @@
 }
 
 .shadcn-compare__panel--accent {
-  border-color: hsl(var(--primary));
-  box-shadow: 0 0 0 1px hsl(var(--primary));
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
 }
 
 .shadcn-compare__title {
@@ -1923,7 +1924,7 @@
 
 .shadcn-compare__description {
   margin: 0.75rem 0 0;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   line-height: 1.6;
 }
 
@@ -1939,7 +1940,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .shadcn-compare__point::before {
@@ -1947,7 +1948,7 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 9999px;
-  background-color: hsl(var(--primary));
+  background-color: var(--primary);
   flex-shrink: 0;
 }
 
@@ -2010,7 +2011,7 @@
 }
 
 .shadcn-gallery__description {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   line-height: 1.6;
   margin: 0.75rem 0 0;
 }
@@ -2067,14 +2068,14 @@
 .shadcn-blog-teasers__category {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: hsl(var(--primary));
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .shadcn-blog-teasers__meta {
   font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .shadcn-blog-teasers__title {
@@ -2090,12 +2091,12 @@
 }
 
 .shadcn-blog-teasers__title a:hover {
-  color: hsl(var(--primary));
+  color: var(--primary);
 }
 
 .shadcn-blog-teasers__excerpt {
   margin: 0.875rem 0 0;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   line-height: 1.6;
 }
 
@@ -2103,8 +2104,8 @@
    NAVBAR
    ============================================ */
 .shadcn-navbar {
-  border-bottom: 1px solid hsl(var(--border));
-  background-color: hsl(var(--background));
+  border-bottom: 1px solid var(--border);
+  background-color: var(--background);
 }
 
 .shadcn-navbar__container {
@@ -2139,7 +2140,7 @@
   font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
   text-decoration: none;
 }
 
@@ -2153,12 +2154,12 @@
 }
 
 .shadcn-navbar__nav-link {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   text-decoration: none;
 }
 
 .shadcn-navbar__nav-link:hover {
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .shadcn-navbar__actions {
@@ -2177,8 +2178,8 @@
    ============================================ */
 .shadcn-footer {
   padding: 3rem 0;
-  border-top: 1px solid hsl(var(--border));
-  background-color: hsl(var(--muted) / 0.35);
+  border-top: 1px solid var(--border);
+  background-color: color-mix(in oklch, var(--muted) 35%, transparent);
 }
 
 .shadcn-footer__container {
@@ -2217,7 +2218,7 @@
 
 .shadcn-footer__description,
 .shadcn-footer__copyright {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   line-height: 1.6;
   margin: 0.75rem 0 0;
 }
@@ -2231,12 +2232,12 @@
 }
 
 .shadcn-footer__link {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   text-decoration: none;
 }
 
 .shadcn-footer__link:hover {
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 /* ============================================
@@ -2245,8 +2246,7 @@
 
 /* Chart color CSS custom properties */
 .shadcn-chart {
-  --chart-primary: var(--primary);
-  --chart-primary-foreground: var(--primary-foreground);
+  --chart-color: var(--primary);
 }
 
 .shadcn-chart--primary {
@@ -2254,19 +2254,19 @@
 }
 
 .shadcn-chart--blue {
-  --chart-color: 217 91% 60%;
+  --chart-color: hsl(217 91% 60%);
 }
 
 .shadcn-chart--green {
-  --chart-color: 142 71% 45%;
+  --chart-color: hsl(142 71% 45%);
 }
 
 .shadcn-chart--orange {
-  --chart-color: 38 92% 50%;
+  --chart-color: hsl(38 92% 50%);
 }
 
 .shadcn-chart--red {
-  --chart-color: 0 84% 60%;
+  --chart-color: hsl(0 84% 60%);
 }
 
 .shadcn-chart__card {
@@ -2291,7 +2291,7 @@
   text-orientation: mixed;
   transform: rotate(180deg);
   font-size: 0.75rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   padding: 0 0.5rem;
   position: absolute;
   left: 0;
@@ -2302,7 +2302,7 @@
 .shadcn-chart__x-label {
   text-align: center;
   font-size: 0.75rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   padding-top: 0.5rem;
 }
 
@@ -2330,7 +2330,7 @@
 
 /* Grid lines */
 .shadcn-chart__grid-line {
-  stroke: hsl(var(--border));
+  stroke: var(--border);
   stroke-width: 1;
   stroke-dasharray: none;
 }
@@ -2343,34 +2343,30 @@
 /* Axis labels */
 .shadcn-chart__axis-label {
   font-size: 11px;
-  fill: hsl(var(--muted-foreground));
+  fill: var(--muted-foreground);
   font-family: inherit;
 }
 
 /* Gradient definitions */
 .shadcn-chart__gradient-start {
-  stop-color: hsl(var(--chart-color, var(--primary)));
+  stop-color: var(--chart-color);
   stop-opacity: 0.4;
 }
 
 .shadcn-chart__gradient-end {
-  stop-color: hsl(var(--chart-color, var(--primary)));
+  stop-color: var(--chart-color);
   stop-opacity: 0.05;
 }
 
 /* Area fill */
 .shadcn-chart__area {
-  fill: hsl(var(--chart-color, var(--primary)) / 0.2);
+  fill: color-mix(in oklch, var(--chart-color) 20%, transparent);
   transition: fill 0.2s ease;
-}
-
-.shadcn-chart__area[fill^="url"] {
-  fill: unset;
 }
 
 /* Line stroke */
 .shadcn-chart__line {
-  stroke: hsl(var(--chart-color, var(--primary)));
+  stroke: var(--chart-color);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -2379,8 +2375,8 @@
 
 /* Data points */
 .shadcn-chart__point {
-  fill: hsl(var(--background));
-  stroke: hsl(var(--chart-color, var(--primary)));
+  fill: var(--background);
+  stroke: var(--chart-color);
   stroke-width: 2;
   cursor: pointer;
   transition: r 0.15s ease, fill 0.15s ease;
@@ -2388,7 +2384,7 @@
 
 .shadcn-chart__point:hover {
   r: 6;
-  fill: hsl(var(--chart-color, var(--primary)));
+  fill: var(--chart-color);
 }
 
 /* Tooltip */
@@ -2396,9 +2392,9 @@
   position: absolute;
   pointer-events: none;
   z-index: 50;
-  background-color: hsl(var(--popover));
-  color: hsl(var(--popover-foreground));
-  border: 1px solid hsl(var(--border));
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--border);
   border-radius: calc(var(--radius) - 2px);
   padding: 0.5rem 0.75rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -2438,7 +2434,7 @@
 
 .shadcn-chart__tooltip-label {
   font-size: 0.75rem;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   margin-bottom: 0.125rem;
 }
 
