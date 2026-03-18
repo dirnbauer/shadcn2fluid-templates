@@ -1,20 +1,27 @@
 <?php
 
+declare(strict_types=1);
+
+$_EXTKEY ??= 'shadcn2fluid_templates';
+
 $EM_CONF[$_EXTKEY] = [
     'title' => 'ShadCN to Fluid Templates',
-    'description' => 'ShadCN/UI design patterns converted to pure Fluid templates with tweakcn theme integration. Provides beautiful, accessible content elements without JavaScript.',
+    'description' => 'ShadCN/UI design patterns converted to pure Fluid templates with tweakcn theme integration. Provides accessible TYPO3 14 content elements based on Content Blocks 2.x.',
     'category' => 'templates',
     'author' => 'webconsulting studio',
     'author_email' => '',
     'state' => 'stable',
-    'version' => '1.0.0',
+    'version' => '2.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '13.4.0-14.99.99',
-            'fluid' => '13.4.0-14.99.99',
-            'content_blocks' => '1.0.0-2.99.99',
+            'php' => '8.2.0-8.4.99',
+            'typo3' => '14.2.0-14.99.99',
+            'fluid' => '14.2.0-14.99.99',
+            'content_blocks' => '2.1.0-2.99.99',
         ],
         'conflicts' => [],
-        'suggests' => [],
+        'suggests' => [
+            'workspaces' => '14.2.0-14.99.99',
+        ],
     ],
 ];

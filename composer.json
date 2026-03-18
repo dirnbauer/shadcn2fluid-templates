@@ -10,14 +10,30 @@
     ],
     "require": {
         "php": "^8.2",
-        "typo3/cms-core": "^13.4 || ^14.0",
-        "typo3/cms-fluid": "^13.4 || ^14.0",
-        "friendsoftypo3/content-blocks": "^1.0 || ^2.0"
+        "typo3/cms-core": "^14.2@dev",
+        "typo3/cms-fluid": "^14.2@dev",
+        "friendsoftypo3/content-blocks": "^2.1"
+    },
+    "suggest": {
+        "typo3/cms-workspaces": "Recommended to stage and preview content elements in TYPO3 workspaces."
     },
     "autoload": {
         "psr-4": {
             "Webconsulting\\Shadcn2fluidTemplates\\": "Classes/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webconsulting\\Shadcn2fluidTemplates\\Tests\\": "Tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpunit/phpunit": "^11.5",
+        "typo3/testing-framework": "^9.0"
     },
     "extra": {
         "typo3/cms": {
@@ -25,6 +41,14 @@
         }
     },
     "config": {
+        "allow-plugins": {
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        },
         "sort-packages": true
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse --configuration=phpstan.neon.dist",
+        "test": "phpunit --configuration=phpunit.xml.dist"
     }
 }

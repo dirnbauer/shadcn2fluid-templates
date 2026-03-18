@@ -1,0 +1,64 @@
+name: shadcn2fluid/stats
+title: ShadCN Stats
+description: Key figures and KPI sections with responsive cards
+group: common
+prefixFields: false
+fields:
+  - identifier: section_layout
+    type: Select
+    renderType: selectSingle
+    label: Template Layout
+    items:
+      - label: Full Width
+        value: full-width
+      - label: Two Columns
+        value: two-columns
+      - label: Stacked
+        value: stacked
+    default: two-columns
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: headline
+    type: Text
+    label: Section Headline
+
+  - identifier: subheadline
+    type: Textarea
+    label: Section Subheadline
+    rows: 2
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Stat Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '4'
+
+  - identifier: stats
+    type: Collection
+    label: Stats
+    minItems: 1
+    fields:
+      - identifier: value
+        type: Text
+        label: Value
+        required: true
+
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2

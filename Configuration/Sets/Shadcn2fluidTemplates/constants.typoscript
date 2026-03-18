@@ -1,3 +1,11 @@
 #
 # ShadCN to Fluid Templates - TypoScript Constants
 #
+
+plugin.tx_shadcn2fluid_templates {
+    settings {
+        # Optional custom theme CSS file loaded after the bundled theme.
+        # Example: EXT:site_package/Resources/Public/Css/shadcn-theme.css
+        customThemeCss =
+    }
+}
