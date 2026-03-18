@@ -4,7 +4,7 @@
 
 Team renders member cards with portrait, role, bio, and optional profile links.
 
-## Layouts
+## Templates
 
 - `full-width`
 - `two-columns`
@@ -15,9 +15,9 @@ Team renders member cards with portrait, role, bio, and optional profile links.
 | Field | Type | Purpose |
 |-------|------|---------|
 | `eyebrow` | Text | Small section kicker |
-| `headline` | Text | Main heading |
+| `headline` | Text | Main section heading |
 | `subheadline` | Textarea | Supporting copy |
-| `columns` | Select | 2, 3, or 4 member columns |
+| `columns` | Select | 2, 3, or 4 columns |
 | `members` | Collection | Image, name, role, bio, profile link |
 
 ## Notes

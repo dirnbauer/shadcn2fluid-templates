@@ -4,7 +4,7 @@
 
 Timeline renders a vertical sequence for process steps, milestones, or roadmap entries.
 
-## Layouts
+## Templates
 
 - `full-width`
 - `two-columns`
@@ -15,11 +15,11 @@ Timeline renders a vertical sequence for process steps, milestones, or roadmap e
 | Field | Type | Purpose |
 |-------|------|---------|
 | `eyebrow` | Text | Small section kicker |
-| `headline` | Text | Main heading |
+| `headline` | Text | Main section heading |
 | `subheadline` | Textarea | Supporting copy |
 | `items` | Collection | Step/date, title, rich text, optional link |
 
 ## Notes
 
 - timeline item content supports rich text
-- use concise `step` values such as dates, sprint names, or phase labels
+- use short `step` values such as dates, phases, or sprint names

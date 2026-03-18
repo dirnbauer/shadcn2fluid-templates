@@ -4,7 +4,7 @@
 
 Stats renders KPI-style number cards for landing pages, reports, and summary sections.
 
-## Layouts
+## Templates
 
 - `full-width`
 - `two-columns`
@@ -15,7 +15,7 @@ Stats renders KPI-style number cards for landing pages, reports, and summary sec
 | Field | Type | Purpose |
 |-------|------|---------|
 | `eyebrow` | Text | Small section kicker |
-| `headline` | Text | Main heading |
+| `headline` | Text | Main section heading |
 | `subheadline` | Textarea | Supporting copy |
-| `columns` | Select | 2, 3, or 4 stat columns |
+| `columns` | Select | 2, 3, or 4 columns |
 | `stats` | Collection | Value, label, description |

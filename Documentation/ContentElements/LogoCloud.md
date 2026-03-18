@@ -4,7 +4,7 @@
 
 Logo Cloud renders partner, customer, or press logos in a responsive proof grid.
 
-## Layouts
+## Templates
 
 - `full-width`
 - `two-columns`
@@ -15,12 +15,12 @@ Logo Cloud renders partner, customer, or press logos in a responsive proof grid.
 | Field | Type | Purpose |
 |-------|------|---------|
 | `eyebrow` | Text | Small section kicker |
-| `headline` | Text | Main heading |
+| `headline` | Text | Main section heading |
 | `subheadline` | Textarea | Supporting copy |
 | `columns` | Select | 3, 4, 5, or 6 columns |
-| `logos` | Collection | Image, name, and optional link |
+| `logos` | Collection | Image, name, optional link |
 
 ## Notes
 
-- use consistent logo proportions for the cleanest result
-- upload new files instead of overwriting existing logos when working in a workspace
+- use transparent or monochrome logos for the cleanest visual result
+- do not overwrite physical files in-place when staging logo changes in workspaces
