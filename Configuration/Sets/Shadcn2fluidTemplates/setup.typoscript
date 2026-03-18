@@ -1,21 +1,17 @@
 #
 # ShadCN to Fluid Templates - TypoScript Setup
 #
-# This configuration includes the CSS files for the shadcn theme and components.
+# The theme CSS path is configurable via the site set setting
+# "shadcn2fluid.themeCss" (defaults to the bundled theme).
+# Override it per site to use a custom theme, e.g. from tweakcn.com.
 #
 
 page {
     includeCSS {
-        shadcnTheme = EXT:shadcn2fluid_templates/Resources/Public/Css/shadcn-theme.css
+        shadcnTheme = {$shadcn2fluid.themeCss}
         shadcnTheme.media = all
 
         shadcnComponents = EXT:shadcn2fluid_templates/Resources/Public/Css/components.css
         shadcnComponents.media = all
     }
 }
-
-[{$plugin.tx_shadcn2fluid_templates.settings.customThemeCss}]
-    page.includeCSS.shadcnThemeCustom = {$plugin.tx_shadcn2fluid_templates.settings.customThemeCss}
-    page.includeCSS.shadcnThemeCustom.media = all
-    page.includeCSS.shadcnThemeCustom.after = shadcnComponents
-[end]

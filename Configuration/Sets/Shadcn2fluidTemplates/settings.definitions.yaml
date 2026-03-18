@@ -1,0 +1,11 @@
+categories:
+  Shadcn2fluid:
+    label: 'ShadCN Theme'
+
+settings:
+  shadcn2fluid.themeCss:
+    label: 'Theme CSS File'
+    category: Shadcn2fluid
+    description: 'Path to the CSS file containing shadcn/ui color variables (:root and .dark blocks). Copy-paste the output from tweakcn.com into a CSS file in your site package and set the path here, e.g. EXT:site_package/Resources/Public/Css/shadcn-theme.css'
+    type: string
+    default: 'EXT:shadcn2fluid_templates/Resources/Public/Css/shadcn-theme.css'
