@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="shadcn-accordion-section">
+    <f:if condition="{data.headline}">
+        <h2 class="shadcn-accordion-section__headline">{data.headline}</h2>
+    </f:if>
+    
+    <div class="shadcn-accordion" data-allow-multiple="{f:if(condition: data.allow_multiple, then: 'true', else: 'false')}">
+        <f:for each="{data.items}" as="item" iteration="iter">
+            <details class="shadcn-accordion__item" {f:if(condition: item.open_by_default, then: 'open')}>
+                <summary class="shadcn-accordion__trigger">
+                    <span class="shadcn-accordion__title">{item.title}</span>
+                    <span class="shadcn-accordion__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="shadcn-accordion__content">
+                    <f:format.html>{item.content}</f:format.html>
+                </div>
+            </details>
+        </f:for>
+    </div>
+</div>
+
+</html>

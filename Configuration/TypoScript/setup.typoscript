@@ -1,0 +1,34 @@
+#
+# ShadCN to Fluid Templates - TypoScript Setup
+#
+# This configuration includes the CSS files for the shadcn theme and components.
+# The theme can be overridden via constants or by including a custom CSS file.
+#
+
+# Include shadcn theme and component CSS
+page {
+    includeCSS {
+        # Base theme variables from tweakcn
+        shadcnTheme = EXT:shadcn2fluid_templates/Resources/Public/Css/shadcn-theme.css
+        shadcnTheme.media = all
+
+        # Component styles
+        shadcnComponents = EXT:shadcn2fluid_templates/Resources/Public/Css/components.css
+        shadcnComponents.media = all
+    }
+
+    # Alpine.js - required for interactive components (Chart, etc.)
+    includeJSFooterlibs {
+        alpinejs = https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js
+        alpinejs.external = 1
+    }
+}
+
+# Optional: Custom theme override
+# To override the theme, set this constant in your site's TypoScript constants:
+# plugin.tx_shadcn2fluid_templates.settings.customThemeCss = fileadmin/css/custom-shadcn-theme.css
+#
+[{$plugin.tx_shadcn2fluid_templates.settings.customThemeCss}]
+    page.includeCSS.shadcnThemeCustom = {$plugin.tx_shadcn2fluid_templates.settings.customThemeCss}
+    page.includeCSS.shadcnThemeCustom.media = all
+[end]

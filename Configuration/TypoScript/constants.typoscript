@@ -1,0 +1,14 @@
+#
+# ShadCN to Fluid Templates - TypoScript Constants
+#
+# Configure these constants to customize the extension behavior.
+#
+
+plugin.tx_shadcn2fluid_templates {
+    settings {
+        # Custom Theme CSS File
+        # Set this to override the default shadcn theme with your own CSS file
+        # Example: fileadmin/css/my-custom-theme.css
+        customThemeCss =
+    }
+}

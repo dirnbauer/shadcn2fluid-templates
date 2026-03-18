@@ -1,0 +1,86 @@
+name: shadcn2fluid/features
+title: ShadCN Feature Grid
+description: Grid of feature cards with icons, titles, and descriptions
+group: common
+prefixFields: false
+fields:
+  - identifier: headline
+    type: Text
+    label: Section Headline
+
+  - identifier: subheadline
+    type: Textarea
+    label: Section Subheadline
+    rows: 2
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '3'
+
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Feature Style
+    items:
+      - label: Icon Top
+        value: icon-top
+      - label: Icon Left
+        value: icon-left
+      - label: Card Style
+        value: card
+    default: icon-top
+
+  - identifier: features
+    type: Collection
+    label: Features
+    minItems: 1
+    fields:
+      - identifier: icon
+        type: Select
+        renderType: selectSingle
+        label: Icon
+        items:
+          - label: Star
+            value: star
+          - label: Check
+            value: check
+          - label: Heart
+            value: heart
+          - label: Lightning
+            value: lightning
+          - label: Shield
+            value: shield
+          - label: Rocket
+            value: rocket
+          - label: Users
+            value: users
+          - label: Settings
+            value: settings
+          - label: Globe
+            value: globe
+          - label: Lock
+            value: lock
+        default: star
+
+      - identifier: title
+        type: Text
+        label: Feature Title
+        required: true
+
+      - identifier: description
+        type: Textarea
+        label: Feature Description
+        rows: 2
+
+      - identifier: link
+        type: Link
+        label: Feature Link

@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<section class="shadcn-cta shadcn-cta--{data.variant} shadcn-cta--bg-{data.background_color}">
+    <div class="shadcn-cta__container">
+        
+        <f:if condition="{data.variant} == 'split'">
+            <f:then>
+                <f:comment><!-- Split Layout --></f:comment>
+                <div class="shadcn-cta__grid">
+                    <div class="shadcn-cta__content">
+                        <f:render partial="CtaContent" arguments="{data: data}"/>
+                    </div>
+                    <f:if condition="{data.image}">
+                        <div class="shadcn-cta__image-wrapper">
+                            <f:for each="{data.image}" as="fileReference">
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 600)}" 
+                                     alt="" 
+                                     class="shadcn-cta__image" />
+                            </f:for>
+                        </div>
+                    </f:if>
+                </div>
+            </f:then>
+            <f:else>
+                <f:comment><!-- Centered/Banner/Inline Layout --></f:comment>
+                <div class="shadcn-cta__content">
+                    <f:render partial="CtaContent" arguments="{data: data}"/>
+                </div>
+            </f:else>
+        </f:if>
+        
+    </div>
+</section>
+
+</html>

@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<!--
+    ShadCN Separator Component - Fluid Partial
+    
+    Arguments:
+    - orientation: string - Separator orientation (horizontal, vertical)
+    - class: string - Additional CSS classes
+    
+    Usage:
+    <f:render partial="Components/Separator" arguments="{orientation: 'horizontal'}"/>
+-->
+
+<f:variable name="orientationClass" value="{f:switch(expression: orientation, cases: {
+    'horizontal': 'shadcn-separator--horizontal',
+    'vertical': 'shadcn-separator--vertical'
+}, default: 'shadcn-separator--horizontal')}"/>
+
+<div role="separator" 
+     aria-orientation="{orientation -> f:or(default: 'horizontal')}"
+     class="shadcn-separator {orientationClass} {class}"></div>
+
+</html>

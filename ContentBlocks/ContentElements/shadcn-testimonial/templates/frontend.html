@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:variable name="ratingInt" value="{data.rating -> f:format.number(decimals: 0)}"/>
+
+<div class="shadcn-testimonial shadcn-testimonial--{data.variant} {f:if(condition: '{data.variant} == \"card\"', then: 'shadcn-card')}">
+    
+    <f:comment><!-- Rating Stars --></f:comment>
+    <f:if condition="{ratingInt} > 0">
+        <div class="shadcn-testimonial__rating">
+            <f:for each="{0: 1, 1: 2, 2: 3, 3: 4, 4: 5}" as="star">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" 
+                     fill="{f:if(condition: '{star} <= {ratingInt}', then: 'currentColor', else: 'none')}" 
+                     stroke="currentColor" stroke-width="2" class="shadcn-testimonial__star {f:if(condition: '{star} <= {ratingInt}', then: 'shadcn-testimonial__star--filled')}">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+            </f:for>
+        </div>
+    </f:if>
+    
+    <f:comment><!-- Quote --></f:comment>
+    <blockquote class="shadcn-testimonial__quote">
+        <f:if condition="{data.variant} == 'large'">
+            <span class="shadcn-testimonial__quote-mark">"</span>
+        </f:if>
+        {data.quote}
+    </blockquote>
+    
+    <f:comment><!-- Author --></f:comment>
+    <div class="shadcn-testimonial__author">
+        <f:if condition="{data.author_image}">
+            <div class="shadcn-avatar">
+                <f:for each="{data.author_image}" as="fileReference">
+                    <img src="{f:uri.image(image: fileReference, width: 64, height: 64)}" 
+                         alt="{data.author_name}" 
+                         class="shadcn-avatar__image" />
+                </f:for>
+            </div>
+        </f:if>
+        <div class="shadcn-testimonial__author-info">
+            <cite class="shadcn-testimonial__author-name">{data.author_name}</cite>
+            <f:if condition="{data.author_title} || {data.author_company}">
+                <span class="shadcn-testimonial__author-role">
+                    {data.author_title}<f:if condition="{data.author_title} && {data.author_company}">, </f:if>{data.author_company}
+                </span>
+            </f:if>
+        </div>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,20 @@
+#
+# ShadCN to Fluid Templates - TypoScript Setup
+#
+# This configuration includes the CSS files for the shadcn theme and components.
+#
+
+# Include shadcn theme and component CSS
+page {
+    includeCSS {
+        # Base theme variables from tweakcn
+        shadcnTheme = EXT:shadcn2fluid_templates/Resources/Public/Css/shadcn-theme.css
+        shadcnTheme.media = all
+
+        # Component styles
+        shadcnComponents = EXT:shadcn2fluid_templates/Resources/Public/Css/components.css
+        shadcnComponents.media = all
+    }
+}
+
+# Alpine.js is loaded via the sitepackage

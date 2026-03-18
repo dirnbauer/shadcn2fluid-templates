@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{data.subheadline}">
+    <span class="shadcn-textmedia__subheadline">{data.subheadline}</span>
+</f:if>
+
+<f:if condition="{data.headline}">
+    <h2 class="shadcn-textmedia__headline">{data.headline}</h2>
+</f:if>
+
+<f:if condition="{data.content}">
+    <div class="shadcn-textmedia__text shadcn-prose">
+        <f:format.html>{data.content}</f:format.html>
+    </div>
+</f:if>
+
+<f:if condition="{data.button_text}">
+    <f:if condition="{data.button_link.url}">
+        <div class="shadcn-textmedia__actions">
+            <f:link.typolink parameter="{data.button_link}" 
+                             class="shadcn-btn shadcn-btn--{data.button_variant}">
+                {data.button_text}
+            </f:link.typolink>
+        </div>
+    </f:if>
+</f:if>
+
+</html>

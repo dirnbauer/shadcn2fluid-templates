@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="shadcn-card">
+    <f:if condition="{data.link.url}">
+        <f:then>
+            <f:link.typolink parameter="{data.link}" class="shadcn-card__link-wrapper">
+                <f:render partial="CardContent" arguments="{data: data}"/>
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <f:render partial="CardContent" arguments="{data: data}"/>
+        </f:else>
+    </f:if>
+</div>
+
+</html>

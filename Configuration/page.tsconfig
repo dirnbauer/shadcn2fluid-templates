@@ -1,0 +1,62 @@
+# ==============================================
+# ShadCN to Fluid Templates - Page TSconfig
+# ==============================================
+
+# Content Element Wizard Groups
+mod.wizards.newContentElement.wizardItems {
+    shadcn {
+        header = ShadCN Elements
+        after = common
+        elements {
+            shadcn2fluid_hero {
+                iconIdentifier = tt_content-shadcn2fluid_hero
+                title = ShadCN Hero Section
+                description = Modern hero section with multiple layout variants (Centered, Split, Background Image)
+                tt_content_defValues.CType = shadcn2fluid_hero
+            }
+            shadcn2fluid_card {
+                iconIdentifier = tt_content-shadcn2fluid_card
+                title = ShadCN Card
+                description = Versatile card component with basic, image, and horizontal variants
+                tt_content_defValues.CType = shadcn2fluid_card
+            }
+            shadcn2fluid_accordion {
+                iconIdentifier = tt_content-shadcn2fluid_accordion
+                title = ShadCN Accordion / FAQ
+                description = Collapsible accordion sections, perfect for FAQs
+                tt_content_defValues.CType = shadcn2fluid_accordion
+            }
+            shadcn2fluid_alert {
+                iconIdentifier = tt_content-shadcn2fluid_alert
+                title = ShadCN Alert / Callout
+                description = Alert boxes for important messages, tips, warnings
+                tt_content_defValues.CType = shadcn2fluid_alert
+            }
+            shadcn2fluid_features {
+                iconIdentifier = tt_content-shadcn2fluid_features
+                title = ShadCN Feature Grid
+                description = Grid of feature cards with icons, titles, and descriptions
+                tt_content_defValues.CType = shadcn2fluid_features
+            }
+            shadcn2fluid_testimonial {
+                iconIdentifier = tt_content-shadcn2fluid_testimonial
+                title = ShadCN Testimonial
+                description = Customer testimonials and quotes with avatar
+                tt_content_defValues.CType = shadcn2fluid_testimonial
+            }
+            shadcn2fluid_cta {
+                iconIdentifier = tt_content-shadcn2fluid_cta
+                title = ShadCN Call to Action
+                description = Prominent call-to-action section with headline and buttons
+                tt_content_defValues.CType = shadcn2fluid_cta
+            }
+            shadcn2fluid_textmedia {
+                iconIdentifier = tt_content-shadcn2fluid_textmedia
+                title = ShadCN Text with Media
+                description = Text content with image or video in modern shadcn styling
+                tt_content_defValues.CType = shadcn2fluid_textmedia
+            }
+        }
+        show = *
+    }
+}
