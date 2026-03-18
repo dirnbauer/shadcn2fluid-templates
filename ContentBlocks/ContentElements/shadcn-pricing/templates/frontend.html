@@ -20,11 +20,12 @@
         <div class="shadcn-section__body">
             <div class="shadcn-pricing__grid shadcn-pricing__grid--cols-{data.columns -> f:or(alternative: '3')}">
                 <f:for each="{data.plans}" as="plan">
+                    <f:variable name="planBadgeVariant" value="{f:if(condition: plan.is_featured, then: 'default', else: 'outline')}"/>
                     <article class="shadcn-pricing__plan shadcn-card {f:if(condition: plan.is_featured, then: 'shadcn-pricing__plan--featured')}">
                         <div class="shadcn-pricing__plan-header">
                             <f:if condition="{plan.badge_text}">
                                 <div class="shadcn-pricing__badge">
-                                    <f:render partial="Components/Badge" arguments="{text: plan.badge_text, variant: '{f:if(condition: plan.is_featured, then: \"default\", else: \"outline\")}'}"/>
+                                    <f:render partial="Components/Badge" arguments="{text: plan.badge_text, variant: planBadgeVariant}"/>
                                 </div>
                             </f:if>
                             <h3 class="shadcn-pricing__plan-name">{plan.name}</h3>
@@ -61,7 +62,7 @@
                                 <f:render partial="Components/Button" arguments="{
                                     link: plan.button_link,
                                     text: plan.button_text,
-                                    variant: '{f:if(condition: plan.is_featured, then: \"default\", else: \"outline\")}',
+                                    variant: planBadgeVariant,
                                     class: 'shadcn-pricing__button'
                                 }"/>
                             </div>

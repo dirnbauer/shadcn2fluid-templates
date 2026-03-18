@@ -8,7 +8,7 @@
     Text can be aligned left or centered.
 -->
 
-<f:variable name="alignmentClass" value="{f:if(condition: '{data.text_alignment} == \"center\"', then: 'shadcn-hero--align-center', else: '')}"/>
+<f:variable name="alignmentClass" value="{f:if(condition: "{data.text_alignment} == 'center'", then: 'shadcn-hero--align-center', else: '')}"/>
 <f:variable name="overlayOpacity" value="{data.overlay_opacity -> f:or(alternative: '0.5')}"/>
 
 <section class="shadcn-hero shadcn-hero--background {alignmentClass}">

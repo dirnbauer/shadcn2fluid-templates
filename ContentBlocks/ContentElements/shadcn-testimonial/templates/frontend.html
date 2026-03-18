@@ -3,7 +3,7 @@
 
 <f:variable name="ratingInt" value="{data.rating -> f:format.number(decimals: 0)}"/>
 
-<div class="shadcn-testimonial shadcn-testimonial--{data.variant} {f:if(condition: '{data.variant} == \"card\"', then: 'shadcn-card')}">
+<div class="shadcn-testimonial shadcn-testimonial--{data.variant} {f:if(condition: "{data.variant} == 'card'", then: 'shadcn-card')}">
     
     <f:comment><!-- Rating Stars --></f:comment>
     <f:if condition="{ratingInt} > 0">

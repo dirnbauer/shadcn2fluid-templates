@@ -96,7 +96,8 @@
                             </f:if>
 
                             <div class="shadcn-contact__actions">
-                                <f:render partial="Components/Button" arguments="{text: '{data.submit_text -> f:or(alternative: \"Send inquiry\")}', type: 'submit', class: 'shadcn-contact__submit'}"/>
+                                <f:variable name="submitButtonText" value="{data.submit_text -> f:or(alternative: 'Send inquiry')}"/>
+                                <f:render partial="Components/Button" arguments="{text: submitButtonText, type: 'submit', class: 'shadcn-contact__submit'}"/>
                             </div>
                         </form>
                     </div>

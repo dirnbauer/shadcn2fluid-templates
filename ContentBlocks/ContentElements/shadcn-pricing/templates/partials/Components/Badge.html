@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<!--
+    ShadCN Badge Component - Fluid Partial
+    
+    Arguments:
+    - text: string - Badge text content
+    - variant: string - Badge style variant (default, secondary, outline, destructive)
+    - class: string - Additional CSS classes
+    
+    Usage:
+    <f:render partial="Components/Badge" arguments="{
+        text: 'New',
+        variant: 'default'
+    }"/>
+-->
+
+<f:variable name="variantClass" value="{f:switch(expression: variant, cases: {
+    'default': 'shadcn-badge--default',
+    'secondary': 'shadcn-badge--secondary',
+    'outline': 'shadcn-badge--outline',
+    'destructive': 'shadcn-badge--destructive'
+}, default: 'shadcn-badge--default')}"/>
+
+<span class="shadcn-badge {variantClass} {class}">
+    {text}
+    <f:if condition="{children}">
+        {children -> f:format.raw()}
+    </f:if>
+</span>
+
+</html>

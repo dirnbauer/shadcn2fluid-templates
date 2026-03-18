@@ -15,7 +15,7 @@
     
     <div class="shadcn-features__grid shadcn-features__grid--cols-{data.columns} shadcn-features__grid--{data.variant}">
         <f:for each="{data.features}" as="feature">
-            <div class="shadcn-feature {f:if(condition: '{data.variant} == \"card\"', then: 'shadcn-card')}">
+            <div class="shadcn-feature {f:if(condition: "{data.variant} == 'card'", then: 'shadcn-card')}">
                 <div class="shadcn-feature__icon">
                     <f:render partial="FeatureIcon" arguments="{icon: feature.icon}"/>
                 </div>
