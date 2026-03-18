@@ -17,18 +17,23 @@ TYPO3 content elements inspired by shadcn/ui, implemented as Content Blocks and 
 - Alert / Callout
 - Card
 - Chart
+- Compare
 - Contact
 - Call to Action
 - Feature Grid
+- Footer
+- Gallery / Portfolio
 - Logo Cloud
+- Navbar
 - Pricing
 - Stats
 - Team
 - Testimonial
 - Text with Media
 - Timeline
+- Blog Teasers
 
-The extension ships a broader set of content elements in the repository, plus a TYPO3 site set, bundled CSS, reusable Fluid partials, and a CSP-friendly external JavaScript asset for the chart element.
+The extension now ships 20 content elements in the repository, plus a TYPO3 site set, bundled CSS, reusable Fluid partials, and a CSP-friendly external JavaScript asset for the chart element.
 
 ## Installation
 

@@ -58,6 +58,29 @@ shadcn2fluid_templates    2.0.0    active
 
 Then add a content element in the backend and confirm the ShadCN elements are available.
 
+The installed set now includes:
+
+- Hero
+- Accordion / FAQ
+- Alert / Callout
+- Area Chart
+- Card
+- Call to Action
+- Compare
+- Contact
+- Feature Grid
+- Footer
+- Gallery / Portfolio
+- Logo Cloud
+- Navbar
+- Pricing
+- Stats
+- Team
+- Testimonial
+- Text with Media
+- Timeline
+- Blog Teasers
+
 ## Local development
 
 If the extension is used from a local path repository:

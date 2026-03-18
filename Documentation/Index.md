@@ -28,16 +28,21 @@ This extension provides shadcn/ui-inspired content elements for TYPO3 14, implem
 - Alert / Callout
 - Card
 - Chart
+- Compare
 - Contact
 - Call to Action
 - Feature Grid
+- Footer
+- Gallery / Portfolio
 - Logo Cloud
+- Navbar
 - Pricing
 - Stats
 - Team
 - Testimonial
 - Text with Media
 - Timeline
+- Blog Teasers
 
 ## Navigation
 
