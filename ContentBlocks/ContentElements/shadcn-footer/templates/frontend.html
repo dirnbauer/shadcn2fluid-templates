@@ -18,7 +18,14 @@
                 <ul class="shadcn-footer__links">
                     <f:for each="{data.footer_links}" as="item">
                         <li>
-                            <f:link.typolink parameter="{item.link}" class="shadcn-footer__link">{item.label}</f:link.typolink>
+                            <f:if condition="{item.link.url}">
+                                <f:then>
+                                    <f:link.typolink parameter="{item.link}" class="shadcn-footer__link">{item.label}</f:link.typolink>
+                                </f:then>
+                                <f:else>
+                                    <span class="shadcn-footer__link">{item.label}</span>
+                                </f:else>
+                            </f:if>
                         </li>
                     </f:for>
                 </ul>
@@ -30,7 +37,14 @@
                 <ul class="shadcn-footer__links">
                     <f:for each="{data.utility_links}" as="item">
                         <li>
-                            <f:link.typolink parameter="{item.link}" class="shadcn-footer__link">{item.label}</f:link.typolink>
+                            <f:if condition="{item.link.url}">
+                                <f:then>
+                                    <f:link.typolink parameter="{item.link}" class="shadcn-footer__link">{item.label}</f:link.typolink>
+                                </f:then>
+                                <f:else>
+                                    <span class="shadcn-footer__link">{item.label}</span>
+                                </f:else>
+                            </f:if>
                         </li>
                     </f:for>
                 </ul>

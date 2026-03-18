@@ -37,7 +37,7 @@
                                 </f:for>
                             </ul>
                         </f:if>
-                        <f:if condition="{data.left_button_text} && {data.left_button_link}">
+                        <f:if condition="{data.left_button_text} && {data.left_button_link.url}">
                             <div class="shadcn-compare__actions">
                                 <f:render partial="Components/Button" arguments="{link: data.left_button_link, text: data.left_button_text, variant: 'outline'}"/>
                             </div>
@@ -63,7 +63,7 @@
                                 </f:for>
                             </ul>
                         </f:if>
-                        <f:if condition="{data.right_button_text} && {data.right_button_link}">
+                        <f:if condition="{data.right_button_text} && {data.right_button_link.url}">
                             <div class="shadcn-compare__actions">
                                 <f:render partial="Components/Button" arguments="{link: data.right_button_link, text: data.right_button_text}"/>
                             </div>
