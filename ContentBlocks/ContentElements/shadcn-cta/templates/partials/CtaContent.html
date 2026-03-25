@@ -15,8 +15,9 @@
     <div class="shadcn-cta__actions">
         <f:if condition="{data.primary_button_text}">
             <f:if condition="{data.primary_button_link.url}">
-                <f:link.typolink parameter="{data.primary_button_link}" 
-                                 class="shadcn-btn shadcn-btn--{f:if(condition: "{data.background_color} == 'primary'", then: 'secondary', else: 'default')} shadcn-btn--lg">
+                <f:variable name="primaryBtnVariant" value="{f:if(condition: '{data.background_color} == \'primary\'', then: 'secondary', else: 'default')}" />
+                <f:link.typolink parameter="{data.primary_button_link}"
+                                 class="shadcn-btn shadcn-btn--{primaryBtnVariant} shadcn-btn--lg">
                     {data.primary_button_text}
                 </f:link.typolink>
             </f:if>
