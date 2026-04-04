@@ -25,5 +25,5 @@ fields:
         label: Stat Label
         required: true
       - identifier: description
-        type: Text
+        type: Textarea
         label: Supporting Text

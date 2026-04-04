@@ -30,5 +30,5 @@ fields:
         maxitems: 1
 
       - identifier: description
-        type: Text
+        type: Textarea
         label: Short Description

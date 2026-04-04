@@ -47,7 +47,7 @@ fields:
         required: true
 
       - identifier: description
-        type: Text
+        type: Textarea
         label: Short Description
 
       - identifier: link

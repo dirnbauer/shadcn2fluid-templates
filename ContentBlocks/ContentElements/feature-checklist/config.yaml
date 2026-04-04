@@ -19,5 +19,5 @@ fields:
         type: Text
         label: Title
       - identifier: description
-        type: Text
+        type: Textarea
         label: Description

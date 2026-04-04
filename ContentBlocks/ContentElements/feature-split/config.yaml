@@ -26,5 +26,5 @@ fields:
         label: Title
         required: true
       - identifier: description
-        type: Text
+        type: Textarea
         label: Description

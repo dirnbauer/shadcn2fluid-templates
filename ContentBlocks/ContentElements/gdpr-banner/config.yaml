@@ -22,7 +22,7 @@ fields:
         label: Category Name
         required: true
       - identifier: description
-        type: Text
+        type: Textarea
         label: Description
       - identifier: required
         type: Checkbox

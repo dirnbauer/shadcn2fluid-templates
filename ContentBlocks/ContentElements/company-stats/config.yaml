@@ -25,5 +25,5 @@ fields:
         label: Label
         required: true
       - identifier: description
-        type: Text
+        type: Textarea
         label: Description

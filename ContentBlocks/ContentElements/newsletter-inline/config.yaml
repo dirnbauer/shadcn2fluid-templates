@@ -8,7 +8,7 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: description
-    type: Text
+    type: Textarea
     label: Description
   - identifier: form_action
     type: Link

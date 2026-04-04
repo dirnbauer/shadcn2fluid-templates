@@ -42,7 +42,7 @@ fields:
         label: Individual Price
 
       - identifier: description
-        type: Text
+        type: Textarea
         label: Short Description
 
   - identifier: button_text
