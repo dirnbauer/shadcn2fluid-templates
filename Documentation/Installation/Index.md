@@ -5,7 +5,7 @@
 | Requirement | Version |
 |-------------|---------|
 | PHP | `^8.2` |
-| TYPO3 | `^14.2@dev` |
+| TYPO3 | `^14.2` |
 | Content Blocks | `^2.1` |
 | Composer | `2.x` |
 
@@ -13,16 +13,14 @@ TYPO3 14 requires the PHP `intl` extension in the runtime that executes Composer
 
 ## Project setup
 
-The project root should already target TYPO3 14.2 development builds. A minimal example:
+The project root should already target TYPO3 14.2 or newer within the TYPO3 14 line. A minimal example:
 
 ```json
 {
     "require": {
-        "typo3/cms-core": "^14.2@dev",
-        "typo3/cms-fluid": "^14.2@dev"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+        "typo3/cms-core": "^14.2",
+        "typo3/cms-fluid": "^14.2"
+    }
 }
 ```
 

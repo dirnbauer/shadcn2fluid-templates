@@ -1,0 +1,54 @@
+name: shadcn2fluid/agency-studio
+typeName: 1704062103
+title: Agency Studio
+description: Base page template for agencies and studios with editorial hero and portfolio-friendly shell
+prefixFields: false
+fields:
+  - identifier: brand_name
+    type: Text
+    label: Brand Name
+  - identifier: logo_image
+    type: File
+    label: Logo Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: header_cta_text
+    type: Text
+    label: Header CTA Text
+  - identifier: header_cta_link
+    type: Link
+    label: Header CTA Link
+  - identifier: hero_eyebrow
+    type: Text
+    label: Hero Eyebrow
+  - identifier: hero_headline
+    type: Text
+    label: Hero Headline
+  - identifier: hero_subheadline
+    type: Textarea
+    label: Hero Subheadline
+    rows: 3
+  - identifier: hero_primary_cta_text
+    type: Text
+    label: Primary CTA Text
+  - identifier: hero_primary_cta_link
+    type: Link
+    label: Primary CTA Link
+  - identifier: hero_secondary_cta_text
+    type: Text
+    label: Secondary CTA Text
+  - identifier: hero_secondary_cta_link
+    type: Link
+    label: Secondary CTA Link
+  - identifier: hero_image
+    type: File
+    label: Hero Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: footer_brand
+    type: Text
+    label: Footer Brand
+  - identifier: footer_copy
+    type: Textarea
+    label: Footer Copy
+    rows: 3

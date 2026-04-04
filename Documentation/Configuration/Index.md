@@ -23,19 +23,25 @@ The chart content element loads its JavaScript with `f:asset.script`, so no inli
 
 ## Custom theme override
 
-The site set exposes one TypoScript constant:
+The site set exposes two site settings that are stored in the TYPO3 site `config.yaml`:
 
-```typoscript
-plugin.tx_shadcn2fluid_templates.settings.customThemeCss =
-```
+- `shadcn2fluid.themeCss`
+- `shadcn2fluid.themeSourceUrl`
 
 Example:
 
-```typoscript
-plugin.tx_shadcn2fluid_templates.settings.customThemeCss = EXT:site_package/Resources/Public/Css/shadcn-theme.css
+```yaml
+base: 'https://www.watchlist-internet.at/'
+baseVariants:
+  - base: 'https://staging.watchlist-internet.at/'
+    condition: 'applicationContext == "Production/Staging"'
+
+settings:
+  'shadcn2fluid.themeCss': 'EXT:site_package/Resources/Public/Css/shadcn-theme.css'
+  'shadcn2fluid.themeSourceUrl': 'https://tweakcn.com/editor/theme'
 ```
 
-If set, the file is loaded after the bundled theme and component CSS.
+`shadcn2fluid.themeCss` controls which CSS file is loaded in the frontend. `shadcn2fluid.themeSourceUrl` is an optional reference to the tweakcn editor or shared preset used to generate that CSS.
 
 ## Page TSconfig
 

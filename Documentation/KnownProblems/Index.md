@@ -8,10 +8,14 @@ Composer fails while resolving TYPO3 core packages.
 
 ### Checks
 
-- confirm the project root targets TYPO3 `^14.2@dev`
-- confirm `minimum-stability` is `dev`
-- confirm `prefer-stable` is `true`
+- confirm the project root targets TYPO3 `^14.2`
 - confirm PHP `ext-intl` is available in the CLI runtime
+- confirm the CLI runtime is PHP `8.2` or higher
+- if multiple PHP versions are installed locally, run Composer with the Homebrew PHP 8.3 binary, for example:
+
+```bash
+/opt/homebrew/opt/php@8.3/bin/php /opt/homebrew/bin/composer validate --strict
+```
 
 ## Content elements do not appear in the backend
 

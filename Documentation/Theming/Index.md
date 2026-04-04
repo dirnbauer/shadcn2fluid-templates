@@ -103,12 +103,19 @@ Paste the copied CSS:
 }
 ```
 
-#### 5. Configure TypoScript
+#### 5. Configure the TYPO3 Site
 
-In your site's TypoScript constants:
+Store the exported CSS path and optional tweakcn reference URL in your site `config.yaml`:
 
-```typoscript
-plugin.tx_shadcn2fluid_templates.settings.customThemeCss = fileadmin/css/custom-shadcn-theme.css
+```yaml
+base: 'https://www.watchlist-internet.at/'
+baseVariants:
+  - base: 'https://staging.watchlist-internet.at/'
+    condition: 'applicationContext == "Production/Staging"'
+
+settings:
+  'shadcn2fluid.themeCss': 'fileadmin/css/custom-shadcn-theme.css'
+  'shadcn2fluid.themeSourceUrl': 'https://tweakcn.com/editor/theme'
 ```
 
 #### 6. Clear Cache
