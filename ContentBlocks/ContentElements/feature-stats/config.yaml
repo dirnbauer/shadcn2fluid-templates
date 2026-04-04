@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-stats
+typeName: shadcn2fluid_feature-stats
 title: Feature Stats
 description: Feature section with supporting statistics and key metrics
 group: features

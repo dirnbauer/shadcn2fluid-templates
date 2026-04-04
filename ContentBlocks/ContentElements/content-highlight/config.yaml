@@ -1,4 +1,5 @@
 name: shadcn2fluid/content-highlight
+typeName: shadcn2fluid_content-highlight
 title: Content Highlight
 description: Emphasized content block with accent background for key messages
 group: content

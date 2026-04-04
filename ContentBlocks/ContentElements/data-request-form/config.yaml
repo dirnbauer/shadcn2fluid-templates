@@ -1,4 +1,5 @@
 name: shadcn2fluid/data-request-form
+typeName: shadcn2fluid_data-request-form
 title: Data Request Form
 description: GDPR data subject request form for access, deletion, or portability
 group: footer

@@ -1,4 +1,5 @@
 name: shadcn2fluid/announcement-bar
+typeName: shadcn2fluid_announcement-bar
 title: Announcement Bar
 description: Slim top-of-page announcement or promo bar with optional CTA link
 group: navigation

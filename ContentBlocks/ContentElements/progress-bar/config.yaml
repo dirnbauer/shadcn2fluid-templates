@@ -1,4 +1,5 @@
 name: shadcn2fluid/progress-bar
+typeName: shadcn2fluid_progress-bar
 title: Progress Bar
 description: Visual progress indicator with label and percentage
 group: data

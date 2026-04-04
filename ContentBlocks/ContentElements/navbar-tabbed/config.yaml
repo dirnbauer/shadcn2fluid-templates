@@ -1,4 +1,5 @@
 name: shadcn2fluid/navbar-tabbed
+typeName: shadcn2fluid_navbar-tabbed
 title: Tabbed Navbar
 description: Navigation with tabbed section switching
 group: navigation

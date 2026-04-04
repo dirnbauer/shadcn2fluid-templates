@@ -1,4 +1,5 @@
 name: shadcn2fluid/navbar
+typeName: shadcn2fluid_navbar
 title: Navbar
 description: Marketing navigation bar with brand, links, and CTA
 group: navigation

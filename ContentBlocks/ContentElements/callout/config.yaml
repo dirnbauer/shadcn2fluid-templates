@@ -1,4 +1,5 @@
 name: shadcn2fluid/callout
+typeName: shadcn2fluid_callout
 title: Callout
 description: Highlighted callout box for tips, warnings, or important notes
 group: content

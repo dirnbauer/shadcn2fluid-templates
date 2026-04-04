@@ -1,4 +1,5 @@
 name: shadcn2fluid/contact
+typeName: shadcn2fluid_contact
 title: Contact
 description: Contact section with info cards and lead form layout
 group: conversion

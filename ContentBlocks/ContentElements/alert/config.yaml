@@ -1,4 +1,5 @@
 name: shadcn2fluid/alert
+typeName: shadcn2fluid_alert
 title: Alert
 description: Alert boxes for important messages, tips, warnings
 group: data

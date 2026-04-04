@@ -1,4 +1,5 @@
 name: shadcn2fluid/footer-centered
+typeName: shadcn2fluid_footer-centered
 title: Footer Centered
 description: Centered footer with logo, links, and copyright
 group: footer

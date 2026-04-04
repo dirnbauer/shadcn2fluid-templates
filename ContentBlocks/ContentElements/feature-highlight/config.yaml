@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-highlight
+typeName: shadcn2fluid_feature-highlight
 title: Feature Highlight
 description: Single prominent feature callout with background accent
 group: features

@@ -1,4 +1,5 @@
 name: shadcn2fluid/tabs
+typeName: shadcn2fluid_tabs
 title: Tabs
 description: Tabbed content panels for organizing related information
 group: content

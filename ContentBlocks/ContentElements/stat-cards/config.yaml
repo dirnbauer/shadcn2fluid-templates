@@ -1,4 +1,5 @@
 name: shadcn2fluid/stat-cards
+typeName: shadcn2fluid_stat-cards
 title: Stat Cards
 description: Compact statistic cards with icon, value, and trend indicator
 group: data

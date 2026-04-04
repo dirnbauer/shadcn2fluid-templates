@@ -1,4 +1,5 @@
 name: shadcn2fluid/footer-newsletter
+typeName: shadcn2fluid_footer-newsletter
 title: Footer Newsletter
 description: Footer with prominent newsletter signup form
 group: footer

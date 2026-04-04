@@ -1,4 +1,5 @@
 name: shadcn2fluid/contact-split
+typeName: shadcn2fluid_contact-split
 title: Contact Split
 description: Split layout with contact form and image side by side
 group: conversion

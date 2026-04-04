@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-startup
+typeName: shadcn2fluid_hero-startup
 title: Hero Startup
 description: Startup landing hero with social proof and waitlist CTA
 group: hero

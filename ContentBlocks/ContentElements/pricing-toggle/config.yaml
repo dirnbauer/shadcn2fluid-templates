@@ -1,4 +1,5 @@
 name: shadcn2fluid/pricing-toggle
+typeName: shadcn2fluid_pricing-toggle
 title: Pricing Toggle
 description: Pricing plans with monthly and yearly values shown together
 group: pricing

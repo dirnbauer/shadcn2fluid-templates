@@ -1,4 +1,5 @@
 name: shadcn2fluid/navbar-stacked
+typeName: shadcn2fluid_navbar-stacked
 title: Stacked Navbar
 description: Two-row navigation with brand on top and links below
 group: navigation

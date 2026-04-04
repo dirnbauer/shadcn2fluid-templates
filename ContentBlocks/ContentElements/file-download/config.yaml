@@ -1,4 +1,5 @@
 name: shadcn2fluid/file-download
+typeName: shadcn2fluid_file-download
 title: File Download
 description: Downloadable file cards with metadata and download links
 group: content

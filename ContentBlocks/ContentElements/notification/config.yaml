@@ -1,4 +1,5 @@
 name: shadcn2fluid/notification
+typeName: shadcn2fluid_notification
 title: Notification
 description: Toast-style notification with icon, message, and action button
 group: data

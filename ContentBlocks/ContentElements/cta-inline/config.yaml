@@ -1,4 +1,5 @@
 name: shadcn2fluid/cta-inline
+typeName: shadcn2fluid_cta-inline
 title: CTA Inline
 description: Compact inline call to action with text and button
 group: conversion

@@ -1,4 +1,5 @@
 name: shadcn2fluid/article-grid
+typeName: shadcn2fluid_article-grid
 title: Article Grid
 description: Editorial article grid with card teasers
 group: content

@@ -1,4 +1,5 @@
 name: shadcn2fluid/bundle-pricing
+typeName: shadcn2fluid_bundle-pricing
 title: Bundle Pricing
 description: Product bundle with combined pricing and savings
 group: pricing

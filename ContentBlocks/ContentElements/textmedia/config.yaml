@@ -1,4 +1,5 @@
 name: shadcn2fluid/textmedia
+typeName: shadcn2fluid_textmedia
 title: Text with Media
 description: Text content with image or video in flexible layouts
 group: content

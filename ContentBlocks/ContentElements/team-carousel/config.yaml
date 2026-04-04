@@ -1,4 +1,5 @@
 name: shadcn2fluid/team-carousel
+typeName: shadcn2fluid_team-carousel
 title: Team Carousel
 description: Horizontally scrollable team member showcase
 group: team

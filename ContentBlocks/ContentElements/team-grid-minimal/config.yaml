@@ -1,4 +1,5 @@
 name: shadcn2fluid/team-grid-minimal
+typeName: shadcn2fluid_team-grid-minimal
 title: Team Grid Minimal
 description: Minimal team grid with name and role only
 group: team

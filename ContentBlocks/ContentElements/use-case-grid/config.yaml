@@ -1,4 +1,5 @@
 name: shadcn2fluid/use-case-grid
+typeName: shadcn2fluid_use-case-grid
 title: Use Case Grid
 description: Use case card grid for segments, audiences, or jobs-to-be-done
 group: features

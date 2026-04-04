@@ -12,7 +12,7 @@
         "php": "^8.2",
         "typo3/cms-core": "^14.3@dev",
         "typo3/cms-fluid": "^14.3@dev",
-        "friendsoftypo3/content-blocks": "^2.1"
+        "friendsoftypo3/content-blocks": "^2.2"
     },
     "suggest": {
         "typo3/cms-workspaces": "Recommended to stage and preview content elements in TYPO3 workspaces."

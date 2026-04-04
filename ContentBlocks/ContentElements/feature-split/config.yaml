@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-split
+typeName: shadcn2fluid_feature-split
 title: Feature Split
 description: Two-column split layout with feature list and media
 group: features

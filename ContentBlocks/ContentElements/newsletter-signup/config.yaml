@@ -1,4 +1,5 @@
 name: shadcn2fluid/newsletter-signup
+typeName: shadcn2fluid_newsletter-signup
 title: Newsletter Signup
 description: Newsletter capture block with signup form and trust copy
 group: conversion

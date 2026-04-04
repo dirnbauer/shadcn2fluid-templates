@@ -1,4 +1,5 @@
 name: shadcn2fluid/cta-card
+typeName: shadcn2fluid_cta-card
 title: CTA Card
 description: Card-style call to action with bordered container
 group: conversion

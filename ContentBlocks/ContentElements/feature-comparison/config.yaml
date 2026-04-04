@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-comparison
+typeName: shadcn2fluid_feature-comparison
 title: Feature Comparison
 description: Side-by-side feature comparison between two options
 group: features

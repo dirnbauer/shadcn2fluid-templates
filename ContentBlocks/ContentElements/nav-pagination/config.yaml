@@ -1,4 +1,5 @@
 name: shadcn2fluid/nav-pagination
+typeName: shadcn2fluid_nav-pagination
 title: Pagination
 description: Page navigation with previous, next, and numbered page links
 group: navigation

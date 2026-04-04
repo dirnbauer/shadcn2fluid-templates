@@ -1,4 +1,5 @@
 name: shadcn2fluid/team-member
+typeName: shadcn2fluid_team-member
 title: Team Member
 description: Single team member profile card with detailed biography
 group: team

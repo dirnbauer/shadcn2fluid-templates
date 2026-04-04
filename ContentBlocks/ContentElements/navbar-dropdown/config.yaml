@@ -1,4 +1,5 @@
 name: shadcn2fluid/navbar-dropdown
+typeName: shadcn2fluid_navbar-dropdown
 title: Dropdown Navbar
 description: Navigation with dropdown sub-menus for top-level items
 group: navigation

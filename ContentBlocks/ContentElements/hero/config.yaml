@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero
+typeName: shadcn2fluid_hero
 title: Hero Section
 description: Modern hero section with multiple layout variants
 group: hero

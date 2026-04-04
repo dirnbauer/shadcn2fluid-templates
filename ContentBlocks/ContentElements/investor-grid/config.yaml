@@ -1,4 +1,5 @@
 name: shadcn2fluid/investor-grid
+typeName: shadcn2fluid_investor-grid
 title: Investor Grid
 description: Grid of investors or backers with logos and funding details
 group: team

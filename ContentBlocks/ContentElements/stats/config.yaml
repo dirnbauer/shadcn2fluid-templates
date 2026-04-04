@@ -1,4 +1,5 @@
 name: shadcn2fluid/stats
+typeName: shadcn2fluid_stats
 title: Stats
 description: Key figures and KPI sections with responsive cards
 group: social-proof

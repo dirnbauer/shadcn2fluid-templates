@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-numbered
+typeName: shadcn2fluid_feature-numbered
 title: Feature Numbered
 description: Numbered feature steps with auto-incrementing counters
 group: features

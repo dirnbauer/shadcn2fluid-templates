@@ -1,4 +1,5 @@
 name: shadcn2fluid/team
+typeName: shadcn2fluid_team
 title: Team
 description: Team member grids with portrait, role, and profile links
 group: team

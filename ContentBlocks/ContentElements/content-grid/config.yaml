@@ -1,4 +1,5 @@
 name: shadcn2fluid/content-grid
+typeName: shadcn2fluid_content-grid
 title: Content Grid
 description: Flexible grid of rich text content cards
 group: content

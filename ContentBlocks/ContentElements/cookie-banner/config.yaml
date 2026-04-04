@@ -1,4 +1,5 @@
 name: shadcn2fluid/cookie-banner
+typeName: shadcn2fluid_cookie-banner
 title: Cookie Banner
 description: Cookie consent banner with accept/decline and settings options
 group: footer

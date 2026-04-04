@@ -1,4 +1,5 @@
 name: shadcn2fluid/footer-minimal
+typeName: shadcn2fluid_footer-minimal
 title: Footer Minimal
 description: Compact single-line footer with copyright and a few links
 group: footer

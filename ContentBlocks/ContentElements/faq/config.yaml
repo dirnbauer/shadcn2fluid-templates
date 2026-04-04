@@ -1,4 +1,5 @@
 name: shadcn2fluid/faq
+typeName: shadcn2fluid_faq
 title: FAQ
 description: Frequently asked questions with structured data support
 group: content

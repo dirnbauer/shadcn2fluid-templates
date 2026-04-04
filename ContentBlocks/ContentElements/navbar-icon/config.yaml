@@ -1,4 +1,5 @@
 name: shadcn2fluid/navbar-icon
+typeName: shadcn2fluid_navbar-icon
 title: Icon Navbar
 description: Navigation using icon buttons for compact visual navigation
 group: navigation

@@ -1,4 +1,5 @@
 name: shadcn2fluid/pricing-comparison
+typeName: shadcn2fluid_pricing-comparison
 title: Pricing Comparison
 description: Feature comparison table across pricing plans
 group: pricing

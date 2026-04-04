@@ -1,4 +1,5 @@
 name: shadcn2fluid/cta-split
+typeName: shadcn2fluid_cta-split
 title: CTA Split
 description: Two-column split CTA with different actions per side
 group: conversion

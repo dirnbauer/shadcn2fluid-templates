@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-saas
+typeName: shadcn2fluid_hero-saas
 title: Hero SaaS
 description: SaaS product hero with dashboard preview placeholder
 group: hero

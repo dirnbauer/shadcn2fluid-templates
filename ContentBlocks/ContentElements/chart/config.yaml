@@ -1,4 +1,5 @@
 name: shadcn2fluid/chart
+typeName: shadcn2fluid_chart
 title: Chart
 description: Interactive area chart with gradient fill, grid lines, and tooltips
 group: data

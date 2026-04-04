@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-countdown
+typeName: shadcn2fluid_hero-countdown
 title: Hero Countdown
 description: Hero with countdown timer for launches and events
 group: hero

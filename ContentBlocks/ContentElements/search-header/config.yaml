@@ -1,4 +1,5 @@
 name: shadcn2fluid/search-header
+typeName: shadcn2fluid_search-header
 title: Search Header
 description: Header block with headline, supporting text, and search form
 group: navigation

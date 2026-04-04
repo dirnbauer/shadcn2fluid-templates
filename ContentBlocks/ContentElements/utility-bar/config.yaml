@@ -1,4 +1,5 @@
 name: shadcn2fluid/utility-bar
+typeName: shadcn2fluid_utility-bar
 title: Utility Bar
 description: Compact utility navigation with support links and contact text
 group: navigation

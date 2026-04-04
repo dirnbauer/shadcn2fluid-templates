@@ -1,4 +1,5 @@
 name: shadcn2fluid/sitemap-grid
+typeName: shadcn2fluid_sitemap-grid
 title: Sitemap Grid
 description: Visual sitemap grid with grouped page links
 group: footer

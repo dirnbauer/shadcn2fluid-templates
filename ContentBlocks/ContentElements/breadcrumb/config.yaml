@@ -1,4 +1,5 @@
 name: shadcn2fluid/breadcrumb
+typeName: shadcn2fluid_breadcrumb
 title: Breadcrumb
 description: Breadcrumb trail for marketing and documentation pages
 group: navigation

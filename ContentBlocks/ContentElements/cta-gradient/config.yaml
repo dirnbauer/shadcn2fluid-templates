@@ -1,4 +1,5 @@
 name: shadcn2fluid/cta-gradient
+typeName: shadcn2fluid_cta-gradient
 title: CTA Gradient
 description: Call to action section with gradient background
 group: conversion

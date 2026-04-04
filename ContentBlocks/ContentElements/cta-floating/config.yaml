@@ -1,4 +1,5 @@
 name: shadcn2fluid/cta-floating
+typeName: shadcn2fluid_cta-floating
 title: CTA Floating
 description: Fixed-position floating call to action bar
 group: conversion

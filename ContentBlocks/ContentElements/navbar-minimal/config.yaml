@@ -1,4 +1,5 @@
 name: shadcn2fluid/navbar-minimal
+typeName: shadcn2fluid_navbar-minimal
 title: Minimal Navbar
 description: Minimal brand-only navigation with optional single CTA
 group: navigation

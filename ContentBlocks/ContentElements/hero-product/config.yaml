@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-product
+typeName: shadcn2fluid_hero-product
 title: Hero Product
 description: Product-focused hero with feature image and pricing CTA
 group: hero

@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-search
+typeName: shadcn2fluid_hero-search
 title: Hero Search
 description: Hero with prominent search bar for platforms and directories
 group: hero

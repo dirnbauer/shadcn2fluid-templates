@@ -1,4 +1,5 @@
 name: shadcn2fluid/pricing-calculator
+typeName: shadcn2fluid_pricing-calculator
 title: Pricing Calculator
 description: Interactive pricing estimator with configurable tiers
 group: pricing

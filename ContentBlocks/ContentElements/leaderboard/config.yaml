@@ -1,4 +1,5 @@
 name: shadcn2fluid/leaderboard
+typeName: shadcn2fluid_leaderboard
 title: Leaderboard
 description: Ranked list with position, name, value, and optional avatar
 group: data

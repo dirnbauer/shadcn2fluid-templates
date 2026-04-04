@@ -1,4 +1,5 @@
 name: shadcn2fluid/accordion
+typeName: shadcn2fluid_accordion
 title: Accordion / FAQ
 description: Collapsible accordion sections, perfect for FAQs
 group: content

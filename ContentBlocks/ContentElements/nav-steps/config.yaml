@@ -1,4 +1,5 @@
 name: shadcn2fluid/nav-steps
+typeName: shadcn2fluid_nav-steps
 title: Steps Navigation
 description: Horizontal step indicator for multi-step forms and wizards
 group: navigation

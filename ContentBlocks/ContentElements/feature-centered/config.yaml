@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-centered
+typeName: shadcn2fluid_feature-centered
 title: Feature Centered
 description: Centered single-column feature showcase with stacked items
 group: features

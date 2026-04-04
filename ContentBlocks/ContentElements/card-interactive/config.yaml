@@ -1,4 +1,5 @@
 name: shadcn2fluid/card-interactive
+typeName: shadcn2fluid_card-interactive
 title: Card Interactive
 description: Hover-animated card with icon, title, and expandable content
 group: data

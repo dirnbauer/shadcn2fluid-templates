@@ -1,4 +1,5 @@
 name: shadcn2fluid/definition-list
+typeName: shadcn2fluid_definition-list
 title: Definition List
 description: Term-definition pairs for glossaries, specs, or key-value data
 group: content

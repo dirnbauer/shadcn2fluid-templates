@@ -1,4 +1,5 @@
 name: shadcn2fluid/pricing
+typeName: shadcn2fluid_pricing
 title: Pricing
 description: Pricing tables with featured plans and CTA buttons
 group: pricing

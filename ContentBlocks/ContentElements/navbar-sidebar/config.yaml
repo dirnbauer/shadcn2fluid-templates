@@ -1,4 +1,5 @@
 name: shadcn2fluid/navbar-sidebar
+typeName: shadcn2fluid_navbar-sidebar
 title: Sidebar Navbar
 description: Vertical sidebar navigation with collapsible sections
 group: navigation

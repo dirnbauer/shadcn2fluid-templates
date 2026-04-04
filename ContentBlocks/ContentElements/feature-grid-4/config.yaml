@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-grid-4
+typeName: shadcn2fluid_feature-grid-4
 title: Feature Grid 4-Column
 description: Fixed four-column feature card grid for compact layouts
 group: features

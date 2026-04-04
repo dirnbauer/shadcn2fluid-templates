@@ -1,4 +1,5 @@
 name: shadcn2fluid/back-to-top
+typeName: shadcn2fluid_back-to-top
 title: Back to Top
 description: Floating back-to-top button with smooth scroll
 group: footer

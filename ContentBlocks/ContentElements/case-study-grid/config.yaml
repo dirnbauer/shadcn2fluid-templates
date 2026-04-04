@@ -1,4 +1,5 @@
 name: shadcn2fluid/case-study-grid
+typeName: shadcn2fluid_case-study-grid
 title: Case Study Grid
 description: Grid of case study preview cards with results
 group: social-proof

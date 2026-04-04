@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-list
+typeName: shadcn2fluid_feature-list
 title: Feature List
 description: Editorial feature list with icon, title, and description rows
 group: features

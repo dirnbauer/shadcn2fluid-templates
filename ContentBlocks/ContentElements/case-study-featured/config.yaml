@@ -1,4 +1,5 @@
 name: shadcn2fluid/case-study-featured
+typeName: shadcn2fluid_case-study-featured
 title: Case Study Featured
 description: Large featured case study with full-width layout and metrics
 group: social-proof

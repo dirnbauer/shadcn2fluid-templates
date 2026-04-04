@@ -1,4 +1,5 @@
 name: shadcn2fluid/pricing-three-tier
+typeName: shadcn2fluid_pricing-three-tier
 title: Pricing Three Tier
 description: Classic three-column pricing with recommended plan highlight
 group: pricing

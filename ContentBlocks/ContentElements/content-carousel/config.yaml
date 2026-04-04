@@ -1,4 +1,5 @@
 name: shadcn2fluid/content-carousel
+typeName: shadcn2fluid_content-carousel
 title: Content Carousel
 description: Horizontally scrollable content cards with snap scroll
 group: content

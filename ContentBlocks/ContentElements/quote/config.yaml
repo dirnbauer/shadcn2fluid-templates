@@ -1,4 +1,5 @@
 name: shadcn2fluid/quote
+typeName: shadcn2fluid_quote
 title: Quote
 description: Styled blockquote with attribution
 group: content

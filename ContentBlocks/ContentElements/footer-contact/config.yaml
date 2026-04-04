@@ -1,4 +1,5 @@
 name: shadcn2fluid/footer-contact
+typeName: shadcn2fluid_footer-contact
 title: Footer Contact
 description: Footer with contact details, address, and business hours
 group: footer

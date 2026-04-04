@@ -1,4 +1,5 @@
 name: shadcn2fluid/resource-library
+typeName: shadcn2fluid_resource-library
 title: Resource Library
 description: Resource card library for downloads, guides, and references
 group: content

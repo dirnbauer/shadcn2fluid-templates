@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-carousel
+typeName: shadcn2fluid_hero-carousel
 title: Hero Carousel
 description: Hero with rotating slides of headline, text, and image
 group: hero

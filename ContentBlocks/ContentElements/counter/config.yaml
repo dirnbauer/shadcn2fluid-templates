@@ -1,4 +1,5 @@
 name: shadcn2fluid/counter
+typeName: shadcn2fluid_counter
 title: Counter
 description: Animated number counter with label and optional prefix/suffix
 group: data

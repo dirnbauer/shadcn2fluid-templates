@@ -1,4 +1,5 @@
 name: shadcn2fluid/about-us
+typeName: shadcn2fluid_about-us
 title: About Us
 description: Company introduction section with image and story text
 group: team

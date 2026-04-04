@@ -1,4 +1,5 @@
 name: shadcn2fluid/content-columns
+typeName: shadcn2fluid_content-columns
 title: Content Columns
 description: Multi-column rich text layout
 group: content

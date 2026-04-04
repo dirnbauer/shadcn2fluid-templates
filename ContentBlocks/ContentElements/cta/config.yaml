@@ -1,4 +1,5 @@
 name: shadcn2fluid/cta
+typeName: shadcn2fluid_cta
 title: Call to Action
 description: Prominent call-to-action section with headline and buttons
 group: conversion

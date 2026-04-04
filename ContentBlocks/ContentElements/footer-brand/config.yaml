@@ -1,4 +1,5 @@
 name: shadcn2fluid/footer-brand
+typeName: shadcn2fluid_footer-brand
 title: Footer Brand
 description: Brand-focused footer with large logo, tagline, and links
 group: footer

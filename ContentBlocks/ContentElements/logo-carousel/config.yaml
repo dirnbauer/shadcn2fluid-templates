@@ -1,4 +1,5 @@
 name: shadcn2fluid/logo-carousel
+typeName: shadcn2fluid_logo-carousel
 title: Logo Carousel
 description: Auto-scrolling logo ticker for client and partner logos
 group: social-proof

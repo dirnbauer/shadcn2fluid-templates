@@ -1,4 +1,5 @@
 name: shadcn2fluid/compare
+typeName: shadcn2fluid_compare
 title: Compare
 description: Side-by-side comparison block for plans, products, or approaches
 group: social-proof

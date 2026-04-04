@@ -1,4 +1,5 @@
 name: shadcn2fluid/imprint
+typeName: shadcn2fluid_imprint
 title: Imprint
 description: Legal imprint page with company details and contact info
 group: footer

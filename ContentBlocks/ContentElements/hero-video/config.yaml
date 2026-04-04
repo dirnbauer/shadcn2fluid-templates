@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-video
+typeName: shadcn2fluid_hero-video
 title: Hero Video
 description: Hero section with embedded video or video placeholder panel
 group: hero

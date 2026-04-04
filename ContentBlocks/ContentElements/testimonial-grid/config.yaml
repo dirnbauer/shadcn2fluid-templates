@@ -1,4 +1,5 @@
 name: shadcn2fluid/testimonial-grid
+typeName: shadcn2fluid_testimonial-grid
 title: Testimonial Grid
 description: Multi-column grid of customer testimonials
 group: social-proof

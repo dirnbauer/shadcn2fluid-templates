@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-tabs
+typeName: shadcn2fluid_feature-tabs
 title: Feature Tabs
 description: Tabbed feature presentation with switchable content panels
 group: features

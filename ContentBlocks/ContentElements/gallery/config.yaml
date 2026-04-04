@@ -1,4 +1,5 @@
 name: shadcn2fluid/gallery
+typeName: shadcn2fluid_gallery
 title: Gallery / Portfolio
 description: Visual gallery or portfolio grid with optional links
 group: content

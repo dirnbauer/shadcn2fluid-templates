@@ -1,4 +1,5 @@
 name: shadcn2fluid/footer-columns
+typeName: shadcn2fluid_footer-columns
 title: Footer Columns
 description: Multi-column footer with grouped link sections
 group: footer

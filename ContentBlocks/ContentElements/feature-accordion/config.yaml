@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-accordion
+typeName: shadcn2fluid_feature-accordion
 title: Feature Accordion
 description: Expandable feature sections with collapsible details
 group: features

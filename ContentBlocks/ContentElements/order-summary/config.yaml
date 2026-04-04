@@ -1,4 +1,5 @@
 name: shadcn2fluid/order-summary
+typeName: shadcn2fluid_order-summary
 title: Order Summary
 description: Order summary card with line items, totals, and CTA
 group: pricing

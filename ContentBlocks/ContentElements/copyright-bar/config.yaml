@@ -1,4 +1,5 @@
 name: shadcn2fluid/copyright-bar
+typeName: shadcn2fluid_copyright-bar
 title: Copyright Bar
 description: Slim copyright bar for the very bottom of the page
 group: footer

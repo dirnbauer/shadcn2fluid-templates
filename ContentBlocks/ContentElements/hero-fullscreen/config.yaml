@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-fullscreen
+typeName: shadcn2fluid_hero-fullscreen
 title: Hero Fullscreen
 description: Full viewport height hero with centered overlay content
 group: hero

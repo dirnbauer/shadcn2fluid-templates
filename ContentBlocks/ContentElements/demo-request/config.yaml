@@ -1,4 +1,5 @@
 name: shadcn2fluid/demo-request
+typeName: shadcn2fluid_demo-request
 title: Demo Request
 description: Request a product demo with details form
 group: conversion

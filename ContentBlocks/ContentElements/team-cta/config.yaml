@@ -1,4 +1,5 @@
 name: shadcn2fluid/team-cta
+typeName: shadcn2fluid_team-cta
 title: Team CTA
 description: Call to action for joining the team with open positions count
 group: team

@@ -1,4 +1,5 @@
 name: shadcn2fluid/analytics-overview
+typeName: shadcn2fluid_analytics-overview
 title: Analytics Overview
 description: Dashboard-style overview with key metrics, trend chart, and summary
 group: data

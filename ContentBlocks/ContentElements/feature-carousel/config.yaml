@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-carousel
+typeName: shadcn2fluid_feature-carousel
 title: Feature Carousel
 description: Horizontally scrollable feature cards with snap scroll
 group: features

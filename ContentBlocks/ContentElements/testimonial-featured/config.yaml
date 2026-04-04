@@ -1,4 +1,5 @@
 name: shadcn2fluid/testimonial-featured
+typeName: shadcn2fluid_testimonial-featured
 title: Testimonial Featured
 description: Large hero-style featured testimonial with background
 group: social-proof

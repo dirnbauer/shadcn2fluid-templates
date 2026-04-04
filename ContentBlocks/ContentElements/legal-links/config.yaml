@@ -1,4 +1,5 @@
 name: shadcn2fluid/legal-links
+typeName: shadcn2fluid_legal-links
 title: Legal Links
 description: Inline legal link bar for privacy, terms, imprint
 group: footer

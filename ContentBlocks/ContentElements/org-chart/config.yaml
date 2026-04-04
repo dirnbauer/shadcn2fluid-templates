@@ -1,4 +1,5 @@
 name: shadcn2fluid/org-chart
+typeName: shadcn2fluid_org-chart
 title: Org Chart
 description: Hierarchical organizational chart with levels
 group: team

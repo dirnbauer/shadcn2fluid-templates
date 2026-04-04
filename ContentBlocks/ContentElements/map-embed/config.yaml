@@ -1,4 +1,5 @@
 name: shadcn2fluid/map-embed
+typeName: shadcn2fluid_map-embed
 title: Map Embed
 description: Embedded map with address details
 group: conversion

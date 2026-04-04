@@ -1,4 +1,5 @@
 name: shadcn2fluid/chart-donut
+typeName: shadcn2fluid_chart-donut
 title: Chart Donut
 description: Donut chart with center label and configurable ring width
 group: data

@@ -1,4 +1,5 @@
 name: shadcn2fluid/booking-form
+typeName: shadcn2fluid_booking-form
 title: Booking Form
 description: Appointment or meeting booking form
 group: conversion

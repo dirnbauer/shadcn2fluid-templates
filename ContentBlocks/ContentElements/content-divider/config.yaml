@@ -1,4 +1,5 @@
 name: shadcn2fluid/content-divider
+typeName: shadcn2fluid_content-divider
 title: Content Divider
 description: Decorative section divider with optional label
 group: content

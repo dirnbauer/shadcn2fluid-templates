@@ -1,4 +1,5 @@
 name: shadcn2fluid/newsletter-inline
+typeName: shadcn2fluid_newsletter-inline
 title: Newsletter Inline
 description: Compact inline newsletter signup form
 group: conversion

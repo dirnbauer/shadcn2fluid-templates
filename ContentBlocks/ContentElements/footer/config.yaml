@@ -1,4 +1,5 @@
 name: shadcn2fluid/footer
+typeName: shadcn2fluid_footer
 title: Footer
 description: Footer block with brand text, navigation links, and utility links
 group: footer

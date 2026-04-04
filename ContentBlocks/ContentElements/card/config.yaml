@@ -1,4 +1,5 @@
 name: shadcn2fluid/card
+typeName: shadcn2fluid_card
 title: Card
 description: Versatile card component with multiple layout variants
 group: data

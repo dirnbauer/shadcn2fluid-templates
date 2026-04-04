@@ -1,4 +1,5 @@
 name: shadcn2fluid/article-hero
+typeName: shadcn2fluid_article-hero
 title: Article Hero
 description: Editorial article intro with headline, metadata, and cover image
 group: content

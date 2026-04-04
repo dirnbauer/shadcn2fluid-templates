@@ -1,4 +1,5 @@
 name: shadcn2fluid/product-reviews
+typeName: shadcn2fluid_product-reviews
 title: Product Reviews
 description: Product review section with aggregate score and individual reviews
 group: pricing

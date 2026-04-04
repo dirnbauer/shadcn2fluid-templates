@@ -1,4 +1,5 @@
 name: shadcn2fluid/pricing-simple
+typeName: shadcn2fluid_pricing-simple
 title: Pricing Simple
 description: Minimal single-price display with CTA
 group: pricing

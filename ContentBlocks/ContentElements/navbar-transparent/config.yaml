@@ -1,4 +1,5 @@
 name: shadcn2fluid/navbar-transparent
+typeName: shadcn2fluid_navbar-transparent
 title: Transparent Navbar
 description: Transparent overlay navigation for hero-first landing pages
 group: navigation

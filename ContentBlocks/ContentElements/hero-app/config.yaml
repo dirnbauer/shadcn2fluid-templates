@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-app
+typeName: shadcn2fluid_hero-app
 title: Hero App
 description: App download hero with device mockup placeholder
 group: hero

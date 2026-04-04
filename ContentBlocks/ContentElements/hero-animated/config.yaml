@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-animated
+typeName: shadcn2fluid_hero-animated
 title: Hero Animated
 description: Hero with CSS animation entrance effects on scroll
 group: hero

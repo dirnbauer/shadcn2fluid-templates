@@ -1,4 +1,5 @@
 name: shadcn2fluid/hero-stats
+typeName: shadcn2fluid_hero-stats
 title: Hero Stats
 description: Hero with headline, CTA, and compact stat cards
 group: hero

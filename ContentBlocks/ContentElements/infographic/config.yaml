@@ -1,4 +1,5 @@
 name: shadcn2fluid/infographic
+typeName: shadcn2fluid_infographic
 title: Infographic
 description: Visual infographic section with numbered steps and icons
 group: data

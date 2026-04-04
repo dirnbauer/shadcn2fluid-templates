@@ -1,4 +1,5 @@
 name: shadcn2fluid/blog-teasers
+typeName: shadcn2fluid_blog-teasers
 title: Blog Teasers
 description: Article teaser cards for news, blog, or resource sections
 group: content

@@ -1,4 +1,5 @@
 name: shadcn2fluid/callback-request
+typeName: shadcn2fluid_callback-request
 title: Callback Request
 description: Request a callback form with phone number capture
 group: conversion

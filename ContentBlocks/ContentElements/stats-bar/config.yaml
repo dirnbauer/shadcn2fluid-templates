@@ -1,4 +1,5 @@
 name: shadcn2fluid/stats-bar
+typeName: shadcn2fluid_stats-bar
 title: Stats Bar
 description: Horizontal bar chart statistics with progress indicators
 group: social-proof

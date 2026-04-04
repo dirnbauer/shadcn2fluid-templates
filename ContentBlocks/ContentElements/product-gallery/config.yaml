@@ -1,4 +1,5 @@
 name: shadcn2fluid/product-gallery
+typeName: shadcn2fluid_product-gallery
 title: Product Gallery
 description: Product image gallery with thumbnails
 group: pricing

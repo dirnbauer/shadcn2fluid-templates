@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-bento
+typeName: shadcn2fluid_feature-bento
 title: Feature Bento Grid
 description: Asymmetric bento-box layout for feature highlights
 group: features

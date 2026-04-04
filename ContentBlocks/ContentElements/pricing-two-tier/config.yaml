@@ -1,4 +1,5 @@
 name: shadcn2fluid/pricing-two-tier
+typeName: shadcn2fluid_pricing-two-tier
 title: Pricing Two Tier
 description: Two-plan pricing comparison with highlighted primary option
 group: pricing

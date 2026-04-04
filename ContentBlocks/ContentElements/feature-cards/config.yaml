@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-cards
+typeName: shadcn2fluid_feature-cards
 title: Feature Cards
 description: Card-based feature presentation with title and supporting copy
 group: features

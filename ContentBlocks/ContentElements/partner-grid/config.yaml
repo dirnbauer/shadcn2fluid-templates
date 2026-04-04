@@ -1,4 +1,5 @@
 name: shadcn2fluid/partner-grid
+typeName: shadcn2fluid_partner-grid
 title: Partner Grid
 description: Grid of partner or client logos with optional links
 group: team

@@ -1,4 +1,5 @@
 name: shadcn2fluid/chart-pie
+typeName: shadcn2fluid_chart-pie
 title: Chart Pie
 description: Pie chart with legend and configurable segments
 group: data

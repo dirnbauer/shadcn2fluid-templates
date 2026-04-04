@@ -1,4 +1,5 @@
 name: shadcn2fluid/product-card
+typeName: shadcn2fluid_product-card
 title: Product Card
 description: Single product showcase card with image, price, and CTA
 group: pricing

@@ -1,4 +1,5 @@
 name: shadcn2fluid/features
+typeName: shadcn2fluid_features
 title: Feature Grid
 description: Grid of feature cards with icons, titles, and descriptions
 group: features

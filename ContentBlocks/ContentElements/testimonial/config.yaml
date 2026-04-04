@@ -1,4 +1,5 @@
 name: shadcn2fluid/testimonial
+typeName: shadcn2fluid_testimonial
 title: Testimonial
 description: Customer testimonials and quotes with avatar
 group: social-proof

@@ -1,4 +1,5 @@
 name: shadcn2fluid/chart-area
+typeName: shadcn2fluid_chart-area
 title: Chart Area
 description: Area chart with gradient fill beneath the line
 group: data

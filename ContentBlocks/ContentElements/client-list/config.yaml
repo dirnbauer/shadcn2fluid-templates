@@ -1,4 +1,5 @@
 name: shadcn2fluid/client-list
+typeName: shadcn2fluid_client-list
 title: Client List
 description: Named list of clients with optional logos and industries
 group: social-proof

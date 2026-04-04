@@ -1,4 +1,5 @@
 name: shadcn2fluid/data-table
+typeName: shadcn2fluid_data-table
 title: Data Table
 description: Responsive data table with sortable columns and striped rows
 group: data

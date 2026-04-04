@@ -1,4 +1,5 @@
 name: shadcn2fluid/trust-badges
+typeName: shadcn2fluid_trust-badges
 title: Trust Badges
 description: Row of trust and security badges for checkout or footer
 group: social-proof

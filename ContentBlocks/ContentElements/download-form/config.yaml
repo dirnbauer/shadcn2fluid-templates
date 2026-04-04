@@ -1,4 +1,5 @@
 name: shadcn2fluid/download-form
+typeName: shadcn2fluid_download-form
 title: Download Form
 description: Gated content download form with email capture
 group: conversion

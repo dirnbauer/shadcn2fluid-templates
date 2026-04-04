@@ -1,4 +1,5 @@
 name: shadcn2fluid/feature-checklist
+typeName: shadcn2fluid_feature-checklist
 title: Feature Checklist
 description: Checklist-style block for inclusions, benefits, or guarantees
 group: features
