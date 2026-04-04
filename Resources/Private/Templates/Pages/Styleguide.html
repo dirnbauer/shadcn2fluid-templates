@@ -672,10 +672,10 @@
                 <h3 class="styleguide__subsection-title">Shapes</h3>
                 <div class="styleguide__preview" style="gap: 1rem;">
                     <div style="display: flex; align-items: center; gap: 1rem;">
-                        <s2f:atom.skeleton class="skeleton--circle" style="width: 3rem; height: 3rem; border-radius: 9999px;" />
+                        <div class="skeleton skeleton--circle" style="width: 3rem; height: 3rem; border-radius: 9999px;"></div>
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <s2f:atom.skeleton style="width: 12rem; height: 1rem;" />
-                            <s2f:atom.skeleton style="width: 8rem; height: 1rem;" />
+                            <div class="skeleton" style="width: 12rem; height: 1rem;"></div>
+                            <div class="skeleton" style="width: 8rem; height: 1rem;"></div>
                         </div>
                     </div>
                 </div>
@@ -816,7 +816,7 @@
             <div class="styleguide__subsection">
                 <h3 class="styleguide__subsection-title">Vertical</h3>
                 <div class="styleguide__preview" style="max-width: 20rem;">
-                    <s2f:atom.scrollArea orientation="vertical" class="styleguide-scroll-demo" style="height: 10rem; width: 100%;">
+                    <div class="scroll-area scroll-area--vertical styleguide-scroll-demo" style="height: 10rem; width: 100%; overflow-y: auto;">
                         <div style="padding: 1rem;">
                             <p style="margin: 0 0 0.75rem;"><strong>TYPO3 CMS</strong></p>
                             <p style="margin: 0 0 0.5rem;">TYPO3 is a professional, enterprise-class content management system.</p>
@@ -824,7 +824,7 @@
                             <p style="margin: 0 0 0.5rem;">Fluid is the templating engine used throughout TYPO3 for rendering frontend output. Fluid 5 introduces native components that simplify template authoring.</p>
                             <p style="margin: 0;">The shadcn2fluid-templates extension brings the shadcn/ui design vocabulary to TYPO3 via Fluid 5 components.</p>
                         </div>
-                    </s2f:atom.scrollArea>
+                    </div>
                 </div>
             </div>
 
