@@ -19,7 +19,6 @@ fields:
     fields:
       - identifier: name
         type: Textarea
-        rows: 1area
         rows: 1
         label: Column Name
         required: true

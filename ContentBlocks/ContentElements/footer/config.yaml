@@ -44,7 +44,6 @@ fields:
     fields:
       - identifier: label
         type: Textarea
-        rows: 1area
         rows: 1
         label: Label
         required: true
