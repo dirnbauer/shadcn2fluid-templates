@@ -1,33 +1,7 @@
-.navbar-tabbed__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--s2f-spacing-4);
-    padding-block: var(--s2f-spacing-3);
-    border-bottom: 1px solid var(--s2f-border);
-}
-.navbar-tabbed__brand {
-    font-weight: 600;
-    font-size: var(--s2f-text-lg);
-    color: var(--s2f-foreground);
-}
-.navbar-tabbed__tabs {
-    display: flex;
-    gap: 0;
-}
-.navbar-tabbed__tab {
-    padding: var(--s2f-spacing-2) var(--s2f-spacing-4);
-    font-size: var(--s2f-text-sm);
-    color: var(--s2f-muted-foreground);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: color 0.15s, border-color 0.15s;
-}
-.navbar-tabbed__tab:hover {
-    color: var(--s2f-foreground);
-}
-.navbar-tabbed__tab--active {
-    color: var(--s2f-foreground);
-    border-bottom-color: var(--s2f-primary);
-    font-weight: 500;
-}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="2" y="3" width="20" height="4" rx="1"/>
+  <line x1="6" y1="5" x2="6" y2="7"/>
+  <line x1="10" y1="5" x2="10" y2="7"/>
+  <line x1="14" y1="5" x2="14" y2="7"/>
+  <rect x="2" y="9" width="20" height="12" rx="1"/>
+</svg>
