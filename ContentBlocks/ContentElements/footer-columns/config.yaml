@@ -24,17 +24,10 @@ fields:
         type: Text
         label: Column Title
         required: true
-      - identifier: link_items
-        type: Collection
-        label: Links
-        fields:
-          - identifier: label
-            type: Text
-            label: Label
-            required: true
-          - identifier: link
-            type: Link
-            label: Link
+      - identifier: links
+        type: Textarea
+        label: Links (one per line)
+        rows: 5
   - identifier: copyright
     type: Text
     label: Copyright Text

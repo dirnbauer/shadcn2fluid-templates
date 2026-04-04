@@ -28,13 +28,6 @@ fields:
         label: Group Title
         required: true
       - identifier: pages
-        type: Collection
-        label: Pages
-        fields:
-          - identifier: label
-            type: Text
-            label: Page Name
-            required: true
-          - identifier: link
-            type: Link
-            label: Link
+        type: Textarea
+        label: Pages (one per line)
+        rows: 5

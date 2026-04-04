@@ -19,11 +19,15 @@
                 <div class="org-chart__level">
                     <f:if condition="{level.level_label}"><h3 class="org-chart__level-label">{level.level_label}</h3></f:if>
                     <div class="org-chart__row">
-                        <f:for each="{level.people}" as="person">
-                            <s2f:molecule.card class="org-chart__person">
-                                <h4 class="org-chart__name">{person.name}</h4>
-                                <f:if condition="{person.role}"><p class="org-chart__role">{person.role}</p></f:if>
-                            </s2f:molecule.card>
+                        <f:for each="{level.people -> f:split(separator: '
+')}" as="personLine">
+                            <f:if condition="{personLine -> f:trim()}">
+                                <f:variable name="personParts" value="{personLine -> f:split(separator: '|')}"/>
+                                <s2f:molecule.card class="org-chart__person">
+                                    <h4 class="org-chart__name">{personParts.0 -> f:trim()}</h4>
+                                    <f:if condition="{personParts.1}"><p class="org-chart__role">{personParts.1 -> f:trim()}</p></f:if>
+                                </s2f:molecule.card>
+                            </f:if>
                         </f:for>
                     </div>
                 </div>

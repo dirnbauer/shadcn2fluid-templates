@@ -42,27 +42,15 @@
                                 <p class="mega-menu__group-desc">{group.description}</p>
                             </f:if>
                             <ul class="mega-menu__links">
-                                <f:for each="{group.link_items}" as="item">
-                                    <li class="mega-menu__link-item">
-                                        <f:if condition="{item.link.url}">
-                                            <f:then>
-                                                <f:link.typolink parameter="{item.link}" class="mega-menu__link">
-                                                    <span class="mega-menu__link-label">{item.label}</span>
-                                                    <f:if condition="{item.detail}">
-                                                        <span class="mega-menu__link-detail">{item.detail}</span>
-                                                    </f:if>
-                                                </f:link.typolink>
-                                            </f:then>
-                                            <f:else>
-                                                <span class="mega-menu__link">
-                                                    <span class="mega-menu__link-label">{item.label}</span>
-                                                    <f:if condition="{item.detail}">
-                                                        <span class="mega-menu__link-detail">{item.detail}</span>
-                                                    </f:if>
-                                                </span>
-                                            </f:else>
-                                        </f:if>
-                                    </li>
+                                <f:for each="{group.links -> f:split(separator: '
+')}" as="linkLine">
+                                    <f:if condition="{linkLine -> f:trim()}">
+                                        <li class="mega-menu__link-item">
+                                            <span class="mega-menu__link">
+                                                <span class="mega-menu__link-label">{linkLine -> f:trim()}</span>
+                                            </span>
+                                        </li>
+                                    </f:if>
                                 </f:for>
                             </ul>
                         </section>

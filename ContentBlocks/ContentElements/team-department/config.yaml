@@ -22,18 +22,6 @@ fields:
         label: Department Name
         required: true
       - identifier: members
-        type: Collection
-        label: Members
-        fields:
-          - identifier: image
-            type: File
-            label: Portrait
-            allowed: common-image-types
-            maxitems: 1
-          - identifier: name
-            type: Text
-            label: Name
-            required: true
-          - identifier: role
-            type: Text
-            label: Role
+        type: Textarea
+        label: "Members (one per line, format: Name | Role)"
+        rows: 5

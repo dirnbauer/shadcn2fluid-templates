@@ -21,13 +21,6 @@ fields:
         type: Text
         label: Level Label
       - identifier: people
-        type: Collection
-        label: People
-        fields:
-          - identifier: name
-            type: Text
-            label: Name
-            required: true
-          - identifier: role
-            type: Text
-            label: Role
+        type: Textarea
+        label: "People (one per line, format: Name | Role)"
+        rows: 5

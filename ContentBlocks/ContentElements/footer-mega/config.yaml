@@ -22,16 +22,10 @@ fields:
       - identifier: title
         type: Text
         label: Group Title
-      - identifier: link_items
-        type: Collection
-        label: Links
-        fields:
-          - identifier: label
-            type: Text
-            label: Label
-          - identifier: link
-            type: Link
-            label: Link
+      - identifier: links
+        type: Textarea
+        label: Links (one per line)
+        rows: 5
   - identifier: newsletter_label
     type: Text
     label: Newsletter Label

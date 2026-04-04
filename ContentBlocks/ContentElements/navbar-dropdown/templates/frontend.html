@@ -22,8 +22,11 @@
                         </f:if>
                         <f:if condition="{item.children}">
                             <ul class="navbar-dropdown__submenu">
-                                <f:for each="{item.children}" as="child">
-                                    <li><f:if condition="{child.link.url}"><f:link.typolink parameter="{child.link}" class="navbar-dropdown__sublink">{child.label}</f:link.typolink></f:if></li>
+                                <f:for each="{item.children -> f:split(separator: '
+')}" as="childLine">
+                                    <f:if condition="{childLine -> f:trim()}">
+                                        <li><span class="navbar-dropdown__sublink">{childLine -> f:trim()}</span></li>
+                                    </f:if>
                                 </f:for>
                             </ul>
                         </f:if>

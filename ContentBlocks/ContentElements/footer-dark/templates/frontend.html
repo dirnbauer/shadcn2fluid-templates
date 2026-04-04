@@ -20,13 +20,11 @@
                 <nav class="footer-dark__col">
                     <h3 class="footer-dark__col-title">{col.title}</h3>
                     <ul class="footer-dark__links">
-                        <f:for each="{col.link_items}" as="item">
-                            <li>
-                                <f:if condition="{item.link}">
-                                    <f:then><f:link.typolink parameter="{item.link}" class="footer-dark__link">{item.label}</f:link.typolink></f:then>
-                                    <f:else><span class="footer-dark__link">{item.label}</span></f:else>
-                                </f:if>
-                            </li>
+                        <f:for each="{col.links -> f:split(separator: '
+')}" as="linkLine">
+                            <f:if condition="{linkLine -> f:trim()}">
+                                <li><span class="footer-dark__link">{linkLine -> f:trim()}</span></li>
+                            </f:if>
                         </f:for>
                     </ul>
                 </nav>

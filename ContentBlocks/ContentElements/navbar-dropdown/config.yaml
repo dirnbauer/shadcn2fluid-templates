@@ -27,15 +27,9 @@ fields:
         type: Link
         label: Link
       - identifier: children
-        type: Collection
-        label: Sub-items
-        fields:
-          - identifier: label
-            type: Text
-            label: Label
-          - identifier: link
-            type: Link
-            label: Link
+        type: Textarea
+        label: Sub-items (one per line)
+        rows: 4
   - identifier: button_text
     type: Text
     label: Button Text

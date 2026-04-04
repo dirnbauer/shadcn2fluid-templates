@@ -18,20 +18,17 @@
             <div class="team-department__group">
                 <h3 class="team-department__dept-name">{dept.name}</h3>
                 <div class="team-department__grid">
-                    <f:for each="{dept.members}" as="member">
-                        <s2f:molecule.card class="team-department__member">
-                            <f:if condition="{member.image}">
-                                <div class="team-department__image-wrapper">
-                                    <f:for each="{member.image}" as="fileReference">
-                                        <img src="{f:uri.image(image: fileReference, maxWidth: 320)}" alt="{member.name}" class="team-department__image"/>
-                                    </f:for>
+                    <f:for each="{dept.members -> f:split(separator: '
+')}" as="memberLine">
+                        <f:if condition="{memberLine -> f:trim()}">
+                            <f:variable name="memberParts" value="{memberLine -> f:split(separator: '|')}"/>
+                            <s2f:molecule.card class="team-department__member">
+                                <div class="team-department__content">
+                                    <h4 class="team-department__name">{memberParts.0 -> f:trim()}</h4>
+                                    <f:if condition="{memberParts.1}"><p class="team-department__role">{memberParts.1 -> f:trim()}</p></f:if>
                                 </div>
-                            </f:if>
-                            <div class="team-department__content">
-                                <h4 class="team-department__name">{member.name}</h4>
-                                <f:if condition="{member.role}"><p class="team-department__role">{member.role}</p></f:if>
-                            </div>
-                        </s2f:molecule.card>
+                            </s2f:molecule.card>
+                        </f:if>
                     </f:for>
                 </div>
             </div>

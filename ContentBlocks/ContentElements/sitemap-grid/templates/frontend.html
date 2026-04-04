@@ -15,13 +15,11 @@
                 <div class="sitemap-grid__group">
                     <h3 class="sitemap-grid__group-title">{group.title}</h3>
                     <ul class="sitemap-grid__links">
-                        <f:for each="{group.pages}" as="page">
-                            <li>
-                                <f:if condition="{page.link}">
-                                    <f:then><f:link.typolink parameter="{page.link}" class="sitemap-grid__link">{page.label}</f:link.typolink></f:then>
-                                    <f:else><span class="sitemap-grid__link">{page.label}</span></f:else>
-                                </f:if>
-                            </li>
+                        <f:for each="{group.pages -> f:split(separator: '
+')}" as="pageLine">
+                            <f:if condition="{pageLine -> f:trim()}">
+                                <li><span class="sitemap-grid__link">{pageLine -> f:trim()}</span></li>
+                            </f:if>
                         </f:for>
                     </ul>
                 </div>
