@@ -1,5 +1,6 @@
 <f:argument name="class" type="string" optional="{true}" default="" />
+<f:argument name="role" type="string" optional="{true}" />
 
-<div class="card {class}">
+<div class="card {class}" role="{role}">
     <f:slot />
 </div>

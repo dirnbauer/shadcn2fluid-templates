@@ -8,10 +8,10 @@
 <s2f:layout.section class="how-to-steps" itemscope itemtype="https://schema.org/HowTo">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <h2 class="typography typography--h2 how-to-steps__headline" itemprop="name">{data.header}</h2>
+            <s2f:atom.typography tag="h2" variant="h2" class="how-to-steps__headline" itemprop="name">{data.header}</s2f:atom.typography>
         </f:if>
         <f:if condition="{data.description}">
-            <p class="typography typography--muted how-to-steps__intro" itemprop="description">{data.description}</p>
+            <s2f:atom.typography variant="muted" class="how-to-steps__intro" itemprop="description">{data.description}</s2f:atom.typography>
         </f:if>
 
         <ol class="how-to-steps__list">

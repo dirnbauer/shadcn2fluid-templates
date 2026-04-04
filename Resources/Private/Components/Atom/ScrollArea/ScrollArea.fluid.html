@@ -1,7 +1,8 @@
 <f:argument name="orientation" type="string" optional="{true}" default="vertical" />
 <f:argument name="class" type="string" optional="{true}" default="" />
+<f:argument name="style" type="string" optional="{true}" default="" />
 
-<div class="scroll-area scroll-area--{orientation} {class}">
+<div class="scroll-area scroll-area--{orientation} {class}" style="{style}">
     <div class="scroll-area__viewport">
         <f:slot />
     </div>
