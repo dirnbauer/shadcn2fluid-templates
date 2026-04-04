@@ -1,0 +1,39 @@
+name: shadcn2fluid/feature-highlight
+title: Feature Highlight
+description: Single prominent feature callout with background accent
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: image
+    type: File
+    label: Feature Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: link
+    type: Link
+    label: Link
+  - identifier: link_text
+    type: Text
+    label: Link Text
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Background Style
+    items:
+      - label: Muted
+        value: muted
+      - label: Primary
+        value: primary
+      - label: None
+        value: none
+    default: muted

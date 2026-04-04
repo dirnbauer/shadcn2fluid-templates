@@ -1,0 +1,30 @@
+name: shadcn2fluid/company-history
+title: Company History
+description: Timeline of company milestones and historical events
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: events
+    type: Collection
+    label: Events
+    minItems: 1
+    fields:
+      - identifier: year
+        type: Text
+        label: Year
+        required: true
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2

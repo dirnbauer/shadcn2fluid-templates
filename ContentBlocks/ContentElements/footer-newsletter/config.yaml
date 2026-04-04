@@ -1,0 +1,28 @@
+name: shadcn2fluid/footer-newsletter
+title: Footer Newsletter
+description: Footer with prominent newsletter signup form
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: placeholder
+    type: Text
+    label: Input Placeholder
+    default: Enter your email
+  - identifier: button_text
+    type: Text
+    label: Button Text
+    default: Subscribe
+  - identifier: privacy_text
+    type: Text
+    label: Privacy Note
+    description: Small text below the form
+  - identifier: copyright
+    type: Text
+    label: Copyright Text

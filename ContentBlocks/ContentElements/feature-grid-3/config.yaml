@@ -1,0 +1,32 @@
+name: shadcn2fluid/feature-grid-3
+title: Feature Grid 3-Column
+description: Fixed three-column feature card grid
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Features
+    minItems: 3
+    fields:
+      - identifier: icon
+        type: Text
+        label: Icon Emoji or Symbol
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+      - identifier: link
+        type: Link
+        label: Link

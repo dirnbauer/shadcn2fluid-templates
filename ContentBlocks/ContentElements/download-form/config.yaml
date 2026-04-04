@@ -1,0 +1,28 @@
+name: shadcn2fluid/download-form
+title: Download Form
+description: Gated content download form with email capture
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: resource_title
+    type: Text
+    label: Resource Title
+  - identifier: form_action
+    type: Link
+    label: Form Action
+  - identifier: button_text
+    type: Text
+    label: Button Text
+    default: Download now
+  - identifier: image
+    type: File
+    label: Preview Image
+    allowed: common-image-types
+    maxitems: 1

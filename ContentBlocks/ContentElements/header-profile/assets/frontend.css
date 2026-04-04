@@ -1,0 +1,39 @@
+.header-profile {
+    border-bottom: 1px solid var(--s2f-border);
+}
+.header-profile__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s2f-spacing-6);
+    padding-block: var(--s2f-spacing-8);
+}
+.header-profile__avatar-img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--s2f-border);
+}
+.header-profile__info {
+    flex: 1;
+}
+.header-profile__name {
+    font-size: var(--s2f-text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--s2f-spacing-1);
+}
+.header-profile__role {
+    font-size: var(--s2f-text-base);
+    color: var(--s2f-muted-foreground);
+    margin-bottom: var(--s2f-spacing-2);
+}
+.header-profile__bio {
+    font-size: var(--s2f-text-sm);
+    color: var(--s2f-muted-foreground);
+    max-width: 36rem;
+    margin-bottom: var(--s2f-spacing-4);
+}
+.header-profile__actions {
+    display: flex;
+    gap: var(--s2f-spacing-2);
+}

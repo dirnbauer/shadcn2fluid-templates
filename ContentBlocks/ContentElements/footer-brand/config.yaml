@@ -1,0 +1,34 @@
+name: shadcn2fluid/footer-brand
+title: Footer Brand
+description: Brand-focused footer with large logo, tagline, and links
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: logo
+    type: File
+    label: Logo
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: brand
+    type: Text
+    label: Brand Name
+  - identifier: tagline
+    type: Text
+    label: Tagline
+  - identifier: links
+    type: Collection
+    label: Links
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: link
+        type: Link
+        label: Link
+  - identifier: copyright
+    type: Text
+    label: Copyright Text

@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-career-listing" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="career-listing">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="career-listing__intro">
+                <f:if condition="{data.eyebrow}"><span class="career-listing__eyebrow">{data.eyebrow}</span></f:if>
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="career-listing__jobs">
+            <f:for each="{data.jobs}" as="job">
+                <article class="career-listing__job">
+                    <div class="career-listing__info">
+                        <h3 class="career-listing__title">{job.title}</h3>
+                        <div class="career-listing__meta">
+                            <f:if condition="{job.department}"><span class="career-listing__dept">{job.department}</span></f:if>
+                            <f:if condition="{job.location}"><span class="career-listing__location">{job.location}</span></f:if>
+                            <f:if condition="{job.type}"><span class="career-listing__type">{job.type}</span></f:if>
+                        </div>
+                    </div>
+                    <f:if condition="{job.apply_link.url}">
+                        <s2f:atom.button link="{job.apply_link}" variant="outline" size="sm">Apply</s2f:atom.button>
+                    </f:if>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

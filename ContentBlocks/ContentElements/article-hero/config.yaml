@@ -1,0 +1,40 @@
+name: shadcn2fluid/article-hero
+title: Article Hero
+description: Editorial article intro with headline, metadata, and cover image
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: dek
+    type: Textarea
+    label: Summary
+    rows: 3
+
+  - identifier: topic
+    type: Text
+    label: Topic
+
+  - identifier: publish_date
+    type: Text
+    label: Publish Date
+
+  - identifier: reading_time
+    type: Text
+    label: Reading Time
+
+  - identifier: author_name
+    type: Text
+    label: Author Name
+
+  - identifier: cover_image
+    type: File
+    label: Cover Image
+    allowed: common-image-types
+    maxitems: 1

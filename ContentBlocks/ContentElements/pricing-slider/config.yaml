@@ -1,0 +1,42 @@
+name: shadcn2fluid/pricing-slider
+title: Pricing Slider
+description: Volume-based pricing with interactive range slider
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+
+  - identifier: unit_label
+    type: Text
+    label: Unit Label
+    default: requests
+
+  - identifier: tiers
+    type: Collection
+    label: Volume Tiers
+    minItems: 2
+    fields:
+      - identifier: volume
+        type: Text
+        label: Volume
+        required: true
+
+      - identifier: price
+        type: Text
+        label: Price
+        required: true
+
+      - identifier: features
+        type: Text
+        label: Included Features

@@ -1,0 +1,39 @@
+name: shadcn2fluid/content-divider
+title: Content Divider
+description: Decorative section divider with optional label
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: label
+    type: Text
+    label: Divider Label
+    description: Optional text displayed on the divider line
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Style
+    items:
+      - label: Line
+        value: line
+      - label: Dashed
+        value: dashed
+      - label: Dotted
+        value: dotted
+      - label: Gradient
+        value: gradient
+    default: line
+  - identifier: spacing
+    type: Select
+    renderType: selectSingle
+    label: Spacing
+    items:
+      - label: Small
+        value: sm
+      - label: Medium
+        value: md
+      - label: Large
+        value: lg
+    default: md

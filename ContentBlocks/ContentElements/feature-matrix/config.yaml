@@ -1,0 +1,32 @@
+name: shadcn2fluid/feature-matrix
+title: Feature Matrix
+description: Feature comparison matrix for products, plans, or capabilities
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: left_label
+    type: Text
+    label: Left Column Label
+  - identifier: right_label
+    type: Text
+    label: Right Column Label
+  - identifier: rows
+    type: Collection
+    label: Rows
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+      - identifier: left_value
+        type: Text
+        label: Left Value
+      - identifier: right_value
+        type: Text
+        label: Right Value

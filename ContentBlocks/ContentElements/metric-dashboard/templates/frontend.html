@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-metric-dashboard" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="metric-dashboard">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.description}">
+            <header class="metric-dashboard__intro">
+                <f:if condition="{data.header}">
+                    <h2 class="metric-dashboard__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="metric-dashboard__description">{data.description}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="metric-dashboard__grid">
+            <f:for each="{data.items}" as="item">
+                <article class="metric-dashboard__card">
+                    <div class="metric-dashboard__label">{item.label}</div>
+                    <div class="metric-dashboard__value">{item.value}</div>
+                    <f:if condition="{item.change}">
+                        <div class="metric-dashboard__change metric-dashboard__change--{item.trend -> f:or(alternative: 'neutral')}">
+                            {item.change}
+                        </div>
+                    </f:if>
+                </article>
+            </f:for>
+        </div>
+
+        <f:if condition="{data.chart_data}">
+            <div class="metric-dashboard__chart"
+                 data-chart-data="{data.chart_data -> f:format.htmlspecialchars()}"
+                 data-chart-id="metric-dash-{data.uid}">
+                <svg class="metric-dashboard__sparkline" id="metric-dash-{data.uid}"></svg>
+            </div>
+        </f:if>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

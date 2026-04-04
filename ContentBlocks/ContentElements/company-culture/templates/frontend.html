@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-company-culture" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="company-culture">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="company-culture__intro">
+                <f:if condition="{data.eyebrow}"><span class="company-culture__eyebrow">{data.eyebrow}</span></f:if>
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="company-culture__grid">
+            <f:for each="{data.items}" as="item">
+                <article class="company-culture__item">
+                    <f:if condition="{item.image}">
+                        <div class="company-culture__image-wrapper">
+                            <f:for each="{item.image}" as="fileReference">
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 640)}" alt="{item.title}" class="company-culture__image"/>
+                            </f:for>
+                        </div>
+                    </f:if>
+                    <f:if condition="{item.title}"><h3 class="company-culture__title">{item.title}</h3></f:if>
+                    <f:if condition="{item.description}"><p class="company-culture__description">{item.description}</p></f:if>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

@@ -1,17 +1,111 @@
 #
-# ShadCN to Fluid Templates - TypoScript Setup
+# shadcn2fluid v3 - Fluid 5 Components for TYPO3
 #
-# The theme CSS path is configurable via the site set setting
-# "shadcn2fluid.themeCss" (defaults to the bundled theme).
-# Override it per site to use a custom theme, e.g. from tweakcn.com.
+# Theme CSS is configurable via site set setting "shadcn2fluid.themeCss".
+# Override per site to use a custom theme exported from tweakcn.com.
 #
 
+page = PAGE
 page {
     includeCSS {
-        shadcnTheme = {$shadcn2fluid.themeCss}
-        shadcnTheme.media = all
+        s2fTheme = {$shadcn2fluid.themeCss}
+        s2fTheme.media = all
 
-        shadcnComponents = EXT:shadcn2fluid_templates/Resources/Public/Css/components.css
-        shadcnComponents.media = all
+        s2fComponents = EXT:shadcn2fluid_templates/Resources/Public/Css/components.css
+        s2fComponents.media = all
+    }
+
+    includeJSFooter {
+        s2fLib = EXT:shadcn2fluid_templates/Resources/Public/Js/s2f.js
+        s2fLib.async = 1
+    }
+
+    10 = FLUIDTEMPLATE
+    10 {
+        templateRootPaths {
+            10 = EXT:shadcn2fluid_templates/Resources/Private/Templates/Pages/
+        }
+        partialRootPaths {
+            10 = EXT:shadcn2fluid_templates/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            10 = EXT:shadcn2fluid_templates/Resources/Private/Layouts/
+        }
+
+        templateName = TEXT
+        templateName {
+            cObject = CASE
+            cObject {
+                key.field = doktype
+
+                default = TEXT
+                default.value = Default
+
+                1704062101 = TEXT
+                1704062101.value = SaasMarketing
+
+                1704062102 = TEXT
+                1704062102.value = CorporateCompany
+
+                1704062103 = TEXT
+                1704062103.value = AgencyStudio
+
+                1704062104 = TEXT
+                1704062104.value = StartupLaunch
+
+                1704062105 = TEXT
+                1704062105.value = DocsKnowledgeBase
+
+                1704062106 = TEXT
+                1704062106.value = BlogMagazine
+
+                1704062107 = TEXT
+                1704062107.value = EcommerceBrand
+
+                1704062108 = TEXT
+                1704062108.value = EventConference
+
+                1704062109 = TEXT
+                1704062109.value = DashboardAppShell
+
+                1704062110 = TEXT
+                1704062110.value = PersonalBrandPortfolio
+
+                1704062111 = TEXT
+                1704062111.value = Styleguide
+            }
+        }
+
+        dataProcessing {
+            10 = content-blocks
+
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                levels = 2
+                expandAll = 1
+                includeSpacer = 0
+                as = mainNavigation
+            }
+
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            30 {
+                special = directory
+                special.value.data = leveluid:0
+                levels = 1
+                includeSpacer = 0
+                as = footerNavigation
+            }
+        }
+    }
+}
+
+lib.shadcn2fluid.mainContent = CONTENT
+lib.shadcn2fluid.mainContent {
+    table = tt_content
+    select {
+        pidInList.data = TSFE:id
+        where = {#colPos}=0
+        orderBy = sorting
+        languageField = sys_language_uid
     }
 }

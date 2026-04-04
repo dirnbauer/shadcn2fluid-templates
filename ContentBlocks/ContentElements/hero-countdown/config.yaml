@@ -1,0 +1,25 @@
+name: shadcn2fluid/hero-countdown
+title: Hero Countdown
+description: Hero with countdown timer for launches and events
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: target_date
+    type: DateTime
+    label: Target Date
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: badge_text
+    type: Text
+    label: Badge Text

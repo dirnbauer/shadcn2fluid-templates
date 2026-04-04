@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+<f:asset.css identifier="s2f-hero-pricing" href="{cb:assetPath()}/frontend.css"/>
+<s2f:layout.section class="hero-pricing">
+    <s2f:layout.container>
+        <div class="hero-pricing__grid">
+            <div class="hero-pricing__content">
+                <f:if condition="{data.header}"><h1 class="hero-pricing__headline">{data.header}</h1></f:if>
+                <f:if condition="{data.subheadline}"><p class="hero-pricing__subheadline">{data.subheadline}</p></f:if>
+            </div>
+            <div class="hero-pricing__card">
+                <div class="hero-pricing__price-row">
+                    <span class="hero-pricing__price">{data.price}</span>
+                    <f:if condition="{data.price_period}"><span class="hero-pricing__period">/{data.price_period}</span></f:if>
+                </div>
+                <f:if condition="{data.features}">
+                    <ul class="hero-pricing__features">
+                        <f:for each="{data.features}" as="feature">
+                            <li class="hero-pricing__feature">{feature.label}</li>
+                        </f:for>
+                    </ul>
+                </f:if>
+                <f:if condition="{data.button_text} && {data.button_link.url}">
+                    <s2f:atom.button link="{data.button_link}" size="lg" class="hero-pricing__cta">{data.button_text}</s2f:atom.button>
+                </f:if>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

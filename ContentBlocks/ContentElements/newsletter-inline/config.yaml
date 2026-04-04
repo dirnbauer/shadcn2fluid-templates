@@ -1,0 +1,21 @@
+name: shadcn2fluid/newsletter-inline
+title: Newsletter Inline
+description: Compact inline newsletter signup form
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Text
+    label: Description
+  - identifier: form_action
+    type: Link
+    label: Form Action
+  - identifier: placeholder
+    type: Text
+    label: Placeholder
+  - identifier: button_text
+    type: Text
+    label: Button Text

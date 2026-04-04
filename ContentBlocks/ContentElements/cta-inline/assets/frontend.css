@@ -1,0 +1,24 @@
+.cta-inline__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s2f-spacing-lg);
+    padding: var(--s2f-spacing-lg);
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    background: hsl(var(--card));
+}
+.cta-inline__headline {
+    font-weight: 600;
+    font-size: var(--s2f-text-base);
+}
+.cta-inline__description {
+    font-size: var(--s2f-text-sm);
+    color: hsl(var(--muted-foreground));
+}
+@media (max-width: 768px) {
+    .cta-inline__bar {
+        flex-direction: column;
+        text-align: center;
+    }
+}

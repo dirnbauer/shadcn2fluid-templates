@@ -1,0 +1,30 @@
+name: shadcn2fluid/resource-library
+title: Resource Library
+description: Resource card library for downloads, guides, and references
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: items
+    type: Collection
+    label: Resources
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+      - identifier: type_label
+        type: Text
+        label: Type
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+      - identifier: link
+        type: Link
+        label: Link

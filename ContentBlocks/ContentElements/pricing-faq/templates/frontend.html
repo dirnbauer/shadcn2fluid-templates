@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-pricing-faq" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="pricing-faq">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="pricing-faq__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="pricing-faq__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="pricing-faq__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="pricing-faq__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="pricing-faq__list">
+            <f:for each="{data.questions}" as="item">
+                <details class="pricing-faq__item">
+                    <summary class="pricing-faq__question">{item.question}</summary>
+                    <div class="pricing-faq__answer">
+                        <p>{item.answer}</p>
+                    </div>
+                </details>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

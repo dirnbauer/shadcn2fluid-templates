@@ -1,0 +1,27 @@
+name: shadcn2fluid/footer-app-links
+title: Footer App Links
+description: Footer with app store download buttons and QR code
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: appstore_link
+    type: Link
+    label: App Store Link
+  - identifier: playstore_link
+    type: Link
+    label: Google Play Link
+  - identifier: qr_image
+    type: File
+    label: QR Code Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: copyright
+    type: Text
+    label: Copyright Text

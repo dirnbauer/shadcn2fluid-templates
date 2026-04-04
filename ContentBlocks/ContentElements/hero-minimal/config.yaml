@@ -1,0 +1,19 @@
+name: shadcn2fluid/hero-minimal
+title: Hero Minimal
+description: Clean minimal hero with just headline, subtitle, and single CTA
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: button_text
+    type: Text
+    label: Button Text
+  - identifier: button_link
+    type: Link
+    label: Button Link

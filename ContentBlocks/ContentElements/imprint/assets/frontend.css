@@ -1,0 +1,10 @@
+.imprint { max-width: 800px; margin-inline: auto; }
+.imprint__title { font-size: var(--s2f-text-xl); font-weight: 700; margin-block-end: var(--s2f-spacing-xl); }
+.imprint__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--s2f-spacing-xl); }
+.imprint__block { display: flex; flex-direction: column; gap: var(--s2f-spacing-xs); }
+.imprint__label { font-size: var(--s2f-text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: hsl(var(--muted-foreground)); }
+.imprint__value { font-size: var(--s2f-text-sm); line-height: 1.6; }
+.imprint__address { white-space: pre-line; }
+.imprint__value a { color: hsl(var(--primary)); text-decoration: none; }
+.imprint__value a:hover { text-decoration: underline; }
+.imprint__additional { margin-block-start: var(--s2f-spacing-xl); padding-block-start: var(--s2f-spacing-xl); border-top: 1px solid hsl(var(--border)); font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); line-height: 1.7; }

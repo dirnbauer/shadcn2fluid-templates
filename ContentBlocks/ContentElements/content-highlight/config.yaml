@@ -1,0 +1,43 @@
+name: shadcn2fluid/content-highlight
+title: Content Highlight
+description: Emphasized content block with accent background for key messages
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: content
+    type: Textarea
+    label: Content
+    enableRichtext: true
+    rows: 6
+    required: true
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Background Style
+    items:
+      - label: Muted
+        value: muted
+      - label: Primary
+        value: primary
+      - label: Bordered
+        value: bordered
+    default: muted
+  - identifier: alignment
+    type: Select
+    renderType: selectSingle
+    label: Text Alignment
+    items:
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+    default: left
+  - identifier: link
+    type: Link
+    label: Call to Action Link
+  - identifier: link_text
+    type: Text
+    label: Call to Action Text

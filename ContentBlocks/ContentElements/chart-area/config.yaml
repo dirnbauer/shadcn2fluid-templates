@@ -1,0 +1,42 @@
+name: shadcn2fluid/chart-area
+title: Chart Area
+description: Area chart with gradient fill beneath the line
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: chart_data
+    type: Textarea
+    label: Chart Data (JSON)
+    rows: 6
+    required: true
+  - identifier: color_variant
+    type: Select
+    renderType: selectSingle
+    label: Color
+    items:
+      - label: Primary
+        value: primary
+      - label: Blue
+        value: blue
+      - label: Green
+        value: green
+    default: primary
+  - identifier: fill_opacity
+    type: Select
+    renderType: selectSingle
+    label: Fill Opacity
+    items:
+      - label: Light
+        value: light
+      - label: Medium
+        value: medium
+      - label: Strong
+        value: strong
+    default: medium

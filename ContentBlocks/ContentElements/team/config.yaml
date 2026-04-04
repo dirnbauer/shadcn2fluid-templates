@@ -1,0 +1,53 @@
+name: shadcn2fluid/team
+title: Team
+description: Team member grids with portrait, role, and profile links
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '3'
+  - identifier: members
+    type: Collection
+    label: Team Members
+    minItems: 1
+    fields:
+      - identifier: image
+        type: File
+        label: Portrait
+        allowed: common-image-types
+        maxitems: 1
+      - identifier: name
+        type: Text
+        label: Name
+        required: true
+      - identifier: role
+        type: Text
+        label: Role
+        required: true
+      - identifier: bio
+        type: Textarea
+        label: Bio
+        rows: 3
+      - identifier: profile_link
+        type: Link
+        label: Profile Link

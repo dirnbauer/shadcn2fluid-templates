@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-contact-info" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="contact-info">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.subheadline}">
+            <header class="contact-info__intro">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="contact-info__grid">
+            <f:for each="{data.items}" as="item">
+                <s2f:molecule.card class="contact-info__item">
+                    <f:if condition="{item.icon}"><span class="contact-info__icon">{item.icon}</span></f:if>
+                    <h3 class="contact-info__label">{item.label}</h3>
+                    <f:if condition="{item.link.url}">
+                        <f:then>
+                            <f:link.typolink parameter="{item.link}" class="contact-info__value contact-info__value--link">{item.value}</f:link.typolink>
+                        </f:then>
+                        <f:else>
+                            <p class="contact-info__value">{item.value}</p>
+                        </f:else>
+                    </f:if>
+                </s2f:molecule.card>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

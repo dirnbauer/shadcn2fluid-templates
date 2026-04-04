@@ -1,0 +1,32 @@
+name: shadcn2fluid/data-request-form
+title: Data Request Form
+description: GDPR data subject request form for access, deletion, or portability
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: request_types
+    type: Collection
+    label: Request Types
+    fields:
+      - identifier: label
+        type: Text
+        label: Request Type Label
+        required: true
+      - identifier: value
+        type: Text
+        label: Form Value
+  - identifier: privacy_text
+    type: Textarea
+    label: Privacy Notice Text
+    rows: 2
+  - identifier: submit_text
+    type: Text
+    label: Submit Button Text
+    default: Submit Request

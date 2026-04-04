@@ -1,0 +1,25 @@
+name: shadcn2fluid/social-links
+title: Social Links
+description: Row of social media profile links
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Text
+    label: Description
+  - identifier: links
+    type: Collection
+    label: Social Links
+    minItems: 1
+    fields:
+      - identifier: platform
+        type: Text
+        label: Platform
+        required: true
+      - identifier: url
+        type: Link
+        label: URL
+        required: true

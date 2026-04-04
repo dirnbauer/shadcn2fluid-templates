@@ -1,0 +1,39 @@
+name: shadcn2fluid/sitemap-grid
+title: Sitemap Grid
+description: Visual sitemap grid with grouped page links
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '4'
+  - identifier: groups
+    type: Collection
+    label: Page Groups
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Group Title
+        required: true
+      - identifier: pages
+        type: Collection
+        label: Pages
+        fields:
+          - identifier: label
+            type: Text
+            label: Page Name
+            required: true
+          - identifier: link
+            type: Link
+            label: Link

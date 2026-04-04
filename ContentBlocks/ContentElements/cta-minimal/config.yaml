@@ -1,0 +1,18 @@
+name: shadcn2fluid/cta-minimal
+title: CTA Minimal
+description: Minimal text-only call to action with a single link
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Text
+    label: Description
+  - identifier: cta_text
+    type: Text
+    label: Link Text
+  - identifier: cta_link
+    type: Link
+    label: Link

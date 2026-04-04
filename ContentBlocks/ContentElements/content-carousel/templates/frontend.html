@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-content-carousel" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="content-carousel">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <header class="content-carousel__intro">
+                <s2f:typography.heading level="2">{data.header}</s2f:typography.heading>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="content-carousel__track">
+            <f:for each="{data.items}" as="item">
+                <s2f:molecule.card class="content-carousel__slide">
+                    <f:if condition="{item.image.0}">
+                        <div class="content-carousel__image-wrapper">
+                            <f:image image="{item.image.0}" alt="{item.title}" maxWidth="480" class="content-carousel__image"/>
+                        </div>
+                    </f:if>
+                    <div class="content-carousel__body">
+                        <h3 class="content-carousel__title">
+                            <f:if condition="{item.link.url}">
+                                <f:then><f:link.typolink parameter="{item.link}">{item.title}</f:link.typolink></f:then>
+                                <f:else>{item.title}</f:else>
+                            </f:if>
+                        </h3>
+                        <f:if condition="{item.content}">
+                            <p class="content-carousel__text">{item.content}</p>
+                        </f:if>
+                    </div>
+                </s2f:molecule.card>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

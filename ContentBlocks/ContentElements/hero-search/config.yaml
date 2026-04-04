@@ -1,0 +1,29 @@
+name: shadcn2fluid/hero-search
+title: Hero Search
+description: Hero with prominent search bar for platforms and directories
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: form_action
+    type: Link
+    label: Search Action URL
+  - identifier: placeholder
+    type: Text
+    label: Search Placeholder
+  - identifier: categories
+    type: Collection
+    label: Category Filters
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+      - identifier: link
+        type: Link
+        label: Link

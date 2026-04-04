@@ -1,0 +1,56 @@
+.hero-saas {
+    padding-block: var(--s2f-spacing-16);
+}
+.hero-saas__content {
+    text-align: center;
+    max-width: 48rem;
+    margin-inline: auto;
+    margin-bottom: var(--s2f-spacing-10);
+}
+.hero-saas__headline {
+    font-size: var(--s2f-text-5xl);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: var(--s2f-spacing-4);
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-saas__subheadline {
+    font-size: var(--s2f-text-xl);
+    color: var(--s2f-muted-foreground);
+    margin-bottom: var(--s2f-spacing-6);
+}
+.hero-saas__actions {
+    display: flex;
+    gap: var(--s2f-spacing-3);
+    justify-content: center;
+}
+.hero-saas__preview {
+    margin-bottom: var(--s2f-spacing-10);
+}
+.hero-saas__dashboard {
+    width: 100%;
+    height: auto;
+    border-radius: var(--s2f-radius-xl);
+    border: 1px solid var(--s2f-border);
+    box-shadow: var(--s2f-shadow-xl);
+}
+.hero-saas__trust {
+    text-align: center;
+}
+.hero-saas__trust-label {
+    font-size: var(--s2f-text-sm);
+    color: var(--s2f-muted-foreground);
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-saas__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s2f-spacing-8);
+    flex-wrap: wrap;
+}
+.hero-saas__logo {
+    font-size: var(--s2f-text-sm);
+    font-weight: 500;
+    color: var(--s2f-muted-foreground);
+}

@@ -1,0 +1,42 @@
+name: shadcn2fluid/client-list
+title: Client List
+description: Named list of clients with optional logos and industries
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: clients
+    type: Collection
+    label: Clients
+    minItems: 1
+    fields:
+      - identifier: name
+        type: Text
+        label: Client Name
+        required: true
+
+      - identifier: industry
+        type: Text
+        label: Industry
+
+      - identifier: logo
+        type: File
+        label: Logo
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: link
+        type: Link
+        label: Website Link

@@ -1,0 +1,43 @@
+name: shadcn2fluid/alert
+title: Alert
+description: Alert boxes for important messages, tips, warnings
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Alert Type
+    items:
+      - label: Default
+        value: default
+      - label: Info
+        value: info
+      - label: Success
+        value: success
+      - label: Warning
+        value: warning
+      - label: Destructive
+        value: destructive
+    default: default
+
+  - identifier: content
+    type: Textarea
+    label: Alert Content
+    enableRichtext: true
+    rows: 3
+    required: true
+
+  - identifier: show_icon
+    type: Checkbox
+    label: Show Icon
+    default: 1
+
+  - identifier: dismissible
+    type: Checkbox
+    label: Dismissible
+    default: 0

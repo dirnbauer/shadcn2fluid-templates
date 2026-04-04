@@ -1,0 +1,30 @@
+name: shadcn2fluid/feature-timeline
+title: Feature Timeline
+description: Vertical timeline showcasing features with progressive steps
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Timeline Steps
+    minItems: 2
+    fields:
+      - identifier: step
+        type: Text
+        label: Step Label
+        required: true
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 3

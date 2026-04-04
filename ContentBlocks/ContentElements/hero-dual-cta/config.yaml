@@ -1,0 +1,39 @@
+name: shadcn2fluid/hero-dual-cta
+title: Hero Dual CTA
+description: Hero emphasizing two equal call-to-action paths
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: left_title
+    type: Text
+    label: Left CTA Title
+  - identifier: left_description
+    type: Textarea
+    label: Left CTA Description
+    rows: 2
+  - identifier: left_button_text
+    type: Text
+    label: Left Button Text
+  - identifier: left_button_link
+    type: Link
+    label: Left Button Link
+  - identifier: right_title
+    type: Text
+    label: Right CTA Title
+  - identifier: right_description
+    type: Textarea
+    label: Right CTA Description
+    rows: 2
+  - identifier: right_button_text
+    type: Text
+    label: Right Button Text
+  - identifier: right_button_link
+    type: Link
+    label: Right Button Link

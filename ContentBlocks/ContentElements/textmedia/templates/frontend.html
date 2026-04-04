@@ -1,0 +1,80 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-textmedia" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="textmedia textmedia--{data.layout}">
+    <s2f:layout.container>
+        <f:if condition="{data.layout} == 'media-above'">
+            <f:if condition="{data.media.0}">
+                <div class="textmedia__media-wrapper">
+                    <f:image image="{data.media.0}" alt="{data.header}" maxWidth="1200"
+                             class="textmedia__media {f:if(condition: data.media_rounded, then: 'textmedia__media--rounded')}"/>
+                </div>
+            </f:if>
+        </f:if>
+
+        <f:if condition="{data.layout} == 'media-left' || {data.layout} == 'media-right'">
+            <div class="textmedia__grid">
+                <f:if condition="{data.layout} == 'media-left'">
+                    <f:if condition="{data.media.0}">
+                        <div class="textmedia__media-wrapper">
+                            <f:image image="{data.media.0}" alt="{data.header}" maxWidth="640"
+                                     class="textmedia__media {f:if(condition: data.media_rounded, then: 'textmedia__media--rounded')}"/>
+                        </div>
+                    </f:if>
+                </f:if>
+
+                <div class="textmedia__content">
+                    <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                    <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+                    <f:if condition="{data.content}">
+                        <div class="textmedia__richtext"><f:format.html>{data.content}</f:format.html></div>
+                    </f:if>
+                    <f:if condition="{data.button_text} && {data.button_link.url}">
+                        <div class="textmedia__actions">
+                            <f:link.typolink parameter="{data.button_link}" class="textmedia__button">{data.button_text}</f:link.typolink>
+                        </div>
+                    </f:if>
+                </div>
+
+                <f:if condition="{data.layout} == 'media-right'">
+                    <f:if condition="{data.media.0}">
+                        <div class="textmedia__media-wrapper">
+                            <f:image image="{data.media.0}" alt="{data.header}" maxWidth="640"
+                                     class="textmedia__media {f:if(condition: data.media_rounded, then: 'textmedia__media--rounded')}"/>
+                        </div>
+                    </f:if>
+                </f:if>
+            </div>
+        </f:if>
+
+        <f:if condition="{data.layout} == 'media-above' || {data.layout} == 'media-below'">
+            <div class="textmedia__content">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+                <f:if condition="{data.content}">
+                    <div class="textmedia__richtext"><f:format.html>{data.content}</f:format.html></div>
+                </f:if>
+                <f:if condition="{data.button_text} && {data.button_link.url}">
+                    <div class="textmedia__actions">
+                        <f:link.typolink parameter="{data.button_link}" class="textmedia__button">{data.button_text}</f:link.typolink>
+                    </div>
+                </f:if>
+            </div>
+        </f:if>
+
+        <f:if condition="{data.layout} == 'media-below'">
+            <f:if condition="{data.media.0}">
+                <div class="textmedia__media-wrapper">
+                    <f:image image="{data.media.0}" alt="{data.header}" maxWidth="1200"
+                             class="textmedia__media {f:if(condition: data.media_rounded, then: 'textmedia__media--rounded')}"/>
+                </div>
+            </f:if>
+        </f:if>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

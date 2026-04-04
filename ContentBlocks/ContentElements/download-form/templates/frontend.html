@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-download-form" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="download-form">
+    <s2f:layout.container>
+        <div class="download-form__layout">
+            <div class="download-form__content">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.description}"><s2f:typography.text variant="muted">{data.description}</s2f:typography.text></f:if>
+                <f:if condition="{data.resource_title}"><p class="download-form__resource">{data.resource_title}</p></f:if>
+            </div>
+            <s2f:molecule.card class="download-form__card">
+                <f:if condition="{data.image}">
+                    <div class="download-form__preview">
+                        <f:for each="{data.image}" as="fileReference">
+                            <img src="{f:uri.image(image: fileReference, maxWidth: 400)}" alt="" class="download-form__image"/>
+                        </f:for>
+                    </div>
+                </f:if>
+                <form class="download-form__form" action="{data.form_action.url}" method="post">
+                    <label class="download-form__field">
+                        <span class="download-form__label">Email</span>
+                        <input class="download-form__input" type="email" name="email" placeholder="you@example.com" required="required"/>
+                    </label>
+                    <s2f:atom.button type="submit">{data.button_text -> f:or(alternative: 'Download now')}</s2f:atom.button>
+                </form>
+            </s2f:molecule.card>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

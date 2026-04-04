@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-feature-carousel" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="feature-carousel">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <header class="feature-carousel__intro">
+                <s2f:typography.heading level="2">{data.header}</s2f:typography.heading>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="feature-carousel__track">
+            <f:for each="{data.items}" as="item">
+                <s2f:molecule.card class="feature-carousel__slide">
+                    <f:if condition="{item.icon}">
+                        <span class="feature-carousel__icon" aria-hidden="true">{item.icon}</span>
+                    </f:if>
+                    <h3 class="feature-carousel__title">
+                        <f:if condition="{item.link.url}">
+                            <f:then><f:link.typolink parameter="{item.link}">{item.title}</f:link.typolink></f:then>
+                            <f:else>{item.title}</f:else>
+                        </f:if>
+                    </h3>
+                    <f:if condition="{item.description}">
+                        <p class="feature-carousel__description">{item.description}</p>
+                    </f:if>
+                </s2f:molecule.card>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

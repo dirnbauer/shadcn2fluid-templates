@@ -1,0 +1,30 @@
+name: shadcn2fluid/search-header
+title: Search Header
+description: Header block with headline, supporting text, and search form
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: form_action
+    type: Link
+    label: Form Action
+
+  - identifier: placeholder
+    type: Text
+    label: Placeholder
+
+  - identifier: button_text
+    type: Text
+    label: Button Text

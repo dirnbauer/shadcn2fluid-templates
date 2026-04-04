@@ -1,0 +1,34 @@
+name: shadcn2fluid/content-carousel
+title: Content Carousel
+description: Horizontally scrollable content cards with snap scroll
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Slides
+    minItems: 3
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: content
+        type: Textarea
+        label: Content
+        rows: 3
+      - identifier: image
+        type: File
+        label: Image
+        allowed: common-image-types
+        maxitems: 1
+      - identifier: link
+        type: Link
+        label: Link

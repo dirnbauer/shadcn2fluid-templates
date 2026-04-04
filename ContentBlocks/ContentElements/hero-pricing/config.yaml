@@ -1,0 +1,32 @@
+name: shadcn2fluid/hero-pricing
+title: Hero Pricing
+description: Hero with inline pricing highlight and CTA
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: price
+    type: Text
+    label: Price
+  - identifier: price_period
+    type: Text
+    label: Price Period
+  - identifier: features
+    type: Collection
+    label: Features
+    fields:
+      - identifier: label
+        type: Text
+        label: Feature
+  - identifier: button_text
+    type: Text
+    label: Button Text
+  - identifier: button_link
+    type: Link
+    label: Button Link

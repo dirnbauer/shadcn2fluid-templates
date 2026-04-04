@@ -1,0 +1,42 @@
+name: shadcn2fluid/counter
+title: Counter
+description: Animated number counter with label and optional prefix/suffix
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: items
+    type: Collection
+    label: Counters
+    minItems: 1
+    fields:
+      - identifier: value
+        type: Number
+        label: Target Value
+        required: true
+      - identifier: prefix
+        type: Text
+        label: Prefix
+        description: e.g. $ or +
+      - identifier: suffix
+        type: Text
+        label: Suffix
+        description: e.g. %, K, M
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '3'

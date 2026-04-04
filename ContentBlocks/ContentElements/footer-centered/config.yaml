@@ -1,0 +1,31 @@
+name: shadcn2fluid/footer-centered
+title: Footer Centered
+description: Centered footer with logo, links, and copyright
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: brand
+    type: Text
+    label: Brand Name
+  - identifier: logo
+    type: File
+    label: Logo
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: links
+    type: Collection
+    label: Links
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: link
+        type: Link
+        label: Link
+  - identifier: copyright
+    type: Text
+    label: Copyright Text

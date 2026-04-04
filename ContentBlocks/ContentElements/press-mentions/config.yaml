@@ -1,0 +1,42 @@
+name: shadcn2fluid/press-mentions
+title: Press Mentions
+description: Media coverage and press mention highlights
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: mentions
+    type: Collection
+    label: Press Mentions
+    minItems: 1
+    fields:
+      - identifier: publication
+        type: Text
+        label: Publication Name
+        required: true
+
+      - identifier: logo
+        type: File
+        label: Publication Logo
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: quote
+        type: Textarea
+        label: Quote / Excerpt
+        rows: 2
+
+      - identifier: date
+        type: Text
+        label: Date
+
+      - identifier: link
+        type: Link
+        label: Article Link

@@ -1,0 +1,43 @@
+name: shadcn2fluid/product-card
+title: Product Card
+description: Single product showcase card with image, price, and CTA
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: image
+    type: File
+    label: Product Image
+    allowed: common-image-types
+    maxitems: 1
+
+  - identifier: badge
+    type: Text
+    label: Badge Text
+    description: e.g. New, Sale, Popular
+
+  - identifier: price
+    type: Text
+    label: Price
+    required: true
+
+  - identifier: original_price
+    type: Text
+    label: Original Price (strikethrough)
+
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+
+  - identifier: button_text
+    type: Text
+    label: Button Text
+    default: Add to Cart
+
+  - identifier: button_link
+    type: Link
+    label: Button Link

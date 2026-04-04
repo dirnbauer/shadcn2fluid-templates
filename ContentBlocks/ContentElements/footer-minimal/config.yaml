@@ -1,0 +1,24 @@
+name: shadcn2fluid/footer-minimal
+title: Footer Minimal
+description: Compact single-line footer with copyright and a few links
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: copyright
+    type: Text
+    label: Copyright Text
+    required: true
+  - identifier: links
+    type: Collection
+    label: Links
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: link
+        type: Link
+        label: Link

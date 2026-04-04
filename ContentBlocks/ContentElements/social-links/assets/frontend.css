@@ -1,0 +1,24 @@
+.social-links__content { text-align: center; }
+.social-links__list {
+    display: flex;
+    justify-content: center;
+    gap: var(--s2f-spacing-md);
+    flex-wrap: wrap;
+    margin-block-start: var(--s2f-spacing-lg);
+}
+.social-links__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--s2f-spacing-xs) var(--s2f-spacing-md);
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    font-size: var(--s2f-text-sm);
+    font-weight: 500;
+    text-decoration: none;
+    color: hsl(var(--foreground));
+    transition: background 0.15s;
+}
+.social-links__item:hover {
+    background: hsl(var(--muted));
+}

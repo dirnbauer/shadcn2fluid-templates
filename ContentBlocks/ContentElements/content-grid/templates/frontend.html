@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-content-grid" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="content-grid">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <s2f:typography.heading level="2" class="content-grid__headline">{data.header}</s2f:typography.heading>
+        </f:if>
+
+        <div class="content-grid__grid content-grid__grid--cols-{data.columns -> f:or(alternative: '2')}">
+            <f:for each="{data.items}" as="item">
+                <s2f:molecule.card class="content-grid__item">
+                    <f:if condition="{item.title}"><h3 class="content-grid__title">{item.title}</h3></f:if>
+                    <f:if condition="{item.content}">
+                        <div class="content-grid__content"><f:format.html>{item.content}</f:format.html></div>
+                    </f:if>
+                    <f:if condition="{item.link.url}">
+                        <f:link.typolink parameter="{item.link}" class="content-grid__link">Read more</f:link.typolink>
+                    </f:if>
+                </s2f:molecule.card>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

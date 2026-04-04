@@ -1,0 +1,37 @@
+name: shadcn2fluid/product-feature
+title: Product Feature
+description: Product feature highlight with image and benefit list
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+
+  - identifier: image
+    type: File
+    label: Product Image
+    allowed: common-image-types
+    maxitems: 1
+
+  - identifier: features
+    type: Textarea
+    label: Feature Benefits (one per line)
+    rows: 6
+
+  - identifier: button_text
+    type: Text
+    label: Button Text
+
+  - identifier: button_link
+    type: Link
+    label: Button Link

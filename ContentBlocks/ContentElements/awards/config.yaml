@@ -1,0 +1,46 @@
+name: shadcn2fluid/awards
+title: Awards
+description: Awards and recognition badges display
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: awards
+    type: Collection
+    label: Awards
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Award Title
+        required: true
+
+      - identifier: year
+        type: Text
+        label: Year
+
+      - identifier: organization
+        type: Text
+        label: Awarding Organization
+
+      - identifier: image
+        type: File
+        label: Award Badge/Logo
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: link
+        type: Link
+        label: Link

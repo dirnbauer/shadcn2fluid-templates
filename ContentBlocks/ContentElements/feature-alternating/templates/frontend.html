@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-feature-alternating" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="feature-alternating">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <header class="feature-alternating__intro">
+                <s2f:typography.heading level="2">{data.header}</s2f:typography.heading>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="feature-alternating__rows">
+            <f:for each="{data.items}" as="item" iteration="iter">
+                <div class="feature-alternating__row {f:if(condition: iter.isEven, then: 'feature-alternating__row--reverse')}">
+                    <div class="feature-alternating__copy">
+                        <h3 class="feature-alternating__title">{item.title}</h3>
+                        <f:if condition="{item.description}">
+                            <p class="feature-alternating__description">{item.description}</p>
+                        </f:if>
+                        <f:if condition="{item.link.url}">
+                            <f:link.typolink parameter="{item.link}" class="feature-alternating__link">Learn more</f:link.typolink>
+                        </f:if>
+                    </div>
+                    <f:if condition="{item.image.0}">
+                        <div class="feature-alternating__media">
+                            <f:image image="{item.image.0}" alt="{item.title}" maxWidth="640" class="feature-alternating__image"/>
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

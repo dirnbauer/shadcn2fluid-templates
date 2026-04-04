@@ -1,0 +1,57 @@
+name: shadcn2fluid/testimonial-carousel
+title: Testimonial Carousel
+description: Sliding carousel of customer testimonials
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: autoplay
+    type: Checkbox
+    label: Autoplay
+    default: 1
+
+  - identifier: testimonials
+    type: Collection
+    label: Testimonials
+    minItems: 2
+    fields:
+      - identifier: quote
+        type: Textarea
+        label: Quote
+        rows: 3
+        required: true
+
+      - identifier: author_name
+        type: Text
+        label: Author Name
+        required: true
+
+      - identifier: author_title
+        type: Text
+        label: Author Title
+
+      - identifier: author_image
+        type: File
+        label: Author Photo
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: rating
+        type: Select
+        renderType: selectSingle
+        label: Star Rating
+        items:
+          - label: No Rating
+            value: '0'
+          - label: 5 Stars
+            value: '5'
+          - label: 4 Stars
+            value: '4'
+        default: '0'

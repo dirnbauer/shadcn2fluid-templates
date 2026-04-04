@@ -1,0 +1,45 @@
+name: shadcn2fluid/cta
+title: Call to Action
+description: Prominent call-to-action section with headline and buttons
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Style
+    items:
+      - label: Centered
+        value: centered
+      - label: Split
+        value: split
+      - label: Banner
+        value: banner
+    default: centered
+  - identifier: badge_text
+    type: Text
+    label: Badge Text
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: secondary_button_text
+    type: Text
+    label: Secondary Button Text
+  - identifier: secondary_button_link
+    type: Link
+    label: Secondary Button Link
+  - identifier: image
+    type: File
+    label: Image
+    allowed: common-image-types
+    maxitems: 1

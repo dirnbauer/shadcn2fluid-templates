@@ -1,0 +1,67 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-contact" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="contact">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="contact__intro">
+                <f:if condition="{data.eyebrow}"><span class="contact__eyebrow">{data.eyebrow}</span></f:if>
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="contact__grid">
+            <s2f:molecule.card class="contact__info">
+                <f:if condition="{data.info_title}"><h3 class="contact__info-title">{data.info_title}</h3></f:if>
+                <f:if condition="{data.info_text}"><p class="contact__info-text">{data.info_text}</p></f:if>
+                <f:if condition="{data.contact_items}">
+                    <ul class="contact__list">
+                        <f:for each="{data.contact_items}" as="item">
+                            <li class="contact__list-item">
+                                <span class="contact__list-label">{item.label}</span>
+                                <f:if condition="{item.link.url}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{item.link}" class="contact__list-value">{item.value}</f:link.typolink>
+                                    </f:then>
+                                    <f:else>
+                                        <span class="contact__list-value">{item.value}</span>
+                                    </f:else>
+                                </f:if>
+                            </li>
+                        </f:for>
+                    </ul>
+                </f:if>
+            </s2f:molecule.card>
+
+            <s2f:molecule.card class="contact__form-card">
+                <f:if condition="{data.form_title}"><h3 class="contact__form-title">{data.form_title}</h3></f:if>
+                <form class="contact__form" action="{data.form_action.url}" method="post">
+                    <div class="contact__field-grid">
+                        <label class="contact__field">
+                            <span class="contact__label">Name</span>
+                            <input class="contact__input" type="text" name="name" placeholder="Your name"/>
+                        </label>
+                        <label class="contact__field">
+                            <span class="contact__label">Email</span>
+                            <input class="contact__input" type="email" name="email" placeholder="you@example.com"/>
+                        </label>
+                    </div>
+                    <label class="contact__field">
+                        <span class="contact__label">Message</span>
+                        <textarea class="contact__textarea" name="message" rows="5" placeholder="Tell us about your project"></textarea>
+                    </label>
+                    <div class="contact__actions">
+                        <s2f:atom.button type="submit">Send inquiry</s2f:atom.button>
+                    </div>
+                </form>
+            </s2f:molecule.card>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

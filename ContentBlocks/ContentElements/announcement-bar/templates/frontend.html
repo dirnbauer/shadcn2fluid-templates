@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-announcement-bar" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="announcement-bar announcement-bar--{data.variant -> f:or(alternative: 'default')}">
+    <s2f:layout.container>
+        <div class="announcement-bar__inner">
+            <p class="announcement-bar__message">
+                <span>{data.message}</span>
+                <f:if condition="{data.supporting_text}">
+                    <small class="announcement-bar__supporting">{data.supporting_text}</small>
+                </f:if>
+            </p>
+            <f:if condition="{data.link_text} && {data.link.url}">
+                <f:link.typolink parameter="{data.link}" class="announcement-bar__link">
+                    {data.link_text}
+                </f:link.typolink>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

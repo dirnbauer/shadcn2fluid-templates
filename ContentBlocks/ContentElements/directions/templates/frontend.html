@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-directions" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="directions">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.subheadline}">
+            <header class="directions__intro">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="directions__list">
+            <f:for each="{data.routes}" as="route">
+                <s2f:molecule.card class="directions__route">
+                    <h3 class="directions__mode">{route.mode}</h3>
+                    <p class="directions__description">{route.description}</p>
+                </s2f:molecule.card>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

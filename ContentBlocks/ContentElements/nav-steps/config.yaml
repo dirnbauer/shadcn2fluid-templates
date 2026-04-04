@@ -1,0 +1,42 @@
+name: shadcn2fluid/nav-steps
+title: Steps Navigation
+description: Horizontal step indicator for multi-step forms and wizards
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Style
+    items:
+      - label: Numbered
+        value: numbered
+      - label: Dots
+        value: dots
+    default: numbered
+  - identifier: steps
+    type: Collection
+    label: Steps
+    minItems: 2
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+      - identifier: link
+        type: Link
+        label: Link
+      - identifier: status
+        type: Select
+        renderType: selectSingle
+        label: Status
+        items:
+          - label: Pending
+            value: pending
+          - label: Current
+            value: current
+          - label: Completed
+            value: completed
+        default: pending

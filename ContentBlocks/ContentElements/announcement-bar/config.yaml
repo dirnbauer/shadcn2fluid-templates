@@ -1,0 +1,39 @@
+name: shadcn2fluid/announcement-bar
+title: Announcement Bar
+description: Slim top-of-page announcement or promo bar with optional CTA link
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Style
+    items:
+      - label: Default
+        value: default
+      - label: Accent
+        value: accent
+      - label: Outline
+        value: outline
+    default: default
+
+  - identifier: message
+    type: Text
+    label: Message
+    required: true
+
+  - identifier: supporting_text
+    type: Text
+    label: Supporting Text
+
+  - identifier: link_text
+    type: Text
+    label: Link Text
+
+  - identifier: link
+    type: Link
+    label: Link

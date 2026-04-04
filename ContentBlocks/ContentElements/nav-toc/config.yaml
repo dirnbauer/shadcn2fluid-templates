@@ -1,0 +1,30 @@
+name: shadcn2fluid/nav-toc
+title: Table of Contents
+description: Vertical table-of-contents navigation for long-form content
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: items
+    type: Collection
+    label: TOC Items
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+      - identifier: anchor
+        type: Text
+        label: Anchor ID
+      - identifier: level
+        type: Select
+        renderType: selectSingle
+        label: Level
+        items:
+          - label: Heading 2
+            value: h2
+          - label: Heading 3
+            value: h3
+        default: h2

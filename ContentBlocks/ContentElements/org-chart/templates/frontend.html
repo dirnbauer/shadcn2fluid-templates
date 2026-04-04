@@ -1,0 +1,35 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-org-chart" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="org-chart">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.subheadline}">
+            <header class="org-chart__intro">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="org-chart__levels">
+            <f:for each="{data.levels}" as="level">
+                <div class="org-chart__level">
+                    <f:if condition="{level.level_label}"><h3 class="org-chart__level-label">{level.level_label}</h3></f:if>
+                    <div class="org-chart__row">
+                        <f:for each="{level.people}" as="person">
+                            <s2f:molecule.card class="org-chart__person">
+                                <h4 class="org-chart__name">{person.name}</h4>
+                                <f:if condition="{person.role}"><p class="org-chart__role">{person.role}</p></f:if>
+                            </s2f:molecule.card>
+                        </f:for>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

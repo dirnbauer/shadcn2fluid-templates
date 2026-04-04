@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-social-links" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="social-links">
+    <s2f:layout.container>
+        <div class="social-links__content">
+            <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+            <f:if condition="{data.description}"><s2f:typography.text variant="muted">{data.description}</s2f:typography.text></f:if>
+            <div class="social-links__list">
+                <f:for each="{data.links}" as="link">
+                    <f:link.typolink parameter="{link.url}" class="social-links__item">{link.platform}</f:link.typolink>
+                </f:for>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

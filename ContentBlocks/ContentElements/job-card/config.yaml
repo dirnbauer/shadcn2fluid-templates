@@ -1,0 +1,25 @@
+name: shadcn2fluid/job-card
+title: Job Card
+description: Single featured job posting with details and apply button
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Job Title
+  - identifier: department
+    type: Text
+    label: Department
+  - identifier: location
+    type: Text
+    label: Location
+  - identifier: type
+    type: Text
+    label: Employment Type
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 4
+  - identifier: apply_link
+    type: Link
+    label: Apply Link

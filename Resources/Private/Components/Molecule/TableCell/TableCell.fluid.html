@@ -1,0 +1,11 @@
+<f:argument name="header" type="bool" optional="{true}" default="{false}" />
+<f:argument name="class" type="string" optional="{true}" default="" />
+
+<f:if condition="{header}">
+    <f:then>
+        <th class="table__head {class}"><f:slot /></th>
+    </f:then>
+    <f:else>
+        <td class="table__cell {class}"><f:slot /></td>
+    </f:else>
+</f:if>

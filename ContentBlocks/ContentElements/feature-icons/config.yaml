@@ -1,0 +1,36 @@
+name: shadcn2fluid/feature-icons
+title: Feature Icons
+description: Compact icon-driven feature grid with minimal text
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+      - label: 6 Columns
+        value: '6'
+    default: '4'
+  - identifier: items
+    type: Collection
+    label: Icon Features
+    minItems: 1
+    fields:
+      - identifier: icon
+        type: Text
+        label: Icon Emoji or Symbol
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Text
+        label: Short Description

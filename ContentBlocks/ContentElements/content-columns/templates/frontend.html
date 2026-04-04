@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-content-columns" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="content-columns">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <s2f:typography.heading level="2" class="content-columns__headline">{data.header}</s2f:typography.heading>
+        </f:if>
+
+        <div class="content-columns__grid content-columns__grid--cols-{data.columns -> f:or(alternative: '2')}">
+            <f:for each="{data.items}" as="item">
+                <div class="content-columns__col">
+                    <f:format.html>{item.content}</f:format.html>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

@@ -1,0 +1,35 @@
+name: shadcn2fluid/legal-links
+title: Legal Links
+description: Inline legal link bar for privacy, terms, imprint
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: links
+    type: Collection
+    label: Legal Links
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: link
+        type: Link
+        label: Link
+  - identifier: separator
+    type: Select
+    renderType: selectSingle
+    label: Separator
+    items:
+      - label: Dot
+        value: dot
+      - label: Pipe
+        value: pipe
+      - label: Slash
+        value: slash
+      - label: None
+        value: none
+    default: dot

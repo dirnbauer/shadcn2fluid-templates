@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+<f:asset.css identifier="s2f-hero-dual-cta" href="{cb:assetPath()}/frontend.css"/>
+<s2f:layout.section class="hero-dual-cta">
+    <s2f:layout.container>
+        <header class="hero-dual-cta__header">
+            <f:if condition="{data.header}"><h1 class="hero-dual-cta__headline">{data.header}</h1></f:if>
+            <f:if condition="{data.subheadline}"><p class="hero-dual-cta__subheadline">{data.subheadline}</p></f:if>
+        </header>
+        <div class="hero-dual-cta__grid">
+            <div class="hero-dual-cta__card">
+                <f:if condition="{data.left_title}"><h2 class="hero-dual-cta__card-title">{data.left_title}</h2></f:if>
+                <f:if condition="{data.left_description}"><p class="hero-dual-cta__card-desc">{data.left_description}</p></f:if>
+                <f:if condition="{data.left_button_text} && {data.left_button_link.url}">
+                    <s2f:atom.button link="{data.left_button_link}" size="lg">{data.left_button_text}</s2f:atom.button>
+                </f:if>
+            </div>
+            <div class="hero-dual-cta__card">
+                <f:if condition="{data.right_title}"><h2 class="hero-dual-cta__card-title">{data.right_title}</h2></f:if>
+                <f:if condition="{data.right_description}"><p class="hero-dual-cta__card-desc">{data.right_description}</p></f:if>
+                <f:if condition="{data.right_button_text} && {data.right_button_link.url}">
+                    <s2f:atom.button link="{data.right_button_link}" variant="outline" size="lg">{data.right_button_text}</s2f:atom.button>
+                </f:if>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

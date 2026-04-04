@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-navbar-icon" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="navbar-icon">
+    <s2f:layout.container>
+        <nav class="navbar-icon__inner" aria-label="Icon navigation">
+            <div class="navbar-icon__brand">
+                <f:if condition="{data.brand_link.url}">
+                    <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-icon__brand-link">{data.brand}</f:link.typolink></f:then>
+                    <f:else><span class="navbar-icon__brand-link">{data.brand}</span></f:else>
+                </f:if>
+            </div>
+            <ul class="navbar-icon__nav">
+                <f:for each="{data.nav_items}" as="item">
+                    <li>
+                        <f:if condition="{item.link.url}">
+                            <f:link.typolink parameter="{item.link}" class="navbar-icon__link" title="{item.label}">
+                                <span class="navbar-icon__icon" aria-hidden="true">{item.icon}</span>
+                                <span class="navbar-icon__label">{item.label}</span>
+                            </f:link.typolink>
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+            <f:if condition="{data.button_text} && {data.button_link.url}">
+                <s2f:atom.button link="{data.button_link}" size="sm">{data.button_text}</s2f:atom.button>
+            </f:if>
+        </nav>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

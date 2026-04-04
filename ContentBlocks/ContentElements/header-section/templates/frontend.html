@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-header-section" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="header-section header-section--{data.variant -> f:or(alternative: 'center')}">
+    <s2f:layout.container>
+        <header class="header-section__inner">
+            <f:if condition="{data.eyebrow}">
+                <span class="header-section__eyebrow">{data.eyebrow}</span>
+            </f:if>
+            <f:if condition="{data.header}">
+                <h2 class="header-section__title">{data.header}</h2>
+            </f:if>
+            <f:if condition="{data.subheadline}">
+                <p class="header-section__subtitle">{data.subheadline}</p>
+            </f:if>
+        </header>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

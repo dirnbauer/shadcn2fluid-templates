@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-quote" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="quote-section">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <s2f:typography.heading level="2" class="quote-section__headline">{data.header}</s2f:typography.heading>
+        </f:if>
+
+        <figure class="quote quote--{data.variant -> f:or(alternative: 'bordered')}">
+            <blockquote class="quote__text">
+                <p>{data.quote_text}</p>
+            </blockquote>
+            <f:if condition="{data.author}">
+                <figcaption class="quote__attribution">
+                    <span class="quote__author">{data.author}</span>
+                    <f:if condition="{data.role}">
+                        <span class="quote__role">{data.role}</span>
+                    </f:if>
+                </figcaption>
+            </f:if>
+        </figure>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

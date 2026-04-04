@@ -1,0 +1,35 @@
+.team__intro {
+    text-align: center;
+    margin-block-end: var(--s2f-spacing-xl);
+}
+.team__eyebrow {
+    font-size: var(--s2f-text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(var(--primary));
+}
+.team__grid {
+    display: grid;
+    gap: var(--s2f-spacing-lg);
+}
+.team__grid--cols-2 { grid-template-columns: repeat(2, 1fr); }
+.team__grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
+.team__grid--cols-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 768px) {
+    .team__grid { grid-template-columns: 1fr; }
+}
+.team__image-wrapper { overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; }
+.team__image { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.team__content { padding: var(--s2f-spacing-md); }
+.team__name { font-weight: 600; }
+.team__role {
+    font-size: var(--s2f-text-sm);
+    color: hsl(var(--muted-foreground));
+}
+.team__bio {
+    font-size: var(--s2f-text-sm);
+    color: hsl(var(--muted-foreground));
+    margin-block-start: var(--s2f-spacing-xs);
+}
+.team__actions { margin-block-start: var(--s2f-spacing-sm); }

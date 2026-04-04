@@ -1,0 +1,30 @@
+name: shadcn2fluid/feature-video
+title: Feature Video
+description: Feature presentation with embedded video demonstration
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: video_url
+    type: Text
+    label: Video URL
+    description: YouTube or Vimeo embed URL
+  - identifier: video_file
+    type: File
+    label: Video File
+    allowed: common-media-types
+    maxitems: 1
+  - identifier: poster
+    type: File
+    label: Poster Image
+    allowed: common-image-types
+    maxitems: 1

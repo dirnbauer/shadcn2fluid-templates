@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-newsletter-inline" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="newsletter-inline">
+    <s2f:layout.container>
+        <div class="newsletter-inline__bar">
+            <div class="newsletter-inline__text">
+                <f:if condition="{data.header}"><h3 class="newsletter-inline__headline">{data.header}</h3></f:if>
+                <f:if condition="{data.description}"><p class="newsletter-inline__description">{data.description}</p></f:if>
+            </div>
+            <form class="newsletter-inline__form" action="{data.form_action.url}" method="post">
+                <input class="newsletter-inline__input" type="email" name="email" placeholder="{data.placeholder -> f:or(alternative: 'Enter your email')}"/>
+                <s2f:atom.button type="submit">{data.button_text -> f:or(alternative: 'Subscribe')}</s2f:atom.button>
+            </form>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

@@ -1,0 +1,34 @@
+name: shadcn2fluid/pricing-faq
+title: Pricing FAQ
+description: Frequently asked questions about pricing and billing
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: questions
+    type: Collection
+    label: Questions
+    minItems: 1
+    fields:
+      - identifier: question
+        type: Text
+        label: Question
+        required: true
+
+      - identifier: answer
+        type: Textarea
+        label: Answer
+        rows: 3
+        required: true

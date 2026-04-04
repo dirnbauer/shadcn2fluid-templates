@@ -1,0 +1,49 @@
+name: shadcn2fluid/stats-counter
+title: Stats Counter
+description: Animated counting statistics with large numbers
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '3'
+
+  - identifier: counters
+    type: Collection
+    label: Counters
+    minItems: 1
+    fields:
+      - identifier: target_value
+        type: Text
+        label: Target Value
+        required: true
+
+      - identifier: suffix
+        type: Text
+        label: Suffix
+        description: e.g. +, %, K
+
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2

@@ -1,0 +1,29 @@
+name: shadcn2fluid/stats-inline
+title: Stats Inline
+description: Compact inline stats row for banners and sections
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: separator
+    type: Checkbox
+    label: Show Separators
+    default: 1
+
+  - identifier: stats
+    type: Collection
+    label: Stats
+    minItems: 2
+    fields:
+      - identifier: value
+        type: Text
+        label: Value
+        required: true
+
+      - identifier: label
+        type: Text
+        label: Label
+        required: true

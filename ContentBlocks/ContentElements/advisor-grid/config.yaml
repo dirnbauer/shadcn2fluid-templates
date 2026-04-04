@@ -1,0 +1,33 @@
+name: shadcn2fluid/advisor-grid
+title: Advisor Grid
+description: Advisory board members displayed in a compact grid
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: advisors
+    type: Collection
+    label: Advisors
+    minItems: 1
+    fields:
+      - identifier: image
+        type: File
+        label: Portrait
+        allowed: common-image-types
+        maxitems: 1
+      - identifier: name
+        type: Text
+        label: Name
+        required: true
+      - identifier: expertise
+        type: Text
+        label: Area of Expertise
+      - identifier: company
+        type: Text
+        label: Company

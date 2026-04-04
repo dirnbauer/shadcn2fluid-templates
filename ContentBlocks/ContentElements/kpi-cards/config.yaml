@@ -1,0 +1,59 @@
+name: shadcn2fluid/kpi-cards
+title: KPI Cards
+description: Proof-point metric cards with value, label, and trend direction
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '4'
+
+  - identifier: items
+    type: Collection
+    label: KPI Items
+    minItems: 1
+    fields:
+      - identifier: value
+        type: Text
+        label: Value
+      - identifier: label
+        type: Text
+        label: Label
+      - identifier: detail
+        type: Textarea
+        label: Detail
+        rows: 2
+      - identifier: trend
+        type: Select
+        renderType: selectSingle
+        label: Trend
+        items:
+          - label: Positive
+            value: positive
+          - label: Neutral
+            value: neutral
+          - label: Caution
+            value: caution
+        default: positive

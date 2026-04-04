@@ -1,0 +1,28 @@
+.utility-bar {
+    background: var(--s2f-muted);
+    border-bottom: 1px solid var(--s2f-border);
+}
+.utility-bar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--s2f-spacing-2);
+    font-size: var(--s2f-text-xs);
+}
+.utility-bar__text {
+    color: var(--s2f-muted-foreground);
+    margin: 0;
+}
+.utility-bar__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--s2f-spacing-4);
+}
+.utility-bar__link {
+    color: var(--s2f-muted-foreground);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+.utility-bar__link:hover {
+    color: var(--s2f-foreground);
+}

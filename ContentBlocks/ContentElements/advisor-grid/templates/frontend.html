@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-advisor-grid" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="advisor-grid">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.subheadline}">
+            <header class="advisor-grid__intro">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="advisor-grid__items">
+            <f:for each="{data.advisors}" as="advisor">
+                <article class="advisor-grid__card">
+                    <f:if condition="{advisor.image}">
+                        <f:for each="{advisor.image}" as="fileReference">
+                            <img src="{f:uri.image(image: fileReference, width: 80, height: 80)}" alt="{advisor.name}" class="advisor-grid__avatar"/>
+                        </f:for>
+                    </f:if>
+                    <div>
+                        <h3 class="advisor-grid__name">{advisor.name}</h3>
+                        <f:if condition="{advisor.expertise}"><p class="advisor-grid__expertise">{advisor.expertise}</p></f:if>
+                        <f:if condition="{advisor.company}"><p class="advisor-grid__company">{advisor.company}</p></f:if>
+                    </div>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

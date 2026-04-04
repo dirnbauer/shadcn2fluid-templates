@@ -1,0 +1,32 @@
+name: shadcn2fluid/company-perks
+title: Company Perks
+description: Employee benefits and perks listed as cards
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: perks
+    type: Collection
+    label: Perks
+    minItems: 1
+    fields:
+      - identifier: icon
+        type: Text
+        label: Icon Label
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2

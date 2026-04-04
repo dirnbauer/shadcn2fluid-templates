@@ -1,0 +1,28 @@
+name: shadcn2fluid/feature-cards
+title: Feature Cards
+description: Card-based feature presentation with title and supporting copy
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Feature Cards
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2

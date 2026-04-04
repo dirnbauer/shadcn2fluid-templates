@@ -1,0 +1,26 @@
+name: shadcn2fluid/feature-numbered
+title: Feature Numbered
+description: Numbered feature steps with auto-incrementing counters
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Steps
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2

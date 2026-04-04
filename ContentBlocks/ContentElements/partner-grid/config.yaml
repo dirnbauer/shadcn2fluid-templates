@@ -1,0 +1,30 @@
+name: shadcn2fluid/partner-grid
+title: Partner Grid
+description: Grid of partner or client logos with optional links
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: partners
+    type: Collection
+    label: Partners
+    minItems: 1
+    fields:
+      - identifier: logo
+        type: File
+        label: Logo
+        allowed: common-image-types
+        maxitems: 1
+      - identifier: name
+        type: Text
+        label: Partner Name
+        required: true
+      - identifier: link
+        type: Link
+        label: Website

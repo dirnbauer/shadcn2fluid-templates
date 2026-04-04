@@ -1,7 +1,7 @@
 {
     "name": "webconsulting/shadcn2fluid-templates",
     "type": "typo3-cms-extension",
-    "description": "ShadCN/UI design patterns converted to pure Fluid templates with tweakcn theme integration for TYPO3",
+    "description": "shadcn/ui-inspired Fluid 5 component library and 250 content elements for TYPO3 14",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
@@ -10,8 +10,8 @@
     ],
     "require": {
         "php": "^8.2",
-        "typo3/cms-core": "^14.2@dev",
-        "typo3/cms-fluid": "^14.2@dev",
+        "typo3/cms-core": "^14.2",
+        "typo3/cms-fluid": "^14.2",
         "friendsoftypo3/content-blocks": "^2.1"
     },
     "suggest": {
@@ -27,8 +27,6 @@
             "Webconsulting\\Shadcn2fluidTemplates\\Tests\\": "Tests/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require-dev": {
         "phpstan/phpstan": "^2.1",
         "phpstan/phpstan-phpunit": "^2.0",

@@ -1,0 +1,54 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-footer-mega" href="{cb:assetPath()}/frontend.css"/>
+
+<footer class="footer-mega">
+    <s2f:layout.container>
+        <div class="footer-mega__top">
+            <div class="footer-mega__brand">
+                <f:if condition="{data.brand}">
+                    <h2 class="footer-mega__title">{data.brand}</h2>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="footer-mega__description">{data.description}</p>
+                </f:if>
+                <f:if condition="{data.newsletter_label}">
+                    <div class="footer-mega__newsletter">
+                        <p class="footer-mega__newsletter-label">{data.newsletter_label}</p>
+                        <form class="footer-mega__newsletter-form">
+                            <input type="email" placeholder="Your email" class="footer-mega__input"/>
+                            <button type="submit" class="footer-mega__submit">Subscribe</button>
+                        </form>
+                    </div>
+                </f:if>
+            </div>
+            <div class="footer-mega__columns">
+                <f:for each="{data.columns}" as="col">
+                    <nav class="footer-mega__col">
+                        <h3 class="footer-mega__col-title">{col.title}</h3>
+                        <ul class="footer-mega__links">
+                            <f:for each="{col.links}" as="item">
+                                <li>
+                                    <f:if condition="{item.link}">
+                                        <f:then><f:link.typolink parameter="{item.link}" class="footer-mega__link">{item.label}</f:link.typolink></f:then>
+                                        <f:else><span class="footer-mega__link">{item.label}</span></f:else>
+                                    </f:if>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </nav>
+                </f:for>
+            </div>
+        </div>
+        <f:if condition="{data.copyright}">
+            <div class="footer-mega__bottom">
+                <p class="footer-mega__copyright">{data.copyright}</p>
+            </div>
+        </f:if>
+    </s2f:layout.container>
+</footer>
+
+</html>

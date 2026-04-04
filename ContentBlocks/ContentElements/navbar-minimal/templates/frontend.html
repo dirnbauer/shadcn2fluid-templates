@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-navbar-minimal" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="navbar-minimal">
+    <s2f:layout.container>
+        <nav class="navbar-minimal__inner" aria-label="Minimal navigation">
+            <div class="navbar-minimal__brand">
+                <f:if condition="{data.brand_link.url}">
+                    <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-minimal__brand-link">{data.brand}</f:link.typolink></f:then>
+                    <f:else><span class="navbar-minimal__brand-link">{data.brand}</span></f:else>
+                </f:if>
+            </div>
+            <f:if condition="{data.button_text} && {data.button_link.url}">
+                <s2f:atom.button link="{data.button_link}" variant="ghost" size="sm">{data.button_text}</s2f:atom.button>
+            </f:if>
+        </nav>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-partner-grid" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="partner-grid">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.subheadline}">
+            <header class="partner-grid__intro">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="partner-grid__items">
+            <f:for each="{data.partners}" as="partner">
+                <div class="partner-grid__item">
+                    <f:if condition="{partner.link.url}">
+                        <f:then>
+                            <f:link.typolink parameter="{partner.link}" class="partner-grid__link">
+                                <f:if condition="{partner.logo}">
+                                    <f:for each="{partner.logo}" as="fileReference">
+                                        <img src="{f:uri.image(image: fileReference, maxWidth: 200)}" alt="{partner.name}" class="partner-grid__logo"/>
+                                    </f:for>
+                                </f:if>
+                                <span class="partner-grid__name">{partner.name}</span>
+                            </f:link.typolink>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{partner.logo}">
+                                <f:for each="{partner.logo}" as="fileReference">
+                                    <img src="{f:uri.image(image: fileReference, maxWidth: 200)}" alt="{partner.name}" class="partner-grid__logo"/>
+                                </f:for>
+                            </f:if>
+                            <span class="partner-grid__name">{partner.name}</span>
+                        </f:else>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

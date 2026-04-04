@@ -1,0 +1,36 @@
+name: shadcn2fluid/newsletter-signup
+title: Newsletter Signup
+description: Newsletter capture block with signup form and trust copy
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: form_action
+    type: Link
+    label: Form Action
+  - identifier: email_placeholder
+    type: Text
+    label: Email Placeholder
+  - identifier: button_text
+    type: Text
+    label: Button Text
+  - identifier: privacy_text
+    type: Textarea
+    label: Privacy Text
+    rows: 2
+  - identifier: points
+    type: Collection
+    label: Supporting Points
+    fields:
+      - identifier: text
+        type: Text
+        label: Point

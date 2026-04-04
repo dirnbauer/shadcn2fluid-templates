@@ -1,0 +1,12 @@
+.navbar-minimal__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--s2f-spacing-4);
+}
+.navbar-minimal__brand-link {
+    font-weight: 600;
+    font-size: var(--s2f-text-lg);
+    color: var(--s2f-foreground);
+    text-decoration: none;
+}

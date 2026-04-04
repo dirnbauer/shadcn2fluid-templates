@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-legal-links" href="{cb:assetPath()}/frontend.css"/>
+
+<nav class="legal-links legal-links--{data.separator -> f:or(alternative: 'dot')}" aria-label="Legal links">
+    <s2f:layout.container>
+        <ul class="legal-links__list">
+            <f:for each="{data.links}" as="item">
+                <li class="legal-links__item">
+                    <f:if condition="{item.link}">
+                        <f:then><f:link.typolink parameter="{item.link}" class="legal-links__link">{item.label}</f:link.typolink></f:then>
+                        <f:else><span class="legal-links__link">{item.label}</span></f:else>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </s2f:layout.container>
+</nav>
+
+</html>

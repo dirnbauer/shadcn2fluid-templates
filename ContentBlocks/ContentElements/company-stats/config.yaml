@@ -1,0 +1,29 @@
+name: shadcn2fluid/company-stats
+title: Company Stats
+description: Key company statistics in a bold counter layout
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: stats
+    type: Collection
+    label: Statistics
+    minItems: 1
+    fields:
+      - identifier: value
+        type: Text
+        label: Value
+        required: true
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: description
+        type: Text
+        label: Description

@@ -1,0 +1,30 @@
+.advisor-grid__intro {
+    text-align: center;
+    margin-block-end: var(--s2f-spacing-xl);
+}
+.advisor-grid__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s2f-spacing-lg);
+}
+@media (max-width: 768px) {
+    .advisor-grid__items { grid-template-columns: 1fr; }
+}
+.advisor-grid__card {
+    display: flex;
+    gap: var(--s2f-spacing-md);
+    align-items: center;
+    padding: var(--s2f-spacing-md);
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+}
+.advisor-grid__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.advisor-grid__name { font-weight: 600; font-size: var(--s2f-text-sm); }
+.advisor-grid__expertise { font-size: var(--s2f-text-xs); color: hsl(var(--primary)); }
+.advisor-grid__company { font-size: var(--s2f-text-xs); color: hsl(var(--muted-foreground)); }

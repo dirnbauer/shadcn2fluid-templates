@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-category-cards" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="category-cards">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="category-cards__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="category-cards__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="category-cards__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="category-cards__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="category-cards__grid category-cards__grid--cols-{data.columns -> f:or(alternative: '3')}">
+            <f:for each="{data.items}" as="item">
+                <article class="category-cards__card">
+                    <div class="category-cards__header">
+                        <h3 class="category-cards__title">{item.title}</h3>
+                        <f:if condition="{item.count}">
+                            <span class="category-cards__count">{item.count}</span>
+                        </f:if>
+                    </div>
+                    <f:if condition="{item.description}">
+                        <p class="category-cards__card-desc">{item.description}</p>
+                    </f:if>
+                    <f:if condition="{item.link.url}">
+                        <f:link.typolink parameter="{item.link}" class="category-cards__link">
+                            Explore &rarr;
+                        </f:link.typolink>
+                    </f:if>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

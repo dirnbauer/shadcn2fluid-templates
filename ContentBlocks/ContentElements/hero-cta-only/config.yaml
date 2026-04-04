@@ -1,0 +1,21 @@
+name: shadcn2fluid/hero-cta-only
+title: Hero CTA Only
+description: Compact hero with just headline and action buttons
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: secondary_button_text
+    type: Text
+    label: Secondary Button Text
+  - identifier: secondary_button_link
+    type: Link
+    label: Secondary Button Link

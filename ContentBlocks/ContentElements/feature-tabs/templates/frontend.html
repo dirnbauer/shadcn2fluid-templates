@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-feature-tabs" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="feature-tabs">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <header class="feature-tabs__intro">
+                <s2f:typography.heading level="2">{data.header}</s2f:typography.heading>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="feature-tabs__tabs" role="tablist">
+            <f:for each="{data.items}" as="item" iteration="iter">
+                <button class="feature-tabs__trigger {f:if(condition: iter.isFirst, then: 'feature-tabs__trigger--active')}"
+                        role="tab"
+                        aria-selected="{f:if(condition: iter.isFirst, then: 'true', else: 'false')}"
+                        data-tab="tab-{data.uid}-{iter.index}">{item.tab_label}</button>
+            </f:for>
+        </div>
+
+        <f:for each="{data.items}" as="item" iteration="iter">
+            <div class="feature-tabs__panel {f:if(condition: iter.isFirst, then: 'feature-tabs__panel--active')}"
+                 role="tabpanel"
+                 id="tab-{data.uid}-{iter.index}">
+                <div class="feature-tabs__content">
+                    <div class="feature-tabs__copy">
+                        <f:if condition="{item.title}"><h3 class="feature-tabs__title">{item.title}</h3></f:if>
+                        <f:if condition="{item.description}"><p class="feature-tabs__description">{item.description}</p></f:if>
+                    </div>
+                    <f:if condition="{item.image.0}">
+                        <div class="feature-tabs__media">
+                            <f:image image="{item.image.0}" alt="{item.title}" maxWidth="800" class="feature-tabs__image"/>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+        </f:for>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

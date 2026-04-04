@@ -1,0 +1,26 @@
+.waitlist-signup__content {
+    text-align: center;
+    max-width: 540px;
+    margin-inline: auto;
+}
+.waitlist-signup__form {
+    display: flex;
+    gap: var(--s2f-spacing-sm);
+    margin-block-start: var(--s2f-spacing-lg);
+}
+.waitlist-signup__input {
+    flex: 1;
+    padding: var(--s2f-spacing-sm);
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    font-size: var(--s2f-text-sm);
+    background: transparent;
+}
+.waitlist-signup__count {
+    font-size: var(--s2f-text-xs);
+    color: hsl(var(--muted-foreground));
+    margin-block-start: var(--s2f-spacing-sm);
+}
+@media (max-width: 768px) {
+    .waitlist-signup__form { flex-direction: column; }
+}

@@ -1,0 +1,31 @@
+name: shadcn2fluid/use-case-grid
+title: Use Case Grid
+description: Use case card grid for segments, audiences, or jobs-to-be-done
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Use Cases
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+      - identifier: link
+        type: Link
+        label: Link

@@ -1,0 +1,38 @@
+.company-history__intro {
+    text-align: center;
+    margin-block-end: var(--s2f-spacing-xl);
+}
+.company-history__timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s2f-spacing-lg);
+    border-inline-start: 2px solid hsl(var(--border));
+    padding-inline-start: var(--s2f-spacing-lg);
+}
+.company-history__event {
+    position: relative;
+}
+.company-history__event::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: calc(-1 * var(--s2f-spacing-lg) - 5px);
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: hsl(var(--primary));
+}
+.company-history__year {
+    font-size: var(--s2f-text-sm);
+    font-weight: 700;
+    color: hsl(var(--primary));
+}
+.company-history__title {
+    font-weight: 600;
+    margin-block-start: var(--s2f-spacing-2xs);
+}
+.company-history__description {
+    font-size: var(--s2f-text-sm);
+    color: hsl(var(--muted-foreground));
+    margin-block-start: var(--s2f-spacing-2xs);
+}

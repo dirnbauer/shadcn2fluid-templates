@@ -1,0 +1,13 @@
+<f:argument name="title" type="string" optional="{true}" />
+<f:argument name="description" type="string" optional="{true}" />
+<f:argument name="class" type="string" optional="{true}" default="" />
+
+<div class="card__header {class}">
+    <f:if condition="{title}">
+        <h3 class="card__title">{title}</h3>
+    </f:if>
+    <f:if condition="{description}">
+        <p class="card__description">{description}</p>
+    </f:if>
+    <f:slot />
+</div>

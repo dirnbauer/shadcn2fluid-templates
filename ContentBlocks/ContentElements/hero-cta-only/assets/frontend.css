@@ -1,0 +1,21 @@
+.hero-cta-only {
+    padding-block: var(--s2f-spacing-12);
+    border-bottom: 1px solid var(--s2f-border);
+}
+.hero-cta-only__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s2f-spacing-6);
+}
+.hero-cta-only__headline {
+    font-size: var(--s2f-text-3xl);
+    font-weight: 700;
+    line-height: 1.2;
+    flex: 1;
+}
+.hero-cta-only__actions {
+    display: flex;
+    gap: var(--s2f-spacing-3);
+    flex-shrink: 0;
+}

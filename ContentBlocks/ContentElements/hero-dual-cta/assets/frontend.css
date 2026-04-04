@@ -1,0 +1,41 @@
+.hero-dual-cta {
+    padding-block: var(--s2f-spacing-16);
+}
+.hero-dual-cta__header {
+    text-align: center;
+    max-width: 42rem;
+    margin-inline: auto;
+    margin-bottom: var(--s2f-spacing-10);
+}
+.hero-dual-cta__headline {
+    font-size: var(--s2f-text-4xl);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-dual-cta__subheadline {
+    font-size: var(--s2f-text-lg);
+    color: var(--s2f-muted-foreground);
+}
+.hero-dual-cta__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s2f-spacing-6);
+}
+.hero-dual-cta__card {
+    padding: var(--s2f-spacing-8);
+    background: var(--s2f-card);
+    border: 1px solid var(--s2f-border);
+    border-radius: var(--s2f-radius-lg);
+    text-align: center;
+}
+.hero-dual-cta__card-title {
+    font-size: var(--s2f-text-xl);
+    font-weight: 600;
+    margin-bottom: var(--s2f-spacing-3);
+}
+.hero-dual-cta__card-desc {
+    font-size: var(--s2f-text-sm);
+    color: var(--s2f-muted-foreground);
+    margin-bottom: var(--s2f-spacing-6);
+}

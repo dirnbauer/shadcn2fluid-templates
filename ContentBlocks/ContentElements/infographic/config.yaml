@@ -1,0 +1,44 @@
+name: shadcn2fluid/infographic
+title: Infographic
+description: Visual infographic section with numbered steps and icons
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: layout
+    type: Select
+    renderType: selectSingle
+    label: Layout
+    items:
+      - label: Horizontal
+        value: horizontal
+      - label: Vertical
+        value: vertical
+    default: horizontal
+  - identifier: items
+    type: Collection
+    label: Steps
+    minItems: 1
+    fields:
+      - identifier: number
+        type: Text
+        label: Step Number
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+      - identifier: image
+        type: File
+        label: Icon/Image
+        allowed: common-image-types
+        maxitems: 1

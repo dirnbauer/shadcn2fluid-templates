@@ -1,0 +1,35 @@
+name: shadcn2fluid/card-interactive
+title: Card Interactive
+description: Hover-animated card with icon, title, and expandable content
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: icon
+    type: Select
+    renderType: selectSingle
+    label: Icon
+    items:
+      - label: Star
+        value: star
+      - label: Heart
+        value: heart
+      - label: Zap
+        value: zap
+      - label: Shield
+        value: shield
+      - label: Globe
+        value: globe
+    default: star
+  - identifier: link
+    type: Link
+    label: Card Link
+  - identifier: badge_text
+    type: Text
+    label: Badge Text

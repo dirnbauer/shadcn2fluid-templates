@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-navbar-sidebar" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="navbar-sidebar">
+    <aside class="navbar-sidebar__panel" aria-label="Sidebar navigation">
+        <div class="navbar-sidebar__brand">
+            <f:if condition="{data.brand_link.url}">
+                <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-sidebar__brand-link">{data.brand}</f:link.typolink></f:then>
+                <f:else><span class="navbar-sidebar__brand-link">{data.brand}</span></f:else>
+            </f:if>
+        </div>
+        <nav class="navbar-sidebar__nav">
+            <f:for each="{data.sections}" as="section">
+                <div class="navbar-sidebar__section">
+                    <f:if condition="{section.title}">
+                        <h3 class="navbar-sidebar__section-title">{section.title}</h3>
+                    </f:if>
+                    <ul class="navbar-sidebar__list">
+                        <f:for each="{section.links}" as="item">
+                            <li>
+                                <f:if condition="{item.link.url}">
+                                    <f:link.typolink parameter="{item.link}" class="navbar-sidebar__link">{item.label}</f:link.typolink>
+                                </f:if>
+                            </li>
+                        </f:for>
+                    </ul>
+                </div>
+            </f:for>
+        </nav>
+        <f:if condition="{data.footer_text}">
+            <div class="navbar-sidebar__footer"><p>{data.footer_text}</p></div>
+        </f:if>
+    </aside>
+</s2f:layout.section>
+
+</html>

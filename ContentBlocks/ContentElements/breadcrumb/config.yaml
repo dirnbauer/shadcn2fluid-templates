@@ -1,0 +1,21 @@
+name: shadcn2fluid/breadcrumb
+title: Breadcrumb
+description: Breadcrumb trail for marketing and documentation pages
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: items
+    type: Collection
+    label: Items
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+      - identifier: link
+        type: Link
+        label: Link

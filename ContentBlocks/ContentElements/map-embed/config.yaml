@@ -1,0 +1,20 @@
+name: shadcn2fluid/map-embed
+title: Map Embed
+description: Embedded map with address details
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: embed_url
+    type: Text
+    label: Map Embed URL
+  - identifier: address
+    type: Textarea
+    label: Address
+    rows: 3
+  - identifier: height
+    type: Text
+    label: Map Height
+    default: '400'

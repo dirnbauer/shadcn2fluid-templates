@@ -1,0 +1,35 @@
+name: shadcn2fluid/content-grid
+title: Content Grid
+description: Flexible grid of rich text content cards
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+    default: '2'
+  - identifier: items
+    type: Collection
+    label: Grid Items
+    minItems: 2
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+      - identifier: content
+        type: Textarea
+        label: Content
+        enableRichtext: true
+        rows: 4
+      - identifier: link
+        type: Link
+        label: Link

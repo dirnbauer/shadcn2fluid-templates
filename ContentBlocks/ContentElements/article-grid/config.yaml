@@ -1,0 +1,30 @@
+name: shadcn2fluid/article-grid
+title: Article Grid
+description: Editorial article grid with card teasers
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: items
+    type: Collection
+    label: Articles
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+      - identifier: category
+        type: Text
+        label: Category
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+      - identifier: link
+        type: Link
+        label: Link

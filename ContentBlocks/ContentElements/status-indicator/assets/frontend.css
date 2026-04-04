@@ -1,0 +1,25 @@
+.status-indicator {
+    border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+    background: hsl(var(--card)); overflow: hidden;
+}
+.status-indicator__header { padding: var(--s2f-spacing-lg); border-bottom: 1px solid hsl(var(--border)); }
+.status-indicator__title { font-size: var(--s2f-text-lg); font-weight: 600; margin-block-end: var(--s2f-spacing-sm); }
+.status-indicator__overall { display: flex; align-items: center; gap: var(--s2f-spacing-xs); }
+.status-indicator__overall-text { font-size: var(--s2f-text-sm); font-weight: 500; }
+.status-indicator__dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+}
+.status-indicator__dot--operational .status-indicator__dot { background: hsl(142 70% 40%); }
+.status-indicator__dot--degraded .status-indicator__dot { background: hsl(45 100% 50%); }
+.status-indicator__dot--outage .status-indicator__dot { background: hsl(0 80% 50%); }
+.status-indicator__dot--maintenance .status-indicator__dot { background: hsl(210 100% 50%); }
+.status-indicator__list { list-style: none; padding: 0; margin: 0; }
+.status-indicator__item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: var(--s2f-spacing-sm) var(--s2f-spacing-lg);
+    border-bottom: 1px solid hsl(var(--border));
+}
+.status-indicator__item:last-child { border-bottom: none; }
+.status-indicator__service-name { font-size: var(--s2f-text-sm); font-weight: 500; }
+.status-indicator__detail { display: block; font-size: var(--s2f-text-xs); color: hsl(var(--muted-foreground)); }
+.status-indicator__status { display: flex; align-items: center; }

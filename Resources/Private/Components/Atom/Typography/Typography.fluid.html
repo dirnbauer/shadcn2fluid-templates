@@ -1,0 +1,12 @@
+<f:argument name="tag" type="string" optional="{true}" default="p" />
+<f:argument name="variant" type="string" optional="{true}" default="p" />
+<f:argument name="class" type="string" optional="{true}" default="" />
+
+<f:switch expression="{tag}">
+    <f:case value="h1"><h1 class="typography typography--{variant} {class}"><f:slot /></h1></f:case>
+    <f:case value="h2"><h2 class="typography typography--{variant} {class}"><f:slot /></h2></f:case>
+    <f:case value="h3"><h3 class="typography typography--{variant} {class}"><f:slot /></h3></f:case>
+    <f:case value="h4"><h4 class="typography typography--{variant} {class}"><f:slot /></h4></f:case>
+    <f:case value="span"><span class="typography typography--{variant} {class}"><f:slot /></span></f:case>
+    <f:defaultCase><p class="typography typography--{variant} {class}"><f:slot /></p></f:defaultCase>
+</f:switch>

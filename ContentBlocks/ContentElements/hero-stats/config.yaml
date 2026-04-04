@@ -1,0 +1,33 @@
+name: shadcn2fluid/hero-stats
+title: Hero Stats
+description: Hero with headline, CTA, and compact stat cards
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: stats
+    type: Collection
+    label: Stats
+    minItems: 1
+    fields:
+      - identifier: value
+        type: Text
+        label: Value
+      - identifier: label
+        type: Text
+        label: Label

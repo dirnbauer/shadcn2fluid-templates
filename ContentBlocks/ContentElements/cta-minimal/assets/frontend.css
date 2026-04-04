@@ -1,0 +1,15 @@
+.cta-minimal__content {
+    text-align: center;
+    max-width: 600px;
+    margin-inline: auto;
+}
+.cta-minimal__link {
+    display: inline-block;
+    margin-block-start: var(--s2f-spacing-md);
+    font-weight: 600;
+    color: hsl(var(--primary));
+    text-decoration: none;
+    font-size: var(--s2f-text-base);
+    transition: opacity 0.15s;
+}
+.cta-minimal__link:hover { opacity: 0.8; }

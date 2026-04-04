@@ -1,0 +1,32 @@
+name: shadcn2fluid/feature-accordion
+title: Feature Accordion
+description: Expandable feature sections with collapsible details
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: image
+    type: File
+    label: Side Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: items
+    type: Collection
+    label: Features
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Feature Title
+        required: true
+      - identifier: content
+        type: Textarea
+        label: Feature Details
+        enableRichtext: true
+        rows: 4

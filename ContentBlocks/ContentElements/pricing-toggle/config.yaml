@@ -1,0 +1,57 @@
+name: shadcn2fluid/pricing-toggle
+title: Pricing Toggle
+description: Pricing plans with monthly and yearly values shown together
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: plans
+    type: Collection
+    label: Plans
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+
+      - identifier: monthly_price
+        type: Text
+        label: Monthly Price
+        required: true
+
+      - identifier: yearly_price
+        type: Text
+        label: Yearly Price
+        required: true
+
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+
+      - identifier: features
+        type: Textarea
+        label: Features (one per line)
+        rows: 4
+
+      - identifier: button_text
+        type: Text
+        label: Button Text
+        default: Choose Plan
+
+      - identifier: button_link
+        type: Link
+        label: Button Link

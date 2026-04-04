@@ -1,0 +1,32 @@
+name: shadcn2fluid/org-chart
+title: Org Chart
+description: Hierarchical organizational chart with levels
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: levels
+    type: Collection
+    label: Levels
+    minItems: 1
+    fields:
+      - identifier: level_label
+        type: Text
+        label: Level Label
+      - identifier: people
+        type: Collection
+        label: People
+        fields:
+          - identifier: name
+            type: Text
+            label: Name
+            required: true
+          - identifier: role
+            type: Text
+            label: Role

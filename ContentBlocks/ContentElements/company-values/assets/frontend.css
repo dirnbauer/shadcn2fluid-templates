@@ -1,0 +1,32 @@
+.company-values__intro {
+    text-align: center;
+    margin-block-end: var(--s2f-spacing-xl);
+}
+.company-values__eyebrow {
+    font-size: var(--s2f-text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(var(--primary));
+}
+.company-values__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s2f-spacing-lg);
+}
+@media (max-width: 768px) {
+    .company-values__grid { grid-template-columns: 1fr; }
+}
+.company-values__icon {
+    display: block;
+    font-size: var(--s2f-text-2xl);
+    margin-block-end: var(--s2f-spacing-sm);
+}
+.company-values__title {
+    font-weight: 600;
+    margin-block-end: var(--s2f-spacing-xs);
+}
+.company-values__description {
+    font-size: var(--s2f-text-sm);
+    color: hsl(var(--muted-foreground));
+}

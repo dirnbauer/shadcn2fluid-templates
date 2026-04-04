@@ -1,0 +1,12 @@
+.chart-pie__card {
+    border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+    background: hsl(var(--card)); overflow: hidden;
+}
+.chart-pie__header { padding: var(--s2f-spacing-lg) var(--s2f-spacing-lg) 0; }
+.chart-pie__title { font-size: var(--s2f-text-lg); font-weight: 600; }
+.chart-pie__description { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); margin-block-start: var(--s2f-spacing-xs); }
+.chart-pie__content { padding: var(--s2f-spacing-lg); display: flex; justify-content: center; }
+.chart-pie__content--small .chart-pie__canvas { width: 200px; height: 200px; }
+.chart-pie__content--medium .chart-pie__canvas { width: 300px; height: 300px; }
+.chart-pie__content--large .chart-pie__canvas { width: 400px; height: 400px; }
+.chart-pie__canvas { max-width: 100%; }

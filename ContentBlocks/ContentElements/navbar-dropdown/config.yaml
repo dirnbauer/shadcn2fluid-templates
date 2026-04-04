@@ -1,0 +1,43 @@
+name: shadcn2fluid/navbar-dropdown
+title: Dropdown Navbar
+description: Navigation with dropdown sub-menus for top-level items
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: brand
+    type: Text
+    label: Brand
+    required: true
+  - identifier: brand_link
+    type: Link
+    label: Brand Link
+  - identifier: nav_items
+    type: Collection
+    label: Navigation Items
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: link
+        type: Link
+        label: Link
+      - identifier: children
+        type: Collection
+        label: Sub-items
+        fields:
+          - identifier: label
+            type: Text
+            label: Label
+          - identifier: link
+            type: Link
+            label: Link
+  - identifier: button_text
+    type: Text
+    label: Button Text
+  - identifier: button_link
+    type: Link
+    label: Button Link

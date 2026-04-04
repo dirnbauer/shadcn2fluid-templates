@@ -1,0 +1,35 @@
+name: shadcn2fluid/office-locations
+title: Office Locations
+description: Cards showing office addresses and contact information
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: locations
+    type: Collection
+    label: Locations
+    minItems: 1
+    fields:
+      - identifier: city
+        type: Text
+        label: City
+        required: true
+      - identifier: address
+        type: Textarea
+        label: Address
+        rows: 3
+      - identifier: phone
+        type: Text
+        label: Phone
+      - identifier: email
+        type: Text
+        label: Email
+      - identifier: map_link
+        type: Link
+        label: Map Link

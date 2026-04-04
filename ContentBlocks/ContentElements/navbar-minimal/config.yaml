@@ -1,0 +1,22 @@
+name: shadcn2fluid/navbar-minimal
+title: Minimal Navbar
+description: Minimal brand-only navigation with optional single CTA
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: brand
+    type: Text
+    label: Brand
+    required: true
+  - identifier: brand_link
+    type: Link
+    label: Brand Link
+  - identifier: button_text
+    type: Text
+    label: Button Text
+  - identifier: button_link
+    type: Link
+    label: Button Link

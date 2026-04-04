@@ -1,0 +1,25 @@
+name: shadcn2fluid/footer-contact
+title: Footer Contact
+description: Footer with contact details, address, and business hours
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: address
+    type: Textarea
+    label: Address
+    rows: 3
+  - identifier: email
+    type: Text
+    label: Email
+  - identifier: phone
+    type: Text
+    label: Phone
+  - identifier: hours
+    type: Text
+    label: Business Hours
+  - identifier: copyright
+    type: Text
+    label: Copyright Text

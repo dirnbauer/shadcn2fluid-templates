@@ -1,0 +1,29 @@
+name: shadcn2fluid/company-milestones
+title: Company Milestones
+description: Key achievements displayed as numbered milestones
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: milestones
+    type: Collection
+    label: Milestones
+    minItems: 1
+    fields:
+      - identifier: year
+        type: Text
+        label: Year
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2

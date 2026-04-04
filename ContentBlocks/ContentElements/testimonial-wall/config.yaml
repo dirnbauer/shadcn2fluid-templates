@@ -1,0 +1,44 @@
+name: shadcn2fluid/testimonial-wall
+title: Testimonial Wall
+description: Masonry-style wall of customer testimonials
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: testimonials
+    type: Collection
+    label: Testimonials
+    minItems: 3
+    fields:
+      - identifier: quote
+        type: Textarea
+        label: Quote
+        rows: 3
+        required: true
+
+      - identifier: author_name
+        type: Text
+        label: Author Name
+        required: true
+
+      - identifier: author_title
+        type: Text
+        label: Author Title
+
+      - identifier: author_image
+        type: File
+        label: Author Photo
+        allowed: common-image-types
+        maxitems: 1

@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-utility-bar" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="utility-bar">
+    <s2f:layout.container>
+        <div class="utility-bar__inner">
+            <f:if condition="{data.left_text}">
+                <p class="utility-bar__text">{data.left_text}</p>
+            </f:if>
+            <f:if condition="{data.links}">
+                <nav class="utility-bar__nav" aria-label="Utility navigation">
+                    <f:for each="{data.links}" as="item">
+                        <f:if condition="{item.link.url}">
+                            <f:link.typolink parameter="{item.link}" class="utility-bar__link">{item.label}</f:link.typolink>
+                        </f:if>
+                    </f:for>
+                </nav>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

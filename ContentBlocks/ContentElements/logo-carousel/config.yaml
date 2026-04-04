@@ -1,0 +1,47 @@
+name: shadcn2fluid/logo-carousel
+title: Logo Carousel
+description: Auto-scrolling logo ticker for client and partner logos
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: speed
+    type: Select
+    renderType: selectSingle
+    label: Scroll Speed
+    items:
+      - label: Slow
+        value: slow
+      - label: Normal
+        value: normal
+      - label: Fast
+        value: fast
+    default: normal
+
+  - identifier: logos
+    type: Collection
+    label: Logos
+    minItems: 3
+    fields:
+      - identifier: image
+        type: File
+        label: Logo Image
+        allowed: common-image-types
+        maxitems: 1
+        required: true
+
+      - identifier: name
+        type: Text
+        label: Company Name
+        required: true
+
+      - identifier: link
+        type: Link
+        label: Optional Link

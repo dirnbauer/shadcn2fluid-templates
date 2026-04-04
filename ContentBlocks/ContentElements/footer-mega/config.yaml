@@ -1,0 +1,39 @@
+name: shadcn2fluid/footer-mega
+title: Footer Mega
+description: Large footer with brand, multiple link groups, social icons, and newsletter
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: brand
+    type: Text
+    label: Brand Name
+  - identifier: description
+    type: Textarea
+    label: Brand Description
+    rows: 3
+  - identifier: columns
+    type: Collection
+    label: Link Groups
+    fields:
+      - identifier: title
+        type: Text
+        label: Group Title
+      - identifier: links
+        type: Collection
+        label: Links
+        fields:
+          - identifier: label
+            type: Text
+            label: Label
+          - identifier: link
+            type: Link
+            label: Link
+  - identifier: newsletter_label
+    type: Text
+    label: Newsletter Label
+  - identifier: copyright
+    type: Text
+    label: Copyright Text

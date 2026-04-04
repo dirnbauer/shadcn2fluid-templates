@@ -1,0 +1,46 @@
+name: shadcn2fluid/testimonial-featured
+title: Testimonial Featured
+description: Large hero-style featured testimonial with background
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: quote
+    type: Textarea
+    label: Quote Text
+    rows: 4
+    required: true
+
+  - identifier: author_name
+    type: Text
+    label: Author Name
+    required: true
+
+  - identifier: author_title
+    type: Text
+    label: Author Title
+
+  - identifier: author_company
+    type: Text
+    label: Company
+
+  - identifier: author_image
+    type: File
+    label: Author Photo
+    allowed: common-image-types
+    maxitems: 1
+
+  - identifier: company_logo
+    type: File
+    label: Company Logo
+    allowed: common-image-types
+    maxitems: 1
+
+  - identifier: background_image
+    type: File
+    label: Background Image
+    allowed: common-image-types
+    maxitems: 1

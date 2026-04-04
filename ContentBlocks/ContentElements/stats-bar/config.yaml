@@ -1,0 +1,38 @@
+name: shadcn2fluid/stats-bar
+title: Stats Bar
+description: Horizontal bar chart statistics with progress indicators
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: items
+    type: Collection
+    label: Stat Bars
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+
+      - identifier: value
+        type: Text
+        label: Display Value
+        required: true
+
+      - identifier: percentage
+        type: Number
+        label: Bar Percentage (0-100)
+        required: true

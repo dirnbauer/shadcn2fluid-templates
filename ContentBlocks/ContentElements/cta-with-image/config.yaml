@@ -1,0 +1,34 @@
+name: shadcn2fluid/cta-with-image
+title: CTA with Image
+description: Call to action featuring a prominent image
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: image
+    type: File
+    label: Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: cta_text
+    type: Text
+    label: Button Text
+  - identifier: cta_link
+    type: Link
+    label: Button Link
+  - identifier: image_position
+    type: Select
+    renderType: selectSingle
+    label: Image Position
+    items:
+      - label: Left
+        value: left
+      - label: Right
+        value: right
+    default: right

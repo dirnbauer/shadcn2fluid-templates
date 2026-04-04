@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-office-hours" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="office-hours">
+    <s2f:layout.container>
+        <s2f:molecule.card class="office-hours__card">
+            <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+            <f:if condition="{data.description}"><s2f:typography.text variant="muted">{data.description}</s2f:typography.text></f:if>
+            <dl class="office-hours__list">
+                <f:for each="{data.hours}" as="entry">
+                    <div class="office-hours__row">
+                        <dt class="office-hours__day">{entry.day}</dt>
+                        <dd class="office-hours__time">{entry.time}</dd>
+                    </div>
+                </f:for>
+            </dl>
+        </s2f:molecule.card>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

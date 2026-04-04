@@ -1,0 +1,26 @@
+name: shadcn2fluid/header-section
+title: Section Header
+description: Reusable section header with eyebrow, title, and subtitle
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subtitle
+    rows: 2
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Alignment
+    items:
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+    default: center

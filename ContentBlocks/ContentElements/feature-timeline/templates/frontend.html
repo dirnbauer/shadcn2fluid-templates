@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-feature-timeline" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="feature-timeline">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <header class="feature-timeline__intro">
+                <s2f:typography.heading level="2">{data.header}</s2f:typography.heading>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="feature-timeline__list">
+            <f:for each="{data.items}" as="item" iteration="iter">
+                <div class="feature-timeline__item">
+                    <div class="feature-timeline__marker" aria-hidden="true">
+                        <span class="feature-timeline__dot">{item.step}</span>
+                        <f:if condition="{iter.isLast} == 0">
+                            <span class="feature-timeline__line"></span>
+                        </f:if>
+                    </div>
+                    <s2f:molecule.card class="feature-timeline__content">
+                        <h3 class="feature-timeline__title">{item.title}</h3>
+                        <f:if condition="{item.description}">
+                            <p class="feature-timeline__description">{item.description}</p>
+                        </f:if>
+                    </s2f:molecule.card>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

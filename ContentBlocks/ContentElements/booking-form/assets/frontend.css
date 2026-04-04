@@ -1,0 +1,19 @@
+.booking-form__card { max-width: 640px; margin-inline: auto; }
+.booking-form__form { margin-block-start: var(--s2f-spacing-lg); display: flex; flex-direction: column; gap: var(--s2f-spacing-md); }
+.booking-form__field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s2f-spacing-md);
+}
+@media (max-width: 768px) {
+    .booking-form__field-grid { grid-template-columns: 1fr; }
+}
+.booking-form__field { display: flex; flex-direction: column; gap: 4px; }
+.booking-form__label { font-size: var(--s2f-text-sm); font-weight: 500; }
+.booking-form__input, .booking-form__textarea {
+    padding: var(--s2f-spacing-xs) var(--s2f-spacing-sm);
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    font-size: var(--s2f-text-sm);
+    background: transparent;
+}

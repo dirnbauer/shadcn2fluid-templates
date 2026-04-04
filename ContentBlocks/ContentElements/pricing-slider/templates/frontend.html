@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-pricing-slider" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="pricing-slider">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.description}">
+            <header class="pricing-slider__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="pricing-slider__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="pricing-slider__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="pricing-slider__description">{data.description}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="pricing-slider__body">
+            <div class="pricing-slider__control">
+                <input type="range" class="pricing-slider__range" min="0" max="100" value="50"/>
+            </div>
+
+            <div class="pricing-slider__tiers">
+                <f:for each="{data.tiers}" as="tier" iteration="iter">
+                    <div class="pricing-slider__tier {f:if(condition: iter.isFirst, then: 'pricing-slider__tier--active')}">
+                        <span class="pricing-slider__volume">{tier.volume} {data.unit_label -> f:or(alternative: 'requests')}</span>
+                        <span class="pricing-slider__price">{tier.price}</span>
+                        <f:if condition="{tier.features}">
+                            <span class="pricing-slider__features">{tier.features}</span>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

@@ -1,0 +1,40 @@
+name: shadcn2fluid/hero-saas
+title: Hero SaaS
+description: SaaS product hero with dashboard preview placeholder
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: badge_text
+    type: Text
+    label: Badge Text
+  - identifier: dashboard_image
+    type: File
+    label: Dashboard Screenshot
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: secondary_button_text
+    type: Text
+    label: Secondary Button Text
+  - identifier: secondary_button_link
+    type: Link
+    label: Secondary Button Link
+  - identifier: logos
+    type: Collection
+    label: Trust Logos
+    fields:
+      - identifier: name
+        type: Text
+        label: Company Name

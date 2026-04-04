@@ -1,0 +1,28 @@
+name: shadcn2fluid/demo-request
+title: Demo Request
+description: Request a product demo with details form
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: form_action
+    type: Link
+    label: Form Action
+  - identifier: submit_text
+    type: Text
+    label: Submit Text
+    default: Request demo
+  - identifier: image
+    type: File
+    label: Side Image
+    allowed: common-image-types
+    maxitems: 1

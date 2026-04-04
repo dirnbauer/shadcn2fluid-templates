@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-product-specs" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="product-specs">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.description}">
+            <header class="product-specs__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="product-specs__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="product-specs__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="product-specs__description">{data.description}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="product-specs__layout">
+            <div class="product-specs__table-wrap">
+                <table class="product-specs__table">
+                    <tbody>
+                        <f:for each="{data.specs}" as="spec">
+                            <tr>
+                                <th class="product-specs__label">{spec.label}</th>
+                                <td class="product-specs__value">{spec.value}</td>
+                            </tr>
+                        </f:for>
+                    </tbody>
+                </table>
+            </div>
+
+            <f:if condition="{data.image}">
+                <div class="product-specs__media">
+                    <f:for each="{data.image}" as="fileReference">
+                        <img src="{f:uri.image(image: fileReference, maxWidth: 480)}" alt="{data.header}" class="product-specs__image"/>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

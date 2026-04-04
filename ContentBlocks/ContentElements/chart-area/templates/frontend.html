@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-chart-area" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="chart-area-section">
+    <s2f:layout.container>
+        <div class="chart-area chart-area--{data.color_variant -> f:or(alternative: 'primary')}"
+             data-chart-data="{data.chart_data -> f:format.htmlspecialchars()}"
+             data-fill-opacity="{data.fill_opacity -> f:or(alternative: 'medium')}"
+             data-chart-id="chart-area-{data.uid}">
+            <div class="chart-area__card">
+                <f:if condition="{data.header} || {data.description}">
+                    <div class="chart-area__header">
+                        <f:if condition="{data.header}">
+                            <h3 class="chart-area__title">{data.header}</h3>
+                        </f:if>
+                        <f:if condition="{data.description}">
+                            <p class="chart-area__description">{data.description}</p>
+                        </f:if>
+                    </div>
+                </f:if>
+                <div class="chart-area__content">
+                    <svg class="chart-area__canvas" id="chart-area-{data.uid}"></svg>
+                </div>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

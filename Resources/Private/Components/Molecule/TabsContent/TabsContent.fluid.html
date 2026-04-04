@@ -1,0 +1,11 @@
+<f:argument name="value" type="string" />
+<f:argument name="class" type="string" optional="{true}" default="" />
+
+<div
+    role="tabpanel"
+    class="tabs__content {class}"
+    data-s2f-tabs-content
+    data-value="{value}"
+>
+    <f:slot />
+</div>

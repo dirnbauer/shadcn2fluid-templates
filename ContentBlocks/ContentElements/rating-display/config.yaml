@@ -1,0 +1,44 @@
+name: shadcn2fluid/rating-display
+title: Rating Display
+description: Aggregate rating display with score and review count
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: ratings
+    type: Collection
+    label: Rating Sources
+    minItems: 1
+    fields:
+      - identifier: platform
+        type: Text
+        label: Platform Name
+        required: true
+
+      - identifier: score
+        type: Text
+        label: Score
+        required: true
+        description: e.g. 4.8/5
+
+      - identifier: review_count
+        type: Text
+        label: Review Count
+        description: e.g. 2,450 reviews
+
+      - identifier: logo
+        type: File
+        label: Platform Logo
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: link
+        type: Link
+        label: Platform Link

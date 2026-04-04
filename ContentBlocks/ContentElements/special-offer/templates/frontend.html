@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-special-offer" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="special-offer">
+    <s2f:layout.container>
+        <div class="special-offer__banner">
+            <f:if condition="{data.eyebrow}">
+                <span class="special-offer__eyebrow">{data.eyebrow}</span>
+            </f:if>
+
+            <f:if condition="{data.discount_text}">
+                <div class="special-offer__discount">{data.discount_text}</div>
+            </f:if>
+
+            <f:if condition="{data.header}">
+                <h2 class="special-offer__headline">{data.header}</h2>
+            </f:if>
+
+            <f:if condition="{data.description}">
+                <p class="special-offer__description">{data.description}</p>
+            </f:if>
+
+            <f:if condition="{data.original_price} || {data.sale_price}">
+                <div class="special-offer__prices">
+                    <f:if condition="{data.original_price}">
+                        <span class="special-offer__original">{data.original_price}</span>
+                    </f:if>
+                    <f:if condition="{data.sale_price}">
+                        <span class="special-offer__sale">{data.sale_price}</span>
+                    </f:if>
+                </div>
+            </f:if>
+
+            <f:if condition="{data.button_text} && {data.button_link.url}">
+                <f:link.typolink parameter="{data.button_link}" class="special-offer__button">
+                    {data.button_text}
+                </f:link.typolink>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

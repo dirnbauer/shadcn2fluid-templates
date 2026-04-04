@@ -1,0 +1,37 @@
+name: shadcn2fluid/team-member
+title: Team Member
+description: Single team member profile card with detailed biography
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: image
+    type: File
+    label: Portrait
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: role
+    type: Text
+    label: Role
+  - identifier: bio
+    type: Textarea
+    label: Biography
+    rows: 4
+  - identifier: email
+    type: Text
+    label: Email
+  - identifier: phone
+    type: Text
+    label: Phone
+  - identifier: social_links
+    type: Collection
+    label: Social Links
+    fields:
+      - identifier: platform
+        type: Text
+        label: Platform
+      - identifier: url
+        type: Link
+        label: URL

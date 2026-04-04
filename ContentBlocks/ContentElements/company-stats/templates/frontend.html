@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-company-stats" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="company-stats">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.subheadline}">
+            <header class="company-stats__intro">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="company-stats__grid">
+            <f:for each="{data.stats}" as="stat">
+                <article class="company-stats__item">
+                    <div class="company-stats__value">{stat.value}</div>
+                    <h3 class="company-stats__label">{stat.label}</h3>
+                    <f:if condition="{stat.description}"><p class="company-stats__description">{stat.description}</p></f:if>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

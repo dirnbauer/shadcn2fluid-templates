@@ -1,0 +1,41 @@
+name: shadcn2fluid/footer-social
+title: Footer Social
+description: Footer with prominent social media icon links
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: brand
+    type: Text
+    label: Brand Name
+  - identifier: items
+    type: Collection
+    label: Social Links
+    minItems: 1
+    fields:
+      - identifier: platform
+        type: Select
+        renderType: selectSingle
+        label: Platform
+        items:
+          - label: Facebook
+            value: facebook
+          - label: X / Twitter
+            value: twitter
+          - label: Instagram
+            value: instagram
+          - label: LinkedIn
+            value: linkedin
+          - label: YouTube
+            value: youtube
+          - label: GitHub
+            value: github
+        default: facebook
+      - identifier: link
+        type: Link
+        label: Profile URL
+  - identifier: copyright
+    type: Text
+    label: Copyright Text

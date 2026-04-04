@@ -1,0 +1,32 @@
+name: shadcn2fluid/company-values
+title: Company Values
+description: Core values presented as icon cards with descriptions
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: values
+    type: Collection
+    label: Values
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Value Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+      - identifier: icon
+        type: Text
+        label: Icon Label

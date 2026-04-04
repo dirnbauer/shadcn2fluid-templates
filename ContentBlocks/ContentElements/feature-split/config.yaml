@@ -1,0 +1,30 @@
+name: shadcn2fluid/feature-split
+title: Feature Split
+description: Two-column split layout with feature list and media
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: image
+    type: File
+    label: Side Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: items
+    type: Collection
+    label: Feature Points
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Text
+        label: Description

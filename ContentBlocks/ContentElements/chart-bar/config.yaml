@@ -1,0 +1,44 @@
+name: shadcn2fluid/chart-bar
+title: Chart Bar
+description: Bar chart with configurable orientation and colors
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: chart_data
+    type: Textarea
+    label: Chart Data (JSON)
+    rows: 6
+    required: true
+  - identifier: orientation
+    type: Select
+    renderType: selectSingle
+    label: Orientation
+    items:
+      - label: Vertical
+        value: vertical
+      - label: Horizontal
+        value: horizontal
+    default: vertical
+  - identifier: color_variant
+    type: Select
+    renderType: selectSingle
+    label: Color
+    items:
+      - label: Primary
+        value: primary
+      - label: Blue
+        value: blue
+      - label: Green
+        value: green
+    default: primary
+  - identifier: show_grid
+    type: Checkbox
+    label: Show Grid Lines
+    default: 1

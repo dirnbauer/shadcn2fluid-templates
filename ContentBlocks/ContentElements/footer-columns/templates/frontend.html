@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-footer-columns" href="{cb:assetPath()}/frontend.css"/>
+
+<footer class="footer-columns">
+    <s2f:layout.container>
+        <div class="footer-columns__grid">
+            <div class="footer-columns__brand">
+                <f:if condition="{data.brand}">
+                    <h2 class="footer-columns__title">{data.brand}</h2>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="footer-columns__description">{data.description}</p>
+                </f:if>
+            </div>
+            <f:for each="{data.columns}" as="col">
+                <nav class="footer-columns__col">
+                    <h3 class="footer-columns__col-title">{col.title}</h3>
+                    <ul class="footer-columns__links">
+                        <f:for each="{col.links}" as="item">
+                            <li>
+                                <f:if condition="{item.link}">
+                                    <f:then><f:link.typolink parameter="{item.link}" class="footer-columns__link">{item.label}</f:link.typolink></f:then>
+                                    <f:else><span class="footer-columns__link">{item.label}</span></f:else>
+                                </f:if>
+                            </li>
+                        </f:for>
+                    </ul>
+                </nav>
+            </f:for>
+        </div>
+        <f:if condition="{data.copyright}">
+            <div class="footer-columns__bottom">
+                <p class="footer-columns__copyright">{data.copyright}</p>
+            </div>
+        </f:if>
+    </s2f:layout.container>
+</footer>
+
+</html>

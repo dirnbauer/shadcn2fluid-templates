@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-booking-form" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="booking-form">
+    <s2f:layout.container>
+        <s2f:molecule.card class="booking-form__card">
+            <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+            <f:if condition="{data.description}"><s2f:typography.text variant="muted">{data.description}</s2f:typography.text></f:if>
+            <form class="booking-form__form" action="{data.form_action.url}" method="post">
+                <div class="booking-form__field-grid">
+                    <label class="booking-form__field">
+                        <span class="booking-form__label">Name</span>
+                        <input class="booking-form__input" type="text" name="name" required="required"/>
+                    </label>
+                    <label class="booking-form__field">
+                        <span class="booking-form__label">Email</span>
+                        <input class="booking-form__input" type="email" name="email" required="required"/>
+                    </label>
+                    <f:if condition="{data.show_phone}">
+                        <label class="booking-form__field">
+                            <span class="booking-form__label">Phone</span>
+                            <input class="booking-form__input" type="tel" name="phone"/>
+                        </label>
+                    </f:if>
+                    <f:if condition="{data.show_date}">
+                        <label class="booking-form__field">
+                            <span class="booking-form__label">Preferred Date</span>
+                            <input class="booking-form__input" type="date" name="date"/>
+                        </label>
+                    </f:if>
+                </div>
+                <label class="booking-form__field">
+                    <span class="booking-form__label">Message</span>
+                    <textarea class="booking-form__textarea" name="message" rows="3"></textarea>
+                </label>
+                <s2f:atom.button type="submit">{data.submit_text -> f:or(alternative: 'Book appointment')}</s2f:atom.button>
+            </form>
+        </s2f:molecule.card>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

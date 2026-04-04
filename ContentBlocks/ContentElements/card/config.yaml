@@ -1,0 +1,51 @@
+name: shadcn2fluid/card
+title: Card
+description: Versatile card component with multiple layout variants
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Card Style
+    items:
+      - label: Basic
+        value: basic
+      - label: With Image
+        value: image
+      - label: Horizontal
+        value: horizontal
+    default: basic
+
+  - identifier: image
+    type: File
+    label: Card Image
+    allowed: common-image-types
+    maxitems: 1
+    displayCond: 'FIELD:variant:!=:basic'
+
+  - identifier: description
+    type: Textarea
+    label: Card Description
+    rows: 3
+
+  - identifier: badge_text
+    type: Text
+    label: Badge Text
+
+  - identifier: link
+    type: Link
+    label: Card Link
+
+  - identifier: button_text
+    type: Text
+    label: Button Text
+
+  - identifier: button_link
+    type: Link
+    label: Button Link
+    displayCond: 'FIELD:button_text:!=:'

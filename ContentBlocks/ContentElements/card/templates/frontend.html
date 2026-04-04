@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-card" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="card-section">
+    <s2f:layout.container>
+        <div class="card card--{data.variant -> f:or(alternative: 'basic')}">
+            <f:if condition="{data.variant} != 'basic'">
+                <f:if condition="{data.image}">
+                    <div class="card__image">
+                        <f:for each="{data.image}" as="file">
+                            <f:image image="{file}" alt="{file.alternative}" width="600"/>
+                        </f:for>
+                    </div>
+                </f:if>
+            </f:if>
+
+            <div class="card__body">
+                <f:if condition="{data.badge_text}">
+                    <span class="card__badge">{data.badge_text}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h3 class="card__title">
+                        <f:if condition="{data.link}">
+                            <f:then><f:link.typolink parameter="{data.link}">{data.header}</f:link.typolink></f:then>
+                            <f:else>{data.header}</f:else>
+                        </f:if>
+                    </h3>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="card__description">{data.description}</p>
+                </f:if>
+                <f:if condition="{data.button_text}">
+                    <div class="card__actions">
+                        <f:link.typolink parameter="{data.button_link}" class="card__button">{data.button_text}</f:link.typolink>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

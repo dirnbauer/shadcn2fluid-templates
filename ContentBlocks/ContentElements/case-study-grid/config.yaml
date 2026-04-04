@@ -1,0 +1,54 @@
+name: shadcn2fluid/case-study-grid
+title: Case Study Grid
+description: Grid of case study preview cards with results
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+    default: '3'
+
+  - identifier: cases
+    type: Collection
+    label: Case Studies
+    minItems: 1
+    fields:
+      - identifier: client_name
+        type: Text
+        label: Client Name
+        required: true
+
+      - identifier: summary
+        type: Textarea
+        label: Summary
+        rows: 2
+
+      - identifier: result
+        type: Text
+        label: Key Result
+        description: e.g. 3x growth
+
+      - identifier: image
+        type: File
+        label: Cover Image
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: link
+        type: Link
+        label: Read More Link

@@ -1,0 +1,21 @@
+name: shadcn2fluid/emergency-contact
+title: Emergency Contact
+description: Highlighted emergency or urgent contact information
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Text
+    label: Description
+  - identifier: phone
+    type: Text
+    label: Phone Number
+  - identifier: phone_link
+    type: Link
+    label: Phone Link
+  - identifier: available
+    type: Text
+    label: Availability

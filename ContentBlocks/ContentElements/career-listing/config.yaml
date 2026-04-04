@@ -1,0 +1,37 @@
+name: shadcn2fluid/career-listing
+title: Career Listing
+description: Job openings listed with department, location and apply link
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: jobs
+    type: Collection
+    label: Job Openings
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Job Title
+        required: true
+      - identifier: department
+        type: Text
+        label: Department
+      - identifier: location
+        type: Text
+        label: Location
+      - identifier: type
+        type: Text
+        label: Type
+      - identifier: apply_link
+        type: Link
+        label: Apply Link

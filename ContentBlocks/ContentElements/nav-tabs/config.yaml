@@ -1,0 +1,35 @@
+name: shadcn2fluid/nav-tabs
+title: Navigation Tabs
+description: Horizontal tab navigation for switching between content sections
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Style
+    items:
+      - label: Underline
+        value: underline
+      - label: Pill
+        value: pill
+      - label: Boxed
+        value: boxed
+    default: underline
+  - identifier: tabs
+    type: Collection
+    label: Tabs
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+      - identifier: link
+        type: Link
+        label: Link
+      - identifier: active
+        type: Checkbox
+        label: Active

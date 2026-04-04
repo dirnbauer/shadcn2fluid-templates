@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-data-table" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="data-table-section">
+    <s2f:layout.container>
+        <div class="data-table {f:if(condition: data.striped, then: 'data-table--striped')} {f:if(condition: data.compact, then: 'data-table--compact')}"
+             data-table-data="{data.table_data -> f:format.htmlspecialchars()}">
+            <f:if condition="{data.header} || {data.description}">
+                <div class="data-table__header">
+                    <f:if condition="{data.header}">
+                        <h3 class="data-table__title">{data.header}</h3>
+                    </f:if>
+                    <f:if condition="{data.description}">
+                        <p class="data-table__description">{data.description}</p>
+                    </f:if>
+                </div>
+            </f:if>
+            <div class="data-table__wrapper">
+                <table class="data-table__table" id="data-table-{data.uid}">
+                    <tbody>
+                        <tr><td>Table renders from JSON data</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

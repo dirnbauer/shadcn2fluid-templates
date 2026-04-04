@@ -1,0 +1,44 @@
+.hero-form {
+    padding-block: var(--s2f-spacing-20);
+}
+.hero-form__content {
+    text-align: center;
+    max-width: 36rem;
+    margin-inline: auto;
+}
+.hero-form__headline {
+    font-size: var(--s2f-text-5xl);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: var(--s2f-spacing-4);
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-form__subheadline {
+    font-size: var(--s2f-text-lg);
+    color: var(--s2f-muted-foreground);
+    margin-bottom: var(--s2f-spacing-8);
+}
+.hero-form__input-group {
+    display: flex;
+    gap: var(--s2f-spacing-2);
+    max-width: 28rem;
+    margin-inline: auto;
+}
+.hero-form__input {
+    flex: 1;
+    padding: var(--s2f-spacing-3) var(--s2f-spacing-4);
+    border: 1px solid var(--s2f-border);
+    border-radius: var(--s2f-radius-md);
+    font-size: var(--s2f-text-base);
+    background: var(--s2f-background);
+    color: var(--s2f-foreground);
+}
+.hero-form__input:focus {
+    outline: 2px solid var(--s2f-ring);
+    outline-offset: 2px;
+}
+.hero-form__privacy {
+    margin-top: var(--s2f-spacing-3);
+    font-size: var(--s2f-text-xs);
+    color: var(--s2f-muted-foreground);
+}

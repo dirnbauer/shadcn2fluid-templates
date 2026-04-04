@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-bundle-pricing" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="bundle-pricing">
+    <s2f:layout.container>
+        <div class="bundle-pricing__card">
+            <header class="bundle-pricing__header">
+                <f:if condition="{data.eyebrow}">
+                    <span class="bundle-pricing__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="bundle-pricing__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="bundle-pricing__description">{data.description}</p>
+                </f:if>
+            </header>
+
+            <div class="bundle-pricing__items">
+                <f:for each="{data.items}" as="item">
+                    <div class="bundle-pricing__item">
+                        <div class="bundle-pricing__item-info">
+                            <span class="bundle-pricing__item-name">{item.name}</span>
+                            <f:if condition="{item.description}">
+                                <span class="bundle-pricing__item-desc">{item.description}</span>
+                            </f:if>
+                        </div>
+                        <f:if condition="{item.individual_price}">
+                            <span class="bundle-pricing__item-price">{item.individual_price}</span>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+
+            <div class="bundle-pricing__footer">
+                <div class="bundle-pricing__total">
+                    <span class="bundle-pricing__bundle-price">{data.bundle_price}</span>
+                    <f:if condition="{data.savings_text}">
+                        <span class="bundle-pricing__savings">{data.savings_text}</span>
+                    </f:if>
+                </div>
+                <f:if condition="{data.button_text} && {data.button_link.url}">
+                    <f:link.typolink parameter="{data.button_link}" class="bundle-pricing__button">
+                        {data.button_text}
+                    </f:link.typolink>
+                </f:if>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

@@ -1,0 +1,23 @@
+name: shadcn2fluid/feature-checklist
+title: Feature Checklist
+description: Checklist-style block for inclusions, benefits, or guarantees
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: items
+    type: Collection
+    label: Checklist
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+      - identifier: description
+        type: Text
+        label: Description

@@ -1,0 +1,15 @@
+<f:argument name="name" type="string" optional="{true}" />
+<f:argument name="placeholder" type="string" optional="{true}" />
+<f:argument name="rows" type="integer" optional="{true}" default="4" />
+<f:argument name="disabled" type="bool" optional="{true}" default="{false}" />
+<f:argument name="required" type="bool" optional="{true}" default="{false}" />
+<f:argument name="class" type="string" optional="{true}" default="" />
+
+<textarea
+    name="{name}"
+    placeholder="{placeholder}"
+    rows="{rows}"
+    disabled="{disabled}"
+    required="{required}"
+    class="textarea {class}"
+><f:slot /></textarea>

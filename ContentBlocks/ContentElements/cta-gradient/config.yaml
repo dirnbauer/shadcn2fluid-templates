@@ -1,0 +1,19 @@
+name: shadcn2fluid/cta-gradient
+title: CTA Gradient
+description: Call to action section with gradient background
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: cta_text
+    type: Text
+    label: Button Text
+  - identifier: cta_link
+    type: Link
+    label: Button Link

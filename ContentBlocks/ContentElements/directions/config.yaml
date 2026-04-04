@@ -1,0 +1,26 @@
+name: shadcn2fluid/directions
+title: Directions
+description: How to reach us with multiple transport options
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: routes
+    type: Collection
+    label: Routes
+    minItems: 1
+    fields:
+      - identifier: mode
+        type: Text
+        label: Transport Mode
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Directions
+        rows: 3

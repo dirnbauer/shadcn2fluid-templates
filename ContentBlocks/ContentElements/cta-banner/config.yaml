@@ -1,0 +1,31 @@
+name: shadcn2fluid/cta-banner
+title: CTA Banner
+description: Full-width colored banner with call to action
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: cta_text
+    type: Text
+    label: Button Text
+  - identifier: cta_link
+    type: Link
+    label: Button Link
+  - identifier: bg_style
+    type: Select
+    renderType: selectSingle
+    label: Background
+    items:
+      - label: Primary
+        value: primary
+      - label: Muted
+        value: muted
+      - label: Dark
+        value: dark
+    default: primary

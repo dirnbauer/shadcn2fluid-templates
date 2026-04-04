@@ -1,0 +1,24 @@
+name: shadcn2fluid/feedback-form
+title: Feedback Form
+description: User feedback collection form with rating option
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: form_action
+    type: Link
+    label: Form Action
+  - identifier: submit_text
+    type: Text
+    label: Submit Text
+    default: Send feedback
+  - identifier: show_rating
+    type: Checkbox
+    label: Show Rating Field
+    default: 1

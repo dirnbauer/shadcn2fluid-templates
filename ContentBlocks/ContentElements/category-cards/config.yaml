@@ -1,0 +1,54 @@
+name: shadcn2fluid/category-cards
+title: Category Cards
+description: Category or topic navigation cards for content hubs
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '3'
+
+  - identifier: items
+    type: Collection
+    label: Categories
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+
+      - identifier: count
+        type: Text
+        label: Count
+
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+
+      - identifier: link
+        type: Link
+        label: Link

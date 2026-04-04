@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-breadcrumb" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="breadcrumb">
+    <s2f:layout.container>
+        <nav class="breadcrumb__nav" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list">
+                <f:for each="{data.items}" as="item" iteration="iterator">
+                    <li class="breadcrumb__item">
+                        <f:if condition="{iterator.isLast}">
+                            <f:then>
+                                <span class="breadcrumb__current" aria-current="page">{item.label}</span>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{item.link.url}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{item.link}" class="breadcrumb__link">{item.label}</f:link.typolink>
+                                    </f:then>
+                                    <f:else>
+                                        <span class="breadcrumb__current">{item.label}</span>
+                                    </f:else>
+                                </f:if>
+                                <span class="breadcrumb__separator" aria-hidden="true">/</span>
+                            </f:else>
+                        </f:if>
+                    </li>
+                </f:for>
+            </ol>
+        </nav>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

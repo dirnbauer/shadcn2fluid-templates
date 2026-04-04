@@ -1,0 +1,45 @@
+name: shadcn2fluid/case-study-card
+title: Case Study Card
+description: Single case study highlight card with results
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: client_name
+    type: Text
+    label: Client Name
+    required: true
+
+  - identifier: client_logo
+    type: File
+    label: Client Logo
+    allowed: common-image-types
+    maxitems: 1
+
+  - identifier: summary
+    type: Textarea
+    label: Summary
+    rows: 3
+    required: true
+
+  - identifier: result_value
+    type: Text
+    label: Key Result Value
+    description: e.g. 3x, 150%, $2M
+
+  - identifier: result_label
+    type: Text
+    label: Key Result Label
+
+  - identifier: image
+    type: File
+    label: Cover Image
+    allowed: common-image-types
+    maxitems: 1
+
+  - identifier: link
+    type: Link
+    label: Read More Link

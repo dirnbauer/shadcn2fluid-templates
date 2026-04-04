@@ -1,0 +1,48 @@
+.hero-video__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s2f-spacing-8);
+    align-items: center;
+    padding-block: var(--s2f-spacing-12);
+}
+.hero-video__eyebrow {
+    display: block;
+    font-size: var(--s2f-text-sm);
+    font-weight: 500;
+    color: var(--s2f-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--s2f-spacing-2);
+}
+.hero-video__headline {
+    font-size: var(--s2f-text-4xl);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-video__description {
+    font-size: var(--s2f-text-lg);
+    color: var(--s2f-muted-foreground);
+    margin-bottom: var(--s2f-spacing-6);
+}
+.hero-video__panel {
+    background: var(--s2f-card);
+    border: 1px solid var(--s2f-border);
+    border-radius: var(--s2f-radius-lg);
+    padding: var(--s2f-spacing-6);
+}
+.hero-video__placeholder {
+    aspect-ratio: 16 / 9;
+    background: var(--s2f-muted);
+    border-radius: var(--s2f-radius-md);
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-video__panel-title {
+    font-size: var(--s2f-text-base);
+    font-weight: 600;
+    margin-bottom: var(--s2f-spacing-1);
+}
+.hero-video__panel-copy {
+    font-size: var(--s2f-text-sm);
+    color: var(--s2f-muted-foreground);
+}

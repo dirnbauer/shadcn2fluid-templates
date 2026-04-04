@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-chart-pie" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="chart-pie-section">
+    <s2f:layout.container>
+        <div class="chart-pie"
+             data-chart-data="{data.chart_data -> f:format.htmlspecialchars()}"
+             data-show-legend="{f:if(condition: data.show_legend, then: 'true', else: 'false')}"
+             data-chart-id="chart-pie-{data.uid}">
+            <div class="chart-pie__card">
+                <f:if condition="{data.header} || {data.description}">
+                    <div class="chart-pie__header">
+                        <f:if condition="{data.header}">
+                            <h3 class="chart-pie__title">{data.header}</h3>
+                        </f:if>
+                        <f:if condition="{data.description}">
+                            <p class="chart-pie__description">{data.description}</p>
+                        </f:if>
+                    </div>
+                </f:if>
+                <div class="chart-pie__content chart-pie__content--{data.chart_size -> f:or(alternative: 'medium')}">
+                    <svg class="chart-pie__canvas" id="chart-pie-{data.uid}"></svg>
+                </div>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

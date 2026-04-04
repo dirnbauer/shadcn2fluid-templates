@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-kpi-cards" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="kpi-cards">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="kpi-cards__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="kpi-cards__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="kpi-cards__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="kpi-cards__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="kpi-cards__grid kpi-cards__grid--cols-{data.columns -> f:or(alternative: '4')}">
+            <f:for each="{data.items}" as="item">
+                <article class="kpi-cards__item kpi-cards__item--{item.trend -> f:or(alternative: 'positive')}">
+                    <div class="kpi-cards__value">{item.value}</div>
+                    <h3 class="kpi-cards__label">{item.label}</h3>
+                    <f:if condition="{item.detail}">
+                        <p class="kpi-cards__detail">{item.detail}</p>
+                    </f:if>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

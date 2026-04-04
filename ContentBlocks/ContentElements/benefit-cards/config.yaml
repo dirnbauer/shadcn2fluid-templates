@@ -1,0 +1,45 @@
+name: shadcn2fluid/benefit-cards
+title: Benefit Cards
+description: Benefit-oriented cards highlighting value propositions
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+    default: '3'
+  - identifier: items
+    type: Collection
+    label: Benefits
+    minItems: 1
+    fields:
+      - identifier: icon
+        type: Text
+        label: Icon Emoji or Symbol
+      - identifier: title
+        type: Text
+        label: Benefit Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+      - identifier: link
+        type: Link
+        label: Link

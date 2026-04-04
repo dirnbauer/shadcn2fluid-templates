@@ -1,0 +1,28 @@
+name: shadcn2fluid/feature-grid-4
+title: Feature Grid 4-Column
+description: Fixed four-column feature card grid for compact layouts
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Features
+    minItems: 4
+    fields:
+      - identifier: icon
+        type: Text
+        label: Icon Emoji or Symbol
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Text
+        label: Short Description

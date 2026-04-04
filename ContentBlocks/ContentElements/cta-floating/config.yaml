@@ -1,0 +1,25 @@
+name: shadcn2fluid/cta-floating
+title: CTA Floating
+description: Fixed-position floating call to action bar
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: cta_text
+    type: Text
+    label: Button Text
+  - identifier: cta_link
+    type: Link
+    label: Button Link
+  - identifier: position
+    type: Select
+    renderType: selectSingle
+    label: Position
+    items:
+      - label: Bottom
+        value: bottom
+      - label: Top
+        value: top
+    default: bottom

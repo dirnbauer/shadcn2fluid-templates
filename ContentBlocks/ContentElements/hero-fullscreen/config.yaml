@@ -1,0 +1,42 @@
+name: shadcn2fluid/hero-fullscreen
+title: Hero Fullscreen
+description: Full viewport height hero with centered overlay content
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: background_image
+    type: File
+    label: Background Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: overlay_opacity
+    type: Select
+    renderType: selectSingle
+    label: Overlay Opacity
+    items:
+      - label: Light (30%)
+        value: '0.3'
+      - label: Medium (50%)
+        value: '0.5'
+      - label: Heavy (70%)
+        value: '0.7'
+    default: '0.5'
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: secondary_button_text
+    type: Text
+    label: Secondary Button Text
+  - identifier: secondary_button_link
+    type: Link
+    label: Secondary Button Link

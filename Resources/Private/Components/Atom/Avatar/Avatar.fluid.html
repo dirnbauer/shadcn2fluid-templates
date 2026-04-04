@@ -1,0 +1,16 @@
+<f:argument name="src" type="string" optional="{true}" />
+<f:argument name="alt" type="string" optional="{true}" default="" />
+<f:argument name="fallback" type="string" optional="{true}" />
+<f:argument name="size" type="string" optional="{true}" default="default" />
+<f:argument name="class" type="string" optional="{true}" default="" />
+
+<span class="avatar avatar--{size} {class}">
+    <f:if condition="{src}">
+        <f:then>
+            <img src="{src}" alt="{alt}" class="avatar__image" loading="lazy" />
+        </f:then>
+        <f:else>
+            <span class="avatar__fallback">{fallback}</span>
+        </f:else>
+    </f:if>
+</span>

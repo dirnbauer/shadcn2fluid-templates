@@ -1,0 +1,58 @@
+name: shadcn2fluid/social-proof-counter
+title: Social Proof Counter
+description: Live-style counters for users, downloads, or customers
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: layout
+    type: Select
+    renderType: selectSingle
+    label: Layout
+    items:
+      - label: Inline Row
+        value: inline
+      - label: Stacked Center
+        value: stacked
+    default: inline
+
+  - identifier: counters
+    type: Collection
+    label: Counters
+    minItems: 1
+    fields:
+      - identifier: value
+        type: Text
+        label: Value
+        required: true
+        description: e.g. 10,000+
+
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+
+      - identifier: icon
+        type: Select
+        renderType: selectSingle
+        label: Icon
+        items:
+          - label: None
+            value: none
+          - label: Users
+            value: users
+          - label: Download
+            value: download
+          - label: Globe
+            value: globe
+          - label: Heart
+            value: heart
+        default: none

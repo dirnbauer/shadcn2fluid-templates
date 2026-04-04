@@ -1,0 +1,34 @@
+name: shadcn2fluid/feature-alternating
+title: Feature Alternating
+description: Alternating left-right feature rows with image and text
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Feature Rows
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 3
+      - identifier: image
+        type: File
+        label: Image
+        allowed: common-image-types
+        maxitems: 1
+      - identifier: link
+        type: Link
+        label: Link

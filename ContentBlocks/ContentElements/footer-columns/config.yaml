@@ -1,0 +1,39 @@
+name: shadcn2fluid/footer-columns
+title: Footer Columns
+description: Multi-column footer with grouped link sections
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: brand
+    type: Text
+    label: Brand Name
+  - identifier: description
+    type: Textarea
+    label: Brand Description
+    rows: 3
+  - identifier: columns
+    type: Collection
+    label: Link Columns
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Column Title
+        required: true
+      - identifier: links
+        type: Collection
+        label: Links
+        fields:
+          - identifier: label
+            type: Text
+            label: Label
+            required: true
+          - identifier: link
+            type: Link
+            label: Link
+  - identifier: copyright
+    type: Text
+    label: Copyright Text

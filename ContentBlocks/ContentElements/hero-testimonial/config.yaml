@@ -1,0 +1,34 @@
+name: shadcn2fluid/hero-testimonial
+title: Hero Testimonial
+description: Hero combined with featured customer testimonial
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: quote
+    type: Textarea
+    label: Testimonial Quote
+    rows: 3
+  - identifier: author_name
+    type: Text
+    label: Author Name
+  - identifier: author_role
+    type: Text
+    label: Author Role
+  - identifier: author_image
+    type: File
+    label: Author Image
+    allowed: common-image-types
+    maxitems: 1

@@ -1,0 +1,50 @@
+name: shadcn2fluid/testimonial-grid
+title: Testimonial Grid
+description: Multi-column grid of customer testimonials
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+    default: '3'
+
+  - identifier: testimonials
+    type: Collection
+    label: Testimonials
+    minItems: 1
+    fields:
+      - identifier: quote
+        type: Textarea
+        label: Quote
+        rows: 3
+        required: true
+
+      - identifier: author_name
+        type: Text
+        label: Author Name
+        required: true
+
+      - identifier: author_title
+        type: Text
+        label: Author Title
+
+      - identifier: author_image
+        type: File
+        label: Author Photo
+        allowed: common-image-types
+        maxitems: 1

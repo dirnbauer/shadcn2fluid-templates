@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-product-hero" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="product-hero">
+    <s2f:layout.container>
+        <div class="product-hero__layout">
+            <div class="product-hero__content">
+                <f:if condition="{data.eyebrow}">
+                    <span class="product-hero__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h1 class="product-hero__headline">{data.header}</h1>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="product-hero__description">{data.description}</p>
+                </f:if>
+                <f:if condition="{data.price}">
+                    <div class="product-hero__price-row">
+                        <f:if condition="{data.price_note}">
+                            <span class="product-hero__price-note">{data.price_note}</span>
+                        </f:if>
+                        <span class="product-hero__price">{data.price}</span>
+                    </div>
+                </f:if>
+                <f:if condition="{data.button_text} && {data.button_link.url}">
+                    <f:link.typolink parameter="{data.button_link}" class="product-hero__button">
+                        {data.button_text}
+                    </f:link.typolink>
+                </f:if>
+            </div>
+
+            <f:if condition="{data.image}">
+                <div class="product-hero__media">
+                    <f:for each="{data.image}" as="fileReference">
+                        <img src="{f:uri.image(image: fileReference, maxWidth: 720)}" alt="{data.header}" class="product-hero__image"/>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

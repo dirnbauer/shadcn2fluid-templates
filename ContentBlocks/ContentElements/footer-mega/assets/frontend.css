@@ -1,0 +1,17 @@
+.footer-mega { padding-block: var(--s2f-spacing-2xl); border-top: 1px solid hsl(var(--border)); }
+.footer-mega__top { display: grid; grid-template-columns: 1fr 2fr; gap: var(--s2f-spacing-2xl); }
+@media (max-width: 768px) { .footer-mega__top { grid-template-columns: 1fr; } }
+.footer-mega__title { font-size: var(--s2f-text-xl); font-weight: 700; }
+.footer-mega__description { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); margin-block-start: var(--s2f-spacing-sm); max-width: 320px; }
+.footer-mega__newsletter { margin-block-start: var(--s2f-spacing-lg); }
+.footer-mega__newsletter-label { font-size: var(--s2f-text-sm); font-weight: 500; margin-block-end: var(--s2f-spacing-xs); }
+.footer-mega__newsletter-form { display: flex; gap: var(--s2f-spacing-xs); }
+.footer-mega__input { flex: 1; padding: var(--s2f-spacing-xs) var(--s2f-spacing-sm); border: 1px solid hsl(var(--border)); border-radius: var(--radius); font-size: var(--s2f-text-sm); background: hsl(var(--background)); }
+.footer-mega__submit { padding: var(--s2f-spacing-xs) var(--s2f-spacing-md); border: none; border-radius: var(--radius); font-size: var(--s2f-text-sm); font-weight: 500; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); cursor: pointer; }
+.footer-mega__columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--s2f-spacing-xl); }
+.footer-mega__col-title { font-size: var(--s2f-text-sm); font-weight: 600; margin-block-end: var(--s2f-spacing-sm); }
+.footer-mega__links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--s2f-spacing-xs); }
+.footer-mega__link { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); text-decoration: none; }
+.footer-mega__link:hover { color: hsl(var(--foreground)); }
+.footer-mega__bottom { margin-block-start: var(--s2f-spacing-2xl); padding-block-start: var(--s2f-spacing-md); border-top: 1px solid hsl(var(--border)); }
+.footer-mega__copyright { font-size: var(--s2f-text-xs); color: hsl(var(--muted-foreground)); }

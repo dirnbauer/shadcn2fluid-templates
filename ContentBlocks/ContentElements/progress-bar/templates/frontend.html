@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-progress-bar" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="progress-bar-section">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <h2 class="progress-bar__headline">{data.header}</h2>
+        </f:if>
+        <div class="progress-bar__list">
+            <f:for each="{data.items}" as="item">
+                <div class="progress-bar__item">
+                    <div class="progress-bar__meta">
+                        <span class="progress-bar__label">{item.label}</span>
+                        <f:if condition="{data.show_value}">
+                            <span class="progress-bar__value">{item.value}%</span>
+                        </f:if>
+                    </div>
+                    <div class="progress-bar__track" role="progressbar" aria-valuenow="{item.value}" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar__fill progress-bar__fill--{item.color -> f:or(alternative: 'primary')}" style="width: {item.value}%"></div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

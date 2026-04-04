@@ -1,0 +1,40 @@
+name: shadcn2fluid/hero-animated
+title: Hero Animated
+description: Hero with CSS animation entrance effects on scroll
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: badge_text
+    type: Text
+    label: Badge Text
+  - identifier: animation
+    type: Select
+    renderType: selectSingle
+    label: Animation
+    items:
+      - label: Fade Up
+        value: fade-up
+      - label: Fade In
+        value: fade-in
+      - label: Slide In
+        value: slide-in
+    default: fade-up
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: secondary_button_text
+    type: Text
+    label: Secondary Button Text
+  - identifier: secondary_button_link
+    type: Link
+    label: Secondary Button Link

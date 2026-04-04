@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-logo-grid" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="logo-grid">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header}">
+            <header class="logo-grid__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="logo-grid__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="logo-grid__headline">{data.header}</h2>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="logo-grid__items logo-grid__items--cols-{data.columns -> f:or(alternative: '4')}">
+            <f:for each="{data.logos}" as="logo">
+                <div class="logo-grid__item">
+                    <f:if condition="{logo.link.url}">
+                        <f:then>
+                            <f:link.typolink parameter="{logo.link}" class="logo-grid__link" title="{logo.name}">
+                                <f:for each="{logo.image}" as="fileReference">
+                                    <img src="{f:uri.image(image: fileReference, maxWidth: 200)}" alt="{logo.name}" class="logo-grid__image"/>
+                                </f:for>
+                                <f:if condition="{data.show_names}">
+                                    <span class="logo-grid__name">{logo.name}</span>
+                                </f:if>
+                            </f:link.typolink>
+                        </f:then>
+                        <f:else>
+                            <div class="logo-grid__link">
+                                <f:for each="{logo.image}" as="fileReference">
+                                    <img src="{f:uri.image(image: fileReference, maxWidth: 200)}" alt="{logo.name}" class="logo-grid__image"/>
+                                </f:for>
+                                <f:if condition="{data.show_names}">
+                                    <span class="logo-grid__name">{logo.name}</span>
+                                </f:if>
+                            </div>
+                        </f:else>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

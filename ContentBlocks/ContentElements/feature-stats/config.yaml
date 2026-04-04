@@ -1,0 +1,29 @@
+name: shadcn2fluid/feature-stats
+title: Feature Stats
+description: Feature section with supporting statistics and key metrics
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: items
+    type: Collection
+    label: Stats
+    minItems: 1
+    fields:
+      - identifier: value
+        type: Text
+        label: Stat Value
+        required: true
+      - identifier: label
+        type: Text
+        label: Stat Label
+        required: true
+      - identifier: description
+        type: Text
+        label: Supporting Text

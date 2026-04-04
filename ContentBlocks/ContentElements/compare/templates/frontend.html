@@ -1,0 +1,76 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-compare" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="compare">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="compare__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="compare__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="compare__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="compare__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="compare__grid">
+            <article class="compare__panel">
+                <h3 class="compare__title">{data.left_title}</h3>
+                <f:if condition="{data.left_description}">
+                    <p class="compare__panel-description">{data.left_description}</p>
+                </f:if>
+                <f:if condition="{data.left_points}">
+                    <ul class="compare__points">
+                        <f:for each="{data.left_points -> f:split(separator: '\n')}" as="point">
+                            <f:if condition="{point}">
+                                <li class="compare__point">{point}</li>
+                            </f:if>
+                        </f:for>
+                    </ul>
+                </f:if>
+                <f:if condition="{data.left_button_text} && {data.left_button_link.url}">
+                    <div class="compare__actions">
+                        <f:link.typolink parameter="{data.left_button_link}" class="compare__button compare__button--outline">
+                            {data.left_button_text}
+                        </f:link.typolink>
+                    </div>
+                </f:if>
+            </article>
+
+            <article class="compare__panel compare__panel--accent">
+                <f:if condition="{data.right_badge}">
+                    <span class="compare__badge">{data.right_badge}</span>
+                </f:if>
+                <h3 class="compare__title">{data.right_title}</h3>
+                <f:if condition="{data.right_description}">
+                    <p class="compare__panel-description">{data.right_description}</p>
+                </f:if>
+                <f:if condition="{data.right_points}">
+                    <ul class="compare__points">
+                        <f:for each="{data.right_points -> f:split(separator: '\n')}" as="point">
+                            <f:if condition="{point}">
+                                <li class="compare__point">{point}</li>
+                            </f:if>
+                        </f:for>
+                    </ul>
+                </f:if>
+                <f:if condition="{data.right_button_text} && {data.right_button_link.url}">
+                    <div class="compare__actions">
+                        <f:link.typolink parameter="{data.right_button_link}" class="compare__button">
+                            {data.right_button_text}
+                        </f:link.typolink>
+                    </div>
+                </f:if>
+            </article>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

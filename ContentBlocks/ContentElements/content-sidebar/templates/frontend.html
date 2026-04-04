@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-content-sidebar" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="content-sidebar content-sidebar--{data.sidebar_position -> f:or(alternative: 'right')}">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <s2f:typography.heading level="2" class="content-sidebar__headline">{data.header}</s2f:typography.heading>
+        </f:if>
+
+        <div class="content-sidebar__grid">
+            <div class="content-sidebar__main">
+                <f:format.html>{data.content}</f:format.html>
+            </div>
+            <aside class="content-sidebar__aside">
+                <s2f:molecule.card class="content-sidebar__sidebar-card">
+                    <f:format.html>{data.sidebar_content}</f:format.html>
+                </s2f:molecule.card>
+            </aside>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

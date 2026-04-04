@@ -1,0 +1,37 @@
+name: shadcn2fluid/feature-image
+title: Feature with Image
+description: Single feature highlight with large image and supporting text
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: image
+    type: File
+    label: Feature Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: image_position
+    type: Select
+    renderType: selectSingle
+    label: Image Position
+    items:
+      - label: Right
+        value: right
+      - label: Left
+        value: left
+    default: right
+  - identifier: link
+    type: Link
+    label: Call to Action Link
+  - identifier: link_text
+    type: Text
+    label: Call to Action Text

@@ -1,0 +1,28 @@
+.team-cta__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: hsl(var(--muted));
+    padding: var(--s2f-spacing-2xl);
+    text-align: center;
+}
+.team-cta__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+}
+.team-cta__content { position: relative; max-width: 600px; margin-inline: auto; }
+.team-cta__count {
+    display: inline-block;
+    font-size: var(--s2f-text-sm);
+    font-weight: 600;
+    color: hsl(var(--primary));
+    background: hsl(var(--primary) / 0.1);
+    padding: 2px 12px;
+    border-radius: 9999px;
+    margin-block-end: var(--s2f-spacing-sm);
+}
+.team-cta__actions { margin-block-start: var(--s2f-spacing-lg); }

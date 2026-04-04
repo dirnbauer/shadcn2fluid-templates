@@ -1,0 +1,13 @@
+<f:argument name="name" type="string" optional="{true}" />
+<f:argument name="disabled" type="bool" optional="{true}" default="{false}" />
+<f:argument name="required" type="bool" optional="{true}" default="{false}" />
+<f:argument name="class" type="string" optional="{true}" default="" />
+
+<select
+    name="{name}"
+    disabled="{disabled}"
+    required="{required}"
+    class="select {class}"
+>
+    <f:slot />
+</select>

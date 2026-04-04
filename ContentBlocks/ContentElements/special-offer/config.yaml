@@ -1,0 +1,41 @@
+name: shadcn2fluid/special-offer
+title: Special Offer
+description: Promotional banner with discount and countdown urgency
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+    description: e.g. Limited Time
+
+  - identifier: description
+    type: Textarea
+    label: Offer Description
+    rows: 2
+
+  - identifier: discount_text
+    type: Text
+    label: Discount Text
+    description: e.g. 50% OFF, Save $200
+
+  - identifier: original_price
+    type: Text
+    label: Original Price
+
+  - identifier: sale_price
+    type: Text
+    label: Sale Price
+
+  - identifier: button_text
+    type: Text
+    label: CTA Button Text
+    default: Claim Offer
+
+  - identifier: button_link
+    type: Link
+    label: CTA Button Link

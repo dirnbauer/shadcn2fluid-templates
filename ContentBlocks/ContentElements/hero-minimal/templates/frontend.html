@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-hero-minimal" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="hero-minimal">
+    <s2f:layout.container>
+        <div class="hero-minimal__content">
+            <f:if condition="{data.header}">
+                <h1 class="hero-minimal__headline">{data.header}</h1>
+            </f:if>
+            <f:if condition="{data.subheadline}">
+                <p class="hero-minimal__subheadline">{data.subheadline}</p>
+            </f:if>
+            <f:if condition="{data.button_text} && {data.button_link.url}">
+                <s2f:atom.button link="{data.button_link}" size="lg">{data.button_text}</s2f:atom.button>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

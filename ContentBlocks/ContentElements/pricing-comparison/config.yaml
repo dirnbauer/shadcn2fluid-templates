@@ -1,0 +1,44 @@
+name: shadcn2fluid/pricing-comparison
+title: Pricing Comparison
+description: Feature comparison table across pricing plans
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: plans
+    type: Collection
+    label: Plan Names
+    minItems: 2
+    maxItems: 4
+    fields:
+      - identifier: name
+        type: Text
+        label: Plan Name
+        required: true
+
+      - identifier: price
+        type: Text
+        label: Price
+
+  - identifier: features
+    type: Collection
+    label: Feature Rows
+    minItems: 1
+    fields:
+      - identifier: feature_name
+        type: Text
+        label: Feature Name
+        required: true
+
+      - identifier: values
+        type: Text
+        label: Values (comma-separated)
+        description: One value per plan, e.g. Yes, Yes, No
+        required: true

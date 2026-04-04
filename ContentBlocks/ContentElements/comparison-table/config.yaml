@@ -1,0 +1,39 @@
+name: shadcn2fluid/comparison-table
+title: Comparison Table
+description: Side-by-side feature comparison table with check/cross indicators
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: columns
+    type: Collection
+    label: Comparison Columns
+    minItems: 2
+    fields:
+      - identifier: name
+        type: Text
+        label: Column Name
+        required: true
+      - identifier: highlighted
+        type: Checkbox
+        label: Highlight
+        default: 0
+  - identifier: features
+    type: Collection
+    label: Feature Rows
+    minItems: 1
+    fields:
+      - identifier: name
+        type: Text
+        label: Feature Name
+        required: true
+      - identifier: values
+        type: Text
+        label: Values (comma-separated)
+        description: Use "yes", "no", or text for each column

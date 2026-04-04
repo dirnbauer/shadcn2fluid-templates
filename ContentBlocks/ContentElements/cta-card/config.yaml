@@ -1,0 +1,22 @@
+name: shadcn2fluid/cta-card
+title: CTA Card
+description: Card-style call to action with bordered container
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: cta_text
+    type: Text
+    label: Button Text
+  - identifier: cta_link
+    type: Link
+    label: Button Link
+  - identifier: badge
+    type: Text
+    label: Badge Text

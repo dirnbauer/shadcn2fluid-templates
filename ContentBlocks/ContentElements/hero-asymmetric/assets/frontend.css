@@ -1,0 +1,31 @@
+.hero-asymmetric__grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: var(--s2f-spacing-8);
+    align-items: center;
+    padding-block: var(--s2f-spacing-12);
+}
+.hero-asymmetric__content {
+    padding-right: var(--s2f-spacing-4);
+}
+.hero-asymmetric__headline {
+    font-size: var(--s2f-text-4xl);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: var(--s2f-spacing-3);
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-asymmetric__subheadline {
+    font-size: var(--s2f-text-lg);
+    color: var(--s2f-muted-foreground);
+    margin-bottom: var(--s2f-spacing-6);
+}
+.hero-asymmetric__actions {
+    display: flex;
+    gap: var(--s2f-spacing-3);
+}
+.hero-asymmetric__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--s2f-radius-lg);
+}

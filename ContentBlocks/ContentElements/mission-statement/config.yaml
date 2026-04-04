@@ -1,0 +1,19 @@
+name: shadcn2fluid/mission-statement
+title: Mission Statement
+description: Bold centered mission or vision statement
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: statement
+    type: Textarea
+    label: Mission Statement
+    rows: 4
+  - identifier: attribution
+    type: Text
+    label: Attribution

@@ -1,0 +1,34 @@
+name: shadcn2fluid/feature-tabs
+title: Feature Tabs
+description: Tabbed feature presentation with switchable content panels
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Tabs
+    minItems: 2
+    fields:
+      - identifier: tab_label
+        type: Text
+        label: Tab Label
+        required: true
+      - identifier: title
+        type: Text
+        label: Content Title
+      - identifier: description
+        type: Textarea
+        label: Content Description
+        rows: 3
+      - identifier: image
+        type: File
+        label: Tab Image
+        allowed: common-image-types
+        maxitems: 1

@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+<f:asset.css identifier="s2f-hero-search" href="{cb:assetPath()}/frontend.css"/>
+<s2f:layout.section class="hero-search">
+    <s2f:layout.container>
+        <div class="hero-search__content">
+            <f:if condition="{data.header}"><h1 class="hero-search__headline">{data.header}</h1></f:if>
+            <f:if condition="{data.subheadline}"><p class="hero-search__subheadline">{data.subheadline}</p></f:if>
+            <form class="hero-search__form" action="{data.form_action.url}" method="get">
+                <input type="search" name="q" placeholder="{data.placeholder -> f:or(alternative: 'Search...')}" class="hero-search__input"/>
+                <s2f:atom.button type="submit" size="lg">Search</s2f:atom.button>
+            </form>
+            <f:if condition="{data.categories}">
+                <div class="hero-search__categories">
+                    <f:for each="{data.categories}" as="cat">
+                        <f:if condition="{cat.link.url}">
+                            <f:link.typolink parameter="{cat.link}" class="hero-search__category">{cat.label}</f:link.typolink>
+                        </f:if>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

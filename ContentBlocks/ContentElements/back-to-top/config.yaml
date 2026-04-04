@@ -1,0 +1,29 @@
+name: shadcn2fluid/back-to-top
+title: Back to Top
+description: Floating back-to-top button with smooth scroll
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: label
+    type: Text
+    label: Button Label
+    default: Back to top
+  - identifier: show_label
+    type: Checkbox
+    label: Show Label Text
+    default: 0
+  - identifier: position
+    type: Select
+    renderType: selectSingle
+    label: Position
+    items:
+      - label: Bottom Right
+        value: bottom-right
+      - label: Bottom Left
+        value: bottom-left
+      - label: Bottom Center
+        value: bottom-center
+    default: bottom-right

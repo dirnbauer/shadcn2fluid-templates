@@ -1,0 +1,36 @@
+name: shadcn2fluid/copyright-bar
+title: Copyright Bar
+description: Slim copyright bar for the very bottom of the page
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: copyright
+    type: Text
+    label: Copyright Text
+    required: true
+  - identifier: links
+    type: Collection
+    label: Links
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: link
+        type: Link
+        label: Link
+  - identifier: alignment
+    type: Select
+    renderType: selectSingle
+    label: Alignment
+    items:
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Space Between
+        value: between
+    default: between

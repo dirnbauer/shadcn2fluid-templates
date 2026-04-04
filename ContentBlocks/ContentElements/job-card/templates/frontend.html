@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-job-card" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="job-card">
+    <s2f:layout.container>
+        <s2f:molecule.card class="job-card__card">
+            <div class="job-card__header">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <div class="job-card__meta">
+                    <f:if condition="{data.department}"><span class="job-card__badge">{data.department}</span></f:if>
+                    <f:if condition="{data.location}"><span class="job-card__badge">{data.location}</span></f:if>
+                    <f:if condition="{data.type}"><span class="job-card__badge">{data.type}</span></f:if>
+                </div>
+            </div>
+            <f:if condition="{data.description}"><p class="job-card__description">{data.description}</p></f:if>
+            <f:if condition="{data.apply_link.url}">
+                <div class="job-card__actions">
+                    <s2f:atom.button link="{data.apply_link}" size="lg">Apply now</s2f:atom.button>
+                </div>
+            </f:if>
+        </s2f:molecule.card>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

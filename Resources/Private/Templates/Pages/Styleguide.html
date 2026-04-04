@@ -1,0 +1,1253 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<style>
+/* ===== Styleguide Page Styles ===== */
+
+.styleguide {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+    min-height: 100vh;
+}
+
+.styleguide__header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid hsl(var(--border));
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: hsl(var(--background));
+}
+
+.styleguide__header-left {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.styleguide__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+.styleguide__version {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    background-color: hsl(var(--muted));
+    color: hsl(var(--muted-foreground));
+}
+
+/* Sidebar Navigation */
+.styleguide__nav {
+    position: sticky;
+    top: 5rem;
+    align-self: start;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+}
+
+.styleguide__nav-group {
+    margin-bottom: 1.5rem;
+}
+
+.styleguide__nav-heading {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(var(--muted-foreground));
+    margin: 0 0 0.5rem;
+    padding: 0 0.5rem;
+}
+
+.styleguide__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.styleguide__nav-link {
+    display: block;
+    padding: 0.375rem 0.5rem;
+    border-radius: var(--radius, 0.375rem);
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+    text-decoration: none;
+    transition: color 150ms ease, background-color 150ms ease;
+}
+
+.styleguide__nav-link:hover {
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--accent));
+}
+
+/* Main Content */
+.styleguide__main {
+    min-width: 0;
+}
+
+/* Component Section */
+.styleguide__component {
+    margin-bottom: 3rem;
+    scroll-margin-top: 5rem;
+}
+
+.styleguide__component-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin: 0 0 0.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+.styleguide__component-desc {
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+    margin: 0.5rem 0 1rem;
+    line-height: 1.5;
+}
+
+.styleguide__subsection {
+    margin-bottom: 1.5rem;
+}
+
+.styleguide__subsection-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    color: hsl(var(--foreground));
+}
+
+/* Preview Box */
+.styleguide__preview {
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius, 0.375rem);
+    padding: 1.5rem;
+    background-color: hsl(var(--background));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.styleguide__preview--col {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.styleguide__preview--grid {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.styleguide__preview--muted {
+    background-color: hsl(var(--muted) / 0.3);
+}
+
+.styleguide__preview--typography {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* Code Block */
+.styleguide__code {
+    margin-top: 0.5rem;
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius, 0.375rem);
+    overflow: hidden;
+}
+
+.styleguide__code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    background-color: hsl(var(--muted));
+    border-bottom: 1px solid hsl(var(--border));
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: hsl(var(--muted-foreground));
+}
+
+.styleguide__code pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--muted) / 0.3);
+    scrollbar-width: thin;
+}
+
+.styleguide__code code {
+    font-family: inherit;
+}
+
+/* Labels inside previews */
+.styleguide__label {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(var(--muted-foreground));
+    text-align: center;
+}
+
+.styleguide__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .styleguide {
+        grid-template-columns: 1fr;
+    }
+    .styleguide__nav {
+        position: relative;
+        top: 0;
+        max-height: none;
+        border-bottom: 1px solid hsl(var(--border));
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+</style>
+
+<div class="styleguide">
+
+    <!-- ====== HEADER ====== -->
+    <header class="styleguide__header">
+        <div class="styleguide__header-left">
+            <h1 class="styleguide__title">Component Library</h1>
+            <span class="styleguide__version">shadcn2fluid</span>
+        </div>
+        <s2f:atom.button variant="outline" size="sm" data-s2f-theme-toggle="true">Toggle Dark Mode</s2f:atom.button>
+    </header>
+
+    <!-- ====== SIDEBAR NAV ====== -->
+    <nav class="styleguide__nav" aria-label="Component navigation">
+        <div class="styleguide__nav-group">
+            <p class="styleguide__nav-heading">Atoms</p>
+            <ul class="styleguide__nav-list">
+                <li><a href="#button" class="styleguide__nav-link">Button</a></li>
+                <li><a href="#badge" class="styleguide__nav-link">Badge</a></li>
+                <li><a href="#typography" class="styleguide__nav-link">Typography</a></li>
+                <li><a href="#input" class="styleguide__nav-link">Input</a></li>
+                <li><a href="#textarea" class="styleguide__nav-link">Textarea</a></li>
+                <li><a href="#label" class="styleguide__nav-link">Label</a></li>
+                <li><a href="#select" class="styleguide__nav-link">Select</a></li>
+                <li><a href="#separator" class="styleguide__nav-link">Separator</a></li>
+                <li><a href="#avatar" class="styleguide__nav-link">Avatar</a></li>
+                <li><a href="#progress" class="styleguide__nav-link">Progress</a></li>
+                <li><a href="#skeleton" class="styleguide__nav-link">Skeleton</a></li>
+                <li><a href="#link" class="styleguide__nav-link">Link</a></li>
+                <li><a href="#image" class="styleguide__nav-link">Image</a></li>
+                <li><a href="#icon" class="styleguide__nav-link">Icon</a></li>
+                <li><a href="#aspect-ratio" class="styleguide__nav-link">AspectRatio</a></li>
+                <li><a href="#scroll-area" class="styleguide__nav-link">ScrollArea</a></li>
+            </ul>
+        </div>
+
+        <div class="styleguide__nav-group">
+            <p class="styleguide__nav-heading">Molecules</p>
+            <ul class="styleguide__nav-list">
+                <li><a href="#card" class="styleguide__nav-link">Card</a></li>
+                <li><a href="#alert" class="styleguide__nav-link">Alert</a></li>
+                <li><a href="#accordion" class="styleguide__nav-link">Accordion</a></li>
+                <li><a href="#tabs" class="styleguide__nav-link">Tabs</a></li>
+                <li><a href="#table" class="styleguide__nav-link">Table</a></li>
+            </ul>
+        </div>
+
+        <div class="styleguide__nav-group">
+            <p class="styleguide__nav-heading">Layout</p>
+            <ul class="styleguide__nav-list">
+                <li><a href="#section" class="styleguide__nav-link">Section</a></li>
+                <li><a href="#container" class="styleguide__nav-link">Container</a></li>
+                <li><a href="#grid" class="styleguide__nav-link">Grid</a></li>
+                <li><a href="#stack" class="styleguide__nav-link">Stack</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <main class="styleguide__main">
+
+        <!-- ============================================================
+             ATOMS
+             ============================================================ -->
+
+        <!-- ==================== BUTTON ==================== -->
+        <section id="button" class="styleguide__component">
+            <h2 class="styleguide__component-name">Button</h2>
+            <p class="styleguide__component-desc">
+                Displays a button or a component that looks like a button. Supports six visual variants, four sizes, disabled state, and rendering as an anchor when <code>href</code> is provided.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Variants</h3>
+                <div class="styleguide__preview">
+                    <div class="styleguide__item">
+                        <s2f:atom.button variant="default">Default</s2f:atom.button>
+                        <span class="styleguide__label">default</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.button variant="secondary">Secondary</s2f:atom.button>
+                        <span class="styleguide__label">secondary</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.button variant="outline">Outline</s2f:atom.button>
+                        <span class="styleguide__label">outline</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.button variant="ghost">Ghost</s2f:atom.button>
+                        <span class="styleguide__label">ghost</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.button variant="destructive">Destructive</s2f:atom.button>
+                        <span class="styleguide__label">destructive</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.button variant="link">Link</s2f:atom.button>
+                        <span class="styleguide__label">link</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Sizes</h3>
+                <div class="styleguide__preview">
+                    <div class="styleguide__item">
+                        <s2f:atom.button size="sm">Small</s2f:atom.button>
+                        <span class="styleguide__label">sm</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.button size="default">Default</s2f:atom.button>
+                        <span class="styleguide__label">default</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.button size="lg">Large</s2f:atom.button>
+                        <span class="styleguide__label">lg</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.button size="icon">+</s2f:atom.button>
+                        <span class="styleguide__label">icon</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">States</h3>
+                <div class="styleguide__preview">
+                    <s2f:atom.button disabled="{true}">Disabled</s2f:atom.button>
+                    <s2f:atom.button href="#button">As Link</s2f:atom.button>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.button variant="default" size="lg"&gt;Click me&lt;/s2f:atom.button&gt;
+&lt;s2f:atom.button variant="outline" disabled="{f:constant(name: 'true')}"&gt;Disabled&lt;/s2f:atom.button&gt;
+&lt;s2f:atom.button href="/page" variant="secondary"&gt;Link button&lt;/s2f:atom.button&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== BADGE ==================== -->
+        <section id="badge" class="styleguide__component">
+            <h2 class="styleguide__component-name">Badge</h2>
+            <p class="styleguide__component-desc">
+                Displays a small status descriptor. Four variants for different semantic contexts.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Variants</h3>
+                <div class="styleguide__preview">
+                    <div class="styleguide__item">
+                        <s2f:atom.badge variant="default">Default</s2f:atom.badge>
+                        <span class="styleguide__label">default</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.badge variant="secondary">Secondary</s2f:atom.badge>
+                        <span class="styleguide__label">secondary</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.badge variant="outline">Outline</s2f:atom.badge>
+                        <span class="styleguide__label">outline</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.badge variant="destructive">Destructive</s2f:atom.badge>
+                        <span class="styleguide__label">destructive</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.badge variant="default"&gt;New&lt;/s2f:atom.badge&gt;
+&lt;s2f:atom.badge variant="destructive"&gt;Error&lt;/s2f:atom.badge&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== TYPOGRAPHY ==================== -->
+        <section id="typography" class="styleguide__component">
+            <h2 class="styleguide__component-name">Typography</h2>
+            <p class="styleguide__component-desc">
+                Semantic text rendering with configurable HTML tag and visual variant. Supports heading levels, paragraphs, and utility styles.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Headings</h3>
+                <div class="styleguide__preview styleguide__preview--typography">
+                    <s2f:atom.typography tag="h1" variant="h1">Heading 1 -- The quick brown fox</s2f:atom.typography>
+                    <s2f:atom.typography tag="h2" variant="h2">Heading 2 -- The quick brown fox</s2f:atom.typography>
+                    <s2f:atom.typography tag="h3" variant="h3">Heading 3 -- The quick brown fox</s2f:atom.typography>
+                    <s2f:atom.typography tag="h4" variant="h4">Heading 4 -- The quick brown fox</s2f:atom.typography>
+                </div>
+            </div>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Body &amp; Utility</h3>
+                <div class="styleguide__preview styleguide__preview--typography">
+                    <s2f:atom.typography tag="p" variant="p">Paragraph -- The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs.</s2f:atom.typography>
+                    <s2f:atom.typography tag="p" variant="lead">Lead -- A slightly larger introductory paragraph style.</s2f:atom.typography>
+                    <s2f:atom.typography tag="p" variant="large">Large -- Emphasized body text rendered at a larger size.</s2f:atom.typography>
+                    <s2f:atom.typography tag="span" variant="small">Small -- Fine print and secondary information.</s2f:atom.typography>
+                    <s2f:atom.typography tag="span" variant="muted">Muted -- Subdued color for less important text.</s2f:atom.typography>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.typography tag="h1" variant="h1"&gt;Page Title&lt;/s2f:atom.typography&gt;
+&lt;s2f:atom.typography tag="p" variant="lead"&gt;Introduction text&lt;/s2f:atom.typography&gt;
+&lt;s2f:atom.typography tag="span" variant="muted"&gt;Hint text&lt;/s2f:atom.typography&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== INPUT ==================== -->
+        <section id="input" class="styleguide__component">
+            <h2 class="styleguide__component-name">Input</h2>
+            <p class="styleguide__component-desc">
+                A styled text input field. Supports type, placeholder, disabled, and required attributes.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Default &amp; States</h3>
+                <div class="styleguide__preview styleguide__preview--col" style="max-width: 24rem;">
+                    <s2f:atom.input type="text" placeholder="Default input" />
+                    <s2f:atom.input type="email" placeholder="Email input" />
+                    <s2f:atom.input type="password" placeholder="Password input" />
+                    <s2f:atom.input type="text" placeholder="Disabled input" disabled="{true}" />
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.input type="email" placeholder="you@example.com" /&gt;
+&lt;s2f:atom.input type="text" disabled="{true}" placeholder="Disabled" /&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== TEXTAREA ==================== -->
+        <section id="textarea" class="styleguide__component">
+            <h2 class="styleguide__component-name">Textarea</h2>
+            <p class="styleguide__component-desc">
+                A multi-line text input area with configurable rows.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Default &amp; Disabled</h3>
+                <div class="styleguide__preview styleguide__preview--col" style="max-width: 24rem;">
+                    <s2f:atom.textarea placeholder="Type your message here..." rows="3" />
+                    <s2f:atom.textarea placeholder="Disabled textarea" rows="3" disabled="{true}" />
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.textarea placeholder="Your message..." rows="4" /&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== LABEL ==================== -->
+        <section id="label" class="styleguide__component">
+            <h2 class="styleguide__component-name">Label</h2>
+            <p class="styleguide__component-desc">
+                A form label associated with an input via the <code>for</code> attribute.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">With Input</h3>
+                <div class="styleguide__preview styleguide__preview--col" style="max-width: 24rem;">
+                    <div>
+                        <s2f:atom.label for="sg-email">Email address</s2f:atom.label>
+                        <s2f:atom.input type="email" name="sg-email" placeholder="you@example.com" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.label for="email"&gt;Email&lt;/s2f:atom.label&gt;
+&lt;s2f:atom.input type="email" name="email" /&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== SELECT ==================== -->
+        <section id="select" class="styleguide__component">
+            <h2 class="styleguide__component-name">Select</h2>
+            <p class="styleguide__component-desc">
+                A styled native select dropdown.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Default &amp; Disabled</h3>
+                <div class="styleguide__preview styleguide__preview--col" style="max-width: 24rem;">
+                    <s2f:atom.select name="sg-framework">
+                        <option value="" disabled="disabled" selected="selected">Select a framework</option>
+                        <option value="typo3">TYPO3</option>
+                        <option value="laravel">Laravel</option>
+                        <option value="symfony">Symfony</option>
+                    </s2f:atom.select>
+                    <s2f:atom.select name="sg-disabled" disabled="{true}">
+                        <option>Disabled select</option>
+                    </s2f:atom.select>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.select name="framework"&gt;
+    &lt;option value="typo3"&gt;TYPO3&lt;/option&gt;
+    &lt;option value="laravel"&gt;Laravel&lt;/option&gt;
+&lt;/s2f:atom.select&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== SEPARATOR ==================== -->
+        <section id="separator" class="styleguide__component">
+            <h2 class="styleguide__component-name">Separator</h2>
+            <p class="styleguide__component-desc">
+                A visual divider between content sections. Supports horizontal and vertical orientations.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Horizontal</h3>
+                <div class="styleguide__preview styleguide__preview--col">
+                    <s2f:atom.typography tag="p" variant="p">Content above separator</s2f:atom.typography>
+                    <s2f:atom.separator orientation="horizontal" />
+                    <s2f:atom.typography tag="p" variant="p">Content below separator</s2f:atom.typography>
+                </div>
+            </div>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Vertical</h3>
+                <div class="styleguide__preview" style="height: 3rem;">
+                    <span>Left</span>
+                    <s2f:atom.separator orientation="vertical" />
+                    <span>Center</span>
+                    <s2f:atom.separator orientation="vertical" />
+                    <span>Right</span>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.separator orientation="horizontal" /&gt;
+&lt;s2f:atom.separator orientation="vertical" /&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== AVATAR ==================== -->
+        <section id="avatar" class="styleguide__component">
+            <h2 class="styleguide__component-name">Avatar</h2>
+            <p class="styleguide__component-desc">
+                An image element with a fallback for representing the user. Three sizes plus text fallback when no image is provided.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Sizes</h3>
+                <div class="styleguide__preview">
+                    <div class="styleguide__item">
+                        <s2f:atom.avatar size="sm" src="https://i.pravatar.cc/64?u=sm" alt="Small avatar" />
+                        <span class="styleguide__label">sm</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.avatar size="default" src="https://i.pravatar.cc/96?u=def" alt="Default avatar" />
+                        <span class="styleguide__label">default</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.avatar size="lg" src="https://i.pravatar.cc/128?u=lg" alt="Large avatar" />
+                        <span class="styleguide__label">lg</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Fallback</h3>
+                <div class="styleguide__preview">
+                    <s2f:atom.avatar size="default" fallback="JD" />
+                    <s2f:atom.avatar size="default" fallback="AB" />
+                    <s2f:atom.avatar size="default" fallback="XY" />
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.avatar size="default" src="/avatar.jpg" alt="John Doe" /&gt;
+&lt;s2f:atom.avatar size="lg" fallback="JD" /&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== PROGRESS ==================== -->
+        <section id="progress" class="styleguide__component">
+            <h2 class="styleguide__component-name">Progress</h2>
+            <p class="styleguide__component-desc">
+                Displays an indicator showing the completion progress of a task, typically as a horizontal bar.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Values</h3>
+                <div class="styleguide__preview styleguide__preview--col" style="max-width: 24rem;">
+                    <div>
+                        <span class="styleguide__label">0%</span>
+                        <s2f:atom.progress value="0" />
+                    </div>
+                    <div>
+                        <span class="styleguide__label">25%</span>
+                        <s2f:atom.progress value="25" />
+                    </div>
+                    <div>
+                        <span class="styleguide__label">50%</span>
+                        <s2f:atom.progress value="50" />
+                    </div>
+                    <div>
+                        <span class="styleguide__label">75%</span>
+                        <s2f:atom.progress value="75" />
+                    </div>
+                    <div>
+                        <span class="styleguide__label">100%</span>
+                        <s2f:atom.progress value="100" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.progress value="75" /&gt;
+&lt;s2f:atom.progress value="100" max="100" /&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== SKELETON ==================== -->
+        <section id="skeleton" class="styleguide__component">
+            <h2 class="styleguide__component-name">Skeleton</h2>
+            <p class="styleguide__component-desc">
+                A placeholder loading indicator used to represent content before it loads.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Shapes</h3>
+                <div class="styleguide__preview" style="gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <s2f:atom.skeleton class="skeleton--circle" style="width: 3rem; height: 3rem; border-radius: 9999px;" />
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <s2f:atom.skeleton style="width: 12rem; height: 1rem;" />
+                            <s2f:atom.skeleton style="width: 8rem; height: 1rem;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.skeleton class="w-48 h-4" /&gt;
+&lt;s2f:atom.skeleton class="w-12 h-12 rounded-full" /&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== LINK ==================== -->
+        <section id="link" class="styleguide__component">
+            <h2 class="styleguide__component-name">Link</h2>
+            <p class="styleguide__component-desc">
+                A styled anchor element with variant support. Can open in a new tab with <code>external</code>.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Default &amp; External</h3>
+                <div class="styleguide__preview">
+                    <s2f:atom.link href="#link" variant="default">Internal Link</s2f:atom.link>
+                    <s2f:atom.link href="https://typo3.org" variant="default" external="{true}">External Link</s2f:atom.link>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.link href="/about" variant="default"&gt;About us&lt;/s2f:atom.link&gt;
+&lt;s2f:atom.link href="https://typo3.org" external="{true}"&gt;TYPO3&lt;/s2f:atom.link&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== IMAGE ==================== -->
+        <section id="image" class="styleguide__component">
+            <h2 class="styleguide__component-name">Image</h2>
+            <p class="styleguide__component-desc">
+                A responsive image component with optional aspect ratio wrapper. Supports lazy loading by default.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Default &amp; With Aspect Ratio</h3>
+                <div class="styleguide__preview styleguide__preview--col" style="max-width: 24rem;">
+                    <s2f:atom.image src="https://placehold.co/600x400/e2e8f0/64748b?text=600x400" alt="Sample image" width="600" height="400" />
+                    <s2f:atom.image src="https://placehold.co/600x400/e2e8f0/64748b?text=16:9" alt="16:9 aspect ratio" aspectRatio="16/9" />
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.image src="/img/photo.jpg" alt="Description" width="600" height="400" /&gt;
+&lt;s2f:atom.image src="/img/hero.jpg" alt="Hero" aspectRatio="16/9" /&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== ICON ==================== -->
+        <section id="icon" class="styleguide__component">
+            <h2 class="styleguide__component-name">Icon</h2>
+            <p class="styleguide__component-desc">
+                Renders an SVG icon from a sprite sheet via <code>&lt;use&gt;</code>. Sizes match the button size scale.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Usage</h3>
+                <div class="styleguide__preview">
+                    <div class="styleguide__item">
+                        <s2f:atom.icon name="check" size="sm" />
+                        <span class="styleguide__label">sm</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.icon name="check" size="default" />
+                        <span class="styleguide__label">default</span>
+                    </div>
+                    <div class="styleguide__item">
+                        <s2f:atom.icon name="check" size="lg" />
+                        <span class="styleguide__label">lg</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.icon name="check" size="default" /&gt;
+&lt;s2f:atom.icon name="arrow-right" size="lg" /&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== ASPECT RATIO ==================== -->
+        <section id="aspect-ratio" class="styleguide__component">
+            <h2 class="styleguide__component-name">AspectRatio</h2>
+            <p class="styleguide__component-desc">
+                A container that enforces a fixed aspect ratio on its children. Useful for responsive media embeds.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Ratios</h3>
+                <div class="styleguide__preview styleguide__preview--grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div>
+                        <s2f:atom.aspectRatio ratio="16/9">
+                            <div style="background: hsl(var(--muted)); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius, 0.375rem);">
+                                <span class="styleguide__label">16 / 9</span>
+                            </div>
+                        </s2f:atom.aspectRatio>
+                    </div>
+                    <div>
+                        <s2f:atom.aspectRatio ratio="4/3">
+                            <div style="background: hsl(var(--muted)); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius, 0.375rem);">
+                                <span class="styleguide__label">4 / 3</span>
+                            </div>
+                        </s2f:atom.aspectRatio>
+                    </div>
+                    <div>
+                        <s2f:atom.aspectRatio ratio="1/1">
+                            <div style="background: hsl(var(--muted)); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius, 0.375rem);">
+                                <span class="styleguide__label">1 / 1</span>
+                            </div>
+                        </s2f:atom.aspectRatio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.aspectRatio ratio="16/9"&gt;
+    &lt;img src="/img/hero.jpg" alt="Hero" style="width:100%; height:100%; object-fit:cover;" /&gt;
+&lt;/s2f:atom.aspectRatio&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== SCROLL AREA ==================== -->
+        <section id="scroll-area" class="styleguide__component">
+            <h2 class="styleguide__component-name">ScrollArea</h2>
+            <p class="styleguide__component-desc">
+                A scrollable container with styled, thin scrollbars. Supports vertical and horizontal orientations.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Vertical</h3>
+                <div class="styleguide__preview" style="max-width: 20rem;">
+                    <s2f:atom.scrollArea orientation="vertical" class="styleguide-scroll-demo" style="height: 10rem; width: 100%;">
+                        <div style="padding: 1rem;">
+                            <p style="margin: 0 0 0.75rem;"><strong>TYPO3 CMS</strong></p>
+                            <p style="margin: 0 0 0.5rem;">TYPO3 is a professional, enterprise-class content management system.</p>
+                            <p style="margin: 0 0 0.5rem;">It provides a flexible architecture for building complex websites with editorial workflows, multilingual support, and a powerful extension framework.</p>
+                            <p style="margin: 0 0 0.5rem;">Fluid is the templating engine used throughout TYPO3 for rendering frontend output. Fluid 5 introduces native components that simplify template authoring.</p>
+                            <p style="margin: 0;">The shadcn2fluid-templates extension brings the shadcn/ui design vocabulary to TYPO3 via Fluid 5 components.</p>
+                        </div>
+                    </s2f:atom.scrollArea>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:atom.scrollArea orientation="vertical" style="height: 200px;"&gt;
+    &lt;p&gt;Long scrollable content...&lt;/p&gt;
+&lt;/s2f:atom.scrollArea&gt;</code></pre>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             MOLECULES
+             ============================================================ -->
+
+        <!-- ==================== CARD ==================== -->
+        <section id="card" class="styleguide__component">
+            <h2 class="styleguide__component-name">Card</h2>
+            <p class="styleguide__component-desc">
+                A flexible container composed of Card, CardHeader, CardContent, and CardFooter sub-components. Used for grouping related content.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Full Composition</h3>
+                <div class="styleguide__preview" style="max-width: 24rem;">
+                    <s2f:molecule.card>
+                        <s2f:molecule.cardHeader title="Card Title" description="A short description of this card's purpose." />
+                        <s2f:molecule.cardContent>
+                            <s2f:atom.typography tag="p" variant="p">This is the main content area of the card. It can contain any valid Fluid markup including other components.</s2f:atom.typography>
+                        </s2f:molecule.cardContent>
+                        <s2f:molecule.cardFooter>
+                            <s2f:atom.button variant="default" size="sm">Save</s2f:atom.button>
+                            <s2f:atom.button variant="outline" size="sm">Cancel</s2f:atom.button>
+                        </s2f:molecule.cardFooter>
+                    </s2f:molecule.card>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:molecule.card&gt;
+    &lt;s2f:molecule.cardHeader title="Title" description="Description" /&gt;
+    &lt;s2f:molecule.cardContent&gt;
+        &lt;p&gt;Card body content&lt;/p&gt;
+    &lt;/s2f:molecule.cardContent&gt;
+    &lt;s2f:molecule.cardFooter&gt;
+        &lt;s2f:atom.button variant="default"&gt;Action&lt;/s2f:atom.button&gt;
+    &lt;/s2f:molecule.cardFooter&gt;
+&lt;/s2f:molecule.card&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== ALERT ==================== -->
+        <section id="alert" class="styleguide__component">
+            <h2 class="styleguide__component-name">Alert</h2>
+            <p class="styleguide__component-desc">
+                Displays a callout for important information. Composed of Alert, AlertTitle, and AlertDescription sub-components.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Variants</h3>
+                <div class="styleguide__preview styleguide__preview--col">
+                    <s2f:molecule.alert variant="default">
+                        <s2f:molecule.alertTitle>Default Alert</s2f:molecule.alertTitle>
+                        <s2f:molecule.alertDescription>This is a default informational alert message.</s2f:molecule.alertDescription>
+                    </s2f:molecule.alert>
+
+                    <s2f:molecule.alert variant="info">
+                        <s2f:molecule.alertTitle>Info</s2f:molecule.alertTitle>
+                        <s2f:molecule.alertDescription>Additional context or helpful information for the user.</s2f:molecule.alertDescription>
+                    </s2f:molecule.alert>
+
+                    <s2f:molecule.alert variant="success">
+                        <s2f:molecule.alertTitle>Success</s2f:molecule.alertTitle>
+                        <s2f:molecule.alertDescription>The operation completed successfully.</s2f:molecule.alertDescription>
+                    </s2f:molecule.alert>
+
+                    <s2f:molecule.alert variant="warning">
+                        <s2f:molecule.alertTitle>Warning</s2f:molecule.alertTitle>
+                        <s2f:molecule.alertDescription>Please review your input before proceeding.</s2f:molecule.alertDescription>
+                    </s2f:molecule.alert>
+
+                    <s2f:molecule.alert variant="destructive">
+                        <s2f:molecule.alertTitle>Error</s2f:molecule.alertTitle>
+                        <s2f:molecule.alertDescription>Something went wrong. Please try again later.</s2f:molecule.alertDescription>
+                    </s2f:molecule.alert>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:molecule.alert variant="destructive"&gt;
+    &lt;s2f:molecule.alertTitle&gt;Error&lt;/s2f:molecule.alertTitle&gt;
+    &lt;s2f:molecule.alertDescription&gt;Something went wrong.&lt;/s2f:molecule.alertDescription&gt;
+&lt;/s2f:molecule.alert&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== ACCORDION ==================== -->
+        <section id="accordion" class="styleguide__component">
+            <h2 class="styleguide__component-name">Accordion</h2>
+            <p class="styleguide__component-desc">
+                A vertically stacked set of interactive headings that each reveal a section of content. Supports <code>single</code> and <code>multiple</code> expansion modes.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Single Mode</h3>
+                <div class="styleguide__preview styleguide__preview--col" style="max-width: 32rem;">
+                    <s2f:molecule.accordion type="single">
+                        <s2f:molecule.accordionItem trigger="Is it accessible?" open="{true}">
+                            Yes. The accordion follows WAI-ARIA design patterns and supports full keyboard navigation.
+                        </s2f:molecule.accordionItem>
+                        <s2f:molecule.accordionItem trigger="Is it styled?">
+                            Yes. It ships with default styles from the shadcn2fluid design system that integrate with your theme tokens.
+                        </s2f:molecule.accordionItem>
+                        <s2f:molecule.accordionItem trigger="Is it animated?">
+                            Yes. It uses CSS transitions for smooth open and close animations via the data attributes.
+                        </s2f:molecule.accordionItem>
+                    </s2f:molecule.accordion>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:molecule.accordion type="single"&gt;
+    &lt;s2f:molecule.accordionItem trigger="Question?" open="{true}"&gt;
+        Answer content here.
+    &lt;/s2f:molecule.accordionItem&gt;
+    &lt;s2f:molecule.accordionItem trigger="Another question?"&gt;
+        Another answer.
+    &lt;/s2f:molecule.accordionItem&gt;
+&lt;/s2f:molecule.accordion&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== TABS ==================== -->
+        <section id="tabs" class="styleguide__component">
+            <h2 class="styleguide__component-name">Tabs</h2>
+            <p class="styleguide__component-desc">
+                A set of layered sections of content, known as tab panels, displayed one at a time. Composed of Tabs, TabsList, TabsTrigger, and TabsContent.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Default</h3>
+                <div class="styleguide__preview styleguide__preview--col" style="max-width: 28rem;">
+                    <s2f:molecule.tabs defaultValue="account">
+                        <s2f:molecule.tabsList>
+                            <s2f:molecule.tabsTrigger value="account">Account</s2f:molecule.tabsTrigger>
+                            <s2f:molecule.tabsTrigger value="password">Password</s2f:molecule.tabsTrigger>
+                            <s2f:molecule.tabsTrigger value="settings">Settings</s2f:molecule.tabsTrigger>
+                        </s2f:molecule.tabsList>
+                        <s2f:molecule.tabsContent value="account">
+                            <s2f:atom.typography tag="p" variant="p">Make changes to your account settings here. Update your display name, email, and profile picture.</s2f:atom.typography>
+                        </s2f:molecule.tabsContent>
+                        <s2f:molecule.tabsContent value="password">
+                            <s2f:atom.typography tag="p" variant="p">Change your password. Use a strong, unique password that you are not using elsewhere.</s2f:atom.typography>
+                        </s2f:molecule.tabsContent>
+                        <s2f:molecule.tabsContent value="settings">
+                            <s2f:atom.typography tag="p" variant="p">Manage your notification preferences, theme settings, and language options.</s2f:atom.typography>
+                        </s2f:molecule.tabsContent>
+                    </s2f:molecule.tabs>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:molecule.tabs defaultValue="tab1"&gt;
+    &lt;s2f:molecule.tabsList&gt;
+        &lt;s2f:molecule.tabsTrigger value="tab1"&gt;Tab 1&lt;/s2f:molecule.tabsTrigger&gt;
+        &lt;s2f:molecule.tabsTrigger value="tab2"&gt;Tab 2&lt;/s2f:molecule.tabsTrigger&gt;
+    &lt;/s2f:molecule.tabsList&gt;
+    &lt;s2f:molecule.tabsContent value="tab1"&gt;Content 1&lt;/s2f:molecule.tabsContent&gt;
+    &lt;s2f:molecule.tabsContent value="tab2"&gt;Content 2&lt;/s2f:molecule.tabsContent&gt;
+&lt;/s2f:molecule.tabs&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== TABLE ==================== -->
+        <section id="table" class="styleguide__component">
+            <h2 class="styleguide__component-name">Table</h2>
+            <p class="styleguide__component-desc">
+                A responsive table composed of Table, TableHeader, TableRow, and TableCell sub-components. Wraps in a scrollable container automatically.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Sample Data</h3>
+                <div class="styleguide__preview styleguide__preview--col">
+                    <s2f:molecule.table>
+                        <s2f:molecule.tableHeader>
+                            <s2f:molecule.tableRow>
+                                <s2f:molecule.tableCell header="{true}">Invoice</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell header="{true}">Status</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell header="{true}">Method</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell header="{true}">Amount</s2f:molecule.tableCell>
+                            </s2f:molecule.tableRow>
+                        </s2f:molecule.tableHeader>
+                        <tbody>
+                            <s2f:molecule.tableRow>
+                                <s2f:molecule.tableCell>INV-001</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell><s2f:atom.badge variant="default">Paid</s2f:atom.badge></s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell>Credit Card</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell>$250.00</s2f:molecule.tableCell>
+                            </s2f:molecule.tableRow>
+                            <s2f:molecule.tableRow>
+                                <s2f:molecule.tableCell>INV-002</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell><s2f:atom.badge variant="secondary">Pending</s2f:atom.badge></s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell>Bank Transfer</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell>$1,200.00</s2f:molecule.tableCell>
+                            </s2f:molecule.tableRow>
+                            <s2f:molecule.tableRow>
+                                <s2f:molecule.tableCell>INV-003</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell><s2f:atom.badge variant="destructive">Overdue</s2f:atom.badge></s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell>PayPal</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell>$450.00</s2f:molecule.tableCell>
+                            </s2f:molecule.tableRow>
+                            <s2f:molecule.tableRow>
+                                <s2f:molecule.tableCell>INV-004</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell><s2f:atom.badge variant="outline">Draft</s2f:atom.badge></s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell>Credit Card</s2f:molecule.tableCell>
+                                <s2f:molecule.tableCell>$89.00</s2f:molecule.tableCell>
+                            </s2f:molecule.tableRow>
+                        </tbody>
+                    </s2f:molecule.table>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:molecule.table&gt;
+    &lt;s2f:molecule.tableHeader&gt;
+        &lt;s2f:molecule.tableRow&gt;
+            &lt;s2f:molecule.tableCell header="{true}"&gt;Name&lt;/s2f:molecule.tableCell&gt;
+            &lt;s2f:molecule.tableCell header="{true}"&gt;Email&lt;/s2f:molecule.tableCell&gt;
+        &lt;/s2f:molecule.tableRow&gt;
+    &lt;/s2f:molecule.tableHeader&gt;
+    &lt;tbody&gt;
+        &lt;s2f:molecule.tableRow&gt;
+            &lt;s2f:molecule.tableCell&gt;Jane Doe&lt;/s2f:molecule.tableCell&gt;
+            &lt;s2f:molecule.tableCell&gt;jane@example.com&lt;/s2f:molecule.tableCell&gt;
+        &lt;/s2f:molecule.tableRow&gt;
+    &lt;/tbody&gt;
+&lt;/s2f:molecule.table&gt;</code></pre>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             LAYOUT
+             ============================================================ -->
+
+        <!-- ==================== SECTION ==================== -->
+        <section id="section" class="styleguide__component">
+            <h2 class="styleguide__component-name">Section</h2>
+            <p class="styleguide__component-desc">
+                A page-level section wrapper with configurable background and vertical spacing. Use it to define distinct content areas on a page.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Backgrounds</h3>
+                <div class="styleguide__preview styleguide__preview--col" style="gap: 0; padding: 0; overflow: hidden;">
+                    <s2f:layout.section background="default" spacing="sm">
+                        <s2f:layout.container size="default">
+                            <s2f:atom.typography tag="p" variant="small">background="default"</s2f:atom.typography>
+                        </s2f:layout.container>
+                    </s2f:layout.section>
+                    <s2f:layout.section background="muted" spacing="sm">
+                        <s2f:layout.container size="default">
+                            <s2f:atom.typography tag="p" variant="small">background="muted"</s2f:atom.typography>
+                        </s2f:layout.container>
+                    </s2f:layout.section>
+                    <s2f:layout.section background="primary" spacing="sm">
+                        <s2f:layout.container size="default">
+                            <s2f:atom.typography tag="p" variant="small">background="primary"</s2f:atom.typography>
+                        </s2f:layout.container>
+                    </s2f:layout.section>
+                    <s2f:layout.section background="card" spacing="sm">
+                        <s2f:layout.container size="default">
+                            <s2f:atom.typography tag="p" variant="small">background="card"</s2f:atom.typography>
+                        </s2f:layout.container>
+                    </s2f:layout.section>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:layout.section background="muted" spacing="default"&gt;
+    &lt;s2f:layout.container&gt;
+        ...page content...
+    &lt;/s2f:layout.container&gt;
+&lt;/s2f:layout.section&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== CONTAINER ==================== -->
+        <section id="container" class="styleguide__component">
+            <h2 class="styleguide__component-name">Container</h2>
+            <p class="styleguide__component-desc">
+                A centered, max-width container. Four sizes to constrain content width on wide screens.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Sizes</h3>
+                <div class="styleguide__preview styleguide__preview--col styleguide__preview--muted" style="padding: 1rem 0;">
+                    <s2f:layout.container size="sm">
+                        <div style="padding: 0.75rem; background: hsl(var(--background)); border: 1px solid hsl(var(--border)); border-radius: var(--radius, 0.375rem); text-align: center;">
+                            <span class="styleguide__label">sm</span>
+                        </div>
+                    </s2f:layout.container>
+                    <s2f:layout.container size="default">
+                        <div style="padding: 0.75rem; background: hsl(var(--background)); border: 1px solid hsl(var(--border)); border-radius: var(--radius, 0.375rem); text-align: center;">
+                            <span class="styleguide__label">default</span>
+                        </div>
+                    </s2f:layout.container>
+                    <s2f:layout.container size="lg">
+                        <div style="padding: 0.75rem; background: hsl(var(--background)); border: 1px solid hsl(var(--border)); border-radius: var(--radius, 0.375rem); text-align: center;">
+                            <span class="styleguide__label">lg</span>
+                        </div>
+                    </s2f:layout.container>
+                    <s2f:layout.container size="full">
+                        <div style="padding: 0.75rem; background: hsl(var(--background)); border: 1px solid hsl(var(--border)); border-radius: var(--radius, 0.375rem); text-align: center;">
+                            <span class="styleguide__label">full</span>
+                        </div>
+                    </s2f:layout.container>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:layout.container size="default"&gt;
+    ...centered content...
+&lt;/s2f:layout.container&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== GRID ==================== -->
+        <section id="grid" class="styleguide__component">
+            <h2 class="styleguide__component-name">Grid</h2>
+            <p class="styleguide__component-desc">
+                A CSS grid layout with configurable column count and gap. Responsive by default.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Column Counts</h3>
+                <div class="styleguide__preview styleguide__preview--col">
+                    <s2f:atom.typography tag="p" variant="small" class="styleguide__label">2 columns</s2f:atom.typography>
+                    <s2f:layout.grid cols="2">
+                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">1</div>
+                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">2</div>
+                    </s2f:layout.grid>
+
+                    <s2f:atom.typography tag="p" variant="small" class="styleguide__label">3 columns</s2f:atom.typography>
+                    <s2f:layout.grid cols="3">
+                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">1</div>
+                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">2</div>
+                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">3</div>
+                    </s2f:layout.grid>
+
+                    <s2f:atom.typography tag="p" variant="small" class="styleguide__label">4 columns</s2f:atom.typography>
+                    <s2f:layout.grid cols="4">
+                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">1</div>
+                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">2</div>
+                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">3</div>
+                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">4</div>
+                    </s2f:layout.grid>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:layout.grid cols="3" gap="default"&gt;
+    &lt;div&gt;Column 1&lt;/div&gt;
+    &lt;div&gt;Column 2&lt;/div&gt;
+    &lt;div&gt;Column 3&lt;/div&gt;
+&lt;/s2f:layout.grid&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ==================== STACK ==================== -->
+        <section id="stack" class="styleguide__component">
+            <h2 class="styleguide__component-name">Stack</h2>
+            <p class="styleguide__component-desc">
+                A flex-based layout component for stacking children vertically or horizontally with configurable gap and alignment.
+            </p>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Vertical</h3>
+                <div class="styleguide__preview" style="max-width: 20rem;">
+                    <s2f:layout.stack direction="vertical" gap="default">
+                        <div style="padding: 0.75rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 1</div>
+                        <div style="padding: 0.75rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 2</div>
+                        <div style="padding: 0.75rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 3</div>
+                    </s2f:layout.stack>
+                </div>
+            </div>
+
+            <div class="styleguide__subsection">
+                <h3 class="styleguide__subsection-title">Horizontal</h3>
+                <div class="styleguide__preview">
+                    <s2f:layout.stack direction="horizontal" gap="default" align="center">
+                        <div style="padding: 0.75rem 1.5rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 1</div>
+                        <div style="padding: 0.75rem 1.5rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 2</div>
+                        <div style="padding: 0.75rem 1.5rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 3</div>
+                    </s2f:layout.stack>
+                </div>
+            </div>
+
+            <div class="styleguide__code">
+                <div class="styleguide__code-header">Fluid</div>
+                <pre><code>&lt;s2f:layout.stack direction="vertical" gap="default"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+&lt;/s2f:layout.stack&gt;
+
+&lt;s2f:layout.stack direction="horizontal" gap="default" align="center"&gt;
+    &lt;s2f:atom.button&gt;Left&lt;/s2f:atom.button&gt;
+    &lt;s2f:atom.button variant="outline"&gt;Right&lt;/s2f:atom.button&gt;
+&lt;/s2f:layout.stack&gt;</code></pre>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+</html>

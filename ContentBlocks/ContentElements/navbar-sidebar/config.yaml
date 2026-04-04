@@ -1,0 +1,37 @@
+name: shadcn2fluid/navbar-sidebar
+title: Sidebar Navbar
+description: Vertical sidebar navigation with collapsible sections
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: brand
+    type: Text
+    label: Brand
+    required: true
+  - identifier: brand_link
+    type: Link
+    label: Brand Link
+  - identifier: sections
+    type: Collection
+    label: Sections
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Section Title
+      - identifier: links
+        type: Collection
+        label: Links
+        fields:
+          - identifier: label
+            type: Text
+            label: Label
+          - identifier: link
+            type: Link
+            label: Link
+  - identifier: footer_text
+    type: Text
+    label: Footer Text

@@ -1,0 +1,28 @@
+name: shadcn2fluid/data-table
+title: Data Table
+description: Responsive data table with sortable columns and striped rows
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: table_data
+    type: Textarea
+    label: Table Data (JSON)
+    description: |
+      Enter as JSON: {"columns": ["Name","Value"], "rows": [["Item A","100"],["Item B","200"]]}
+    rows: 8
+    required: true
+  - identifier: striped
+    type: Checkbox
+    label: Striped Rows
+    default: 1
+  - identifier: compact
+    type: Checkbox
+    label: Compact Mode
+    default: 0

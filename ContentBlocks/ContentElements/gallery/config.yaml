@@ -1,0 +1,52 @@
+name: shadcn2fluid/gallery
+title: Gallery / Portfolio
+description: Visual gallery or portfolio grid with optional links
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Gallery Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '3'
+
+  - identifier: items
+    type: Collection
+    label: Gallery Items
+    minItems: 1
+    fields:
+      - identifier: image
+        type: File
+        label: Image
+        allowed: common-image-types
+        maxitems: 1
+        required: true
+
+      - identifier: title
+        type: Text
+        label: Title
+
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+
+      - identifier: link
+        type: Link
+        label: Optional Link

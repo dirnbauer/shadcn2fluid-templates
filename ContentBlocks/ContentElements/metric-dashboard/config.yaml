@@ -1,0 +1,46 @@
+name: shadcn2fluid/metric-dashboard
+title: Metric Dashboard
+description: Dashboard layout combining stat cards with a mini chart area
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Metrics
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: value
+        type: Text
+        label: Value
+        required: true
+      - identifier: change
+        type: Text
+        label: Change
+      - identifier: trend
+        type: Select
+        renderType: selectSingle
+        label: Trend
+        items:
+          - label: Up
+            value: up
+          - label: Down
+            value: down
+          - label: Neutral
+            value: neutral
+        default: neutral
+  - identifier: chart_data
+    type: Textarea
+    label: Sparkline Data (JSON)
+    description: Optional JSON array for the overview sparkline
+    rows: 4

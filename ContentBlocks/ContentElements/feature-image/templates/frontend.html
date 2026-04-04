@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-feature-image" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="feature-image feature-image--{data.image_position -> f:or(alternative: 'right')}">
+    <s2f:layout.container>
+        <div class="feature-image__grid">
+            <div class="feature-image__copy">
+                <f:if condition="{data.eyebrow}"><span class="feature-image__eyebrow">{data.eyebrow}</span></f:if>
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.description}">
+                    <s2f:typography.text variant="muted" class="feature-image__description">{data.description}</s2f:typography.text>
+                </f:if>
+                <f:if condition="{data.link.url} && {data.link_text}">
+                    <div class="feature-image__actions">
+                        <f:link.typolink parameter="{data.link}" class="feature-image__cta">{data.link_text}</f:link.typolink>
+                    </div>
+                </f:if>
+            </div>
+            <f:if condition="{data.image.0}">
+                <div class="feature-image__media">
+                    <f:image image="{data.image.0}" alt="{data.header}" maxWidth="800" class="feature-image__img"/>
+                </div>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

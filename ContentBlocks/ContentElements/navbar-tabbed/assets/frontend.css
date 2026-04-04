@@ -1,0 +1,10 @@
+navbar-tabbed__tab--active)}" role="tab">{tab.label}</f:link.typolink>
+                    </f:if>
+                </f:for>
+            </div>
+            <f:if condition="{data.button_text} && {data.button_link.url}">
+                <s2f:atom.button link="{data.button_link}" size="sm">{data.button_text}</s2f:atom.button>
+            </f:if>
+        </nav>
+    </s2f:layout.container>
+</s2f:layout.section>

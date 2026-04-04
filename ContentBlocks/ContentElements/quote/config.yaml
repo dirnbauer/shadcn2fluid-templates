@@ -1,0 +1,32 @@
+name: shadcn2fluid/quote
+title: Quote
+description: Styled blockquote with attribution
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: quote_text
+    type: Textarea
+    label: Quote Text
+    rows: 4
+    required: true
+  - identifier: author
+    type: Text
+    label: Author Name
+  - identifier: role
+    type: Text
+    label: Author Role
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Style
+    items:
+      - label: Bordered
+        value: bordered
+      - label: Large
+        value: large
+      - label: Card
+        value: card
+    default: bordered

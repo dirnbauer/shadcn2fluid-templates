@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-team-member" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="team-member">
+    <s2f:layout.container>
+        <s2f:molecule.card class="team-member__card">
+            <div class="team-member__layout">
+                <f:if condition="{data.image}">
+                    <div class="team-member__image-wrapper">
+                        <f:for each="{data.image}" as="fileReference">
+                            <img src="{f:uri.image(image: fileReference, maxWidth: 480)}" alt="{data.header}" class="team-member__image"/>
+                        </f:for>
+                    </div>
+                </f:if>
+                <div class="team-member__body">
+                    <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                    <f:if condition="{data.role}"><p class="team-member__role">{data.role}</p></f:if>
+                    <f:if condition="{data.bio}"><p class="team-member__bio">{data.bio}</p></f:if>
+                    <f:if condition="{data.email} || {data.phone}">
+                        <div class="team-member__contact">
+                            <f:if condition="{data.email}"><span class="team-member__email">{data.email}</span></f:if>
+                            <f:if condition="{data.phone}"><span class="team-member__phone">{data.phone}</span></f:if>
+                        </div>
+                    </f:if>
+                    <f:if condition="{data.social_links}">
+                        <div class="team-member__socials">
+                            <f:for each="{data.social_links}" as="link">
+                                <f:if condition="{link.url.url}">
+                                    <f:link.typolink parameter="{link.url}" class="team-member__social-link">{link.platform}</f:link.typolink>
+                                </f:if>
+                            </f:for>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+        </s2f:molecule.card>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

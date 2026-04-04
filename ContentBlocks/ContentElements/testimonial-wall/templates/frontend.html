@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-testimonial-wall" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="testimonial-wall">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="testimonial-wall__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="testimonial-wall__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="testimonial-wall__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="testimonial-wall__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="testimonial-wall__masonry">
+            <f:for each="{data.testimonials}" as="item">
+                <article class="testimonial-wall__card">
+                    <blockquote class="testimonial-wall__quote">{item.quote}</blockquote>
+                    <div class="testimonial-wall__author">
+                        <f:if condition="{item.author_image}">
+                            <f:for each="{item.author_image}" as="fileReference">
+                                <img src="{f:uri.image(image: fileReference, width: 40, height: 40)}" alt="{item.author_name}" class="testimonial-wall__avatar"/>
+                            </f:for>
+                        </f:if>
+                        <div>
+                            <cite class="testimonial-wall__name">{item.author_name}</cite>
+                            <f:if condition="{item.author_title}">
+                                <span class="testimonial-wall__role">{item.author_title}</span>
+                            </f:if>
+                        </div>
+                    </div>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

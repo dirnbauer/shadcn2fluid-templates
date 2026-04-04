@@ -1,0 +1,32 @@
+name: shadcn2fluid/header-page
+title: Page Header
+description: Full-width page header with title, description, and optional breadcrumb
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Alignment
+    items:
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+    default: left
+  - identifier: button_text
+    type: Text
+    label: Button Text
+  - identifier: button_link
+    type: Link
+    label: Button Link

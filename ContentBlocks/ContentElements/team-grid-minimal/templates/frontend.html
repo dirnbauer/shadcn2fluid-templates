@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-team-grid-minimal" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="team-grid-minimal">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.subheadline}">
+            <header class="team-grid-minimal__intro">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="team-grid-minimal__grid team-grid-minimal__grid--cols-{data.columns -> f:or(alternative: '4')}">
+            <f:for each="{data.members}" as="member">
+                <article class="team-grid-minimal__member">
+                    <f:if condition="{member.image}">
+                        <f:for each="{member.image}" as="fileReference">
+                            <img src="{f:uri.image(image: fileReference, width: 200, height: 200)}" alt="{member.name}" class="team-grid-minimal__image"/>
+                        </f:for>
+                    </f:if>
+                    <h3 class="team-grid-minimal__name">{member.name}</h3>
+                    <f:if condition="{member.role}"><p class="team-grid-minimal__role">{member.role}</p></f:if>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

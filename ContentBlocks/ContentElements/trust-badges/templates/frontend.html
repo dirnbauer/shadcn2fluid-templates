@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-trust-badges" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="trust-badges">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.subheadline}">
+            <header class="trust-badges__intro">
+                <f:if condition="{data.header}">
+                    <h2 class="trust-badges__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="trust-badges__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="trust-badges__row">
+            <f:for each="{data.badges}" as="badge">
+                <div class="trust-badges__item">
+                    <f:if condition="{badge.image}">
+                        <div class="trust-badges__icon">
+                            <f:for each="{badge.image}" as="fileReference">
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 64)}" alt="{badge.label}" class="trust-badges__icon-img"/>
+                            </f:for>
+                        </div>
+                    </f:if>
+                    <span class="trust-badges__label">{badge.label}</span>
+                    <f:if condition="{badge.description}">
+                        <span class="trust-badges__desc">{badge.description}</span>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

@@ -1,0 +1,36 @@
+name: shadcn2fluid/team-carousel
+title: Team Carousel
+description: Horizontally scrollable team member showcase
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: members
+    type: Collection
+    label: Team Members
+    minItems: 1
+    fields:
+      - identifier: image
+        type: File
+        label: Portrait
+        allowed: common-image-types
+        maxitems: 1
+      - identifier: name
+        type: Text
+        label: Name
+        required: true
+      - identifier: role
+        type: Text
+        label: Role
+      - identifier: profile_link
+        type: Link
+        label: Profile Link

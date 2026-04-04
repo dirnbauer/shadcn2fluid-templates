@@ -1,0 +1,33 @@
+name: shadcn2fluid/hero-stacked
+title: Hero Stacked
+description: Vertically stacked hero with media below content
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: badge_text
+    type: Text
+    label: Badge Text
+  - identifier: hero_image
+    type: File
+    label: Hero Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: secondary_button_text
+    type: Text
+    label: Secondary Button Text
+  - identifier: secondary_button_link
+    type: Link
+    label: Secondary Button Link

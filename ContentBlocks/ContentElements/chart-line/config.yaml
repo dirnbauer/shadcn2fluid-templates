@@ -1,0 +1,38 @@
+name: shadcn2fluid/chart-line
+title: Chart Line
+description: Line chart with optional data points and smooth curves
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: chart_data
+    type: Textarea
+    label: Chart Data (JSON)
+    rows: 6
+    required: true
+  - identifier: color_variant
+    type: Select
+    renderType: selectSingle
+    label: Color
+    items:
+      - label: Primary
+        value: primary
+      - label: Blue
+        value: blue
+      - label: Green
+        value: green
+    default: primary
+  - identifier: show_dots
+    type: Checkbox
+    label: Show Data Points
+    default: 1
+  - identifier: smooth
+    type: Checkbox
+    label: Smooth Curve
+    default: 1

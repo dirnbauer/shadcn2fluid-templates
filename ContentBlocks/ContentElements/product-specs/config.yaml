@@ -1,0 +1,39 @@
+name: shadcn2fluid/product-specs
+title: Product Specs
+description: Technical specifications table for products
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+
+  - identifier: specs
+    type: Collection
+    label: Specifications
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Spec Label
+        required: true
+
+      - identifier: value
+        type: Text
+        label: Spec Value
+        required: true
+
+  - identifier: image
+    type: File
+    label: Product Image
+    allowed: common-image-types
+    maxitems: 1

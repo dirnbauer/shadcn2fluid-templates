@@ -1,0 +1,59 @@
+name: shadcn2fluid/blog-teasers
+title: Blog Teasers
+description: Article teaser cards for news, blog, or resource sections
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Teaser Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+    default: '3'
+
+  - identifier: posts
+    type: Collection
+    label: Posts
+    minItems: 1
+    fields:
+      - identifier: image
+        type: File
+        label: Image
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: category
+        type: Text
+        label: Category
+
+      - identifier: meta
+        type: Text
+        label: Meta
+        description: e.g. 5 min read or Mar 18, 2026
+
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+
+      - identifier: excerpt
+        type: Textarea
+        label: Excerpt
+        rows: 3
+
+      - identifier: link
+        type: Link
+        label: Post Link

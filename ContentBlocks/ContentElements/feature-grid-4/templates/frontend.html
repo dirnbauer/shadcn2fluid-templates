@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-feature-grid-4" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="feature-grid-4">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <header class="feature-grid-4__intro">
+                <s2f:typography.heading level="2">{data.header}</s2f:typography.heading>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="feature-grid-4__grid">
+            <f:for each="{data.items}" as="item">
+                <div class="feature-grid-4__item">
+                    <f:if condition="{item.icon}">
+                        <span class="feature-grid-4__icon" aria-hidden="true">{item.icon}</span>
+                    </f:if>
+                    <h3 class="feature-grid-4__title">{item.title}</h3>
+                    <f:if condition="{item.description}">
+                        <p class="feature-grid-4__description">{item.description}</p>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

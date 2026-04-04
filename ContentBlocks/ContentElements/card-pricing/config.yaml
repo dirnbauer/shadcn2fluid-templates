@@ -1,0 +1,42 @@
+name: shadcn2fluid/card-pricing
+title: Card Pricing
+description: Single pricing card with price, features list, and CTA
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: price
+    type: Text
+    label: Price
+    required: true
+  - identifier: billing_period
+    type: Text
+    label: Billing Period
+    description: e.g. /month, /year
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: features
+    type: Collection
+    label: Features
+    fields:
+      - identifier: text
+        type: Text
+        label: Feature Text
+      - identifier: included
+        type: Checkbox
+        label: Included
+        default: 1
+  - identifier: button_text
+    type: Text
+    label: Button Text
+  - identifier: button_link
+    type: Link
+    label: Button Link
+  - identifier: highlighted
+    type: Checkbox
+    label: Highlight Card
+    default: 0

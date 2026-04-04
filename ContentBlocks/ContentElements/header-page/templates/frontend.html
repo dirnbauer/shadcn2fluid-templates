@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-header-page" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="header-page header-page--{data.variant -> f:or(alternative: 'left')}">
+    <s2f:layout.container>
+        <header class="header-page__inner">
+            <f:if condition="{data.eyebrow}">
+                <span class="header-page__eyebrow">{data.eyebrow}</span>
+            </f:if>
+            <f:if condition="{data.header}">
+                <h1 class="header-page__title">{data.header}</h1>
+            </f:if>
+            <f:if condition="{data.subheadline}">
+                <p class="header-page__description">{data.subheadline}</p>
+            </f:if>
+            <f:if condition="{data.button_text} && {data.button_link.url}">
+                <div class="header-page__actions">
+                    <s2f:atom.button link="{data.button_link}">{data.button_text}</s2f:atom.button>
+                </div>
+            </f:if>
+        </header>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

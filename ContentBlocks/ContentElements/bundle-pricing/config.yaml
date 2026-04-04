@@ -1,0 +1,55 @@
+name: shadcn2fluid/bundle-pricing
+title: Bundle Pricing
+description: Product bundle with combined pricing and savings
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: bundle_price
+    type: Text
+    label: Bundle Price
+    required: true
+
+  - identifier: savings_text
+    type: Text
+    label: Savings Text
+    description: e.g. Save 30%
+
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+
+  - identifier: items
+    type: Collection
+    label: Bundle Items
+    minItems: 2
+    fields:
+      - identifier: name
+        type: Text
+        label: Item Name
+        required: true
+
+      - identifier: individual_price
+        type: Text
+        label: Individual Price
+
+      - identifier: description
+        type: Text
+        label: Short Description
+
+  - identifier: button_text
+    type: Text
+    label: Button Text
+    default: Get the Bundle
+
+  - identifier: button_link
+    type: Link
+    label: Button Link

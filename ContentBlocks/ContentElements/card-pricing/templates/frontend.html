@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-card-pricing" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="card-pricing-section">
+    <s2f:layout.container>
+        <div class="card-pricing {f:if(condition: data.highlighted, then: 'card-pricing--highlighted')}">
+            <div class="card-pricing__header">
+                <f:if condition="{data.header}">
+                    <h3 class="card-pricing__title">{data.header}</h3>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="card-pricing__description">{data.description}</p>
+                </f:if>
+                <div class="card-pricing__price">
+                    <span class="card-pricing__amount">{data.price}</span>
+                    <f:if condition="{data.billing_period}">
+                        <span class="card-pricing__period">{data.billing_period}</span>
+                    </f:if>
+                </div>
+            </div>
+            <f:if condition="{data.features}">
+                <ul class="card-pricing__features">
+                    <f:for each="{data.features}" as="feature">
+                        <li class="card-pricing__feature {f:if(condition: '!{feature.included}', then: 'card-pricing__feature--excluded')}">
+                            <f:if condition="{feature.included}">
+                                <f:then><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></f:then>
+                                <f:else><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></f:else>
+                            </f:if>
+                            {feature.text}
+                        </li>
+                    </f:for>
+                </ul>
+            </f:if>
+            <f:if condition="{data.button_text}">
+                <div class="card-pricing__action">
+                    <f:link.typolink parameter="{data.button_link}" class="card-pricing__button">{data.button_text}</f:link.typolink>
+                </div>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

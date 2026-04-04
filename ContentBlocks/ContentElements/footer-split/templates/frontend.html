@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-footer-split" href="{cb:assetPath()}/frontend.css"/>
+
+<footer class="footer-split">
+    <s2f:layout.container>
+        <div class="footer-split__inner">
+            <div class="footer-split__left">
+                <f:if condition="{data.brand}">
+                    <h2 class="footer-split__brand">{data.brand}</h2>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="footer-split__description">{data.description}</p>
+                </f:if>
+                <f:if condition="{data.copyright}">
+                    <p class="footer-split__copyright">{data.copyright}</p>
+                </f:if>
+            </div>
+            <f:if condition="{data.links}">
+                <nav class="footer-split__right" aria-label="Footer links">
+                    <ul class="footer-split__links">
+                        <f:for each="{data.links}" as="item">
+                            <li>
+                                <f:if condition="{item.link}">
+                                    <f:then><f:link.typolink parameter="{item.link}" class="footer-split__link">{item.label}</f:link.typolink></f:then>
+                                    <f:else><span class="footer-split__link">{item.label}</span></f:else>
+                                </f:if>
+                            </li>
+                        </f:for>
+                    </ul>
+                </nav>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</footer>
+
+</html>

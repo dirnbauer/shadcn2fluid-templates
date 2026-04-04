@@ -1,0 +1,23 @@
+name: shadcn2fluid/waitlist-signup
+title: Waitlist Signup
+description: Waitlist or early access signup form
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: form_action
+    type: Link
+    label: Form Action
+  - identifier: button_text
+    type: Text
+    label: Button Text
+    default: Join the waitlist
+  - identifier: count_text
+    type: Text
+    label: Count Text

@@ -1,0 +1,25 @@
+name: shadcn2fluid/office-hours
+title: Office Hours
+description: Business hours display with days and times
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Text
+    label: Description
+  - identifier: hours
+    type: Collection
+    label: Hours
+    minItems: 1
+    fields:
+      - identifier: day
+        type: Text
+        label: Day
+        required: true
+      - identifier: time
+        type: Text
+        label: Hours
+        required: true

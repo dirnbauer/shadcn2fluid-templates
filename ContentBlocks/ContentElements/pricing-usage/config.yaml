@@ -1,0 +1,47 @@
+name: shadcn2fluid/pricing-usage
+title: Pricing Usage
+description: Usage-based pricing cards with rate and usage metric
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: items
+    type: Collection
+    label: Usage Items
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+
+      - identifier: rate
+        type: Text
+        label: Rate
+        required: true
+
+      - identifier: unit
+        type: Text
+        label: Unit
+        required: true
+
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+
+      - identifier: link
+        type: Link
+        label: Details Link

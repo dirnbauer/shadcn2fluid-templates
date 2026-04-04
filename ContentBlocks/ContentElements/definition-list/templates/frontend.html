@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-definition-list" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="definition-list-section">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <s2f:typography.heading level="2" class="definition-list-section__headline">{data.header}</s2f:typography.heading>
+        </f:if>
+
+        <dl class="definition-list definition-list--{data.layout -> f:or(alternative: 'stacked')}">
+            <f:for each="{data.items}" as="item">
+                <div class="definition-list__entry">
+                    <dt class="definition-list__term">{item.term}</dt>
+                    <dd class="definition-list__definition">{item.definition}</dd>
+                </div>
+            </f:for>
+        </dl>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

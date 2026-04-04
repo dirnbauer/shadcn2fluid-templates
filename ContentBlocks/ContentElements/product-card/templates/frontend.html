@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-product-card" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="product-card">
+    <s2f:layout.container>
+        <article class="product-card__wrapper">
+            <f:if condition="{data.image}">
+                <div class="product-card__media">
+                    <f:if condition="{data.badge}">
+                        <span class="product-card__badge">{data.badge}</span>
+                    </f:if>
+                    <f:for each="{data.image}" as="fileReference">
+                        <img src="{f:uri.image(image: fileReference, maxWidth: 480)}" alt="{data.header}" class="product-card__image"/>
+                    </f:for>
+                </div>
+            </f:if>
+            <div class="product-card__body">
+                <f:if condition="{data.header}">
+                    <h2 class="product-card__title">{data.header}</h2>
+                </f:if>
+                <div class="product-card__price-row">
+                    <span class="product-card__price">{data.price}</span>
+                    <f:if condition="{data.original_price}">
+                        <span class="product-card__original-price">{data.original_price}</span>
+                    </f:if>
+                </div>
+                <f:if condition="{data.description}">
+                    <p class="product-card__description">{data.description}</p>
+                </f:if>
+                <f:if condition="{data.button_text} && {data.button_link.url}">
+                    <f:link.typolink parameter="{data.button_link}" class="product-card__button">
+                        {data.button_text}
+                    </f:link.typolink>
+                </f:if>
+            </div>
+        </article>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

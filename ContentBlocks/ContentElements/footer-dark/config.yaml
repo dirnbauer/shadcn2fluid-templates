@@ -1,0 +1,36 @@
+name: shadcn2fluid/footer-dark
+title: Footer Dark
+description: Dark-themed footer with inverted colors
+group: footer
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: brand
+    type: Text
+    label: Brand Name
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: columns
+    type: Collection
+    label: Link Groups
+    fields:
+      - identifier: title
+        type: Text
+        label: Group Title
+      - identifier: links
+        type: Collection
+        label: Links
+        fields:
+          - identifier: label
+            type: Text
+            label: Label
+          - identifier: link
+            type: Link
+            label: Link
+  - identifier: copyright
+    type: Text
+    label: Copyright Text

@@ -1,0 +1,50 @@
+.hero-testimonial__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s2f-spacing-8);
+    align-items: center;
+    padding-block: var(--s2f-spacing-12);
+}
+.hero-testimonial__headline {
+    font-size: var(--s2f-text-4xl);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-testimonial__subheadline {
+    font-size: var(--s2f-text-lg);
+    color: var(--s2f-muted-foreground);
+    margin-bottom: var(--s2f-spacing-6);
+}
+.hero-testimonial__quote-card {
+    padding: var(--s2f-spacing-8);
+    background: var(--s2f-card);
+    border: 1px solid var(--s2f-border);
+    border-radius: var(--s2f-radius-lg);
+}
+.hero-testimonial__quote {
+    font-size: var(--s2f-text-lg);
+    font-style: italic;
+    color: var(--s2f-foreground);
+    margin: 0 0 var(--s2f-spacing-6);
+    line-height: 1.6;
+}
+.hero-testimonial__author {
+    display: flex;
+    align-items: center;
+    gap: var(--s2f-spacing-3);
+}
+.hero-testimonial__avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.hero-testimonial__author-name {
+    font-weight: 600;
+    font-size: var(--s2f-text-sm);
+}
+.hero-testimonial__author-role {
+    font-size: var(--s2f-text-xs);
+    color: var(--s2f-muted-foreground);
+}

@@ -1,0 +1,17 @@
+.pricing-toggle__intro { text-align: center; margin-block-end: var(--s2f-spacing-xl); }
+.pricing-toggle__eyebrow { font-size: var(--s2f-text-sm); text-transform: uppercase; letter-spacing: 0.05em; color: hsl(var(--primary)); font-weight: 600; }
+.pricing-toggle__headline { margin-block-start: var(--s2f-spacing-xs); }
+.pricing-toggle__description { color: hsl(var(--muted-foreground)); max-width: 40rem; margin-inline: auto; }
+.pricing-toggle__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: var(--s2f-spacing-lg); }
+.pricing-toggle__plan { border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: var(--s2f-spacing-lg); display: flex; flex-direction: column; }
+.pricing-toggle__title { font-size: var(--s2f-text-lg); font-weight: 700; }
+.pricing-toggle__prices { margin-block-start: var(--s2f-spacing-sm); }
+.pricing-toggle__price { font-size: var(--s2f-text-2xl); font-weight: 800; }
+.pricing-toggle__period { font-size: var(--s2f-text-sm); font-weight: 400; color: hsl(var(--muted-foreground)); }
+.pricing-toggle__price-alt { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); }
+.pricing-toggle__plan-desc { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); margin-block-start: var(--s2f-spacing-xs); }
+.pricing-toggle__features { list-style: none; padding: 0; margin-block-start: var(--s2f-spacing-md); display: flex; flex-direction: column; gap: var(--s2f-spacing-xs); flex: 1; }
+.pricing-toggle__feature { display: flex; align-items: start; gap: 0.5rem; font-size: var(--s2f-text-sm); }
+.pricing-toggle__feature svg { flex-shrink: 0; color: hsl(var(--primary)); margin-block-start: 0.125rem; }
+.pricing-toggle__button { display: block; text-align: center; padding: 0.5rem 1.5rem; border-radius: var(--radius); font-weight: 500; text-decoration: none; border: 1px solid hsl(var(--border)); color: hsl(var(--foreground)); margin-block-start: var(--s2f-spacing-lg); transition: background 0.2s; }
+.pricing-toggle__button:hover { background: hsl(var(--accent)); }

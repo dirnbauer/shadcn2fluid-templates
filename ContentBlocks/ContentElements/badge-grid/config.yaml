@@ -1,0 +1,53 @@
+name: shadcn2fluid/badge-grid
+title: Badge Grid
+description: Grid of labeled badges for tags, skills, or categories
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Badge Style
+    items:
+      - label: Default
+        value: default
+      - label: Outline
+        value: outline
+      - label: Secondary
+        value: secondary
+    default: default
+  - identifier: items
+    type: Collection
+    label: Badges
+    minItems: 1
+    fields:
+      - identifier: text
+        type: Text
+        label: Badge Text
+        required: true
+      - identifier: link
+        type: Link
+        label: Link
+      - identifier: color
+        type: Select
+        renderType: selectSingle
+        label: Color
+        items:
+          - label: Default
+            value: default
+          - label: Blue
+            value: blue
+          - label: Green
+            value: green
+          - label: Red
+            value: red
+          - label: Yellow
+            value: yellow
+        default: default

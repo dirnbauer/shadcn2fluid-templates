@@ -1,0 +1,37 @@
+name: shadcn2fluid/hero-product
+title: Hero Product
+description: Product-focused hero with feature image and pricing CTA
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Product Name
+  - identifier: subheadline
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: badge_text
+    type: Text
+    label: Badge Text
+  - identifier: price
+    type: Text
+    label: Price
+  - identifier: product_image
+    type: File
+    label: Product Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: features
+    type: Collection
+    label: Key Features
+    fields:
+      - identifier: label
+        type: Text
+        label: Feature

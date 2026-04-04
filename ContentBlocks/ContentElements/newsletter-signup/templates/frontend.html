@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-newsletter-signup" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="newsletter-signup">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="newsletter-signup__intro">
+                <f:if condition="{data.eyebrow}"><span class="newsletter-signup__eyebrow">{data.eyebrow}</span></f:if>
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="newsletter-signup__body">
+            <s2f:molecule.card class="newsletter-signup__form-card">
+                <form class="newsletter-signup__form" action="{data.form_action.url}" method="post">
+                    <label class="newsletter-signup__field">
+                        <span class="newsletter-signup__label">Email</span>
+                        <input class="newsletter-signup__input" type="email" name="email" placeholder="{data.email_placeholder -> f:or(alternative: 'you@example.com')}"/>
+                    </label>
+                    <s2f:atom.button type="submit">{data.button_text -> f:or(alternative: 'Subscribe')}</s2f:atom.button>
+                </form>
+                <f:if condition="{data.privacy_text}">
+                    <p class="newsletter-signup__privacy">{data.privacy_text}</p>
+                </f:if>
+            </s2f:molecule.card>
+
+            <f:if condition="{data.points}">
+                <div class="newsletter-signup__points">
+                    <f:for each="{data.points}" as="point">
+                        <div class="newsletter-signup__point">
+                            <span class="newsletter-signup__check">+</span>
+                            <span>{point.text}</span>
+                        </div>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

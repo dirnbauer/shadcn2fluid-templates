@@ -1,0 +1,27 @@
+name: shadcn2fluid/hero-parallax
+title: Hero Parallax
+description: Hero with parallax scrolling background effect
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: background_image
+    type: File
+    label: Background Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: badge_text
+    type: Text
+    label: Badge Text

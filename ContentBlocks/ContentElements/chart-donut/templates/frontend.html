@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-chart-donut" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="chart-donut-section">
+    <s2f:layout.container>
+        <div class="chart-donut"
+             data-chart-data="{data.chart_data -> f:format.htmlspecialchars()}"
+             data-show-legend="{f:if(condition: data.show_legend, then: 'true', else: 'false')}"
+             data-chart-id="chart-donut-{data.uid}">
+            <div class="chart-donut__card">
+                <f:if condition="{data.header} || {data.description}">
+                    <div class="chart-donut__header">
+                        <f:if condition="{data.header}">
+                            <h3 class="chart-donut__title">{data.header}</h3>
+                        </f:if>
+                        <f:if condition="{data.description}">
+                            <p class="chart-donut__description">{data.description}</p>
+                        </f:if>
+                    </div>
+                </f:if>
+                <div class="chart-donut__content">
+                    <div class="chart-donut__wrapper">
+                        <svg class="chart-donut__canvas" id="chart-donut-{data.uid}"></svg>
+                        <f:if condition="{data.center_value} || {data.center_label}">
+                            <div class="chart-donut__center">
+                                <f:if condition="{data.center_value}">
+                                    <span class="chart-donut__center-value">{data.center_value}</span>
+                                </f:if>
+                                <f:if condition="{data.center_label}">
+                                    <span class="chart-donut__center-label">{data.center_label}</span>
+                                </f:if>
+                            </div>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

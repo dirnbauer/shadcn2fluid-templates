@@ -1,0 +1,52 @@
+.hero-pricing__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s2f-spacing-8);
+    align-items: center;
+    padding-block: var(--s2f-spacing-12);
+}
+.hero-pricing__headline {
+    font-size: var(--s2f-text-4xl);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-pricing__subheadline {
+    font-size: var(--s2f-text-lg);
+    color: var(--s2f-muted-foreground);
+}
+.hero-pricing__card {
+    padding: var(--s2f-spacing-8);
+    background: var(--s2f-card);
+    border: 1px solid var(--s2f-border);
+    border-radius: var(--s2f-radius-lg);
+}
+.hero-pricing__price-row {
+    margin-bottom: var(--s2f-spacing-4);
+}
+.hero-pricing__price {
+    font-size: var(--s2f-text-4xl);
+    font-weight: 700;
+}
+.hero-pricing__period {
+    font-size: var(--s2f-text-base);
+    color: var(--s2f-muted-foreground);
+}
+.hero-pricing__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--s2f-spacing-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s2f-spacing-2);
+}
+.hero-pricing__feature::before {
+    content: "\2713 ";
+    color: var(--s2f-primary);
+}
+.hero-pricing__feature {
+    font-size: var(--s2f-text-sm);
+}
+.hero-pricing__cta {
+    width: 100%;
+}

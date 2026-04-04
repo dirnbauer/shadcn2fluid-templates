@@ -1,0 +1,61 @@
+name: shadcn2fluid/pricing-three-tier
+title: Pricing Three Tier
+description: Classic three-column pricing with recommended plan highlight
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: plans
+    type: Collection
+    label: Plans
+    minItems: 3
+    maxItems: 3
+    fields:
+      - identifier: name
+        type: Text
+        label: Plan Name
+        required: true
+
+      - identifier: price
+        type: Text
+        label: Price
+        required: true
+
+      - identifier: billing_period
+        type: Text
+        label: Billing Period
+
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+
+      - identifier: features
+        type: Textarea
+        label: Features (one per line)
+        rows: 6
+
+      - identifier: is_recommended
+        type: Checkbox
+        label: Recommended Plan
+
+      - identifier: button_text
+        type: Text
+        label: Button Text
+        default: Get Started
+
+      - identifier: button_link
+        type: Link
+        label: Button Link

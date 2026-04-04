@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-company-perks" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="company-perks">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="company-perks__intro">
+                <f:if condition="{data.eyebrow}"><span class="company-perks__eyebrow">{data.eyebrow}</span></f:if>
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="company-perks__grid">
+            <f:for each="{data.perks}" as="perk">
+                <s2f:molecule.card class="company-perks__item">
+                    <f:if condition="{perk.icon}"><span class="company-perks__icon">{perk.icon}</span></f:if>
+                    <h3 class="company-perks__title">{perk.title}</h3>
+                    <f:if condition="{perk.description}"><p class="company-perks__description">{perk.description}</p></f:if>
+                </s2f:molecule.card>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

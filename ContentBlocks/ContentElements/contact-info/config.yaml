@@ -1,0 +1,32 @@
+name: shadcn2fluid/contact-info
+title: Contact Info
+description: Simple contact information cards with icons
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Contact Items
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: value
+        type: Text
+        label: Value
+        required: true
+      - identifier: link
+        type: Link
+        label: Link
+      - identifier: icon
+        type: Text
+        label: Icon Label

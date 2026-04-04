@@ -1,0 +1,56 @@
+name: shadcn2fluid/case-study-featured
+title: Case Study Featured
+description: Large featured case study with full-width layout and metrics
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: client_name
+    type: Text
+    label: Client Name
+    required: true
+
+  - identifier: client_logo
+    type: File
+    label: Client Logo
+    allowed: common-image-types
+    maxitems: 1
+
+  - identifier: description
+    type: Textarea
+    label: Case Study Description
+    rows: 4
+    required: true
+
+  - identifier: image
+    type: File
+    label: Hero Image
+    allowed: common-image-types
+    maxitems: 1
+
+  - identifier: metrics
+    type: Collection
+    label: Key Metrics
+    minItems: 1
+    maxItems: 4
+    fields:
+      - identifier: value
+        type: Text
+        label: Value
+        required: true
+
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+
+  - identifier: link
+    type: Link
+    label: Read Full Case Study

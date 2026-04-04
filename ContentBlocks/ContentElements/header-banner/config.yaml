@@ -1,0 +1,36 @@
+name: shadcn2fluid/header-banner
+title: Banner Header
+description: Full-width banner header with background color and optional image
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: background_image
+    type: File
+    label: Background Image
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Style
+    items:
+      - label: Default
+        value: default
+      - label: Dark
+        value: dark
+      - label: Primary
+        value: primary
+    default: default
+  - identifier: button_text
+    type: Text
+    label: Button Text
+  - identifier: button_link
+    type: Link
+    label: Button Link

@@ -1,0 +1,38 @@
+name: shadcn2fluid/pricing-enterprise
+title: Pricing Enterprise
+description: Enterprise pricing CTA with custom quote request
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+
+  - identifier: features
+    type: Textarea
+    label: Key Features (one per line)
+    rows: 6
+
+  - identifier: contact_text
+    type: Text
+    label: CTA Button Text
+    default: Contact Sales
+
+  - identifier: contact_link
+    type: Link
+    label: CTA Button Link
+
+  - identifier: image
+    type: File
+    label: Illustration
+    allowed: common-image-types
+    maxitems: 1

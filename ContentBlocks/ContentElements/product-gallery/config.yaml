@@ -1,0 +1,33 @@
+name: shadcn2fluid/product-gallery
+title: Product Gallery
+description: Product image gallery with thumbnails
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: images
+    type: File
+    label: Product Images
+    allowed: common-image-types
+    maxitems: 10
+    minitems: 1
+
+  - identifier: caption
+    type: Text
+    label: Gallery Caption
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Thumbnail Columns
+    items:
+      - label: 4 Columns
+        value: '4'
+      - label: 5 Columns
+        value: '5'
+      - label: 6 Columns
+        value: '6'
+    default: '4'

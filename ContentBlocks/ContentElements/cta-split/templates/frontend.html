@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-cta-split" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="cta-split">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <header class="cta-split__intro">
+                <s2f:typography.heading level="2">{data.header}</s2f:typography.heading>
+            </header>
+        </f:if>
+
+        <div class="cta-split__grid">
+            <s2f:molecule.card class="cta-split__side">
+                <f:if condition="{data.left_title}"><h3 class="cta-split__title">{data.left_title}</h3></f:if>
+                <f:if condition="{data.left_description}"><p class="cta-split__description">{data.left_description}</p></f:if>
+                <f:if condition="{data.left_button_text} && {data.left_button_link.url}">
+                    <div class="cta-split__actions">
+                        <s2f:atom.button link="{data.left_button_link}">{data.left_button_text}</s2f:atom.button>
+                    </div>
+                </f:if>
+            </s2f:molecule.card>
+
+            <s2f:molecule.card class="cta-split__side">
+                <f:if condition="{data.right_title}"><h3 class="cta-split__title">{data.right_title}</h3></f:if>
+                <f:if condition="{data.right_description}"><p class="cta-split__description">{data.right_description}</p></f:if>
+                <f:if condition="{data.right_button_text} && {data.right_button_link.url}">
+                    <div class="cta-split__actions">
+                        <s2f:atom.button link="{data.right_button_link}" variant="outline">{data.right_button_text}</s2f:atom.button>
+                    </div>
+                </f:if>
+            </s2f:molecule.card>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

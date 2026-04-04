@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-content-divider" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="content-divider content-divider--spacing-{data.spacing -> f:or(alternative: 'md')}">
+    <s2f:layout.container>
+        <div class="content-divider__rule content-divider__rule--{data.variant -> f:or(alternative: 'line')}">
+            <f:if condition="{data.label}">
+                <span class="content-divider__label">{data.label}</span>
+            </f:if>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

@@ -1,0 +1,27 @@
+name: shadcn2fluid/team-cta
+title: Team CTA
+description: Call to action for joining the team with open positions count
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 3
+  - identifier: open_count
+    type: Text
+    label: Open Positions Count
+  - identifier: cta_text
+    type: Text
+    label: Button Text
+  - identifier: cta_link
+    type: Link
+    label: Button Link
+  - identifier: image
+    type: File
+    label: Background Image
+    allowed: common-image-types
+    maxitems: 1

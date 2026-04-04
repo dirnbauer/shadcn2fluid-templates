@@ -1,0 +1,20 @@
+.office-hours__card { max-width: 480px; margin-inline: auto; }
+.office-hours__list {
+    margin-block-start: var(--s2f-spacing-lg);
+}
+.office-hours__row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--s2f-spacing-xs) 0;
+    border-bottom: 1px solid hsl(var(--border));
+}
+.office-hours__row:last-child { border-bottom: none; }
+.office-hours__day {
+    font-weight: 500;
+    font-size: var(--s2f-text-sm);
+}
+.office-hours__time {
+    font-size: var(--s2f-text-sm);
+    color: hsl(var(--muted-foreground));
+    margin: 0;
+}

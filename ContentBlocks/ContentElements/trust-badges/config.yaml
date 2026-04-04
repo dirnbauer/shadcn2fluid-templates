@@ -1,0 +1,34 @@
+name: shadcn2fluid/trust-badges
+title: Trust Badges
+description: Row of trust and security badges for checkout or footer
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: badges
+    type: Collection
+    label: Badges
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Badge Label
+        required: true
+
+      - identifier: image
+        type: File
+        label: Badge Image
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: description
+        type: Text
+        label: Short Description

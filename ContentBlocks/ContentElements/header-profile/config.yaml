@@ -1,0 +1,33 @@
+name: shadcn2fluid/header-profile
+title: Profile Header
+description: Profile page header with avatar, name, bio, and action buttons
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Name
+  - identifier: role
+    type: Text
+    label: Role / Title
+  - identifier: bio
+    type: Textarea
+    label: Bio
+    rows: 3
+  - identifier: avatar
+    type: File
+    label: Avatar
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: secondary_button_text
+    type: Text
+    label: Secondary Button Text
+  - identifier: secondary_button_link
+    type: Link
+    label: Secondary Button Link

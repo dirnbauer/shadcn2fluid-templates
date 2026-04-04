@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-testimonial-video" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="testimonial-video">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <h2 class="testimonial-video__heading">{data.header}</h2>
+        </f:if>
+
+        <div class="testimonial-video__layout">
+            <div class="testimonial-video__player">
+                <div class="testimonial-video__embed">
+                    <iframe src="{data.video_url}" allowfullscreen loading="lazy" title="Video testimonial from {data.author_name}"></iframe>
+                </div>
+            </div>
+
+            <div class="testimonial-video__content">
+                <f:if condition="{data.quote}">
+                    <blockquote class="testimonial-video__quote">&ldquo;{data.quote}&rdquo;</blockquote>
+                </f:if>
+                <div class="testimonial-video__author">
+                    <cite class="testimonial-video__name">{data.author_name}</cite>
+                    <f:if condition="{data.author_title} || {data.author_company}">
+                        <span class="testimonial-video__role">
+                            {data.author_title}<f:if condition="{data.author_title} && {data.author_company}">, </f:if>{data.author_company}
+                        </span>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

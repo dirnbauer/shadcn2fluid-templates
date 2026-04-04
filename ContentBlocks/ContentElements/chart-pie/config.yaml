@@ -1,0 +1,37 @@
+name: shadcn2fluid/chart-pie
+title: Chart Pie
+description: Pie chart with legend and configurable segments
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: chart_data
+    type: Textarea
+    label: Chart Data (JSON)
+    description: |
+      Enter data as JSON array, e.g.:
+      [{"label": "Segment A", "value": 40}, {"label": "Segment B", "value": 30}]
+    rows: 6
+    required: true
+  - identifier: show_legend
+    type: Checkbox
+    label: Show Legend
+    default: 1
+  - identifier: chart_size
+    type: Select
+    renderType: selectSingle
+    label: Chart Size
+    items:
+      - label: Small
+        value: small
+      - label: Medium
+        value: medium
+      - label: Large
+        value: large
+    default: medium

@@ -1,0 +1,12 @@
+.pricing-faq__intro { text-align: center; margin-block-end: var(--s2f-spacing-xl); }
+.pricing-faq__eyebrow { font-size: var(--s2f-text-sm); text-transform: uppercase; letter-spacing: 0.05em; color: hsl(var(--primary)); font-weight: 600; }
+.pricing-faq__headline { margin-block-start: var(--s2f-spacing-xs); }
+.pricing-faq__description { color: hsl(var(--muted-foreground)); max-width: 40rem; margin-inline: auto; }
+.pricing-faq__list { max-width: 48rem; margin-inline: auto; display: flex; flex-direction: column; }
+.pricing-faq__item { border-block-end: 1px solid hsl(var(--border)); }
+.pricing-faq__question { padding: var(--s2f-spacing-md) 0; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.pricing-faq__question::-webkit-details-marker { display: none; }
+.pricing-faq__question::after { content: "+"; font-size: var(--s2f-text-xl); color: hsl(var(--muted-foreground)); transition: transform 0.2s; }
+.pricing-faq__item[open] .pricing-faq__question::after { content: "\2212"; }
+.pricing-faq__answer { padding-block-end: var(--s2f-spacing-md); }
+.pricing-faq__answer p { color: hsl(var(--muted-foreground)); line-height: 1.6; }

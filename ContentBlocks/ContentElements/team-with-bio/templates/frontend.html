@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-team-with-bio" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="team-with-bio">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="team-with-bio__intro">
+                <f:if condition="{data.eyebrow}"><span class="team-with-bio__eyebrow">{data.eyebrow}</span></f:if>
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="team-with-bio__list">
+            <f:for each="{data.members}" as="member">
+                <article class="team-with-bio__member">
+                    <f:if condition="{member.image}">
+                        <div class="team-with-bio__image-wrapper">
+                            <f:for each="{member.image}" as="fileReference">
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 320)}" alt="{member.name}" class="team-with-bio__image"/>
+                            </f:for>
+                        </div>
+                    </f:if>
+                    <div class="team-with-bio__content">
+                        <h3 class="team-with-bio__name">{member.name}</h3>
+                        <f:if condition="{member.role}"><p class="team-with-bio__role">{member.role}</p></f:if>
+                        <f:if condition="{member.bio}"><p class="team-with-bio__bio">{member.bio}</p></f:if>
+                        <f:if condition="{member.profile_link.url}">
+                            <s2f:atom.button link="{member.profile_link}" variant="ghost" size="sm">Read more</s2f:atom.button>
+                        </f:if>
+                    </div>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

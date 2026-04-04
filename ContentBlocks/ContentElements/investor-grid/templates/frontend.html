@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-investor-grid" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="investor-grid">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.subheadline}">
+            <header class="investor-grid__intro">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+        </f:if>
+
+        <div class="investor-grid__items">
+            <f:for each="{data.investors}" as="inv">
+                <div class="investor-grid__item">
+                    <f:if condition="{inv.logo}">
+                        <f:for each="{inv.logo}" as="fileReference">
+                            <img src="{f:uri.image(image: fileReference, maxWidth: 160)}" alt="{inv.name}" class="investor-grid__logo"/>
+                        </f:for>
+                    </f:if>
+                    <h3 class="investor-grid__name">{inv.name}</h3>
+                    <f:if condition="{inv.type}"><span class="investor-grid__type">{inv.type}</span></f:if>
+                    <f:if condition="{inv.link.url}">
+                        <f:link.typolink parameter="{inv.link}" class="investor-grid__link">Website</f:link.typolink>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

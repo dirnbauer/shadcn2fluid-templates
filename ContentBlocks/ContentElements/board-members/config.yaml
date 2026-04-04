@@ -1,0 +1,37 @@
+name: shadcn2fluid/board-members
+title: Board Members
+description: Executive board member cards with titles and affiliations
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: members
+    type: Collection
+    label: Board Members
+    minItems: 1
+    fields:
+      - identifier: image
+        type: File
+        label: Portrait
+        allowed: common-image-types
+        maxitems: 1
+      - identifier: name
+        type: Text
+        label: Name
+        required: true
+      - identifier: title
+        type: Text
+        label: Title
+      - identifier: affiliation
+        type: Text
+        label: Affiliation
+      - identifier: bio
+        type: Textarea
+        label: Short Bio
+        rows: 2

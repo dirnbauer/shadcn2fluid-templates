@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-client-list" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="client-list">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="client-list__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="client-list__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="client-list__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="client-list__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <ul class="client-list__items">
+            <f:for each="{data.clients}" as="client">
+                <li class="client-list__item">
+                    <f:if condition="{client.logo}">
+                        <div class="client-list__logo">
+                            <f:for each="{client.logo}" as="fileReference">
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 120)}" alt="{client.name}" class="client-list__logo-img"/>
+                            </f:for>
+                        </div>
+                    </f:if>
+                    <div class="client-list__info">
+                        <f:if condition="{client.link.url}">
+                            <f:then>
+                                <f:link.typolink parameter="{client.link}" class="client-list__name">{client.name}</f:link.typolink>
+                            </f:then>
+                            <f:else>
+                                <span class="client-list__name">{client.name}</span>
+                            </f:else>
+                        </f:if>
+                        <f:if condition="{client.industry}">
+                            <span class="client-list__industry">{client.industry}</span>
+                        </f:if>
+                    </div>
+                </li>
+            </f:for>
+        </ul>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

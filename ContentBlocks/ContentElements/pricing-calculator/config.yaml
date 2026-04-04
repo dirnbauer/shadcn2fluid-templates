@@ -1,0 +1,43 @@
+name: shadcn2fluid/pricing-calculator
+title: Pricing Calculator
+description: Interactive pricing estimator with configurable tiers
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+
+  - identifier: unit_label
+    type: Text
+    label: Unit Label
+    description: e.g. users, API calls, seats
+    default: users
+
+  - identifier: tiers
+    type: Collection
+    label: Pricing Tiers
+    minItems: 1
+    fields:
+      - identifier: up_to
+        type: Text
+        label: Up To (quantity)
+        required: true
+
+      - identifier: price_per_unit
+        type: Text
+        label: Price Per Unit
+        required: true
+
+      - identifier: label
+        type: Text
+        label: Tier Label

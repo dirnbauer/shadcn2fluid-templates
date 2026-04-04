@@ -1,0 +1,28 @@
+name: shadcn2fluid/faq
+title: FAQ
+description: Frequently asked questions with structured data support
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Questions
+    minItems: 1
+    fields:
+      - identifier: question
+        type: Text
+        label: Question
+        required: true
+      - identifier: answer
+        type: Textarea
+        label: Answer
+        enableRichtext: true
+        rows: 4
+        required: true

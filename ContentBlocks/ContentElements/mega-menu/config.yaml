@@ -1,0 +1,73 @@
+name: shadcn2fluid/mega-menu
+title: Mega Menu
+description: Expanded marketing navigation with grouped links and CTA area
+group: navigation
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: layout
+    type: Select
+    renderType: selectSingle
+    label: Layout
+    items:
+      - label: Full Width
+        value: full-width
+      - label: Two Columns
+        value: two-columns
+    default: full-width
+
+  - identifier: brand
+    type: Text
+    label: Brand Text
+    required: true
+
+  - identifier: brand_link
+    type: Link
+    label: Brand Link
+
+  - identifier: intro_title
+    type: Text
+    label: Intro Title
+
+  - identifier: intro_text
+    type: Textarea
+    label: Intro Text
+    rows: 3
+
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+
+  - identifier: menu_groups
+    type: Collection
+    label: Menu Groups
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Group Title
+      - identifier: description
+        type: Textarea
+        label: Group Description
+        rows: 2
+      - identifier: links
+        type: Collection
+        label: Links
+        minItems: 1
+        fields:
+          - identifier: label
+            type: Text
+            label: Link Label
+          - identifier: detail
+            type: Text
+            label: Link Detail
+          - identifier: link
+            type: Link
+            label: Link

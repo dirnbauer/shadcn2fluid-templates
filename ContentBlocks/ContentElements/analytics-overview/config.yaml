@@ -1,0 +1,45 @@
+name: shadcn2fluid/analytics-overview
+title: Analytics Overview
+description: Dashboard-style overview with key metrics, trend chart, and summary
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: period_label
+    type: Text
+    label: Period Label
+    description: e.g. Last 30 days
+  - identifier: items
+    type: Collection
+    label: Key Metrics
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: value
+        type: Text
+        label: Value
+        required: true
+      - identifier: change
+        type: Text
+        label: Change
+      - identifier: trend
+        type: Select
+        renderType: selectSingle
+        label: Trend
+        items:
+          - label: Up
+            value: up
+          - label: Down
+            value: down
+          - label: Neutral
+            value: neutral
+        default: neutral
+  - identifier: summary
+    type: Textarea
+    label: Summary Text
+    rows: 3

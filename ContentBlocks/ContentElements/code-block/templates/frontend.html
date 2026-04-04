@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-code-block" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="code-block-section">
+    <s2f:layout.container>
+        <f:if condition="{data.header}">
+            <s2f:typography.heading level="2" class="code-block-section__headline">{data.header}</s2f:typography.heading>
+        </f:if>
+
+        <div class="code-block">
+            <f:if condition="{data.filename} || {data.language}">
+                <div class="code-block__header">
+                    <f:if condition="{data.filename}"><span class="code-block__filename">{data.filename}</span></f:if>
+                    <f:if condition="{data.language}"><span class="code-block__language">{data.language}</span></f:if>
+                </div>
+            </f:if>
+            <pre class="code-block__pre"><code class="code-block__code">{data.code -> f:format.htmlspecialchars()}</code></pre>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

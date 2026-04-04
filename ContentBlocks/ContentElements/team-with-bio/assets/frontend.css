@@ -1,0 +1,39 @@
+.team-with-bio__intro {
+    text-align: center;
+    margin-block-end: var(--s2f-spacing-xl);
+}
+.team-with-bio__eyebrow {
+    font-size: var(--s2f-text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(var(--primary));
+}
+.team-with-bio__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s2f-spacing-xl);
+}
+.team-with-bio__member {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: var(--s2f-spacing-lg);
+    align-items: start;
+}
+@media (max-width: 768px) {
+    .team-with-bio__member { grid-template-columns: 1fr; }
+}
+.team-with-bio__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+.team-with-bio__name { font-weight: 600; }
+.team-with-bio__role { font-size: var(--s2f-text-sm); color: hsl(var(--primary)); font-weight: 500; }
+.team-with-bio__bio {
+    font-size: var(--s2f-text-sm);
+    color: hsl(var(--muted-foreground));
+    line-height: 1.7;
+    margin-block-start: var(--s2f-spacing-sm);
+}

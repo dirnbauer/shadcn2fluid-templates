@@ -1,0 +1,27 @@
+.feature-cards__intro {
+    text-align: center;
+    margin-block-end: var(--s2f-spacing-xl);
+}
+.feature-cards__eyebrow {
+    font-size: var(--s2f-text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(var(--primary));
+}
+.feature-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s2f-spacing-lg);
+}
+@media (max-width: 768px) {
+    .feature-cards__grid { grid-template-columns: 1fr; }
+}
+.feature-cards__title {
+    font-weight: 600;
+    margin-block-end: var(--s2f-spacing-xs);
+}
+.feature-cards__description {
+    color: hsl(var(--muted-foreground));
+    font-size: var(--s2f-text-sm);
+}

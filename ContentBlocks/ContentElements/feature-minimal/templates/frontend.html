@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-feature-minimal" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="feature-minimal">
+    <s2f:layout.container>
+        <div class="feature-minimal__layout">
+            <header class="feature-minimal__intro">
+                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+            </header>
+            <div class="feature-minimal__list">
+                <f:for each="{data.items}" as="item">
+                    <div class="feature-minimal__item">
+                        <h3 class="feature-minimal__title">{item.title}</h3>
+                        <f:if condition="{item.description}">
+                            <p class="feature-minimal__description">{item.description}</p>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-comparison-table" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="comparison-table-section">
+    <s2f:layout.container>
+        <f:if condition="{data.header} || {data.description}">
+            <header class="comparison-table__intro">
+                <f:if condition="{data.header}">
+                    <h2 class="comparison-table__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.description}">
+                    <p class="comparison-table__description">{data.description}</p>
+                </f:if>
+            </header>
+        </f:if>
+        <div class="comparison-table__wrapper">
+            <table class="comparison-table__table">
+                <thead>
+                    <tr>
+                        <th class="comparison-table__feature-col">Feature</th>
+                        <f:for each="{data.columns}" as="col">
+                            <th class="{f:if(condition: col.highlighted, then: 'comparison-table__col--highlighted')}">{col.name}</th>
+                        </f:for>
+                    </tr>
+                </thead>
+                <tbody>
+                    <f:for each="{data.features}" as="feature">
+                        <tr>
+                            <td class="comparison-table__feature-name">{feature.name}</td>
+                            <td class="comparison-table__cell" colspan="{f:count(subject: data.columns)}">{feature.values}</td>
+                        </tr>
+                    </f:for>
+                </tbody>
+            </table>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

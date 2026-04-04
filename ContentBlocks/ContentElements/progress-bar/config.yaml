@@ -1,0 +1,42 @@
+name: shadcn2fluid/progress-bar
+title: Progress Bar
+description: Visual progress indicator with label and percentage
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: items
+    type: Collection
+    label: Progress Items
+    minItems: 1
+    fields:
+      - identifier: label
+        type: Text
+        label: Label
+        required: true
+      - identifier: value
+        type: Number
+        label: Percentage (0-100)
+        required: true
+      - identifier: color
+        type: Select
+        renderType: selectSingle
+        label: Color
+        items:
+          - label: Primary
+            value: primary
+          - label: Green
+            value: green
+          - label: Blue
+            value: blue
+          - label: Orange
+            value: orange
+          - label: Red
+            value: red
+        default: primary
+  - identifier: show_value
+    type: Checkbox
+    label: Show Percentage
+    default: 1

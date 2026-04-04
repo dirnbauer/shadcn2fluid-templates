@@ -1,0 +1,43 @@
+name: shadcn2fluid/changelog
+title: Changelog
+description: Version history timeline with release notes
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: items
+    type: Collection
+    label: Releases
+    minItems: 1
+    fields:
+      - identifier: version
+        type: Text
+        label: Version
+        required: true
+      - identifier: date
+        type: Text
+        label: Date
+      - identifier: title
+        type: Text
+        label: Release Title
+      - identifier: description
+        type: Textarea
+        label: Release Notes
+        enableRichtext: true
+        rows: 4
+      - identifier: tag
+        type: Select
+        renderType: selectSingle
+        label: Tag
+        items:
+          - label: New
+            value: new
+          - label: Fix
+            value: fix
+          - label: Improvement
+            value: improvement
+          - label: Breaking
+            value: breaking
+        default: new

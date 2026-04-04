@@ -1,0 +1,38 @@
+name: shadcn2fluid/team-department
+title: Team Department
+description: Team members grouped by department with section headings
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: departments
+    type: Collection
+    label: Departments
+    minItems: 1
+    fields:
+      - identifier: name
+        type: Text
+        label: Department Name
+        required: true
+      - identifier: members
+        type: Collection
+        label: Members
+        fields:
+          - identifier: image
+            type: File
+            label: Portrait
+            allowed: common-image-types
+            maxitems: 1
+          - identifier: name
+            type: Text
+            label: Name
+            required: true
+          - identifier: role
+            type: Text
+            label: Role

@@ -1,0 +1,47 @@
+name: shadcn2fluid/product-comparison
+title: Product Comparison
+description: Side-by-side product comparison with specs
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: products
+    type: Collection
+    label: Products
+    minItems: 2
+    maxItems: 3
+    fields:
+      - identifier: name
+        type: Text
+        label: Product Name
+        required: true
+
+      - identifier: image
+        type: File
+        label: Product Image
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: price
+        type: Text
+        label: Price
+
+      - identifier: specs
+        type: Textarea
+        label: Specs (one per line)
+        rows: 6
+
+      - identifier: is_recommended
+        type: Checkbox
+        label: Recommended
+
+      - identifier: link
+        type: Link
+        label: Product Link

@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-feature-matrix" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="feature-matrix">
+    <s2f:layout.container>
+        <header class="feature-matrix__intro">
+            <f:if condition="{data.eyebrow}"><span class="feature-matrix__eyebrow">{data.eyebrow}</span></f:if>
+            <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
+        </header>
+        <s2f:molecule.card class="feature-matrix__table" role="table">
+            <div class="feature-matrix__head" role="row">
+                <span class="feature-matrix__label" role="columnheader">Feature</span>
+                <span class="feature-matrix__value" role="columnheader">{data.left_label -> f:or(alternative: 'Plan A')}</span>
+                <span class="feature-matrix__value" role="columnheader">{data.right_label -> f:or(alternative: 'Plan B')}</span>
+            </div>
+            <f:for each="{data.rows}" as="row">
+                <div class="feature-matrix__row" role="row">
+                    <span class="feature-matrix__label" role="cell">{row.label}</span>
+                    <span class="feature-matrix__value" role="cell">{row.left_value}</span>
+                    <span class="feature-matrix__value" role="cell">{row.right_value}</span>
+                </div>
+            </f:for>
+        </s2f:molecule.card>
+    </s2f:layout.container>
+</s2f:layout.section>
+
+</html>

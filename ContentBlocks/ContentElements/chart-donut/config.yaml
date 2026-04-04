@@ -1,0 +1,30 @@
+name: shadcn2fluid/chart-donut
+title: Chart Donut
+description: Donut chart with center label and configurable ring width
+group: data
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+  - identifier: chart_data
+    type: Textarea
+    label: Chart Data (JSON)
+    rows: 6
+    required: true
+  - identifier: center_label
+    type: Text
+    label: Center Label
+    description: Text shown in the donut center
+  - identifier: center_value
+    type: Text
+    label: Center Value
+    description: Large value shown in the donut center
+  - identifier: show_legend
+    type: Checkbox
+    label: Show Legend
+    default: 1

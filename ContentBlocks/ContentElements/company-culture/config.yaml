@@ -1,0 +1,33 @@
+name: shadcn2fluid/company-culture
+title: Company Culture
+description: Showcase workplace culture with images and captions
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Culture Highlights
+    minItems: 1
+    fields:
+      - identifier: image
+        type: File
+        label: Image
+        allowed: common-image-types
+        maxitems: 1
+      - identifier: title
+        type: Text
+        label: Title
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2

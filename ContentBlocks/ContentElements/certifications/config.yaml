@@ -1,0 +1,47 @@
+name: shadcn2fluid/certifications
+title: Certifications
+description: Certification badges and compliance indicators
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: certifications
+    type: Collection
+    label: Certifications
+    minItems: 1
+    fields:
+      - identifier: name
+        type: Text
+        label: Certification Name
+        required: true
+
+      - identifier: issuer
+        type: Text
+        label: Issuing Body
+
+      - identifier: badge
+        type: File
+        label: Badge Image
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+
+      - identifier: link
+        type: Link
+        label: Verification Link

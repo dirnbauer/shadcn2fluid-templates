@@ -1,0 +1,38 @@
+name: shadcn2fluid/table-content
+title: Table Content
+description: Styled data table with header row and body rows
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: caption
+    type: Text
+    label: Table Caption
+  - identifier: columns
+    type: Collection
+    label: Column Headers
+    minItems: 2
+    fields:
+      - identifier: label
+        type: Text
+        label: Column Header
+        required: true
+  - identifier: rows
+    type: Collection
+    label: Table Rows
+    minItems: 1
+    fields:
+      - identifier: col1
+        type: Text
+        label: Column 1
+      - identifier: col2
+        type: Text
+        label: Column 2
+      - identifier: col3
+        type: Text
+        label: Column 3
+      - identifier: col4
+        type: Text
+        label: Column 4

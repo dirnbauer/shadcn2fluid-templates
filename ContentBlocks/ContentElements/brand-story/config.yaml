@@ -1,0 +1,25 @@
+name: shadcn2fluid/brand-story
+title: Brand Story
+description: Narrative brand section with text blocks and images
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: lead
+    type: Textarea
+    label: Lead Paragraph
+    rows: 3
+  - identifier: body
+    type: Textarea
+    label: Body Text
+    rows: 6
+  - identifier: image
+    type: File
+    label: Image
+    allowed: common-image-types
+    maxitems: 1

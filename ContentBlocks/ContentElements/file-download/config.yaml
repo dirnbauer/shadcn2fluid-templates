@@ -1,0 +1,30 @@
+name: shadcn2fluid/file-download
+title: File Download
+description: Downloadable file cards with metadata and download links
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: items
+    type: Collection
+    label: Files
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Text
+        label: Description
+      - identifier: file
+        type: File
+        label: File
+        maxitems: 1
+        required: true
+      - identifier: file_size
+        type: Text
+        label: File Size
+        description: e.g. 2.4 MB

@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+      xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="s2f-pricing-usage" href="{cb:assetPath()}/frontend.css"/>
+
+<s2f:layout.section class="pricing-usage">
+    <s2f:layout.container>
+        <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
+            <header class="pricing-usage__intro">
+                <f:if condition="{data.eyebrow}">
+                    <span class="pricing-usage__eyebrow">{data.eyebrow}</span>
+                </f:if>
+                <f:if condition="{data.header}">
+                    <h2 class="pricing-usage__headline">{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.subheadline}">
+                    <p class="pricing-usage__description">{data.subheadline}</p>
+                </f:if>
+            </header>
+        </f:if>
+
+        <div class="pricing-usage__grid">
+            <f:for each="{data.items}" as="item">
+                <article class="pricing-usage__card">
+                    <h3 class="pricing-usage__title">{item.title}</h3>
+                    <div class="pricing-usage__rate-row">
+                        <span class="pricing-usage__rate">{item.rate}</span>
+                        <span class="pricing-usage__unit">/ {item.unit}</span>
+                    </div>
+                    <f:if condition="{item.description}">
+                        <p class="pricing-usage__card-desc">{item.description}</p>
+                    </f:if>
+                    <f:if condition="{item.link.url}">
+                        <f:link.typolink parameter="{item.link}" class="pricing-usage__link">
+                            Learn more &rarr;
+                        </f:link.typolink>
+                    </f:if>
+                </article>
+            </f:for>
+        </div>
+    </s2f:layout.container>
+</s2f:layout.section>
+</html>

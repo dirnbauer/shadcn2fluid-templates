@@ -1,0 +1,43 @@
+name: shadcn2fluid/timeline
+title: Timeline
+description: Process, roadmap, and milestone timelines
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+
+  - identifier: items
+    type: Collection
+    label: Timeline Items
+    minItems: 1
+    fields:
+      - identifier: step
+        type: Text
+        label: Step / Date
+        required: true
+
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+
+      - identifier: content
+        type: Textarea
+        label: Content
+        rows: 4
+        enableRichtext: true
+
+      - identifier: link_text
+        type: Text
+        label: Link Text
+
+      - identifier: link
+        type: Link
+        label: Link

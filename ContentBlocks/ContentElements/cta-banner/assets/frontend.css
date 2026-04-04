@@ -1,0 +1,28 @@
+.cta-banner {
+    padding: var(--s2f-spacing-2xl) 0;
+}
+.cta-banner--primary {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+}
+.cta-banner--muted { background: hsl(var(--muted)); }
+.cta-banner--dark { background: hsl(var(--foreground)); color: hsl(var(--background)); }
+.cta-banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s2f-spacing-lg);
+    flex-wrap: wrap;
+}
+.cta-banner__headline {
+    font-size: var(--s2f-text-xl);
+    font-weight: 700;
+}
+.cta-banner__description {
+    font-size: var(--s2f-text-sm);
+    opacity: 0.9;
+    max-width: 500px;
+}
+@media (max-width: 768px) {
+    .cta-banner__content { flex-direction: column; text-align: center; }
+}

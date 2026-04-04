@@ -1,0 +1,30 @@
+.mission-statement__content {
+    text-align: center;
+    max-width: 800px;
+    margin-inline: auto;
+}
+.mission-statement__eyebrow {
+    font-size: var(--s2f-text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: hsl(var(--primary));
+    display: block;
+    margin-block-end: var(--s2f-spacing-sm);
+}
+.mission-statement__quote {
+    font-size: var(--s2f-text-2xl);
+    font-weight: 300;
+    line-height: 1.4;
+    color: hsl(var(--foreground));
+    margin-block-start: var(--s2f-spacing-md);
+    border: none;
+    padding: 0;
+}
+.mission-statement__attribution {
+    display: block;
+    margin-block-start: var(--s2f-spacing-md);
+    font-size: var(--s2f-text-sm);
+    font-style: normal;
+    color: hsl(var(--muted-foreground));
+}

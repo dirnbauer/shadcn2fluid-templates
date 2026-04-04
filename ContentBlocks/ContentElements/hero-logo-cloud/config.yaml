@@ -1,0 +1,29 @@
+name: shadcn2fluid/hero-logo-cloud
+title: Hero Logo Cloud
+description: Hero section with supporting logo strip for proof and trust
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: logos
+    type: Collection
+    label: Logos
+    fields:
+      - identifier: name
+        type: Text
+        label: Name

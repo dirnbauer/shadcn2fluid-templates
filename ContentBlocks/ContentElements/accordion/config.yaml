@@ -1,0 +1,37 @@
+name: shadcn2fluid/accordion
+title: Accordion / FAQ
+description: Collapsible accordion sections, perfect for FAQs
+group: content
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: allow_multiple
+    type: Checkbox
+    label: Allow Multiple Open
+    description: Allow multiple accordion items to be open at once
+    default: 0
+
+  - identifier: items
+    type: Collection
+    label: Accordion Items
+    minItems: 1
+    fields:
+      - identifier: title
+        type: Text
+        label: Question / Title
+        required: true
+
+      - identifier: content
+        type: Textarea
+        label: Answer / Content
+        enableRichtext: true
+        rows: 5
+        required: true
+
+      - identifier: open_by_default
+        type: Checkbox
+        label: Open by Default
+        default: 0

@@ -1,0 +1,35 @@
+.founder-quote__intro {
+    text-align: center;
+    margin-block-end: var(--s2f-spacing-lg);
+}
+.founder-quote__card {
+    text-align: center;
+    max-width: 700px;
+    margin-inline: auto;
+}
+.founder-quote__image-wrapper { margin-block-end: var(--s2f-spacing-md); }
+.founder-quote__image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.founder-quote__text {
+    font-size: var(--s2f-text-xl);
+    font-style: italic;
+    line-height: 1.5;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.founder-quote__author { margin-block-start: var(--s2f-spacing-md); }
+.founder-quote__name {
+    display: block;
+    font-weight: 600;
+    font-style: normal;
+}
+.founder-quote__title {
+    display: block;
+    font-size: var(--s2f-text-sm);
+    color: hsl(var(--muted-foreground));
+}

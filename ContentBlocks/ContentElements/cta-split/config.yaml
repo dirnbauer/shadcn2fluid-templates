@@ -1,0 +1,35 @@
+name: shadcn2fluid/cta-split
+title: CTA Split
+description: Two-column split CTA with different actions per side
+group: conversion
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: left_title
+    type: Text
+    label: Left Title
+  - identifier: left_description
+    type: Textarea
+    label: Left Description
+    rows: 2
+  - identifier: left_button_text
+    type: Text
+    label: Left Button Text
+  - identifier: left_button_link
+    type: Link
+    label: Left Button Link
+  - identifier: right_title
+    type: Text
+    label: Right Title
+  - identifier: right_description
+    type: Textarea
+    label: Right Description
+    rows: 2
+  - identifier: right_button_text
+    type: Text
+    label: Right Button Text
+  - identifier: right_button_link
+    type: Link
+    label: Right Button Link

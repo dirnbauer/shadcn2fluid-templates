@@ -1,0 +1,55 @@
+name: shadcn2fluid/product-grid
+title: Product Grid
+description: Grid of product cards with images and prices
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: columns
+    type: Select
+    renderType: selectSingle
+    label: Columns
+    items:
+      - label: 2 Columns
+        value: '2'
+      - label: 3 Columns
+        value: '3'
+      - label: 4 Columns
+        value: '4'
+    default: '3'
+
+  - identifier: products
+    type: Collection
+    label: Products
+    minItems: 1
+    fields:
+      - identifier: name
+        type: Text
+        label: Product Name
+        required: true
+
+      - identifier: image
+        type: File
+        label: Product Image
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: price
+        type: Text
+        label: Price
+        required: true
+
+      - identifier: description
+        type: Text
+        label: Short Description
+
+      - identifier: link
+        type: Link
+        label: Product Link

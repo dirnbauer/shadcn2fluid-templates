@@ -1,0 +1,33 @@
+name: shadcn2fluid/investor-grid
+title: Investor Grid
+description: Grid of investors or backers with logos and funding details
+group: team
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: investors
+    type: Collection
+    label: Investors
+    minItems: 1
+    fields:
+      - identifier: logo
+        type: File
+        label: Logo
+        allowed: common-image-types
+        maxitems: 1
+      - identifier: name
+        type: Text
+        label: Name
+        required: true
+      - identifier: type
+        type: Text
+        label: Type
+      - identifier: link
+        type: Link
+        label: Website

@@ -1,0 +1,47 @@
+name: shadcn2fluid/feature-list
+title: Feature List
+description: Editorial feature list with icon, title, and description rows
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+
+  - identifier: layout
+    type: Select
+    renderType: selectSingle
+    label: Layout
+    items:
+      - label: Full Width
+        value: full-width
+      - label: Two Columns
+        value: two-columns
+      - label: Stacked
+        value: stacked
+    default: two-columns
+
+  - identifier: items
+    type: Collection
+    label: Feature Items
+    minItems: 1
+    fields:
+      - identifier: icon
+        type: Text
+        label: Icon Label
+      - identifier: title
+        type: Text
+        label: Title
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2

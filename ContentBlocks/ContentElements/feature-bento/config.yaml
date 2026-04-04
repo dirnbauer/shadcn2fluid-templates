@@ -1,0 +1,43 @@
+name: shadcn2fluid/feature-bento
+title: Feature Bento Grid
+description: Asymmetric bento-box layout for feature highlights
+group: features
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 2
+  - identifier: items
+    type: Collection
+    label: Bento Items
+    minItems: 3
+    fields:
+      - identifier: title
+        type: Text
+        label: Title
+        required: true
+      - identifier: description
+        type: Textarea
+        label: Description
+        rows: 2
+      - identifier: size
+        type: Select
+        renderType: selectSingle
+        label: Card Size
+        items:
+          - label: Small (1x1)
+            value: small
+          - label: Wide (2x1)
+            value: wide
+          - label: Tall (1x2)
+            value: tall
+        default: small
+      - identifier: image
+        type: File
+        label: Background Image
+        allowed: common-image-types
+        maxitems: 1

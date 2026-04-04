@@ -1,0 +1,56 @@
+name: shadcn2fluid/review-carousel
+title: Review Carousel
+description: Sliding carousel of customer reviews with ratings
+group: social-proof
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: eyebrow
+    type: Text
+    label: Eyebrow
+
+  - identifier: reviews
+    type: Collection
+    label: Reviews
+    minItems: 2
+    fields:
+      - identifier: reviewer_name
+        type: Text
+        label: Reviewer Name
+        required: true
+
+      - identifier: reviewer_image
+        type: File
+        label: Reviewer Photo
+        allowed: common-image-types
+        maxitems: 1
+
+      - identifier: rating
+        type: Select
+        renderType: selectSingle
+        label: Rating
+        items:
+          - label: 5 Stars
+            value: '5'
+          - label: 4 Stars
+            value: '4'
+          - label: 3 Stars
+            value: '3'
+        default: '5'
+
+      - identifier: title
+        type: Text
+        label: Review Title
+
+      - identifier: text
+        type: Textarea
+        label: Review Text
+        rows: 3
+        required: true
+
+      - identifier: date
+        type: Text
+        label: Date

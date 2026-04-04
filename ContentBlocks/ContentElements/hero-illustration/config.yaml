@@ -1,0 +1,40 @@
+name: shadcn2fluid/hero-illustration
+title: Hero Illustration
+description: Hero with illustration or SVG artwork panel
+group: hero
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+  - identifier: subheadline
+    type: Textarea
+    label: Subheadline
+    rows: 3
+  - identifier: illustration
+    type: File
+    label: Illustration
+    allowed: common-image-types
+    maxitems: 1
+  - identifier: image_position
+    type: Select
+    renderType: selectSingle
+    label: Image Position
+    items:
+      - label: Right
+        value: right
+      - label: Left
+        value: left
+    default: right
+  - identifier: primary_button_text
+    type: Text
+    label: Primary Button Text
+  - identifier: primary_button_link
+    type: Link
+    label: Primary Button Link
+  - identifier: secondary_button_text
+    type: Text
+    label: Secondary Button Text
+  - identifier: secondary_button_link
+    type: Link
+    label: Secondary Button Link

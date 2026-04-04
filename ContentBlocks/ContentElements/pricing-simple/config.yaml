@@ -1,0 +1,38 @@
+name: shadcn2fluid/pricing-simple
+title: Pricing Simple
+description: Minimal single-price display with CTA
+group: pricing
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Heading
+
+  - identifier: price
+    type: Text
+    label: Price
+    required: true
+
+  - identifier: billing_period
+    type: Text
+    label: Billing Period
+    description: e.g. per month
+
+  - identifier: description
+    type: Textarea
+    label: Description
+    rows: 2
+
+  - identifier: features
+    type: Textarea
+    label: Features (one per line)
+    rows: 5
+
+  - identifier: button_text
+    type: Text
+    label: Button Text
+    default: Get Started
+
+  - identifier: button_link
+    type: Link
+    label: Button Link
