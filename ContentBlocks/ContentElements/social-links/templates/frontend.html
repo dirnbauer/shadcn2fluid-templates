@@ -8,8 +8,8 @@
 <s2f:layout.section class="social-links">
     <s2f:layout.container>
         <div class="social-links__content">
-            <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
-            <f:if condition="{data.description_text}"><s2f:typography.text variant="muted">{data.description_text}</s2f:typography.text></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
+            <f:if condition="{data.description_text}"><s2f:atom.typography variant="muted">{data.description_text}</s2f:atom.typography></f:if>
             <div class="social-links__list">
                 <f:for each="{data.link_items}" as="link">
                     <f:link.typolink parameter="{link.url}" class="social-links__item">{link.platform}</f:link.typolink>

@@ -10,10 +10,10 @@
         <f:if condition="{data.header} || {data.subheadline}">
             <div class="features__header">
                 <f:if condition="{data.header}">
-                    <s2f:typography.heading level="2">{data.header}</s2f:typography.heading>
+                    <s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <s2f:typography.text variant="muted" class="features__subheadline">{data.subheadline}</s2f:typography.text>
+                    <s2f:atom.typography variant="muted" class="features__subheadline">{data.subheadline}</s2f:atom.typography>
                 </f:if>
             </div>
         </f:if>

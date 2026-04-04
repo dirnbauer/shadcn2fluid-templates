@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <f:if condition="{data.header}">
             <header class="feature-timeline__intro">
-                <s2f:typography.heading level="2">{data.header}</s2f:typography.heading>
-                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+                <s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 

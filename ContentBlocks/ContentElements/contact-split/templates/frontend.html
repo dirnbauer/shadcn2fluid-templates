@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <div class="contact-split__layout">
             <div class="contact-split__content">
-                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
-                <f:if condition="{data.description}"><s2f:typography.text variant="muted">{data.description}</s2f:typography.text></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
+                <f:if condition="{data.description}"><s2f:atom.typography variant="muted">{data.description}</s2f:atom.typography></f:if>
                 <form class="contact-split__form" action="{data.form_action.url}" method="post">
                     <label class="contact-split__field">
                         <span class="contact-split__label">Name</span>

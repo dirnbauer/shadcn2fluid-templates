@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <div class="feature-accordion__grid">
             <div class="feature-accordion__copy">
-                <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
-                <f:if condition="{data.subheadline}"><s2f:typography.text variant="muted">{data.subheadline}</s2f:typography.text></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
 
                 <div class="feature-accordion__list">
                     <f:for each="{data.items}" as="item" iteration="iter">

@@ -8,8 +8,8 @@
 <s2f:layout.section class="booking-form">
     <s2f:layout.container>
         <s2f:molecule.card class="booking-form__card">
-            <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
-            <f:if condition="{data.description}"><s2f:typography.text variant="muted">{data.description}</s2f:typography.text></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
+            <f:if condition="{data.description}"><s2f:atom.typography variant="muted">{data.description}</s2f:atom.typography></f:if>
             <form class="booking-form__form" action="{data.form_action.url}" method="post">
                 <div class="booking-form__field-grid">
                     <label class="booking-form__field">
