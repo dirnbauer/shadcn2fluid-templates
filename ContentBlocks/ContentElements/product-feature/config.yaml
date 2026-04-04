@@ -23,7 +23,7 @@ fields:
     allowed: common-image-types
     maxitems: 1
 
-  - identifier: features
+  - identifier: features_list
     type: Textarea
     label: Feature Benefits (one per line)
     rows: 6

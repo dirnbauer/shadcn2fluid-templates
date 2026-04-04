@@ -34,7 +34,7 @@
                     <f:if condition="{review.title}">
                         <h3 class="review-carousel__title">{review.title}</h3>
                     </f:if>
-                    <p class="review-carousel__text">{review.text}</p>
+                    <p class="review-carousel__text">{review.review_text}</p>
                     <div class="review-carousel__reviewer">
                         <f:if condition="{review.reviewer_image}">
                             <f:for each="{review.reviewer_image}" as="fileReference">

@@ -15,8 +15,8 @@
                     <s2f:atom.button type="submit" size="lg">{data.button_text -> f:or(alternative: 'Get Started')}</s2f:atom.button>
                 </div>
             </form>
-            <f:if condition="{data.privacy_text}">
-                <p class="hero-form__privacy">{data.privacy_text}</p>
+            <f:if condition="{data.privacy_notice}">
+                <p class="hero-form__privacy">{data.privacy_notice}</p>
             </f:if>
         </div>
     </s2f:layout.container>

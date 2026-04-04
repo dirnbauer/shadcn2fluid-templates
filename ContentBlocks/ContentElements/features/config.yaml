@@ -44,7 +44,7 @@ fields:
     label: Features
     minItems: 1
     fields:
-      - identifier: icon
+      - identifier: icon_name
         type: Select
         renderType: selectSingle
         label: Icon

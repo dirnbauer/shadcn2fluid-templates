@@ -9,7 +9,7 @@
     <s2f:layout.container>
         <div class="social-links__content">
             <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
-            <f:if condition="{data.description}"><s2f:typography.text variant="muted">{data.description}</s2f:typography.text></f:if>
+            <f:if condition="{data.description_text}"><s2f:typography.text variant="muted">{data.description_text}</s2f:typography.text></f:if>
             <div class="social-links__list">
                 <f:for each="{data.links}" as="link">
                     <f:link.typolink parameter="{link.url}" class="social-links__item">{link.platform}</f:link.typolink>

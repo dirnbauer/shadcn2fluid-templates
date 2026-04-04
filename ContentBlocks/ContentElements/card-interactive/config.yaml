@@ -11,7 +11,7 @@ fields:
     type: Textarea
     label: Description
     rows: 3
-  - identifier: icon
+  - identifier: icon_style
     type: Select
     renderType: selectSingle
     label: Icon

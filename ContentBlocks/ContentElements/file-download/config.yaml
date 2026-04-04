@@ -16,8 +16,8 @@ fields:
         type: Text
         label: Title
         required: true
-      - identifier: description
-        type: Textarea
+      - identifier: description_text
+        type: Text
         label: Description
       - identifier: file
         type: File

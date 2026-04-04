@@ -33,7 +33,7 @@ fields:
         type: Text
         label: Price
 
-      - identifier: specs
+      - identifier: specs_text
         type: Textarea
         label: Specs (one per line)
         rows: 6

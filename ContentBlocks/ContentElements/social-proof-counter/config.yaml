@@ -40,7 +40,7 @@ fields:
         label: Label
         required: true
 
-      - identifier: icon
+      - identifier: icon_name
         type: Select
         renderType: selectSingle
         label: Icon

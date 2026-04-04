@@ -7,8 +7,8 @@ fields:
   - identifier: header
     useExistingField: true
     label: Heading
-  - identifier: description
-    type: Textarea
+  - identifier: description_text
+    type: Text
     label: Description
   - identifier: links
     type: Collection

@@ -46,8 +46,8 @@ fields:
         label: Price
         required: true
 
-      - identifier: description
-        type: Textarea
+      - identifier: description_text
+        type: Text
         label: Short Description
 
       - identifier: link

@@ -20,7 +20,7 @@ fields:
   - identifier: button_text
     type: Text
     label: Button Text
-  - identifier: privacy_text
+  - identifier: privacy_notice
     type: Text
     label: Privacy Text
   - identifier: badge_text

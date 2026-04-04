@@ -17,7 +17,7 @@ fields:
     label: Description
     rows: 3
 
-  - identifier: features
+  - identifier: features_list
     type: Textarea
     label: Key Features (one per line)
     rows: 6

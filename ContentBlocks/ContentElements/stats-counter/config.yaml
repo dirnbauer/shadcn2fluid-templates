@@ -28,7 +28,7 @@ fields:
     label: Counters
     minItems: 1
     fields:
-      - identifier: target_value
+      - identifier: counter_target
         type: Text
         label: Target Value
         required: true

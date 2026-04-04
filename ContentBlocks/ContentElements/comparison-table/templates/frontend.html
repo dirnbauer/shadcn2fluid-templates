@@ -22,7 +22,7 @@
                 <thead>
                     <tr>
                         <th class="comparison-table__feature-col">Feature</th>
-                        <f:for each="{data.columns}" as="col">
+                        <f:for each="{data.column_items}" as="col">
                             <th class="{f:if(condition: col.highlighted, then: 'comparison-table__col--highlighted')}">{col.name}</th>
                         </f:for>
                     </tr>
@@ -31,7 +31,7 @@
                     <f:for each="{data.features}" as="feature">
                         <tr>
                             <td class="comparison-table__feature-name">{feature.name}</td>
-                            <td class="comparison-table__cell" colspan="{f:count(subject: data.columns)}">{feature.values}</td>
+                            <td class="comparison-table__cell" colspan="{f:count(subject: data.column_items)}">{feature.tier_values}</td>
                         </tr>
                     </f:for>
                 </tbody>

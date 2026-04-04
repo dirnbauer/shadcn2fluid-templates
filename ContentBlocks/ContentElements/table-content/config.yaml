@@ -10,7 +10,7 @@ fields:
   - identifier: caption
     type: Text
     label: Table Caption
-  - identifier: columns
+  - identifier: column_items
     type: Collection
     label: Column Headers
     minItems: 2

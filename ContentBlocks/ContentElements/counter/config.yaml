@@ -12,7 +12,7 @@ fields:
     label: Counters
     minItems: 1
     fields:
-      - identifier: value
+      - identifier: target_value
         type: Number
         label: Target Value
         required: true

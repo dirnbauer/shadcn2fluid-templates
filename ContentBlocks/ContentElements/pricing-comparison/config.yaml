@@ -37,7 +37,7 @@ fields:
         label: Feature Name
         required: true
 
-      - identifier: values
+      - identifier: tier_values
         type: Text
         label: Values (comma-separated)
         description: One value per plan, e.g. Yes, Yes, No

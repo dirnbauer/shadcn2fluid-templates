@@ -10,8 +10,8 @@
         <div class="feature-stats__layout">
             <div class="feature-stats__copy">
                 <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
-                <f:if condition="{data.description}">
-                    <s2f:typography.text variant="muted" class="feature-stats__description">{data.description}</s2f:typography.text>
+                <f:if condition="{data.description_text}">
+                    <s2f:typography.text variant="muted" class="feature-stats__description">{data.description_text}</s2f:typography.text>
                 </f:if>
             </div>
             <div class="feature-stats__grid">
@@ -19,8 +19,8 @@
                     <div class="feature-stats__item">
                         <span class="feature-stats__value">{item.value}</span>
                         <span class="feature-stats__label">{item.label}</span>
-                        <f:if condition="{item.description}">
-                            <span class="feature-stats__detail">{item.description}</span>
+                        <f:if condition="{item.description_text}">
+                            <span class="feature-stats__detail">{item.description_text}</span>
                         </f:if>
                     </div>
                 </f:for>

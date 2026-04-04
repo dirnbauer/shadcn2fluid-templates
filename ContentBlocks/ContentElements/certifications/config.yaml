@@ -31,7 +31,7 @@ fields:
         type: Text
         label: Issuing Body
 
-      - identifier: badge
+      - identifier: badge_image
         type: File
         label: Badge Image
         allowed: common-image-types

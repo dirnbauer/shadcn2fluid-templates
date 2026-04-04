@@ -9,7 +9,7 @@
     <s2f:layout.container>
         <div class="emergency-contact__card">
             <f:if condition="{data.header}"><h2 class="emergency-contact__headline">{data.header}</h2></f:if>
-            <f:if condition="{data.description}"><p class="emergency-contact__description">{data.description}</p></f:if>
+            <f:if condition="{data.description_text}"><p class="emergency-contact__description">{data.description_text}</p></f:if>
             <f:if condition="{data.phone}">
                 <div class="emergency-contact__phone">
                     <f:if condition="{data.phone_link.url}">

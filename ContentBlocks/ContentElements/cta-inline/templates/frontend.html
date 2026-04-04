@@ -10,7 +10,7 @@
         <div class="cta-inline__bar">
             <div class="cta-inline__text">
                 <f:if condition="{data.header}"><h3 class="cta-inline__headline">{data.header}</h3></f:if>
-                <f:if condition="{data.description}"><p class="cta-inline__description">{data.description}</p></f:if>
+                <f:if condition="{data.description_text}"><p class="cta-inline__description">{data.description_text}</p></f:if>
             </div>
             <f:if condition="{data.cta_text} && {data.cta_link.url}">
                 <s2f:atom.button link="{data.cta_link}">{data.cta_text}</s2f:atom.button>

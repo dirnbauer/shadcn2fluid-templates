@@ -31,8 +31,8 @@
                     <div class="pricing-slider__tier {f:if(condition: iter.isFirst, then: 'pricing-slider__tier--active')}">
                         <span class="pricing-slider__volume">{tier.volume} {data.unit_label -> f:or(alternative: 'requests')}</span>
                         <span class="pricing-slider__price">{tier.price}</span>
-                        <f:if condition="{tier.features}">
-                            <span class="pricing-slider__features">{tier.features}</span>
+                        <f:if condition="{tier.included_features}">
+                            <span class="pricing-slider__features">{tier.included_features}</span>
                         </f:if>
                     </div>
                 </f:for>

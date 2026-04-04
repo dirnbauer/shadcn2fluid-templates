@@ -10,15 +10,15 @@
         <div class="feature-split__grid">
             <div class="feature-split__copy">
                 <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
-                <f:if condition="{data.description}">
-                    <s2f:typography.text variant="muted" class="feature-split__description">{data.description}</s2f:typography.text>
+                <f:if condition="{data.description_text}">
+                    <s2f:typography.text variant="muted" class="feature-split__description">{data.description_text}</s2f:typography.text>
                 </f:if>
                 <div class="feature-split__list">
                     <f:for each="{data.items}" as="item">
                         <div class="feature-split__item">
                             <h3 class="feature-split__title">{item.title}</h3>
-                            <f:if condition="{item.description}">
-                                <p class="feature-split__detail">{item.description}</p>
+                            <f:if condition="{item.description_text}">
+                                <p class="feature-split__detail">{item.description_text}</p>
                             </f:if>
                         </div>
                     </f:for>

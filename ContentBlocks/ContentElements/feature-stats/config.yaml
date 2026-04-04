@@ -24,6 +24,6 @@ fields:
         type: Text
         label: Stat Label
         required: true
-      - identifier: description
-        type: Textarea
+      - identifier: description_text
+        type: Text
         label: Supporting Text

@@ -16,7 +16,7 @@ fields:
         type: Text
         label: Label
         required: true
-      - identifier: value
+      - identifier: target_value
         type: Number
         label: Percentage (0-100)
         required: true

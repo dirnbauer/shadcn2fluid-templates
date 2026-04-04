@@ -14,7 +14,7 @@ fields:
     type: Textarea
     label: Brand Description
     rows: 3
-  - identifier: columns
+  - identifier: column_items
     type: Collection
     label: Link Columns
     minItems: 1

@@ -37,6 +37,6 @@ fields:
         label: Price
         required: true
 
-      - identifier: features
+      - identifier: included_features
         type: Text
         label: Included Features

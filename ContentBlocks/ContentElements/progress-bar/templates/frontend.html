@@ -16,11 +16,11 @@
                     <div class="progress-bar__meta">
                         <span class="progress-bar__label">{item.label}</span>
                         <f:if condition="{data.show_value}">
-                            <span class="progress-bar__value">{item.value}%</span>
+                            <span class="progress-bar__value">{item.target_value}%</span>
                         </f:if>
                     </div>
-                    <div class="progress-bar__track" role="progressbar" aria-valuenow="{item.value}" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar__fill progress-bar__fill--{item.color -> f:or(alternative: 'primary')}" style="width: {item.value}%"></div>
+                    <div class="progress-bar__track" role="progressbar" aria-valuenow="{item.target_value}" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar__fill progress-bar__fill--{item.color -> f:or(alternative: 'primary')}" style="width: {item.target_value}%"></div>
                     </div>
                 </div>
             </f:for>

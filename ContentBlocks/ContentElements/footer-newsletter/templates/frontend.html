@@ -21,8 +21,8 @@
                     <input type="email" placeholder="{data.placeholder -> f:or(alternative: 'Enter your email')}" class="footer-newsletter__input" required="required"/>
                     <button type="submit" class="footer-newsletter__button">{data.button_text -> f:or(alternative: 'Subscribe')}</button>
                 </form>
-                <f:if condition="{data.privacy_text}">
-                    <p class="footer-newsletter__privacy">{data.privacy_text}</p>
+                <f:if condition="{data.privacy_notice}">
+                    <p class="footer-newsletter__privacy">{data.privacy_notice}</p>
                 </f:if>
             </div>
         </div>

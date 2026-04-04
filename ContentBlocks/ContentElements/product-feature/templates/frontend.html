@@ -26,7 +26,7 @@
                 <f:if condition="{data.description}">
                     <p class="product-feature__description">{data.description}</p>
                 </f:if>
-                <f:if condition="{data.features}">
+                <f:if condition="{data.features_list}">
                     <ul class="product-feature__list">
                         <f:for each="{data.features -> f:split(separator: '\n')}" as="feature">
                             <f:if condition="{feature}">

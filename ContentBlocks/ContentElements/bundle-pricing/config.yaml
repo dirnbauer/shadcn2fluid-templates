@@ -41,8 +41,8 @@ fields:
         type: Text
         label: Individual Price
 
-      - identifier: description
-        type: Textarea
+      - identifier: description_text
+        type: Text
         label: Short Description
 
   - identifier: button_text

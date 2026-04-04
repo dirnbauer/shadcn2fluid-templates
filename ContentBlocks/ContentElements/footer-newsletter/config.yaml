@@ -19,7 +19,7 @@ fields:
     type: Text
     label: Button Text
     default: Subscribe
-  - identifier: privacy_text
+  - identifier: privacy_notice
     type: Text
     label: Privacy Note
     description: Small text below the form

@@ -11,7 +11,7 @@ fields:
     type: Textarea
     label: Description
     rows: 2
-  - identifier: columns
+  - identifier: column_items
     type: Collection
     label: Comparison Columns
     minItems: 2
@@ -33,7 +33,7 @@ fields:
         type: Text
         label: Feature Name
         required: true
-      - identifier: values
+      - identifier: tier_values
         type: Text
         label: Values (comma-separated)
         description: Use "yes", "no", or text for each column

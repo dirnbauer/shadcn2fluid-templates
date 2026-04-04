@@ -9,7 +9,7 @@
     <s2f:layout.container>
         <div class="cta-minimal__content">
             <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
-            <f:if condition="{data.description}"><s2f:typography.text variant="muted">{data.description}</s2f:typography.text></f:if>
+            <f:if condition="{data.description_text}"><s2f:typography.text variant="muted">{data.description_text}</s2f:typography.text></f:if>
             <f:if condition="{data.cta_text} && {data.cta_link.url}">
                 <f:link.typolink parameter="{data.cta_link}" class="cta-minimal__link">{data.cta_text} &rarr;</f:link.typolink>
             </f:if>

@@ -25,8 +25,8 @@
                         <label class="gdpr-banner__category">
                             <input type="checkbox" {f:if(condition: cat.required, then: 'checked disabled')} class="gdpr-banner__checkbox"/>
                             <span class="gdpr-banner__cat-name">{cat.name}</span>
-                            <f:if condition="{cat.description}">
-                                <span class="gdpr-banner__cat-desc">{cat.description}</span>
+                            <f:if condition="{cat.description_text}">
+                                <span class="gdpr-banner__cat-desc">{cat.description_text}</span>
                             </f:if>
                         </label>
                     </f:for>

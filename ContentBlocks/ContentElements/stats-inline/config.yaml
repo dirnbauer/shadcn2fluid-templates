@@ -8,7 +8,7 @@ fields:
     useExistingField: true
     label: Heading
 
-  - identifier: separator
+  - identifier: show_separator
     type: Checkbox
     label: Show Separators
     default: 1

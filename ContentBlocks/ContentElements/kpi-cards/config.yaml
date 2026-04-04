@@ -41,7 +41,7 @@ fields:
       - identifier: label
         type: Text
         label: Label
-      - identifier: detail
+      - identifier: detail_text
         type: Textarea
         label: Detail
         rows: 2

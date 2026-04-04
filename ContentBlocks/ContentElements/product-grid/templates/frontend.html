@@ -31,8 +31,8 @@
                     <div class="product-grid__body">
                         <h3 class="product-grid__name">{product.name}</h3>
                         <span class="product-grid__price">{product.price}</span>
-                        <f:if condition="{product.description}">
-                            <p class="product-grid__desc">{product.description}</p>
+                        <f:if condition="{product.description_text}">
+                            <p class="product-grid__desc">{product.description_text}</p>
                         </f:if>
                         <f:if condition="{product.link.url}">
                             <f:link.typolink parameter="{product.link}" class="product-grid__link">

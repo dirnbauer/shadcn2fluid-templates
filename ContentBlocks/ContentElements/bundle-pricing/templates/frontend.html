@@ -15,8 +15,8 @@
                 <f:if condition="{data.header}">
                     <h2 class="bundle-pricing__headline">{data.header}</h2>
                 </f:if>
-                <f:if condition="{data.description}">
-                    <p class="bundle-pricing__description">{data.description}</p>
+                <f:if condition="{data.description_text}">
+                    <p class="bundle-pricing__description">{data.description_text}</p>
                 </f:if>
             </header>
 
@@ -25,8 +25,8 @@
                     <div class="bundle-pricing__item">
                         <div class="bundle-pricing__item-info">
                             <span class="bundle-pricing__item-name">{item.name}</span>
-                            <f:if condition="{item.description}">
-                                <span class="bundle-pricing__item-desc">{item.description}</span>
+                            <f:if condition="{item.description_text}">
+                                <span class="bundle-pricing__item-desc">{item.description_text}</span>
                             </f:if>
                         </div>
                         <f:if condition="{item.individual_price}">

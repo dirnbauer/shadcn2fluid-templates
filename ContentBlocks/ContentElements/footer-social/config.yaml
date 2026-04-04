@@ -15,7 +15,7 @@ fields:
     label: Social Links
     minItems: 1
     fields:
-      - identifier: platform
+      - identifier: platform_name
         type: Select
         renderType: selectSingle
         label: Platform

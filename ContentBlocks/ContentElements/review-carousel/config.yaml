@@ -45,7 +45,7 @@ fields:
         type: Text
         label: Review Title
 
-      - identifier: text
+      - identifier: review_text
         type: Textarea
         label: Review Text
         rows: 3

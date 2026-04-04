@@ -18,6 +18,6 @@ fields:
       - identifier: title
         type: Text
         label: Title
-      - identifier: description
-        type: Textarea
+      - identifier: description_text
+        type: Text
         label: Description

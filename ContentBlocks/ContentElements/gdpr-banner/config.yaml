@@ -21,8 +21,8 @@ fields:
         type: Text
         label: Category Name
         required: true
-      - identifier: description
-        type: Textarea
+      - identifier: description_text
+        type: Text
         label: Description
       - identifier: required
         type: Checkbox

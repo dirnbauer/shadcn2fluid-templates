@@ -29,6 +29,6 @@ fields:
         allowed: common-image-types
         maxitems: 1
 
-      - identifier: description
-        type: Textarea
+      - identifier: description_text
+        type: Text
         label: Short Description

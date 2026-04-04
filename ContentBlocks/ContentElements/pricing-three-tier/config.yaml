@@ -42,7 +42,7 @@ fields:
         label: Description
         rows: 2
 
-      - identifier: features
+      - identifier: features_list
         type: Textarea
         label: Features (one per line)
         rows: 6

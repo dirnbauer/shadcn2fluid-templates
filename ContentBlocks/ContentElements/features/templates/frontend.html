@@ -22,7 +22,7 @@
             <f:for each="{data.features}" as="feature">
                 <div class="features__item {f:if(condition: '{data.variant} == \'card\'', then: 'features__item--card')}">
                     <div class="features__icon" aria-hidden="true">
-                        <span class="features__icon-label">{feature.icon}</span>
+                        <span class="features__icon-label">{feature.icon_name}</span>
                     </div>
                     <div class="features__content">
                         <h3 class="features__title">
