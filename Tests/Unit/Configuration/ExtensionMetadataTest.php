@@ -19,8 +19,8 @@ final class ExtensionMetadataTest extends TestCase
         $suggestions = $composerConfiguration['suggest'];
 
         self::assertSame('typo3-cms-extension', $composerConfiguration['type']);
-        self::assertSame('^14.2@dev', $requirements['typo3/cms-core']);
-        self::assertSame('^14.2@dev', $requirements['typo3/cms-fluid']);
+        self::assertSame('^14.3@dev', $requirements['typo3/cms-core']);
+        self::assertSame('^14.3@dev', $requirements['typo3/cms-fluid']);
         self::assertSame('^2.1', $requirements['friendsoftypo3/content-blocks']);
         self::assertSame(
             'Recommended to stage and preview content elements in TYPO3 workspaces.',
@@ -35,11 +35,11 @@ final class ExtensionMetadataTest extends TestCase
         $dependencies = $extensionConfiguration['constraints']['depends'];
         $suggestions = $extensionConfiguration['constraints']['suggests'];
 
-        self::assertSame('2.0.0', $extensionConfiguration['version']);
-        self::assertSame('14.2.0-14.99.99', $dependencies['typo3']);
-        self::assertSame('14.2.0-14.99.99', $dependencies['fluid']);
+        self::assertSame('3.0.0', $extensionConfiguration['version']);
+        self::assertSame('14.3.0-14.99.99', $dependencies['typo3']);
+        self::assertSame('14.3.0-14.99.99', $dependencies['fluid']);
         self::assertSame('2.1.0-2.99.99', $dependencies['content_blocks']);
-        self::assertSame('14.2.0-14.99.99', $suggestions['workspaces']);
+        self::assertSame('14.3.0-14.99.99', $suggestions['workspaces']);
     }
 
     #[Test]

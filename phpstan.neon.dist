@@ -4,7 +4,9 @@ includes:
 parameters:
     level: 9
     paths:
+        - Classes/
         - Configuration/Icons.php
+        - Configuration/TCA/Overrides/tt_content.php
         - ext_emconf.php
         - ext_localconf.php
     tmpDir: var/phpstan

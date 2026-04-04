@@ -10,8 +10,8 @@
         <div class="feature-split__grid">
             <div class="feature-split__copy">
                 <f:if condition="{data.header}"><s2f:typography.heading level="2">{data.header}</s2f:typography.heading></f:if>
-                <f:if condition="{data.description_text}">
-                    <s2f:typography.text variant="muted" class="feature-split__description">{data.description_text}</s2f:typography.text>
+                <f:if condition="{data.description}">
+                    <s2f:typography.text variant="muted" class="feature-split__description">{data.description}</s2f:typography.text>
                 </f:if>
                 <div class="feature-split__list">
                     <f:for each="{data.items}" as="item">

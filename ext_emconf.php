@@ -11,17 +11,17 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'webconsulting studio',
     'author_email' => '',
     'state' => 'stable',
-    'version' => '2.0.0',
+    'version' => '3.0.0',
     'constraints' => [
         'depends' => [
             'php' => '8.2.0-8.4.99',
-            'typo3' => '14.2.0-14.99.99',
-            'fluid' => '14.2.0-14.99.99',
+            'typo3' => '14.3.0-14.99.99',
+            'fluid' => '14.3.0-14.99.99',
             'content_blocks' => '2.1.0-2.99.99',
         ],
         'conflicts' => [],
         'suggests' => [
-            'workspaces' => '14.2.0-14.99.99',
+            'workspaces' => '14.3.0-14.99.99',
         ],
     ],
 ];
