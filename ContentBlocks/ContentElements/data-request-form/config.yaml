@@ -17,17 +17,20 @@ fields:
     label: Request Types
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Request Type Label
         required: true
       - identifier: value
-        type: Text
+        type: Textarea
+        rows: 1
         label: Form Value
   - identifier: privacy_text
     type: Textarea
     label: Privacy Notice Text
     rows: 2
   - identifier: submit_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Submit Button Text
     default: Submit Request

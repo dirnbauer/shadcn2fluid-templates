@@ -18,7 +18,8 @@ fields:
     minItems: 2
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Step Title
         required: true
       - identifier: content

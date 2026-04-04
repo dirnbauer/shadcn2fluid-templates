@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -25,12 +26,14 @@ fields:
     maxItems: 2
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
         required: true
 
       - identifier: price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Price
         required: true
 
@@ -49,7 +52,8 @@ fields:
         label: Featured
 
       - identifier: button_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Button Text
         default: Get Started
 

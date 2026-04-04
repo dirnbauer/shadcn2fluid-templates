@@ -30,7 +30,8 @@ fields:
         value: primary
     default: default
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: button_link
     type: Link

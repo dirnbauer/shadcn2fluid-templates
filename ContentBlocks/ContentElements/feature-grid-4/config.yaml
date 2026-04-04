@@ -18,12 +18,15 @@ fields:
     minItems: 4
     fields:
       - identifier: icon
-        type: Text
+        type: Textarea
+        rows: 1
         label: Icon Emoji or Symbol
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
         required: true
       - identifier: description_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Short Description

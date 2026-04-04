@@ -18,7 +18,8 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
       - identifier: description
         type: Textarea
@@ -30,7 +31,8 @@ fields:
         allowed: common-image-types
         maxitems: 1
       - identifier: button_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Button Text
       - identifier: button_link
         type: Link

@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: description
@@ -30,7 +31,8 @@ fields:
     rows: 6
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
 
   - identifier: button_link

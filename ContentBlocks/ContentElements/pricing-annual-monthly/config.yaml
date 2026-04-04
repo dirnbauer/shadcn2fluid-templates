@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -24,22 +25,26 @@ fields:
     minItems: 1
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Plan Name
         required: true
 
       - identifier: monthly_price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Monthly Price
         required: true
 
       - identifier: annual_price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Annual Price
         required: true
 
       - identifier: savings
-        type: Text
+        type: Textarea
+        rows: 1
         label: Savings Badge
         description: e.g. Save 20%
 
@@ -53,7 +58,8 @@ fields:
         label: Featured Plan
 
       - identifier: button_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Button Text
         default: Get Started
 

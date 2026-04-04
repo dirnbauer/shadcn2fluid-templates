@@ -9,14 +9,16 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: subheadline
     type: Textarea
     label: Subheadline
     rows: 3
   - identifier: primary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Primary Button Text
   - identifier: primary_button_link
     type: Link
@@ -27,8 +29,10 @@ fields:
     minItems: 1
     fields:
       - identifier: value
-        type: Text
+        type: Textarea
+        rows: 1
         label: Value
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label

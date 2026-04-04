@@ -13,7 +13,8 @@ fields:
     label: Subheadline
     rows: 3
   - identifier: badge_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Badge Text
   - identifier: gradient_from
     type: Text
@@ -23,13 +24,15 @@ fields:
     type: Text
     label: Gradient To Color
   - identifier: primary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Primary Button Text
   - identifier: primary_button_link
     type: Link
     label: Primary Button Link
   - identifier: secondary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Secondary Button Text
   - identifier: secondary_button_link
     type: Link

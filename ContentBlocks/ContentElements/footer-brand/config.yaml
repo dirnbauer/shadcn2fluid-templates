@@ -14,22 +14,26 @@ fields:
     allowed: common-image-types
     maxitems: 1
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand Name
   - identifier: tagline
-    type: Text
+    type: Textarea
+    rows: 1
     label: Tagline
   - identifier: link_items
     type: Collection
     label: Links
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
         required: true
       - identifier: link
         type: Link
         label: Link
   - identifier: copyright
-    type: Text
+    type: Textarea
+    rows: 1
     label: Copyright Text

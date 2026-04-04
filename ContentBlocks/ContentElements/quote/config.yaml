@@ -14,10 +14,12 @@ fields:
     rows: 4
     required: true
   - identifier: author
-    type: Text
+    type: Textarea
+    rows: 1
     label: Author Name
   - identifier: role
-    type: Text
+    type: Textarea
+    rows: 1
     label: Author Role
   - identifier: variant
     type: Select

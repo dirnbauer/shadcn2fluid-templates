@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -38,21 +39,25 @@ fields:
     maxItems: 4
     fields:
       - identifier: badge_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Badge Text
 
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Plan Name
         required: true
 
       - identifier: price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Price
         required: true
 
       - identifier: billing_period
-        type: Text
+        type: Textarea
+        rows: 1
         label: Billing Period
         description: e.g. per month or per seat
 
@@ -72,7 +77,8 @@ fields:
         default: 0
 
       - identifier: button_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Button Text
         default: Get Started
 

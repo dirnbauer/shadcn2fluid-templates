@@ -24,7 +24,8 @@ fields:
     minItems: 2
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
       - identifier: content
         type: Textarea

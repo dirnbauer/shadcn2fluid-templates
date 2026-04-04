@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: lead
     type: Textarea

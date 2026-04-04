@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: reviews
@@ -19,7 +20,8 @@ fields:
     minItems: 2
     fields:
       - identifier: reviewer_name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Reviewer Name
         required: true
 
@@ -43,7 +45,8 @@ fields:
         default: '5'
 
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Review Title
 
       - identifier: review_text
@@ -53,5 +56,6 @@ fields:
         required: true
 
       - identifier: date
-        type: Text
+        type: Textarea
+        rows: 1
         label: Date

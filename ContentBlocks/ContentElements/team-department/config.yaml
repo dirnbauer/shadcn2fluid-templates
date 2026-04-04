@@ -18,7 +18,8 @@ fields:
     minItems: 1
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Department Name
         required: true
       - identifier: members

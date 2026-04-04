@@ -14,7 +14,8 @@ fields:
     minItems: 1
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
         required: true
       - identifier: target_value

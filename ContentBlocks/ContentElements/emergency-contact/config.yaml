@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: description_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Description
   - identifier: phone
     type: Text
@@ -18,5 +19,6 @@ fields:
     type: Link
     label: Phone Link
   - identifier: available
-    type: Text
+    type: Textarea
+    rows: 1
     label: Availability

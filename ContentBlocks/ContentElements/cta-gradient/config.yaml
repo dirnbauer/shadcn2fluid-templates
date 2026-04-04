@@ -13,7 +13,8 @@ fields:
     label: Description
     rows: 3
   - identifier: cta_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: cta_link
     type: Link

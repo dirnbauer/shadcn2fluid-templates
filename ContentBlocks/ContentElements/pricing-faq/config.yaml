@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -24,7 +25,8 @@ fields:
     minItems: 1
     fields:
       - identifier: question
-        type: Text
+        type: Textarea
+        rows: 1
         label: Question
         required: true
 

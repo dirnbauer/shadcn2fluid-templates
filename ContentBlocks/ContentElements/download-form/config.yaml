@@ -13,13 +13,15 @@ fields:
     label: Description
     rows: 3
   - identifier: resource_title
-    type: Text
+    type: Textarea
+    rows: 1
     label: Resource Title
   - identifier: form_action
     type: Link
     label: Form Action
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
     default: Download now
   - identifier: image

@@ -29,16 +29,19 @@ fields:
     required: true
 
   - identifier: author_name
-    type: Text
+    type: Textarea
+    rows: 1
     label: Author Name
     required: true
 
   - identifier: author_title
-    type: Text
+    type: Textarea
+    rows: 1
     label: Author Title / Role
 
   - identifier: author_company
-    type: Text
+    type: Textarea
+    rows: 1
     label: Company Name
 
   - identifier: author_image

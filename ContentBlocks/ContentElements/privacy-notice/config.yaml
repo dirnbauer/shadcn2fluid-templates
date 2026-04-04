@@ -18,7 +18,8 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Section Title
         required: true
       - identifier: content
@@ -27,5 +28,6 @@ fields:
         enableRichtext: true
         rows: 4
   - identifier: last_updated
-    type: Text
+    type: Textarea
+    rows: 1
     label: Last Updated Date

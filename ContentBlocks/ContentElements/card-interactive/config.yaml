@@ -32,5 +32,6 @@ fields:
     type: Link
     label: Card Link
   - identifier: badge_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Badge Text

@@ -18,7 +18,8 @@ fields:
     minItems: 1
     fields:
       - identifier: level_label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Level Label
       - identifier: people
         type: Textarea

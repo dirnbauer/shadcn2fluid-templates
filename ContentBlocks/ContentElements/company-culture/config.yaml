@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: subheadline
     type: Textarea
@@ -26,7 +27,8 @@ fields:
         allowed: common-image-types
         maxitems: 1
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
       - identifier: description
         type: Textarea

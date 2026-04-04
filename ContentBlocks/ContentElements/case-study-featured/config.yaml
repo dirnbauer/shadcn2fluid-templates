@@ -10,11 +10,13 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: client_name
-    type: Text
+    type: Textarea
+    rows: 1
     label: Client Name
     required: true
 
@@ -43,12 +45,14 @@ fields:
     maxItems: 4
     fields:
       - identifier: value
-        type: Text
+        type: Textarea
+        rows: 1
         label: Value
         required: true
 
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
         required: true
 

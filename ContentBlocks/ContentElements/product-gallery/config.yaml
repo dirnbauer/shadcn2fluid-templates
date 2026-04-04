@@ -17,7 +17,8 @@ fields:
     minitems: 1
 
   - identifier: caption
-    type: Text
+    type: Textarea
+    rows: 1
     label: Gallery Caption
 
   - identifier: columns

@@ -40,5 +40,6 @@ fields:
     type: Link
     label: Call to Action Link
   - identifier: link_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Call to Action Text

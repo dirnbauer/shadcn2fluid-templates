@@ -21,7 +21,8 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Question / Title
         required: true
 

@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand
     required: true
   - identifier: brand_link
@@ -20,7 +21,9 @@ fields:
     label: Left Links
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1area
+        rows: 1
         label: Label
       - identifier: link
         type: Link
@@ -36,7 +39,8 @@ fields:
         type: Link
         label: Link
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: button_link
     type: Link

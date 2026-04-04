@@ -18,7 +18,8 @@ fields:
     minItems: 1
     fields:
       - identifier: mode
-        type: Text
+        type: Textarea
+        rows: 1
         label: Transport Mode
         required: true
       - identifier: description

@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand Name
   - identifier: logo
     type: File
@@ -21,12 +22,14 @@ fields:
     label: Links
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
         required: true
       - identifier: link
         type: Link
         label: Link
   - identifier: copyright
-    type: Text
+    type: Textarea
+    rows: 1
     label: Copyright Text

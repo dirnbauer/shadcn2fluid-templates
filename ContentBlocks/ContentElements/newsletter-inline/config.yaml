@@ -9,14 +9,17 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: description_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Description
   - identifier: form_action
     type: Link
     label: Form Action
   - identifier: placeholder
-    type: Text
+    type: Textarea
+    rows: 1
     label: Placeholder
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text

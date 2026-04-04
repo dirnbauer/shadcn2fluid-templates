@@ -13,17 +13,21 @@ fields:
     label: Description
     rows: 2
   - identifier: placeholder
-    type: Text
+    type: Textarea
+    rows: 1
     label: Input Placeholder
     default: Enter your email
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
     default: Subscribe
   - identifier: privacy_notice
-    type: Text
+    type: Textarea
+    rows: 1
     label: Privacy Note
     description: Small text below the form
   - identifier: copyright
-    type: Text
+    type: Textarea
+    rows: 1
     label: Copyright Text

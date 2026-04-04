@@ -10,16 +10,19 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: bundle_price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Bundle Price
     required: true
 
   - identifier: savings_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Savings Text
     description: e.g. Save 30%
 
@@ -34,20 +37,24 @@ fields:
     minItems: 2
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Item Name
         required: true
 
       - identifier: individual_price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Individual Price
 
       - identifier: description_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Short Description
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
     default: Get the Bundle
 

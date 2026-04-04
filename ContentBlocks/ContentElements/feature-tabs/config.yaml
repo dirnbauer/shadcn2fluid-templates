@@ -18,11 +18,13 @@ fields:
     minItems: 2
     fields:
       - identifier: tab_label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Tab Label
         required: true
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Content Title
       - identifier: description
         type: Textarea

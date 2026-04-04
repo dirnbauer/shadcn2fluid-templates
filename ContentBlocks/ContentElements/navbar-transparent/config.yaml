@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand
     required: true
 
@@ -19,14 +20,16 @@ fields:
     label: Navigation Items
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
       - identifier: link
         type: Link
         label: Link
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
 
   - identifier: button_link

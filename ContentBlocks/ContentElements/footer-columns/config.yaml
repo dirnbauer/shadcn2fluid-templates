@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand Name
   - identifier: description
     type: Textarea
@@ -21,7 +22,8 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Column Title
         required: true
       - identifier: links
@@ -29,5 +31,6 @@ fields:
         label: Links (one per line)
         rows: 5
   - identifier: copyright
-    type: Text
+    type: Textarea
+    rows: 1
     label: Copyright Text

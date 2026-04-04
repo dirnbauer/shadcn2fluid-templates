@@ -23,9 +23,11 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
         required: true
       - identifier: description_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Description

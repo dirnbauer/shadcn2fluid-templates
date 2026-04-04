@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: label
-    type: Text
+    type: Textarea
+    rows: 1
     label: Divider Label
     description: Optional text displayed on the divider line
   - identifier: variant

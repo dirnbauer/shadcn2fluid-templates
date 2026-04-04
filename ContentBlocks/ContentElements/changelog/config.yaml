@@ -14,14 +14,17 @@ fields:
     minItems: 1
     fields:
       - identifier: version
-        type: Text
+        type: Textarea
+        rows: 1
         label: Version
         required: true
       - identifier: date
-        type: Text
+        type: Textarea
+        rows: 1
         label: Date
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Release Title
       - identifier: description
         type: Textarea

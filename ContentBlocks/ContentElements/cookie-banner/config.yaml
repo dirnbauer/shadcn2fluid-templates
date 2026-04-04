@@ -15,15 +15,18 @@ fields:
     rows: 3
     required: true
   - identifier: accept_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Accept Button Text
     default: Accept All
   - identifier: decline_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Decline Button Text
     default: Decline
   - identifier: settings_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Settings Button Text
     default: Cookie Settings
   - identifier: settings_link

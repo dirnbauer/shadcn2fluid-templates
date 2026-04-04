@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: left_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Left Text
 
   - identifier: link_items
@@ -18,7 +19,8 @@ fields:
     label: Links
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
       - identifier: link
         type: Link

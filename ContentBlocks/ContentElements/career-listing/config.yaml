@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: subheadline
     type: Textarea
@@ -21,14 +22,17 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Job Title
         required: true
       - identifier: department
-        type: Text
+        type: Textarea
+        rows: 1
         label: Department
       - identifier: location
-        type: Text
+        type: Textarea
+        rows: 1
         label: Location
       - identifier: type
         type: Text

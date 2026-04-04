@@ -16,14 +16,18 @@ fields:
     type: Link
     label: Form Action URL
   - identifier: input_placeholder
-    type: Text
+    type: Textarea
+    rows: 1
     label: Input Placeholder
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: privacy_notice
-    type: Text
+    type: Textarea
+    rows: 1
     label: Privacy Text
   - identifier: badge_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Badge Text

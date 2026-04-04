@@ -24,7 +24,8 @@ fields:
     minItems: 2
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
       - identifier: link
         type: Link

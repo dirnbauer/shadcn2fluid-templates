@@ -16,14 +16,16 @@ fields:
     type: Link
     label: Search Action URL
   - identifier: placeholder
-    type: Text
+    type: Textarea
+    rows: 1
     label: Search Placeholder
   - identifier: categories
     type: Collection
     label: Category Filters
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
       - identifier: link
         type: Link

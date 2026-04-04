@@ -23,7 +23,8 @@ fields:
     default: full-width
 
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand Text
     required: true
 
@@ -36,7 +37,8 @@ fields:
     label: Navigation Items
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
         required: true
       - identifier: link
@@ -44,7 +46,8 @@ fields:
         label: Link
 
   - identifier: secondary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Secondary Button Text
 
   - identifier: secondary_button_link
@@ -52,7 +55,8 @@ fields:
     label: Secondary Button Link
 
   - identifier: primary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Primary Button Text
 
   - identifier: primary_button_link

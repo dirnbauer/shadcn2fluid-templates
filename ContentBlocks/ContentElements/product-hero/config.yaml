@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: description
@@ -25,16 +26,19 @@ fields:
     maxitems: 1
 
   - identifier: price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Price
 
   - identifier: price_note
-    type: Text
+    type: Textarea
+    rows: 1
     label: Price Note
     description: e.g. Starting at, From
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
     default: Buy Now
 

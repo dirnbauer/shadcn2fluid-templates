@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: description
     type: Textarea
@@ -34,5 +35,6 @@ fields:
     type: Link
     label: Call to Action Link
   - identifier: link_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Call to Action Text

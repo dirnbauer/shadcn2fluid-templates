@@ -13,20 +13,24 @@ fields:
     label: Subheadline
     rows: 3
   - identifier: price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Price
   - identifier: price_period
-    type: Text
+    type: Textarea
+    rows: 1
     label: Price Period
   - identifier: feature_items
     type: Collection
     label: Features
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Feature
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: button_link
     type: Link

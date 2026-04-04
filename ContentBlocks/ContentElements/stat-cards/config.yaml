@@ -26,15 +26,18 @@ fields:
     minItems: 1
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
         required: true
       - identifier: value
-        type: Text
+        type: Textarea
+        rows: 1
         label: Value
         required: true
       - identifier: change
-        type: Text
+        type: Textarea
+        rows: 1
         label: Change
         description: e.g. +12.5%
       - identifier: trend

@@ -18,13 +18,16 @@ fields:
     minItems: 1
     fields:
       - identifier: value
-        type: Text
+        type: Textarea
+        rows: 1
         label: Stat Value
         required: true
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Stat Label
         required: true
       - identifier: description_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Supporting Text

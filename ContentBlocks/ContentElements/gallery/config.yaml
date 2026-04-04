@@ -40,7 +40,8 @@ fields:
         required: true
 
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
 
       - identifier: description

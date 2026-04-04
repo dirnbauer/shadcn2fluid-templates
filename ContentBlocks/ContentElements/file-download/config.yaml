@@ -14,11 +14,13 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
         required: true
       - identifier: description_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Description
       - identifier: file
         type: File
@@ -26,6 +28,7 @@ fields:
         maxitems: 1
         required: true
       - identifier: file_size
-        type: Text
+        type: Textarea
+        rows: 1
         label: File Size
         description: e.g. 2.4 MB

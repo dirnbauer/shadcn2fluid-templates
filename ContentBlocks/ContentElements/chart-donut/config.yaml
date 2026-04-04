@@ -18,11 +18,13 @@ fields:
     rows: 6
     required: true
   - identifier: center_label
-    type: Text
+    type: Textarea
+    rows: 1
     label: Center Label
     description: Text shown in the donut center
   - identifier: center_value
-    type: Text
+    type: Textarea
+    rows: 1
     label: Center Value
     description: Large value shown in the donut center
   - identifier: show_legend

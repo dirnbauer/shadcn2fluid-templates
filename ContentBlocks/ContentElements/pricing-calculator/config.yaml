@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: description
@@ -19,7 +20,8 @@ fields:
     rows: 2
 
   - identifier: unit_label
-    type: Text
+    type: Textarea
+    rows: 1
     label: Unit Label
     description: e.g. users, API calls, seats
     default: users
@@ -30,15 +32,18 @@ fields:
     minItems: 1
     fields:
       - identifier: up_to
-        type: Text
+        type: Textarea
+        rows: 1
         label: Up To (quantity)
         required: true
 
       - identifier: price_per_unit
-        type: Text
+        type: Textarea
+        rows: 1
         label: Price Per Unit
         required: true
 
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Tier Label

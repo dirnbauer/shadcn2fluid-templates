@@ -10,12 +10,14 @@ fields:
     label: Heading
 
   - identifier: average_score
-    type: Text
+    type: Textarea
+    rows: 1
     label: Average Score
     description: e.g. 4.7
 
   - identifier: total_reviews
-    type: Text
+    type: Textarea
+    rows: 1
     label: Total Reviews
     description: e.g. 1,284 reviews
 
@@ -25,7 +27,8 @@ fields:
     minItems: 1
     fields:
       - identifier: author
-        type: Text
+        type: Textarea
+        rows: 1
         label: Reviewer Name
         required: true
 
@@ -43,7 +46,8 @@ fields:
         default: '5'
 
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Review Title
 
       - identifier: review_text
@@ -53,5 +57,6 @@ fields:
         required: true
 
       - identifier: date
-        type: Text
+        type: Textarea
+        rows: 1
         label: Date

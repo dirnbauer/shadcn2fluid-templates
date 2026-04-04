@@ -13,7 +13,8 @@ fields:
     label: Description
     rows: 3
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: variant
     type: Select
@@ -26,7 +27,8 @@ fields:
         value: center
     default: left
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: button_link
     type: Link

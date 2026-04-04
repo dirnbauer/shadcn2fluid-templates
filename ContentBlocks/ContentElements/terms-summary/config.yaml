@@ -18,7 +18,8 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Term Title
         required: true
       - identifier: summary
@@ -29,5 +30,6 @@ fields:
     type: Link
     label: Full Terms Link
   - identifier: last_updated
-    type: Text
+    type: Textarea
+    rows: 1
     label: Last Updated

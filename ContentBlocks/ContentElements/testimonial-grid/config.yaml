@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: columns
@@ -36,12 +37,14 @@ fields:
         required: true
 
       - identifier: author_name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Author Name
         required: true
 
       - identifier: author_title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Author Title
 
       - identifier: author_image

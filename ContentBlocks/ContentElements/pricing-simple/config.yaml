@@ -10,12 +10,14 @@ fields:
     label: Heading
 
   - identifier: price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Price
     required: true
 
   - identifier: billing_period
-    type: Text
+    type: Textarea
+    rows: 1
     label: Billing Period
     description: e.g. per month
 
@@ -30,7 +32,8 @@ fields:
     rows: 5
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
     default: Get Started
 

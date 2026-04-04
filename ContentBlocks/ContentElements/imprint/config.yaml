@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: company_name
-    type: Text
+    type: Textarea
+    rows: 1
     label: Company Name
     required: true
   - identifier: address

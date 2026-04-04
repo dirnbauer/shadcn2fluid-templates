@@ -73,7 +73,8 @@ fields:
         default: star
 
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Feature Title
         required: true
 

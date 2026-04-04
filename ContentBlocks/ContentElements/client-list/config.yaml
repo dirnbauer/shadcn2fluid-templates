@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -24,12 +25,14 @@ fields:
     minItems: 1
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Client Name
         required: true
 
       - identifier: industry
-        type: Text
+        type: Textarea
+        rows: 1
         label: Industry
 
       - identifier: logo

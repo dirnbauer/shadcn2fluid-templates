@@ -13,19 +13,22 @@ fields:
     label: Subheadline
     rows: 3
   - identifier: announcement_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Announcement Text
   - identifier: announcement_link
     type: Link
     label: Announcement Link
   - identifier: primary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Primary Button Text
   - identifier: primary_button_link
     type: Link
     label: Primary Button Link
   - identifier: secondary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Secondary Button Text
   - identifier: secondary_button_link
     type: Link

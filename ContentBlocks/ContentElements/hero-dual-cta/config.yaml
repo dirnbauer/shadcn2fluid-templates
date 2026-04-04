@@ -13,27 +13,31 @@ fields:
     label: Subheadline
     rows: 3
   - identifier: left_title
-    type: Text
+    type: Textarea
+    rows: 1
     label: Left CTA Title
   - identifier: left_description
     type: Textarea
     label: Left CTA Description
     rows: 2
   - identifier: left_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Left Button Text
   - identifier: left_button_link
     type: Link
     label: Left Button Link
   - identifier: right_title
-    type: Text
+    type: Textarea
+    rows: 1
     label: Right CTA Title
   - identifier: right_description
     type: Textarea
     label: Right CTA Description
     rows: 2
   - identifier: right_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Right Button Text
   - identifier: right_button_link
     type: Link

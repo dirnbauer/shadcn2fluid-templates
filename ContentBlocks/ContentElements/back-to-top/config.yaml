@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: label
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Label
     default: Back to top
   - identifier: show_label

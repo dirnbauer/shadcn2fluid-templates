@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: cta_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: cta_link
     type: Link

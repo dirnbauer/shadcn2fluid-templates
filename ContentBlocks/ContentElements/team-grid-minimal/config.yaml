@@ -35,9 +35,11 @@ fields:
         allowed: common-image-types
         maxitems: 1
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Name
         required: true
       - identifier: role
-        type: Text
+        type: Textarea
+        rows: 1
         label: Role

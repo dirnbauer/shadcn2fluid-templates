@@ -9,14 +9,16 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand
     required: true
   - identifier: brand_link
     type: Link
     label: Brand Link
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: button_link
     type: Link

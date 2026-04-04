@@ -9,11 +9,13 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Price
     required: true
   - identifier: billing_period
-    type: Text
+    type: Textarea
+    rows: 1
     label: Billing Period
     description: e.g. /month, /year
   - identifier: description
@@ -25,14 +27,16 @@ fields:
     label: Features
     fields:
       - identifier: text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Feature Text
       - identifier: included
         type: Checkbox
         label: Included
         default: 1
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: button_link
     type: Link

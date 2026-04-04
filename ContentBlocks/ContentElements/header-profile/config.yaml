@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Name
   - identifier: role
-    type: Text
+    type: Textarea
+    rows: 1
     label: Role / Title
   - identifier: bio
     type: Textarea
@@ -21,13 +22,15 @@ fields:
     allowed: common-image-types
     maxitems: 1
   - identifier: primary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Primary Button Text
   - identifier: primary_button_link
     type: Link
     label: Primary Button Link
   - identifier: secondary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Secondary Button Text
   - identifier: secondary_button_link
     type: Link

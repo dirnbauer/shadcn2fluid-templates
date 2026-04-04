@@ -28,7 +28,8 @@ fields:
         value: error
     default: info
   - identifier: action_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Action Button Text
   - identifier: action_link
     type: Link

@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: description_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Description
   - identifier: hours_items
     type: Collection
@@ -17,10 +18,12 @@ fields:
     minItems: 1
     fields:
       - identifier: day
-        type: Text
+        type: Textarea
+        rows: 1
         label: Day
         required: true
       - identifier: time
-        type: Text
+        type: Textarea
+        rows: 1
         label: Hours
         required: true

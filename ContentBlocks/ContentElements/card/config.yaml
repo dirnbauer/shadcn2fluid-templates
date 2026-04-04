@@ -35,7 +35,8 @@ fields:
     rows: 3
 
   - identifier: badge_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Badge Text
 
   - identifier: link
@@ -43,7 +44,8 @@ fields:
     label: Card Link
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
 
   - identifier: button_link

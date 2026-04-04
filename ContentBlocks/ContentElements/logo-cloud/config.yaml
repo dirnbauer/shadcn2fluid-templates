@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -46,7 +47,8 @@ fields:
         required: true
 
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Logo Name
         required: true
 

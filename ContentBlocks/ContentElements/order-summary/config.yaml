@@ -15,38 +15,46 @@ fields:
     minItems: 1
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Item Name
         required: true
 
       - identifier: quantity
-        type: Text
+        type: Textarea
+        rows: 1
         label: Quantity
 
       - identifier: price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Price
         required: true
 
   - identifier: subtotal
-    type: Text
+    type: Textarea
+    rows: 1
     label: Subtotal
 
   - identifier: discount_label
-    type: Text
+    type: Textarea
+    rows: 1
     label: Discount Label
 
   - identifier: discount_value
-    type: Text
+    type: Textarea
+    rows: 1
     label: Discount Value
 
   - identifier: total
-    type: Text
+    type: Textarea
+    rows: 1
     label: Total
     required: true
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
     default: Proceed to Checkout
 

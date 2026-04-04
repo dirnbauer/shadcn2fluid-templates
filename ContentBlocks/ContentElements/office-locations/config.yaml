@@ -18,7 +18,8 @@ fields:
     minItems: 1
     fields:
       - identifier: city
-        type: Text
+        type: Textarea
+        rows: 1
         label: City
         required: true
       - identifier: address

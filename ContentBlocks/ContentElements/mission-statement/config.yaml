@@ -9,12 +9,14 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: statement
     type: Textarea
     label: Mission Statement
     rows: 4
   - identifier: attribution
-    type: Text
+    type: Textarea
+    rows: 1
     label: Attribution

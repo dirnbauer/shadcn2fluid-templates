@@ -9,27 +9,31 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand
     required: true
   - identifier: brand_link
     type: Link
     label: Brand Link
   - identifier: tagline
-    type: Text
+    type: Textarea
+    rows: 1
     label: Tagline
   - identifier: nav_items
     type: Collection
     label: Navigation Items
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
       - identifier: link
         type: Link
         label: Link
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: button_link
     type: Link

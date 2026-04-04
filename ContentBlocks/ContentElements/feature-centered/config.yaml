@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: subheadline
     type: Textarea
@@ -21,10 +22,12 @@ fields:
     minItems: 1
     fields:
       - identifier: icon
-        type: Text
+        type: Textarea
+        rows: 1
         label: Icon Emoji or Symbol
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
         required: true
       - identifier: description

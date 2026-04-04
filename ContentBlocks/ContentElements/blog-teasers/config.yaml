@@ -37,16 +37,19 @@ fields:
         maxitems: 1
 
       - identifier: category
-        type: Text
+        type: Textarea
+        rows: 1
         label: Category
 
       - identifier: meta
-        type: Text
+        type: Textarea
+        rows: 1
         label: Meta
         description: e.g. 5 min read or Mar 18, 2026
 
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
         required: true
 

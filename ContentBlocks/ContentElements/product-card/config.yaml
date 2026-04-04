@@ -16,17 +16,20 @@ fields:
     maxitems: 1
 
   - identifier: badge
-    type: Text
+    type: Textarea
+    rows: 1
     label: Badge Text
     description: e.g. New, Sale, Popular
 
   - identifier: price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Price
     required: true
 
   - identifier: original_price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Original Price (strikethrough)
 
   - identifier: description
@@ -35,7 +38,8 @@ fields:
     rows: 2
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
     default: Add to Cart
 

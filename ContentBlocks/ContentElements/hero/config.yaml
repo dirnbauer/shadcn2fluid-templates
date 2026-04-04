@@ -25,7 +25,8 @@ fields:
     default: centered
 
   - identifier: badge_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Badge Text
     description: Optional badge displayed above the headline
 
@@ -35,7 +36,8 @@ fields:
     rows: 3
 
   - identifier: primary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Primary Button Text
 
   - identifier: primary_button_link
@@ -57,7 +59,8 @@ fields:
     displayCond: 'FIELD:primary_button_text:!=:'
 
   - identifier: secondary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Secondary Button Text
 
   - identifier: secondary_button_link

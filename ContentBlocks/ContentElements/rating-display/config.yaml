@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: rating_items
@@ -19,18 +20,21 @@ fields:
     minItems: 1
     fields:
       - identifier: platform
-        type: Text
+        type: Textarea
+        rows: 1
         label: Platform Name
         required: true
 
       - identifier: score
-        type: Text
+        type: Textarea
+        rows: 1
         label: Score
         required: true
         description: e.g. 4.8/5
 
       - identifier: review_count
-        type: Text
+        type: Textarea
+        rows: 1
         label: Review Count
         description: e.g. 2,450 reviews
 

@@ -23,16 +23,19 @@ fields:
     default: default
 
   - identifier: message
-    type: Text
+    type: Textarea
+    rows: 1
     label: Message
     required: true
 
   - identifier: supporting_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Supporting Text
 
   - identifier: link_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Link Text
 
   - identifier: link

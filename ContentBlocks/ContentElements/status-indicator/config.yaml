@@ -28,7 +28,8 @@ fields:
     minItems: 1
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Service Name
         required: true
       - identifier: status
@@ -46,5 +47,6 @@ fields:
             value: maintenance
         default: operational
       - identifier: detail
-        type: Text
+        type: Textarea
+        rows: 1
         label: Status Detail

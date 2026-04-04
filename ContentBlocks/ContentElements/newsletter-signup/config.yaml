@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: subheadline
     type: Textarea
@@ -22,7 +23,8 @@ fields:
     type: Text
     label: Email Placeholder
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: privacy_text
     type: Textarea
@@ -33,5 +35,6 @@ fields:
     label: Supporting Points
     fields:
       - identifier: text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Point

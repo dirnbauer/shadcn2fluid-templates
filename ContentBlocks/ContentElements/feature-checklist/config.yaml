@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: items
     type: Collection
@@ -17,8 +18,10 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
       - identifier: description_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Description

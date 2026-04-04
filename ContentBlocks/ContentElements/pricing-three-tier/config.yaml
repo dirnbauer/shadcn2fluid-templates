@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -25,17 +26,20 @@ fields:
     maxItems: 3
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Plan Name
         required: true
 
       - identifier: price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Price
         required: true
 
       - identifier: billing_period
-        type: Text
+        type: Textarea
+        rows: 1
         label: Billing Period
 
       - identifier: description
@@ -53,7 +57,8 @@ fields:
         label: Recommended Plan
 
       - identifier: button_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Button Text
         default: Get Started
 

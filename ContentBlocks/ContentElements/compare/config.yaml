@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -19,7 +20,8 @@ fields:
     rows: 2
 
   - identifier: left_title
-    type: Text
+    type: Textarea
+    rows: 1
     label: Left Title
     required: true
 
@@ -34,7 +36,8 @@ fields:
     rows: 5
 
   - identifier: left_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Left Button Text
 
   - identifier: left_button_link
@@ -42,11 +45,13 @@ fields:
     label: Left Button Link
 
   - identifier: right_badge
-    type: Text
+    type: Textarea
+    rows: 1
     label: Right Badge
 
   - identifier: right_title
-    type: Text
+    type: Textarea
+    rows: 1
     label: Right Title
     required: true
 
@@ -61,7 +66,8 @@ fields:
     rows: 5
 
   - identifier: right_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Right Button Text
 
   - identifier: right_button_link

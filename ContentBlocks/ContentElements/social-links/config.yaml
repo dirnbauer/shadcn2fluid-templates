@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: description_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Description
   - identifier: link_items
     type: Collection
@@ -17,7 +18,8 @@ fields:
     minItems: 1
     fields:
       - identifier: platform
-        type: Text
+        type: Textarea
+        rows: 1
         label: Platform
         required: true
       - identifier: url

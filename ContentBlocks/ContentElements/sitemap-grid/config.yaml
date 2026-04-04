@@ -24,7 +24,8 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Group Title
         required: true
       - identifier: pages

@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: description
@@ -19,7 +20,8 @@ fields:
     rows: 2
 
   - identifier: unit_label
-    type: Text
+    type: Textarea
+    rows: 1
     label: Unit Label
     default: requests
 
@@ -29,15 +31,18 @@ fields:
     minItems: 2
     fields:
       - identifier: volume
-        type: Text
+        type: Textarea
+        rows: 1
         label: Volume
         required: true
 
       - identifier: price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Price
         required: true
 
       - identifier: included_features
-        type: Text
+        type: Textarea
+        rows: 1
         label: Included Features

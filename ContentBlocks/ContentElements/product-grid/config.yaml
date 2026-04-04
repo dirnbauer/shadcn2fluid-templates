@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: columns
@@ -32,7 +33,8 @@ fields:
     minItems: 1
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Product Name
         required: true
 
@@ -43,12 +45,14 @@ fields:
         maxitems: 1
 
       - identifier: price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Price
         required: true
 
       - identifier: description_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Short Description
 
       - identifier: link

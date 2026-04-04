@@ -31,13 +31,15 @@ fields:
     minItems: 1
     fields:
       - identifier: value
-        type: Text
+        type: Textarea
+        rows: 1
         label: Value
         required: true
         description: e.g. 10,000+
 
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
         required: true
 

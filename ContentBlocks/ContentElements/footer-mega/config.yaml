@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand Name
   - identifier: description
     type: Textarea
@@ -20,15 +21,18 @@ fields:
     label: Link Groups
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Group Title
       - identifier: links
         type: Textarea
         label: Links (one per line)
         rows: 5
   - identifier: newsletter_label
-    type: Text
+    type: Textarea
+    rows: 1
     label: Newsletter Label
   - identifier: copyright
-    type: Text
+    type: Textarea
+    rows: 1
     label: Copyright Text

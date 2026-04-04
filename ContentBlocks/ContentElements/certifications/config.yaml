@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -24,12 +25,14 @@ fields:
     minItems: 1
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Certification Name
         required: true
 
       - identifier: issuer
-        type: Text
+        type: Textarea
+        rows: 1
         label: Issuing Body
 
       - identifier: badge_image

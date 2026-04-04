@@ -9,10 +9,12 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: left_title
-    type: Text
+    type: Textarea
+    rows: 1
     label: Left Column Title
   - identifier: right_title
-    type: Text
+    type: Textarea
+    rows: 1
     label: Right Column Title
   - identifier: items
     type: Collection
@@ -20,7 +22,8 @@ fields:
     minItems: 1
     fields:
       - identifier: feature
-        type: Text
+        type: Textarea
+        rows: 1
         label: Feature Name
         required: true
       - identifier: left_supported

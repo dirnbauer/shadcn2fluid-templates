@@ -16,6 +16,7 @@ fields:
     type: Link
     label: Form Action
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
     default: Request callback

@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -24,17 +25,20 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
         required: true
 
       - identifier: monthly_price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Monthly Price
         required: true
 
       - identifier: yearly_price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Yearly Price
         required: true
 
@@ -49,7 +53,8 @@ fields:
         rows: 4
 
       - identifier: button_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Button Text
         default: Choose Plan
 

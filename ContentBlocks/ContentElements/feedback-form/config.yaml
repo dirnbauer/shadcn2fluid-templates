@@ -16,7 +16,8 @@ fields:
     type: Link
     label: Form Action
   - identifier: submit_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Submit Text
     default: Send feedback
   - identifier: show_rating

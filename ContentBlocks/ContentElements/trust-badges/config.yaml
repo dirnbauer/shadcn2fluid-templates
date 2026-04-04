@@ -20,7 +20,8 @@ fields:
     minItems: 1
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Badge Label
         required: true
 
@@ -31,5 +32,6 @@ fields:
         maxitems: 1
 
       - identifier: description_text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Short Description

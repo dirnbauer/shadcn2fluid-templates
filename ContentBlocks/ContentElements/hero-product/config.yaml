@@ -13,10 +13,12 @@ fields:
     label: Description
     rows: 3
   - identifier: badge_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Badge Text
   - identifier: price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Price
   - identifier: product_image
     type: File
@@ -24,7 +26,8 @@ fields:
     allowed: common-image-types
     maxitems: 1
   - identifier: primary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Primary Button Text
   - identifier: primary_button_link
     type: Link
@@ -34,5 +37,6 @@ fields:
     label: Key Features
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Feature

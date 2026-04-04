@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: description
@@ -24,7 +25,8 @@ fields:
     rows: 6
 
   - identifier: contact_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: CTA Button Text
     default: Contact Sales
 

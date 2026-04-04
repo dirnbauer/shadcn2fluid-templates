@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: columns
@@ -30,7 +31,8 @@ fields:
     minItems: 1
     fields:
       - identifier: client_name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Client Name
         required: true
 
@@ -40,7 +42,8 @@ fields:
         rows: 2
 
       - identifier: result
-        type: Text
+        type: Textarea
+        rows: 1
         label: Key Result
         description: e.g. 3x growth
 

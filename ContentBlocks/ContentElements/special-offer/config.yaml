@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
     description: e.g. Limited Time
 
@@ -20,20 +21,24 @@ fields:
     rows: 2
 
   - identifier: discount_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Discount Text
     description: e.g. 50% OFF, Save $200
 
   - identifier: original_price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Original Price
 
   - identifier: sale_price
-    type: Text
+    type: Textarea
+    rows: 1
     label: Sale Price
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: CTA Button Text
     default: Claim Offer
 

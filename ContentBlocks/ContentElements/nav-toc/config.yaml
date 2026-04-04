@@ -14,10 +14,12 @@ fields:
     minItems: 1
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
       - identifier: anchor
-        type: Text
+        type: Textarea
+        rows: 1
         label: Anchor ID
       - identifier: level
         type: Select

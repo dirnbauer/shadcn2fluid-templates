@@ -30,7 +30,8 @@ fields:
     minItems: 1
     fields:
       - identifier: text
-        type: Text
+        type: Textarea
+        rows: 1
         label: Badge Text
         required: true
       - identifier: link

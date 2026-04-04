@@ -21,20 +21,23 @@ fields:
         value: banner
     default: centered
   - identifier: badge_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Badge Text
   - identifier: description
     type: Textarea
     label: Description
     rows: 3
   - identifier: primary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Primary Button Text
   - identifier: primary_button_link
     type: Link
     label: Primary Button Link
   - identifier: secondary_button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Secondary Button Text
   - identifier: secondary_button_link
     type: Link

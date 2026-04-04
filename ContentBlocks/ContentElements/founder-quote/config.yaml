@@ -13,10 +13,12 @@ fields:
     label: Quote
     rows: 4
   - identifier: name
-    type: Text
+    type: Textarea
+    rows: 1
     label: Name
   - identifier: title
-    type: Text
+    type: Textarea
+    rows: 1
     label: Title
   - identifier: image
     type: File

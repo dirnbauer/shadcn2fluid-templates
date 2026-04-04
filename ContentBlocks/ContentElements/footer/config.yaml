@@ -23,7 +23,8 @@ fields:
     default: two-columns
 
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand
     required: true
 
@@ -33,7 +34,8 @@ fields:
     rows: 3
 
   - identifier: copyright
-    type: Text
+    type: Textarea
+    rows: 1
     label: Copyright Text
 
   - identifier: footer_links
@@ -41,7 +43,9 @@ fields:
     label: Footer Links
     fields:
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1area
+        rows: 1
         label: Label
         required: true
       - identifier: link

@@ -14,7 +14,8 @@ fields:
     allowed: common-image-types
     maxitems: 1
   - identifier: role
-    type: Text
+    type: Textarea
+    rows: 1
     label: Role
   - identifier: bio
     type: Textarea
@@ -31,7 +32,8 @@ fields:
     label: Social Links
     fields:
       - identifier: platform
-        type: Text
+        type: Textarea
+        rows: 1
         label: Platform
       - identifier: url
         type: Link

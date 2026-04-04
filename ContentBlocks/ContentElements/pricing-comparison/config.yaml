@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: plans
@@ -20,12 +21,14 @@ fields:
     maxItems: 4
     fields:
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Plan Name
         required: true
 
       - identifier: price
-        type: Text
+        type: Textarea
+        rows: 1
         label: Price
 
   - identifier: feature_items
@@ -34,12 +37,14 @@ fields:
     minItems: 1
     fields:
       - identifier: feature_name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Feature Name
         required: true
 
       - identifier: tier_values
-        type: Text
+        type: Textarea
+        rows: 1
         label: Values (comma-separated)
         description: One value per plan, e.g. Yes, Yes, No
         required: true

@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -24,16 +25,19 @@ fields:
     minItems: 1
     fields:
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Award Title
         required: true
 
       - identifier: year
-        type: Text
+        type: Textarea
+        rows: 1
         label: Year
 
       - identifier: organization
-        type: Text
+        type: Textarea
+        rows: 1
         label: Awarding Organization
 
       - identifier: image

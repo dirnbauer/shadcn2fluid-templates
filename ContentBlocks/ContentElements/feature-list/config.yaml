@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -37,10 +38,12 @@ fields:
     minItems: 1
     fields:
       - identifier: icon
-        type: Text
+        type: Textarea
+        rows: 1
         label: Icon Label
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
       - identifier: description
         type: Textarea

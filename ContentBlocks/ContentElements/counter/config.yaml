@@ -18,15 +18,18 @@ fields:
         label: Target Value
         required: true
       - identifier: prefix
-        type: Text
+        type: Textarea
+        rows: 1
         label: Prefix
         description: e.g. $ or +
       - identifier: suffix
-        type: Text
+        type: Textarea
+        rows: 1
         label: Suffix
         description: e.g. %, K, M
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
         required: true
   - identifier: columns

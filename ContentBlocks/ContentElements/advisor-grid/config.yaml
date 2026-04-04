@@ -23,12 +23,15 @@ fields:
         allowed: common-image-types
         maxitems: 1
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Name
         required: true
       - identifier: expertise
-        type: Text
+        type: Textarea
+        rows: 1
         label: Area of Expertise
       - identifier: company
-        type: Text
+        type: Textarea
+        rows: 1
         label: Company

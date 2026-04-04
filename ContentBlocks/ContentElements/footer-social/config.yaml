@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: brand
-    type: Text
+    type: Textarea
+    rows: 1
     label: Brand Name
   - identifier: items
     type: Collection
@@ -38,5 +39,6 @@ fields:
         type: Link
         label: Profile URL
   - identifier: copyright
-    type: Text
+    type: Textarea
+    rows: 1
     label: Copyright Text

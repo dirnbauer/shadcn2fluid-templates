@@ -24,5 +24,6 @@ fields:
     allowed: common-image-types
     maxitems: 1
   - identifier: copyright
-    type: Text
+    type: Textarea
+    rows: 1
     label: Copyright Text

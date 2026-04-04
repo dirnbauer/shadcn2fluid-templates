@@ -16,9 +16,11 @@ fields:
     type: Link
     label: Form Action
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
     default: Join the waitlist
   - identifier: count_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Count Text

@@ -30,5 +30,6 @@ fields:
     type: Text
     label: Contact Email
   - identifier: last_updated
-    type: Text
+    type: Textarea
+    rows: 1
     label: Last Updated

@@ -16,7 +16,8 @@ fields:
     type: Link
     label: Form Action
   - identifier: submit_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Submit Button Text
     default: Book appointment
   - identifier: show_phone

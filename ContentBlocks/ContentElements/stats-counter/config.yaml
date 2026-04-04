@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: columns
@@ -30,17 +31,20 @@ fields:
     minItems: 1
     fields:
       - identifier: counter_target
-        type: Text
+        type: Textarea
+        rows: 1
         label: Target Value
         required: true
 
       - identifier: suffix
-        type: Text
+        type: Textarea
+        rows: 1
         label: Suffix
         description: e.g. +, %, K
 
       - identifier: label
-        type: Text
+        type: Textarea
+        rows: 1
         label: Label
         required: true
 

@@ -18,7 +18,8 @@ fields:
     allowed: common-media-types
     maxitems: 1
   - identifier: caption
-    type: Text
+    type: Textarea
+    rows: 1
     label: Caption
   - identifier: aspect_ratio
     type: Select

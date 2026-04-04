@@ -28,10 +28,12 @@ fields:
     minItems: 1
     fields:
       - identifier: number
-        type: Text
+        type: Textarea
+        rows: 1
         label: Step Number
       - identifier: title
-        type: Text
+        type: Textarea
+        rows: 1
         label: Title
         required: true
       - identifier: description

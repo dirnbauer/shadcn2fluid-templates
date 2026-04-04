@@ -13,10 +13,12 @@ fields:
     label: Description
     rows: 3
   - identifier: open_count
-    type: Text
+    type: Textarea
+    rows: 1
     label: Open Positions Count
   - identifier: cta_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
   - identifier: cta_link
     type: Link

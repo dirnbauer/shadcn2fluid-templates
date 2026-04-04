@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: speed
@@ -39,7 +40,8 @@ fields:
         required: true
 
       - identifier: name
-        type: Text
+        type: Textarea
+        rows: 1
         label: Company Name
         required: true
 

@@ -10,7 +10,8 @@ fields:
     label: Heading
 
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
 
   - identifier: subheadline
@@ -23,9 +24,11 @@ fields:
     label: Form Action
 
   - identifier: placeholder
-    type: Text
+    type: Textarea
+    rows: 1
     label: Placeholder
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text

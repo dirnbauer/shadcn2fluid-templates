@@ -9,7 +9,8 @@ fields:
     useExistingField: true
     label: Heading
   - identifier: eyebrow
-    type: Text
+    type: Textarea
+    rows: 1
     label: Eyebrow
   - identifier: description
     type: Textarea
@@ -19,7 +20,8 @@ fields:
     type: Link
     label: Form Action
   - identifier: submit_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Submit Text
     default: Request demo
   - identifier: image

@@ -9,10 +9,12 @@ fields:
     useExistingField: true
     label: Job Title
   - identifier: department
-    type: Text
+    type: Textarea
+    rows: 1
     label: Department
   - identifier: location
-    type: Text
+    type: Textarea
+    rows: 1
     label: Location
   - identifier: type
     type: Text

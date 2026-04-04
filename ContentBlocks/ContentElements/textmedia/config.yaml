@@ -47,7 +47,8 @@ fields:
     default: 1
 
   - identifier: button_text
-    type: Text
+    type: Textarea
+    rows: 1
     label: Button Text
 
   - identifier: button_link
