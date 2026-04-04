@@ -6,7 +6,7 @@ $_EXTKEY ??= 'shadcn2fluid_templates';
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'ShadCN to Fluid Templates',
-    'description' => 'ShadCN/UI design patterns converted to pure Fluid templates with tweakcn theme integration. Provides accessible TYPO3 14 content elements based on Content Blocks 2.x.',
+    'description' => 'ShadCN/UI design patterns converted to pure Fluid 5 components and 250 content elements for TYPO3 14. Theme CSS customizable via ui.shadcn.com/create. Page templates provided by the Desiderio theme extension.',
     'category' => 'templates',
     'author' => 'webconsulting studio',
     'author_email' => '',

@@ -10,7 +10,9 @@
 
 ## Overview
 
-This extension provides shadcn/ui-inspired content elements and page templates for TYPO3 14, built on native Fluid 5 Components (atomic design) and Content Blocks. It ships 250 content elements, 11 page templates, and 37 reusable Fluid 5 Components.
+This extension provides shadcn/ui-inspired content elements for TYPO3 14, built on native Fluid 5 Components (atomic design) and Content Blocks. It ships 250 content elements and 37 reusable Fluid 5 Components.
+
+Page templates and styling are provided by a separate theme extension — see [Desiderio](https://github.com/dirnbauer/desiderio).
 
 ## Highlights
 
@@ -19,12 +21,20 @@ This extension provides shadcn/ui-inspired content elements and page templates f
 - Native Fluid 5 Components with `<f:argument>` typed parameters
 - Atomic design: `<s2f:atom.*>`, `<s2f:molecule.*>`, `<s2f:layout.*>`
 - 250 content elements in 10 wizard categories
-- 11 page templates (10 + styleguide)
-- OKLch design tokens via `shadcn-theme.css` (tweakcn.com compatible)
+- OKLch design tokens via `shadcn-theme.css` (generate at [ui.shadcn.com/create](https://ui.shadcn.com/create))
 - BEM CSS, no utility class dependencies
 - Shared vanilla JS (`s2f.js`) for interactive components
 - Workspace-aware content staging
 - PHPStan level 9 and PHPUnit coverage
+
+## Page templates
+
+Page templates are **not included** in this extension. Use [Desiderio](https://github.com/dirnbauer/desiderio) for:
+
+- Backend layouts with PAGEVIEW and visual-editor content areas
+- 5 page templates (Startpage, Contentpage, Sidebar, Styleguide, Default)
+- 5 swappable design styles
+- Dark mode toggle
 
 ## Content element categories (250 total)
 
@@ -41,20 +51,6 @@ This extension provides shadcn/ui-inspired content elements and page templates f
 | Data & Display | 25 |
 | Footer & Legal | 25 |
 
-## Page templates
-
-- SaaS Marketing
-- Corporate Company
-- Agency Studio
-- Startup Launch
-- Docs Knowledge Base
-- Blog Magazine
-- Ecommerce Brand
-- Event Conference
-- Dashboard App Shell
-- Personal Brand Portfolio
-- Styleguide
-
 ## Navigation
 
 ```{toctree}
@@ -67,7 +63,6 @@ ShadcnWorkflow/Index
 Roadmap/Index
 Workspaces/Index
 ContentElements/Index
-PageTemplates/Index
 Theming/Index
 Extending/Index
 KnownProblems/Index
@@ -83,5 +78,5 @@ KnownProblems/Index
 
 ## Support
 
-- Issue tracker: <https://github.com/webconsulting/shadcn2fluid-templates/issues>
-- Source: <https://github.com/webconsulting/shadcn2fluid-templates>
+- Issue tracker: <https://github.com/dirnbauer/shadcn2fluid-templates/issues>
+- Source: <https://github.com/dirnbauer/shadcn2fluid-templates>

@@ -31,17 +31,32 @@ The site set exposes two site settings that are stored in the TYPO3 site `config
 Example:
 
 ```yaml
-base: 'https://www.watchlist-internet.at/'
-baseVariants:
-  - base: 'https://staging.watchlist-internet.at/'
-    condition: 'applicationContext == "Production/Staging"'
-
 settings:
   'shadcn2fluid.themeCss': 'EXT:site_package/Resources/Public/Css/shadcn-theme.css'
-  'shadcn2fluid.themeSourceUrl': 'https://tweakcn.com/editor/theme'
+  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create#b2D0wqNxT'
 ```
 
-`shadcn2fluid.themeCss` controls which CSS file is loaded in the frontend. `shadcn2fluid.themeSourceUrl` is an optional reference to the tweakcn editor or shared preset used to generate that CSS.
+`shadcn2fluid.themeCss` controls which CSS file is loaded in the frontend. `shadcn2fluid.themeSourceUrl` is an optional reference to the [ui.shadcn.com/create](https://ui.shadcn.com/create) preset used to generate that CSS — stored for traceability, does not affect rendering.
+
+### Creating a custom theme
+
+1. Go to [ui.shadcn.com/create](https://ui.shadcn.com/create)
+2. Customize colors, radius, fonts, shadows
+3. Export the CSS (`:root` and `.dark` blocks)
+4. Save it in your site package
+5. Set `shadcn2fluid.themeCss` to the path
+
+See [Theming](../Theming/Index.md) for a detailed guide.
+
+## Page templates and styling
+
+Page templates, backend layouts, and page-level styling are **not** part of this extension. Use the [Desiderio](https://github.com/dirnbauer/desiderio) theme extension for:
+
+- Backend layouts with visual-editor content areas (PAGEVIEW)
+- 5 page templates (Startpage, Contentpage, Sidebar, Styleguide, Default)
+- 5 swappable design styles
+- Dark mode toggle
+- Auto-generated styleguide
 
 ## Page TSconfig
 

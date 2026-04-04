@@ -1,39 +1,40 @@
 # Page Templates
 
-The extension now ships 10 backend-selectable TYPO3 page templates as Content Blocks Page Types.
+Page templates have been moved to the [Desiderio](https://github.com/dirnbauer/desiderio) theme extension.
 
-## Available page templates
+## Why a separate extension?
 
-1. SaaS Marketing
-2. Corporate Company
-3. Agency Studio
-4. Startup Launch
-5. Docs Knowledge Base
-6. Blog Magazine
-7. Ecommerce Brand
-8. Event Conference
-9. Dashboard App Shell
-10. Personal Brand Portfolio
+shadcn2fluid-templates is a **component library** — it provides 250 content elements and 37 Fluid 5 Components. Page templates, backend layouts, and visual styling are the responsibility of a theme extension.
 
-## What each page template includes
+This separation means you can:
 
-- logo / brand field support
-- main navigation from the TYPO3 page tree
-- optional header CTA
-- hero eyebrow, headline, subheadline, and CTA fields
-- hero image field
-- footer brand and footer copy fields
-- rendering of the default main content column (`colPos = 0`)
+- Use the content elements with any theme, not just Desiderio
+- Swap visual designs without reinstalling content elements
+- Keep your component library stable while iterating on page design
 
-## Rendering model
+## Desiderio
 
-The page templates are mapped by `doktype` in the shipped TypoScript setup. The frontend shell lives in:
+[Desiderio](https://github.com/dirnbauer/desiderio) is the recommended theme extension. It provides:
 
-- `Resources/Private/Templates/Pages/`
-- `Resources/Private/Partials/Page/Shell.html`
+- 4 backend layouts (Startpage, Contentpage, Contentpage with Sidebar, Styleguide)
+- PAGEVIEW rendering with visual-editor content areas
+- 5 swappable design styles (SaaS Landing, Corporate, Portfolio, Blog, Dashboard)
+- Dark mode with sun/moon toggle
+- Auto-generated styleguide showing all 250 content elements
 
-The TYPO3 page tree remains the navigation source. Editors choose the page template by selecting the corresponding Page Type in the backend.
+Install it alongside shadcn2fluid-templates:
 
-## Note
+```bash
+composer require webconsulting/desiderio
+```
 
-These page templates provide the structural shell. The body is still composed with content elements, which is the intended TYPO3 model for this extension.
+## Building your own theme
+
+If you prefer a custom theme instead of Desiderio, your theme extension should:
+
+1. Depend on `webconsulting/shadcn2fluid-templates` in `composer.json`
+2. Use `PAGEVIEW` for page rendering (enables visual-editor content areas)
+3. Register backend layouts with named `identifier` fields for content areas
+4. Include `s2f:` components via the namespace `xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"`
+
+See Desiderio's source code for a complete reference implementation.

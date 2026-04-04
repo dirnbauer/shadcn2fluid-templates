@@ -16,7 +16,7 @@ Three-layer system following shadcn/ui principles:
 
 1. **Fluid 5 Components** (`<s2f:atom.*>`, `<s2f:molecule.*>`, `<s2f:layout.*>`) — typed primitives with `<f:argument>` and `<f:slot>`
 2. **Content Blocks** — 250 content elements composing Fluid 5 Components
-3. **Page Templates** — 11 page types using components for header, footer, shell
+3. **Theme extension** — page templates and styling are provided by a separate theme, e.g. [Desiderio](https://github.com/dirnbauer/desiderio)
 
 ## Included content elements (250)
 
@@ -35,19 +35,15 @@ Organized in 10 wizard categories (25 each):
 | Data & Display | Card, Chart, KPI Cards, Data Table, ... |
 | Footer & Legal | Footer, Cookie Banner, Imprint, GDPR Banner, ... |
 
-## Page templates
+## Page Templates
 
-- SaaS Marketing
-- Corporate Company
-- Agency Studio
-- Startup Launch
-- Docs Knowledge Base
-- Blog Magazine
-- Ecommerce Brand
-- Event Conference
-- Dashboard App Shell
-- Personal Brand Portfolio
-- Styleguide (component library documentation)
+Page templates and styling are **not included** in this extension. Use a theme extension like [Desiderio](https://github.com/dirnbauer/desiderio) which provides:
+
+- Backend layouts with visual-editor content areas (PAGEVIEW)
+- 5 page templates (Startpage, Contentpage, Sidebar, Styleguide, Default)
+- 5 swappable design styles (SaaS, Corporate, Portfolio, Blog, Dashboard)
+- Dark mode toggle
+- Auto-generated styleguide page
 
 ## Fluid 5 Components
 
@@ -76,11 +72,17 @@ Then enable the site set:
 3. Add the `shadcn2fluid Templates` set
 4. Save and flush caches
 
+For page templates, also install [Desiderio](https://github.com/dirnbauer/desiderio):
+
+```bash
+composer require webconsulting/desiderio
+```
+
 ## Configuration
 
 The site set loads:
 
-- `shadcn-theme.css` — OKLch design tokens (swappable via tweakcn.com)
+- `shadcn-theme.css` — OKLch design tokens (generate at [ui.shadcn.com/create](https://ui.shadcn.com/create))
 - `components.css` — BEM component styles for all Fluid 5 Components
 - `s2f.js` — Shared vanilla JS (accordion, tabs, dark mode, counters)
 
@@ -89,8 +91,16 @@ Custom theme override via site set settings:
 ```yaml
 settings:
   'shadcn2fluid.themeCss': 'EXT:site_package/Resources/Public/Css/shadcn-theme.css'
-  'shadcn2fluid.themeSourceUrl': 'https://tweakcn.com/editor/theme'
+  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create#b2D0wqNxT'
 ```
+
+### Creating a custom theme
+
+1. Go to [ui.shadcn.com/create](https://ui.shadcn.com/create)
+2. Customize colors, radius, fonts, shadows
+3. Copy the generated CSS (`:root` and `.dark` blocks)
+4. Save it in your site package, e.g. `EXT:site_package/Resources/Public/Css/shadcn-theme.css`
+5. Set `shadcn2fluid.themeCss` in your site configuration
 
 ## Quality gates
 
@@ -112,4 +122,4 @@ vendor/bin/phpunit --configuration=phpunit.xml.dist
 
 - TYPO3 14 requires PHP's `ext-intl`.
 - This extension is not affiliated with shadcn/ui.
-- Theme CSS uses OKLch color space — customize at [tweakcn.com](https://tweakcn.com).
+- Theme CSS uses OKLch color space — customize at [ui.shadcn.com/create](https://ui.shadcn.com/create).
