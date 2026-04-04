@@ -1,5 +1,5 @@
 name: shadcn2fluid/gdpr-banner
-typeName: shadcn2fluid_gdpr-banner
+typeName: shadcn2fluid_gdprbanner
 title: GDPR Banner
 description: GDPR-compliant consent banner with granular cookie controls
 group: footer

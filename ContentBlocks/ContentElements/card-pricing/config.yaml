@@ -1,5 +1,5 @@
 name: shadcn2fluid/card-pricing
-typeName: shadcn2fluid_card-pricing
+typeName: shadcn2fluid_cardpricing
 title: Card Pricing
 description: Single pricing card with price, features list, and CTA
 group: data

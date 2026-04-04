@@ -1,5 +1,5 @@
 name: shadcn2fluid/waitlist-signup
-typeName: shadcn2fluid_waitlist-signup
+typeName: shadcn2fluid_waitlistsignup
 title: Waitlist Signup
 description: Waitlist or early access signup form
 group: conversion

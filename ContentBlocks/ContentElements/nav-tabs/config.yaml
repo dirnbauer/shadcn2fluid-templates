@@ -1,5 +1,5 @@
 name: shadcn2fluid/nav-tabs
-typeName: shadcn2fluid_nav-tabs
+typeName: shadcn2fluid_navtabs
 title: Navigation Tabs
 description: Horizontal tab navigation for switching between content sections
 group: navigation

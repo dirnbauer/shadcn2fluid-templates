@@ -1,5 +1,5 @@
 name: shadcn2fluid/stats-inline
-typeName: shadcn2fluid_stats-inline
+typeName: shadcn2fluid_statsinline
 title: Stats Inline
 description: Compact inline stats row for banners and sections
 group: social-proof

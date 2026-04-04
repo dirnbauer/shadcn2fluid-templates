@@ -1,5 +1,5 @@
 name: shadcn2fluid/badge-grid
-typeName: shadcn2fluid_badge-grid
+typeName: shadcn2fluid_badgegrid
 title: Badge Grid
 description: Grid of labeled badges for tags, skills, or categories
 group: data

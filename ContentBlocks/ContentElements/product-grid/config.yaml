@@ -1,5 +1,5 @@
 name: shadcn2fluid/product-grid
-typeName: shadcn2fluid_product-grid
+typeName: shadcn2fluid_productgrid
 title: Product Grid
 description: Grid of product cards with images and prices
 group: pricing

@@ -1,5 +1,5 @@
 name: shadcn2fluid/header-page
-typeName: shadcn2fluid_header-page
+typeName: shadcn2fluid_headerpage
 title: Page Header
 description: Full-width page header with title, description, and optional breadcrumb
 group: navigation

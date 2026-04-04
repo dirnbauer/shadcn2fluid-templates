@@ -1,5 +1,5 @@
 name: shadcn2fluid/cta-banner
-typeName: shadcn2fluid_cta-banner
+typeName: shadcn2fluid_ctabanner
 title: CTA Banner
 description: Full-width colored banner with call to action
 group: conversion

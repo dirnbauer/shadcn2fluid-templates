@@ -1,5 +1,5 @@
 name: shadcn2fluid/cta-minimal
-typeName: shadcn2fluid_cta-minimal
+typeName: shadcn2fluid_ctaminimal
 title: CTA Minimal
 description: Minimal text-only call to action with a single link
 group: conversion

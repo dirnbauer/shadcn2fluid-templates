@@ -1,5 +1,5 @@
 name: shadcn2fluid/table-content
-typeName: shadcn2fluid_table-content
+typeName: shadcn2fluid_tablecontent
 title: Table Content
 description: Styled data table with header row and body rows
 group: content

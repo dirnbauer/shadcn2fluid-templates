@@ -1,5 +1,5 @@
 name: shadcn2fluid/feature-image
-typeName: shadcn2fluid_feature-image
+typeName: shadcn2fluid_featureimage
 title: Feature with Image
 description: Single feature highlight with large image and supporting text
 group: features

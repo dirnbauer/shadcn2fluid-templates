@@ -1,5 +1,5 @@
 name: shadcn2fluid/pricing-usage
-typeName: shadcn2fluid_pricing-usage
+typeName: shadcn2fluid_pricingusage
 title: Pricing Usage
 description: Usage-based pricing cards with rate and usage metric
 group: pricing

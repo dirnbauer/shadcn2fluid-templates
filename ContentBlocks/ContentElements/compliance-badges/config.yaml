@@ -1,5 +1,5 @@
 name: shadcn2fluid/compliance-badges
-typeName: shadcn2fluid_compliance-badges
+typeName: shadcn2fluid_compliancebadges
 title: Compliance Badges
 description: Row of compliance and certification badges with labels
 group: footer

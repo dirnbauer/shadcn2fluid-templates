@@ -1,5 +1,5 @@
 name: shadcn2fluid/rating-display
-typeName: shadcn2fluid_rating-display
+typeName: shadcn2fluid_ratingdisplay
 title: Rating Display
 description: Aggregate rating display with score and review count
 group: social-proof

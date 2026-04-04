@@ -1,5 +1,5 @@
 name: shadcn2fluid/hero-cta-only
-typeName: shadcn2fluid_hero-cta-only
+typeName: shadcn2fluid_heroctaonly
 title: Hero CTA Only
 description: Compact hero with just headline and action buttons
 group: hero

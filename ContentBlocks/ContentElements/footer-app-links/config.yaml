@@ -1,5 +1,5 @@
 name: shadcn2fluid/footer-app-links
-typeName: shadcn2fluid_footer-app-links
+typeName: shadcn2fluid_footerapplinks
 title: Footer App Links
 description: Footer with app store download buttons and QR code
 group: footer

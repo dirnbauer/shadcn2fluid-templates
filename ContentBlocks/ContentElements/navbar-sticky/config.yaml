@@ -1,5 +1,5 @@
 name: shadcn2fluid/navbar-sticky
-typeName: shadcn2fluid_navbar-sticky
+typeName: shadcn2fluid_navbarsticky
 title: Sticky Navbar
 description: Sticky top navigation with brand, links, and CTA
 group: navigation

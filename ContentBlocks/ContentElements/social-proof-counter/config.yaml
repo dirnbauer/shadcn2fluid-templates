@@ -1,5 +1,5 @@
 name: shadcn2fluid/social-proof-counter
-typeName: shadcn2fluid_social-proof-counter
+typeName: shadcn2fluid_socialproofcounter
 title: Social Proof Counter
 description: Live-style counters for users, downloads, or customers
 group: social-proof

@@ -1,5 +1,5 @@
 name: shadcn2fluid/job-card
-typeName: shadcn2fluid_job-card
+typeName: shadcn2fluid_jobcard
 title: Job Card
 description: Single featured job posting with details and apply button
 group: team

@@ -1,5 +1,5 @@
 name: shadcn2fluid/header-banner
-typeName: shadcn2fluid_header-banner
+typeName: shadcn2fluid_headerbanner
 title: Banner Header
 description: Full-width banner header with background color and optional image
 group: navigation

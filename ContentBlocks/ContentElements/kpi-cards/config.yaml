@@ -1,5 +1,5 @@
 name: shadcn2fluid/kpi-cards
-typeName: shadcn2fluid_kpi-cards
+typeName: shadcn2fluid_kpicards
 title: KPI Cards
 description: Proof-point metric cards with value, label, and trend direction
 group: data

@@ -1,5 +1,5 @@
 name: shadcn2fluid/review-carousel
-typeName: shadcn2fluid_review-carousel
+typeName: shadcn2fluid_reviewcarousel
 title: Review Carousel
 description: Sliding carousel of customer reviews with ratings
 group: social-proof

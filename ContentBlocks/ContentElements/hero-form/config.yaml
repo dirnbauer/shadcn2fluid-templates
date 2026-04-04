@@ -1,5 +1,5 @@
 name: shadcn2fluid/hero-form
-typeName: shadcn2fluid_hero-form
+typeName: shadcn2fluid_heroform
 title: Hero Form
 description: Hero section with inline signup or contact form
 group: hero

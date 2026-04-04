@@ -1,5 +1,5 @@
 name: shadcn2fluid/code-block
-typeName: shadcn2fluid_code-block
+typeName: shadcn2fluid_codeblock
 title: Code Block
 description: Syntax-highlighted code snippet with optional title and language
 group: content

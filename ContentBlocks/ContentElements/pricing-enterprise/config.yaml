@@ -1,5 +1,5 @@
 name: shadcn2fluid/pricing-enterprise
-typeName: shadcn2fluid_pricing-enterprise
+typeName: shadcn2fluid_pricingenterprise
 title: Pricing Enterprise
 description: Enterprise pricing CTA with custom quote request
 group: pricing

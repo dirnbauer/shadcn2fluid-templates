@@ -1,5 +1,5 @@
 name: shadcn2fluid/navbar-split
-typeName: shadcn2fluid_navbar-split
+typeName: shadcn2fluid_navbarsplit
 title: Split Navbar
 description: Split navigation with left links, brand center, right actions
 group: navigation

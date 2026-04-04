@@ -1,5 +1,5 @@
 name: shadcn2fluid/card-overlay
-typeName: shadcn2fluid_card-overlay
+typeName: shadcn2fluid_cardoverlay
 title: Card Overlay
 description: Card with image background and text overlay
 group: data

@@ -1,5 +1,5 @@
 name: shadcn2fluid/header-section
-typeName: shadcn2fluid_header-section
+typeName: shadcn2fluid_headersection
 title: Section Header
 description: Reusable section header with eyebrow, title, and subtitle
 group: navigation

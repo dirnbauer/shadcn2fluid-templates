@@ -1,5 +1,5 @@
 name: shadcn2fluid/feature-matrix
-typeName: shadcn2fluid_feature-matrix
+typeName: shadcn2fluid_featurematrix
 title: Feature Matrix
 description: Feature comparison matrix for products, plans, or capabilities
 group: features

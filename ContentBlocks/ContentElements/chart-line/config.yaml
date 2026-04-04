@@ -1,5 +1,5 @@
 name: shadcn2fluid/chart-line
-typeName: shadcn2fluid_chart-line
+typeName: shadcn2fluid_chartline
 title: Chart Line
 description: Line chart with optional data points and smooth curves
 group: data

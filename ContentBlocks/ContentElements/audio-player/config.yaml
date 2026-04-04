@@ -1,5 +1,5 @@
 name: shadcn2fluid/audio-player
-typeName: shadcn2fluid_audio-player
+typeName: shadcn2fluid_audioplayer
 title: Audio Player
 description: Embedded audio player with title and description
 group: content

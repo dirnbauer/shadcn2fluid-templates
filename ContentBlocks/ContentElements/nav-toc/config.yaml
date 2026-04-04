@@ -1,5 +1,5 @@
 name: shadcn2fluid/nav-toc
-typeName: shadcn2fluid_nav-toc
+typeName: shadcn2fluid_navtoc
 title: Table of Contents
 description: Vertical table-of-contents navigation for long-form content
 group: navigation

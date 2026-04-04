@@ -1,5 +1,5 @@
 name: shadcn2fluid/footer-split
-typeName: shadcn2fluid_footer-split
+typeName: shadcn2fluid_footersplit
 title: Footer Split
 description: Two-column split footer with brand left and links right
 group: footer

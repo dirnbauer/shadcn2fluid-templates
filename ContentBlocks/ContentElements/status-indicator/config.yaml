@@ -1,5 +1,5 @@
 name: shadcn2fluid/status-indicator
-typeName: shadcn2fluid_status-indicator
+typeName: shadcn2fluid_statusindicator
 title: Status Indicator
 description: Service status display with colored dots and labels
 group: data

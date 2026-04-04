@@ -1,5 +1,5 @@
 name: shadcn2fluid/video-embed
-typeName: shadcn2fluid_video-embed
+typeName: shadcn2fluid_videoembed
 title: Video Embed
 description: Responsive video embed for YouTube, Vimeo, or self-hosted video
 group: content

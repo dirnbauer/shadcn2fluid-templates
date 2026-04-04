@@ -1,5 +1,5 @@
 name: shadcn2fluid/pricing-slider
-typeName: shadcn2fluid_pricing-slider
+typeName: shadcn2fluid_pricingslider
 title: Pricing Slider
 description: Volume-based pricing with interactive range slider
 group: pricing

@@ -1,5 +1,5 @@
 name: shadcn2fluid/testimonial-wall
-typeName: shadcn2fluid_testimonial-wall
+typeName: shadcn2fluid_testimonialwall
 title: Testimonial Wall
 description: Masonry-style wall of customer testimonials
 group: social-proof

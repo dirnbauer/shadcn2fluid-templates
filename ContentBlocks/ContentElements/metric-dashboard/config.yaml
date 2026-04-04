@@ -1,5 +1,5 @@
 name: shadcn2fluid/metric-dashboard
-typeName: shadcn2fluid_metric-dashboard
+typeName: shadcn2fluid_metricdashboard
 title: Metric Dashboard
 description: Dashboard layout combining stat cards with a mini chart area
 group: data

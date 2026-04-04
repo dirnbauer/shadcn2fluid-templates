@@ -1,5 +1,5 @@
 name: shadcn2fluid/board-members
-typeName: shadcn2fluid_board-members
+typeName: shadcn2fluid_boardmembers
 title: Board Members
 description: Executive board member cards with titles and affiliations
 group: team

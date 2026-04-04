@@ -1,5 +1,5 @@
 name: shadcn2fluid/feedback-form
-typeName: shadcn2fluid_feedback-form
+typeName: shadcn2fluid_feedbackform
 title: Feedback Form
 description: User feedback collection form with rating option
 group: conversion

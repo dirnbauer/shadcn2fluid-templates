@@ -1,5 +1,5 @@
 name: shadcn2fluid/header-profile
-typeName: shadcn2fluid_header-profile
+typeName: shadcn2fluid_headerprofile
 title: Profile Header
 description: Profile page header with avatar, name, bio, and action buttons
 group: navigation

@@ -1,5 +1,5 @@
 name: shadcn2fluid/navbar-mobile
-typeName: shadcn2fluid_navbar-mobile
+typeName: shadcn2fluid_navbarmobile
 title: Mobile Navbar
 description: Mobile-optimized navigation with hamburger menu toggle
 group: navigation

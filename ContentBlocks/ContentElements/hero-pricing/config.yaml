@@ -1,5 +1,5 @@
 name: shadcn2fluid/hero-pricing
-typeName: shadcn2fluid_hero-pricing
+typeName: shadcn2fluid_heropricing
 title: Hero Pricing
 description: Hero with inline pricing highlight and CTA
 group: hero

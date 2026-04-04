@@ -1,5 +1,5 @@
 name: shadcn2fluid/stats-counter
-typeName: shadcn2fluid_stats-counter
+typeName: shadcn2fluid_statscounter
 title: Stats Counter
 description: Animated counting statistics with large numbers
 group: social-proof

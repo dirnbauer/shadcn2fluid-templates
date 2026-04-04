@@ -1,5 +1,5 @@
 name: shadcn2fluid/chart-bar
-typeName: shadcn2fluid_chart-bar
+typeName: shadcn2fluid_chartbar
 title: Chart Bar
 description: Bar chart with configurable orientation and colors
 group: data
