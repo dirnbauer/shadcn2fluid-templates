@@ -14,7 +14,7 @@ fields:
     type: Textarea
     label: Description
     rows: 3
-  - identifier: links
+  - identifier: link_items
     type: Collection
     label: Links
     fields:

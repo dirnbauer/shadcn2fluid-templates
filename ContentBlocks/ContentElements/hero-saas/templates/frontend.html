@@ -25,11 +25,11 @@
                 </f:for>
             </f:if>
         </div>
-        <f:if condition="{data.logos}">
+        <f:if condition="{data.logo_items}">
             <div class="hero-saas__trust">
                 <p class="hero-saas__trust-label">Trusted by</p>
                 <div class="hero-saas__logos">
-                    <f:for each="{data.logos}" as="logo">
+                    <f:for each="{data.logo_items}" as="logo">
                         <span class="hero-saas__logo">{logo.name}</span>
                     </f:for>
                 </div>

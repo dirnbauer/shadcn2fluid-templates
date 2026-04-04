@@ -17,7 +17,7 @@ fields:
   - identifier: price_period
     type: Text
     label: Price Period
-  - identifier: features
+  - identifier: feature_items
     type: Collection
     label: Features
     fields:

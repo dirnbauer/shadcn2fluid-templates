@@ -22,7 +22,7 @@ fields:
       - identifier: title
         type: Text
         label: Section Title
-      - identifier: links
+      - identifier: link_items
         type: Collection
         label: Links
         fields:

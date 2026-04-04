@@ -28,7 +28,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <f:for each="{data.features}" as="feature">
+                    <f:for each="{data.feature_items}" as="feature">
                         <tr>
                             <td class="comparison-table__feature-name">{feature.name}</td>
                             <td class="comparison-table__cell" colspan="{f:count(subject: data.column_items)}">{feature.tier_values}</td>

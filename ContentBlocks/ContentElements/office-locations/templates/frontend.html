@@ -15,7 +15,7 @@
         </f:if>
 
         <div class="office-locations__grid">
-            <f:for each="{data.locations}" as="loc">
+            <f:for each="{data.location_items}" as="loc">
                 <s2f:molecule.card class="office-locations__item">
                     <h3 class="office-locations__city">{loc.city}</h3>
                     <f:if condition="{loc.address}"><p class="office-locations__address">{loc.address}</p></f:if>

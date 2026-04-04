@@ -13,7 +13,7 @@ fields:
     label: Subheadline
     rows: 2
 
-  - identifier: badges
+  - identifier: badge_items
     type: Collection
     label: Badges
     minItems: 1

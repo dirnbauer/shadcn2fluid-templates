@@ -20,7 +20,7 @@
                         <h3 class="navbar-sidebar__section-title">{section.title}</h3>
                     </f:if>
                     <ul class="navbar-sidebar__list">
-                        <f:for each="{section.links}" as="item">
+                        <f:for each="{section.link_items}" as="item">
                             <li>
                                 <f:if condition="{item.link.url}">
                                     <f:link.typolink parameter="{item.link}" class="navbar-sidebar__link">{item.label}</f:link.typolink>

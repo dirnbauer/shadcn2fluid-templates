@@ -18,7 +18,7 @@ fields:
   - identifier: tagline
     type: Text
     label: Tagline
-  - identifier: links
+  - identifier: link_items
     type: Collection
     label: Links
     fields:

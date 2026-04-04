@@ -23,10 +23,10 @@
                     <p class="footer-brand__tagline">{data.tagline}</p>
                 </f:if>
             </div>
-            <f:if condition="{data.links}">
+            <f:if condition="{data.link_items}">
                 <nav class="footer-brand__nav" aria-label="Footer links">
                     <ul class="footer-brand__links">
-                        <f:for each="{data.links}" as="item">
+                        <f:for each="{data.link_items}" as="item">
                             <li>
                                 <f:if condition="{item.link}">
                                     <f:then><f:link.typolink parameter="{item.link}" class="footer-brand__link">{item.label}</f:link.typolink></f:then>

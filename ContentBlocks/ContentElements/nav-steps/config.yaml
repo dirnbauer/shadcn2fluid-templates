@@ -17,7 +17,7 @@ fields:
       - label: Dots
         value: dots
     default: numbered
-  - identifier: steps
+  - identifier: step_items
     type: Collection
     label: Steps
     minItems: 2

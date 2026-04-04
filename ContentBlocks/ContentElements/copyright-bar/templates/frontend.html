@@ -9,10 +9,10 @@
     <s2f:layout.container>
         <div class="copyright-bar__inner">
             <p class="copyright-bar__text">{data.copyright}</p>
-            <f:if condition="{data.links}">
+            <f:if condition="{data.link_items}">
                 <nav aria-label="Legal links">
                     <ul class="copyright-bar__links">
-                        <f:for each="{data.links}" as="item">
+                        <f:for each="{data.link_items}" as="item">
                             <li>
                                 <f:if condition="{item.link}">
                                     <f:then><f:link.typolink parameter="{item.link}" class="copyright-bar__link">{item.label}</f:link.typolink></f:then>

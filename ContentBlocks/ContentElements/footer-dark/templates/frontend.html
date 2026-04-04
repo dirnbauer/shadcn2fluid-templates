@@ -20,7 +20,7 @@
                 <nav class="footer-dark__col">
                     <h3 class="footer-dark__col-title">{col.title}</h3>
                     <ul class="footer-dark__links">
-                        <f:for each="{col.links}" as="item">
+                        <f:for each="{col.link_items}" as="item">
                             <li>
                                 <f:if condition="{item.link}">
                                     <f:then><f:link.typolink parameter="{item.link}" class="footer-dark__link">{item.label}</f:link.typolink></f:then>

@@ -42,7 +42,7 @@
                                 <p class="mega-menu__group-desc">{group.description}</p>
                             </f:if>
                             <ul class="mega-menu__links">
-                                <f:for each="{group.links}" as="item">
+                                <f:for each="{group.link_items}" as="item">
                                     <li class="mega-menu__link-item">
                                         <f:if condition="{item.link.url}">
                                             <f:then>

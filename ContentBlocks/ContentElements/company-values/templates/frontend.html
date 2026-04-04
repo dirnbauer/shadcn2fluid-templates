@@ -16,7 +16,7 @@
         </f:if>
 
         <div class="company-values__grid">
-            <f:for each="{data.values}" as="value">
+            <f:for each="{data.value_items}" as="value">
                 <s2f:molecule.card class="company-values__item">
                     <f:if condition="{value.icon}"><span class="company-values__icon">{value.icon}</span></f:if>
                     <h3 class="company-values__title">{value.title}</h3>

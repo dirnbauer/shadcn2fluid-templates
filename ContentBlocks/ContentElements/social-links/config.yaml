@@ -10,7 +10,7 @@ fields:
   - identifier: description_text
     type: Text
     label: Description
-  - identifier: links
+  - identifier: link_items
     type: Collection
     label: Social Links
     minItems: 1

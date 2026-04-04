@@ -17,7 +17,7 @@ fields:
     label: Subheadline
     rows: 2
 
-  - identifier: questions
+  - identifier: question_items
     type: Collection
     label: Questions
     minItems: 1

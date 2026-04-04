@@ -25,7 +25,7 @@ fields:
         value: fast
     default: normal
 
-  - identifier: logos
+  - identifier: logo_items
     type: Collection
     label: Logos
     minItems: 3

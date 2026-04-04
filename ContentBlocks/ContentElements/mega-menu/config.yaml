@@ -57,7 +57,7 @@ fields:
         type: Textarea
         label: Group Description
         rows: 2
-      - identifier: links
+      - identifier: link_items
         type: Collection
         label: Links
         minItems: 1

@@ -8,7 +8,7 @@
 <nav class="legal-links legal-links--{data.separator -> f:or(alternative: 'dot')}" aria-label="Legal links">
     <s2f:layout.container>
         <ul class="legal-links__list">
-            <f:for each="{data.links}" as="item">
+            <f:for each="{data.link_items}" as="item">
                 <li class="legal-links__item">
                     <f:if condition="{item.link}">
                         <f:then><f:link.typolink parameter="{item.link}" class="legal-links__link">{item.label}</f:link.typolink></f:then>

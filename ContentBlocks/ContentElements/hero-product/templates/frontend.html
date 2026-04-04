@@ -10,9 +10,9 @@
                 <f:if condition="{data.badge_text}"><s2f:atom.badge variant="secondary">{data.badge_text}</s2f:atom.badge></f:if>
                 <f:if condition="{data.header}"><h1 class="hero-product__title">{data.header}</h1></f:if>
                 <f:if condition="{data.subheadline}"><p class="hero-product__description">{data.subheadline}</p></f:if>
-                <f:if condition="{data.features}">
+                <f:if condition="{data.feature_items}">
                     <ul class="hero-product__features">
-                        <f:for each="{data.features}" as="feature">
+                        <f:for each="{data.feature_items}" as="feature">
                             <li class="hero-product__feature">{feature.label}</li>
                         </f:for>
                     </ul>

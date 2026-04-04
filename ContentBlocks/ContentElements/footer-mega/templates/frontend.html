@@ -30,7 +30,7 @@
                     <nav class="footer-mega__col">
                         <h3 class="footer-mega__col-title">{col.title}</h3>
                         <ul class="footer-mega__links">
-                            <f:for each="{col.links}" as="item">
+                            <f:for each="{col.link_items}" as="item">
                                 <li>
                                     <f:if condition="{item.link}">
                                         <f:then><f:link.typolink parameter="{item.link}" class="footer-mega__link">{item.label}</f:link.typolink></f:then>

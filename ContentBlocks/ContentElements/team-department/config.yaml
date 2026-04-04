@@ -11,7 +11,7 @@ fields:
     type: Textarea
     label: Subheadline
     rows: 2
-  - identifier: departments
+  - identifier: department_items
     type: Collection
     label: Departments
     minItems: 1

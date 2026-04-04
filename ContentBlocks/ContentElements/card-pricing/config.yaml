@@ -19,7 +19,7 @@ fields:
     type: Textarea
     label: Description
     rows: 2
-  - identifier: features
+  - identifier: feature_items
     type: Collection
     label: Features
     fields:

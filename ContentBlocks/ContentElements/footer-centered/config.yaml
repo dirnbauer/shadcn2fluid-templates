@@ -15,7 +15,7 @@ fields:
     label: Logo
     allowed: common-image-types
     maxitems: 1
-  - identifier: links
+  - identifier: link_items
     type: Collection
     label: Links
     fields:

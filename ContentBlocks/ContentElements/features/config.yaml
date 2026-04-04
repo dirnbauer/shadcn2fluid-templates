@@ -39,7 +39,7 @@ fields:
         value: card
     default: icon-top
 
-  - identifier: features
+  - identifier: feature_items
     type: Collection
     label: Features
     minItems: 1

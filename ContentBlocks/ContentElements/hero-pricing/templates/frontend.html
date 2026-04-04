@@ -15,9 +15,9 @@
                     <span class="hero-pricing__price">{data.price}</span>
                     <f:if condition="{data.price_period}"><span class="hero-pricing__period">/{data.price_period}</span></f:if>
                 </div>
-                <f:if condition="{data.features}">
+                <f:if condition="{data.feature_items}">
                     <ul class="hero-pricing__features">
-                        <f:for each="{data.features}" as="feature">
+                        <f:for each="{data.feature_items}" as="feature">
                             <li class="hero-pricing__feature">{feature.label}</li>
                         </f:for>
                     </ul>

@@ -9,10 +9,10 @@
     <s2f:layout.container>
         <div class="footer-minimal__inner">
             <p class="footer-minimal__copyright">{data.copyright}</p>
-            <f:if condition="{data.links}">
+            <f:if condition="{data.link_items}">
                 <nav aria-label="Footer links">
                     <ul class="footer-minimal__links">
-                        <f:for each="{data.links}" as="item">
+                        <f:for each="{data.link_items}" as="item">
                             <li>
                                 <f:if condition="{item.link}">
                                     <f:then><f:link.typolink parameter="{item.link}" class="footer-minimal__link">{item.label}</f:link.typolink></f:then>

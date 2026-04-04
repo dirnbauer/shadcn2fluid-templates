@@ -19,7 +19,7 @@
         </f:if>
 
         <div class="features__grid features__grid--cols-{data.columns} features__grid--{data.variant}">
-            <f:for each="{data.features}" as="feature">
+            <f:for each="{data.feature_items}" as="feature">
                 <div class="features__item {f:if(condition: '{data.variant} == \'card\'', then: 'features__item--card')}">
                     <div class="features__icon" aria-hidden="true">
                         <span class="features__icon-label">{feature.icon_name}</span>

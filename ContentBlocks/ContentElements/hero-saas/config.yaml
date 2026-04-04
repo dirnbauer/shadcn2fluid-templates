@@ -31,7 +31,7 @@ fields:
   - identifier: secondary_button_link
     type: Link
     label: Secondary Button Link
-  - identifier: logos
+  - identifier: logo_items
     type: Collection
     label: Trust Logos
     fields:

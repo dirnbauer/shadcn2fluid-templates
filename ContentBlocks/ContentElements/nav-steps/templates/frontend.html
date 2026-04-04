@@ -9,7 +9,7 @@
     <s2f:layout.container>
         <nav class="nav-steps__inner" aria-label="Progress steps">
             <ol class="nav-steps__list">
-                <f:for each="{data.steps}" as="step" iteration="iterator">
+                <f:for each="{data.step_items}" as="step" iteration="iterator">
                     <li class="nav-steps__item nav-steps__item--{step.status -> f:or(alternative: 'pending')}">
                         <span class="nav-steps__indicator">{iterator.cycle}</span>
                         <span class="nav-steps__label">{step.label}</span>

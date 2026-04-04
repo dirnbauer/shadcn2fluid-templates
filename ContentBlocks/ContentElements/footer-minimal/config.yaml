@@ -11,7 +11,7 @@ fields:
     type: Text
     label: Copyright Text
     required: true
-  - identifier: links
+  - identifier: link_items
     type: Collection
     label: Links
     fields:

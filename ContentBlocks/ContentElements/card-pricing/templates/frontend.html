@@ -22,9 +22,9 @@
                     </f:if>
                 </div>
             </div>
-            <f:if condition="{data.features}">
+            <f:if condition="{data.feature_items}">
                 <ul class="card-pricing__features">
-                    <f:for each="{data.features}" as="feature">
+                    <f:for each="{data.feature_items}" as="feature">
                         <li class="card-pricing__feature {f:if(condition: '!{feature.included}', then: 'card-pricing__feature--excluded')}">
                             <f:if condition="{feature.included}">
                                 <f:then><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></f:then>

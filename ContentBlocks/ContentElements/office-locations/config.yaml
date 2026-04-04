@@ -11,7 +11,7 @@ fields:
     type: Textarea
     label: Subheadline
     rows: 2
-  - identifier: locations
+  - identifier: location_items
     type: Collection
     label: Locations
     minItems: 1
