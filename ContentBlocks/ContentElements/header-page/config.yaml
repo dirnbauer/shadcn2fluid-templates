@@ -7,29 +7,29 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: subheadline
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 3
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
   - identifier: variant
     type: Select
     renderType: selectSingle
-    label: Alignment
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:alignment'
     items:
-      - label: Left
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.left'
         value: left
-      - label: Center
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.center'
         value: center
     default: left
   - identifier: button_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
   - identifier: button_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'

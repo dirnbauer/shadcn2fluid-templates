@@ -7,10 +7,10 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 3
   - identifier: open_count
     type: Textarea
@@ -19,12 +19,12 @@ fields:
   - identifier: cta_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
   - identifier: cta_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'
   - identifier: image
     type: File
-    label: Background Image
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:background_image'
     allowed: common-image-types
     maxitems: 1

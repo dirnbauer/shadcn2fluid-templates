@@ -7,12 +7,12 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: autoplay
     type: Checkbox
@@ -33,17 +33,17 @@ fields:
       - identifier: author_name
         type: Textarea
         rows: 1
-        label: Author Name
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_name'
         required: true
 
       - identifier: author_title
         type: Textarea
         rows: 1
-        label: Author Title
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_title'
 
       - identifier: author_image
         type: File
-        label: Author Photo
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_photo'
         allowed: common-image-types
         maxitems: 1
 
@@ -54,8 +54,8 @@ fields:
         items:
           - label: No Rating
             value: '0'
-          - label: 5 Stars
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.5_stars'
             value: '5'
-          - label: 4 Stars
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.4_stars'
             value: '4'
         default: '0'

@@ -7,23 +7,23 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: content
     type: Textarea
-    label: Content
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:content'
     enableRichtext: true
     rows: 4
     required: true
   - identifier: variant
     type: Select
     renderType: selectSingle
-    label: Style
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:style'
     items:
-      - label: Info
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.info'
         value: info
-      - label: Warning
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.warning'
         value: warning
-      - label: Success
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.success'
         value: success
       - label: Danger
         value: danger

@@ -7,13 +7,13 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: layout
     type: Select
     renderType: selectSingle
-    label: Layout
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:layout'
     items:
-      - label: Stacked
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.stacked'
         value: stacked
       - label: Inline
         value: inline

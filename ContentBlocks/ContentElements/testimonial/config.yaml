@@ -7,16 +7,16 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: variant
     type: Select
     renderType: selectSingle
-    label: Style
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:style'
     items:
       - label: Simple Quote
         value: simple
-      - label: Card Style
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:card_style'
         value: card
       - label: Large Quote
         value: large
@@ -31,7 +31,7 @@ fields:
   - identifier: author_name
     type: Textarea
     rows: 1
-    label: Author Name
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_name'
     required: true
 
   - identifier: author_title
@@ -42,11 +42,11 @@ fields:
   - identifier: author_company
     type: Textarea
     rows: 1
-    label: Company Name
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:company_name'
 
   - identifier: author_image
     type: File
-    label: Author Photo
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_photo'
     allowed: common-image-types
     maxitems: 1
 
@@ -61,10 +61,10 @@ fields:
         value: '1'
       - label: 2 Stars
         value: '2'
-      - label: 3 Stars
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.3_stars'
         value: '3'
-      - label: 4 Stars
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.4_stars'
         value: '4'
-      - label: 5 Stars
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.5_stars'
         value: '5'
     default: '0'

@@ -21,7 +21,7 @@ fields:
     label: Employment Type
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 4
   - identifier: apply_link
     type: Link

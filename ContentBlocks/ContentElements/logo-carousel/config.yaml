@@ -7,12 +7,12 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: speed
     type: Select
@@ -42,9 +42,9 @@ fields:
       - identifier: name
         type: Textarea
         rows: 1
-        label: Company Name
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:company_name'
         required: true
 
       - identifier: link
         type: Link
-        label: Optional Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:optional_link'

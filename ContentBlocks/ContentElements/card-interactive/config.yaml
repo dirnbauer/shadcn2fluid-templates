@@ -7,10 +7,10 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 3
   - identifier: icon_style
     type: Select
@@ -34,4 +34,4 @@ fields:
   - identifier: badge_text
     type: Textarea
     rows: 1
-    label: Badge Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:badge_text'

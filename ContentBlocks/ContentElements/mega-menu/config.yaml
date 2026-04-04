@@ -7,16 +7,16 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: layout
     type: Select
     renderType: selectSingle
-    label: Layout
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:layout'
     items:
-      - label: Full Width
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.full_width'
         value: full-width
-      - label: Two Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.two_columns'
         value: two-columns
     default: full-width
 
@@ -28,7 +28,7 @@ fields:
 
   - identifier: brand_link
     type: Link
-    label: Brand Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:brand_link'
 
   - identifier: intro_title
     type: Textarea
@@ -43,11 +43,11 @@ fields:
   - identifier: primary_button_text
     type: Textarea
     rows: 1
-    label: Primary Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:primary_button_text'
 
   - identifier: primary_button_link
     type: Link
-    label: Primary Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:primary_button_link'
 
   - identifier: menu_groups
     type: Collection
@@ -64,5 +64,5 @@ fields:
         rows: 2
       - identifier: links
         type: Textarea
-        label: Links (one per line)
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:links_one_per_line'
         rows: 5

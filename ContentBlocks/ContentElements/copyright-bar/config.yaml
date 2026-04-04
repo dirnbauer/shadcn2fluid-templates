@@ -7,33 +7,33 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: copyright
     type: Textarea
     rows: 1
-    label: Copyright Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:copyright_text'
     required: true
   - identifier: link_items
     type: Collection
-    label: Links
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:links'
     fields:
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
         required: true
       - identifier: link
         type: Link
-        label: Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'
   - identifier: alignment
     type: Select
     renderType: selectSingle
-    label: Alignment
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:alignment'
     items:
-      - label: Left
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.left'
         value: left
-      - label: Center
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.center'
         value: center
-      - label: Space Between
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.between'
         value: between
     default: between

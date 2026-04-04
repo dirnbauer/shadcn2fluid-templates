@@ -7,12 +7,12 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: products
     type: Collection
@@ -28,14 +28,14 @@ fields:
 
       - identifier: image
         type: File
-        label: Product Image
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:product_image'
         allowed: common-image-types
         maxitems: 1
 
       - identifier: price
         type: Textarea
         rows: 1
-        label: Price
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:price'
 
       - identifier: specs_text
         type: Textarea

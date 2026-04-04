@@ -7,12 +7,12 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: reviews
     type: Collection
@@ -34,13 +34,13 @@ fields:
       - identifier: rating
         type: Select
         renderType: selectSingle
-        label: Rating
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:rating'
         items:
-          - label: 5 Stars
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.5_stars'
             value: '5'
-          - label: 4 Stars
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.4_stars'
             value: '4'
-          - label: 3 Stars
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.3_stars'
             value: '3'
         default: '5'
 

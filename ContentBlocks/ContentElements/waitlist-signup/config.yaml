@@ -7,18 +7,18 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 3
   - identifier: form_action
     type: Link
-    label: Form Action
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:form_action'
   - identifier: button_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
     default: Join the waitlist
   - identifier: count_text
     type: Textarea

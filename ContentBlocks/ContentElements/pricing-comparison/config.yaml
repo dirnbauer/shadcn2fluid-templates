@@ -7,12 +7,12 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: plans
     type: Collection
@@ -29,7 +29,7 @@ fields:
       - identifier: price
         type: Textarea
         rows: 1
-        label: Price
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:price'
 
   - identifier: feature_items
     type: Collection

@@ -7,24 +7,24 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 5
   - identifier: image
     type: File
-    label: Image
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:image'
     allowed: common-image-types
     maxitems: 1
   - identifier: cta_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
   - identifier: cta_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'

@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: left_text
     type: Textarea
@@ -16,12 +16,12 @@ fields:
 
   - identifier: link_items
     type: Collection
-    label: Links
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:links'
     fields:
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
       - identifier: link
         type: Link
-        label: Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'

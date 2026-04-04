@@ -7,22 +7,22 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 3
   - identifier: form_action
     type: Link
-    label: Form Action
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:form_action'
   - identifier: submit_text
     type: Textarea
     rows: 1
-    label: Submit Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:submit_text'
     default: Request demo
   - identifier: image
     type: File

@@ -7,17 +7,17 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: columns
     type: Select
     renderType: selectSingle
-    label: Columns
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:columns'
     items:
-      - label: 2 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.2_columns'
         value: '2'
-      - label: 3 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.3_columns'
         value: '3'
-      - label: 4 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.4_columns'
         value: '4'
     default: '4'
   - identifier: items
@@ -28,12 +28,12 @@ fields:
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
         required: true
       - identifier: value
         type: Textarea
         rows: 1
-        label: Value
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:value'
         required: true
       - identifier: change
         type: Textarea
@@ -43,12 +43,12 @@ fields:
       - identifier: trend
         type: Select
         renderType: selectSingle
-        label: Trend
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:trend'
         items:
-          - label: Up
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.up'
             value: up
-          - label: Down
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.down'
             value: down
-          - label: Neutral
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.neutral'
             value: neutral
         default: neutral

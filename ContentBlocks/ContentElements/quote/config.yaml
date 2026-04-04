@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: quote_text
     type: Textarea
     label: Quote Text
@@ -16,20 +16,20 @@ fields:
   - identifier: author
     type: Textarea
     rows: 1
-    label: Author Name
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_name'
   - identifier: role
     type: Textarea
     rows: 1
-    label: Author Role
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_role'
   - identifier: variant
     type: Select
     renderType: selectSingle
-    label: Style
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:style'
     items:
-      - label: Bordered
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.bordered'
         value: bordered
-      - label: Large
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.large'
         value: large
-      - label: Card
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.card'
         value: card
     default: bordered

@@ -7,15 +7,15 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: columns
     type: Select
     renderType: selectSingle
-    label: Columns
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:columns'
     items:
-      - label: 3 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.3_columns'
         value: '3'
-      - label: 4 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.4_columns'
         value: '4'
     default: '4'
   - identifier: groups

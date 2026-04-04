@@ -7,10 +7,10 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 2
   - identifier: investors
     type: Collection
@@ -19,13 +19,13 @@ fields:
     fields:
       - identifier: logo
         type: File
-        label: Logo
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:logo'
         allowed: common-image-types
         maxitems: 1
       - identifier: name
         type: Textarea
         rows: 1
-        label: Name
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:name'
         required: true
       - identifier: type
         type: Text

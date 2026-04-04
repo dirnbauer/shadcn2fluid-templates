@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: label
     type: Textarea
     rows: 1
@@ -16,7 +16,7 @@ fields:
   - identifier: variant
     type: Select
     renderType: selectSingle
-    label: Style
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:style'
     items:
       - label: Line
         value: line
@@ -36,6 +36,6 @@ fields:
         value: sm
       - label: Medium
         value: md
-      - label: Large
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.large'
         value: lg
     default: md

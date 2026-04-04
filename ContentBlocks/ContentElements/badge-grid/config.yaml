@@ -7,21 +7,21 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 2
   - identifier: variant
     type: Select
     renderType: selectSingle
     label: Badge Style
     items:
-      - label: Default
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
         value: default
-      - label: Outline
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.outline'
         value: outline
-      - label: Secondary
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.secondary'
         value: secondary
     default: default
   - identifier: items
@@ -32,23 +32,23 @@ fields:
       - identifier: text
         type: Textarea
         rows: 1
-        label: Badge Text
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:badge_text'
         required: true
       - identifier: link
         type: Link
-        label: Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'
       - identifier: color
         type: Select
         renderType: selectSingle
-        label: Color
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:color_field'
         items:
-          - label: Default
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
             value: default
-          - label: Blue
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.blue'
             value: blue
-          - label: Green
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.green'
             value: green
-          - label: Red
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.red'
             value: red
           - label: Yellow
             value: yellow

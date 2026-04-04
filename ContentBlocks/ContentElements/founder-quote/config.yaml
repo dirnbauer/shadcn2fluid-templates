@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: quote
     type: Textarea
     label: Quote
@@ -15,13 +15,13 @@ fields:
   - identifier: name
     type: Textarea
     rows: 1
-    label: Name
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:name'
   - identifier: title
     type: Textarea
     rows: 1
-    label: Title
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:title'
   - identifier: image
     type: File
-    label: Portrait
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:portrait'
     allowed: common-image-types
     maxitems: 1

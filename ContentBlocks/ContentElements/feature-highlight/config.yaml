@@ -7,14 +7,14 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 3
   - identifier: image
     type: File
@@ -23,20 +23,20 @@ fields:
     maxitems: 1
   - identifier: link
     type: Link
-    label: Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'
   - identifier: link_text
     type: Textarea
     rows: 1
-    label: Link Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link_text'
   - identifier: variant
     type: Select
     renderType: selectSingle
     label: Background Style
     items:
-      - label: Muted
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.muted'
         value: muted
-      - label: Primary
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.primary'
         value: primary
-      - label: None
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.none'
         value: none
     default: muted

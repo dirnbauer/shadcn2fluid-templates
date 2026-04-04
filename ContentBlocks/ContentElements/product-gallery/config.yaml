@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: images
     type: File
@@ -26,7 +26,7 @@ fields:
     renderType: selectSingle
     label: Thumbnail Columns
     items:
-      - label: 4 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.4_columns'
         value: '4'
       - label: 5 Columns
         value: '5'

@@ -7,19 +7,19 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 2
   - identifier: layout
     type: Select
     renderType: selectSingle
-    label: Layout
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:layout'
     items:
-      - label: Horizontal
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.horizontal'
         value: horizontal
-      - label: Vertical
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.vertical'
         value: vertical
     default: horizontal
   - identifier: items
@@ -34,11 +34,11 @@ fields:
       - identifier: title
         type: Textarea
         rows: 1
-        label: Title
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:title'
         required: true
       - identifier: description
         type: Textarea
-        label: Description
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
         rows: 2
       - identifier: image
         type: File

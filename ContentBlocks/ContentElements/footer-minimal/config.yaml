@@ -7,21 +7,21 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: copyright
     type: Textarea
     rows: 1
-    label: Copyright Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:copyright_text'
     required: true
   - identifier: link_items
     type: Collection
-    label: Links
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:links'
     fields:
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
         required: true
       - identifier: link
         type: Link
-        label: Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'

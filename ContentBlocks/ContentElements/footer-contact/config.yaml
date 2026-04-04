@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: address
     type: Textarea
     label: Address
@@ -25,4 +25,4 @@ fields:
   - identifier: copyright
     type: Textarea
     rows: 1
-    label: Copyright Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:copyright_text'

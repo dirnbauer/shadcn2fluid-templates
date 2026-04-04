@@ -7,16 +7,16 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: image
     type: File
-    label: Portrait
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:portrait'
     allowed: common-image-types
     maxitems: 1
   - identifier: role
     type: Textarea
     rows: 1
-    label: Role
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:role'
   - identifier: bio
     type: Textarea
     label: Biography

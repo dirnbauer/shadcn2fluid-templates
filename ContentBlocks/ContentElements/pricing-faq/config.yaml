@@ -7,16 +7,16 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 2
 
   - identifier: question_items

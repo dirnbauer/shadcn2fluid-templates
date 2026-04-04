@@ -7,23 +7,23 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: columns
     type: Select
     renderType: selectSingle
-    label: Columns
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:columns'
     items:
-      - label: 2 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.2_columns'
         value: '2'
-      - label: 3 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.3_columns'
         value: '3'
-      - label: 4 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.4_columns'
         value: '4'
     default: '3'
 
@@ -40,20 +40,20 @@ fields:
 
       - identifier: image
         type: File
-        label: Product Image
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:product_image'
         allowed: common-image-types
         maxitems: 1
 
       - identifier: price
         type: Textarea
         rows: 1
-        label: Price
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:price'
         required: true
 
       - identifier: description_text
         type: Textarea
         rows: 1
-        label: Short Description
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:short_description'
 
       - identifier: link
         type: Link

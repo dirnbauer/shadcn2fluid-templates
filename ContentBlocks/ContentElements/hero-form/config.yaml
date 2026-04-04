@@ -7,10 +7,10 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 3
   - identifier: form_action
     type: Link
@@ -22,7 +22,7 @@ fields:
   - identifier: button_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
   - identifier: privacy_notice
     type: Textarea
     rows: 1
@@ -30,4 +30,4 @@ fields:
   - identifier: badge_text
     type: Textarea
     rows: 1
-    label: Badge Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:badge_text'

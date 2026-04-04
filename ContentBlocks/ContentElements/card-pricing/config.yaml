@@ -7,11 +7,11 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: price
     type: Textarea
     rows: 1
-    label: Price
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:price'
     required: true
   - identifier: billing_period
     type: Textarea
@@ -20,11 +20,11 @@ fields:
     description: e.g. /month, /year
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 2
   - identifier: feature_items
     type: Collection
-    label: Features
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:features'
     fields:
       - identifier: text
         type: Textarea
@@ -37,10 +37,10 @@ fields:
   - identifier: button_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
   - identifier: button_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'
   - identifier: highlighted
     type: Checkbox
     label: Highlight Card

@@ -7,11 +7,11 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: brand
     type: Textarea
     rows: 1
-    label: Brand Name
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:brand_name'
   - identifier: description
     type: Textarea
     label: Brand Description
@@ -26,7 +26,7 @@ fields:
         label: Group Title
       - identifier: links
         type: Textarea
-        label: Links (one per line)
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:links_one_per_line'
         rows: 5
   - identifier: newsletter_label
     type: Textarea
@@ -35,4 +35,4 @@ fields:
   - identifier: copyright
     type: Textarea
     rows: 1
-    label: Copyright Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:copyright_text'

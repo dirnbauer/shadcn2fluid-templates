@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: link_items
     type: Collection
     label: Legal Links
@@ -16,11 +16,11 @@ fields:
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
         required: true
       - identifier: link
         type: Link
-        label: Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'
   - identifier: separator
     type: Select
     renderType: selectSingle
@@ -32,6 +32,6 @@ fields:
         value: pipe
       - label: Slash
         value: slash
-      - label: None
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.none'
         value: none
     default: dot

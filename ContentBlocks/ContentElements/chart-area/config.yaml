@@ -7,26 +7,26 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 2
   - identifier: chart_data
     type: Textarea
-    label: Chart Data (JSON)
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:chart_data_json'
     rows: 6
     required: true
   - identifier: color_variant
     type: Select
     renderType: selectSingle
-    label: Color
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:color_field'
     items:
-      - label: Primary
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.primary'
         value: primary
-      - label: Blue
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.blue'
         value: blue
-      - label: Green
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.green'
         value: green
     default: primary
   - identifier: fill_opacity

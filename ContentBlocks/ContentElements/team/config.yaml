@@ -7,25 +7,25 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 2
   - identifier: columns
     type: Select
     renderType: selectSingle
-    label: Columns
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:columns'
     items:
-      - label: 2 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.2_columns'
         value: '2'
-      - label: 3 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.3_columns'
         value: '3'
-      - label: 4 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.4_columns'
         value: '4'
     default: '3'
   - identifier: members
@@ -35,18 +35,18 @@ fields:
     fields:
       - identifier: image
         type: File
-        label: Portrait
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:portrait'
         allowed: common-image-types
         maxitems: 1
       - identifier: name
         type: Textarea
         rows: 1
-        label: Name
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:name'
         required: true
       - identifier: role
         type: Textarea
         rows: 1
-        label: Role
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:role'
         required: true
       - identifier: bio
         type: Textarea

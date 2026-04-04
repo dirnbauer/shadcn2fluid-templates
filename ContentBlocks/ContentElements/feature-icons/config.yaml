@@ -7,15 +7,15 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: columns
     type: Select
     renderType: selectSingle
-    label: Columns
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:columns'
     items:
-      - label: 3 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.3_columns'
         value: '3'
-      - label: 4 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.4_columns'
         value: '4'
       - label: 6 Columns
         value: '6'
@@ -28,13 +28,13 @@ fields:
       - identifier: icon
         type: Textarea
         rows: 1
-        label: Icon Emoji or Symbol
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:icon_emoji'
       - identifier: title
         type: Textarea
         rows: 1
-        label: Title
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:title'
         required: true
       - identifier: description_text
         type: Textarea
         rows: 1
-        label: Short Description
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:short_description'

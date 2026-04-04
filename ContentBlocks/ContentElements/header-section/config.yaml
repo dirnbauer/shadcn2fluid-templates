@@ -7,11 +7,11 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
   - identifier: subheadline
     type: Textarea
     label: Subtitle
@@ -19,10 +19,10 @@ fields:
   - identifier: variant
     type: Select
     renderType: selectSingle
-    label: Alignment
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:alignment'
     items:
-      - label: Left
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.left'
         value: left
-      - label: Center
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.center'
         value: center
     default: center

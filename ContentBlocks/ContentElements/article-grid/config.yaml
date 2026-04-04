@@ -7,11 +7,11 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
   - identifier: items
     type: Collection
     label: Articles
@@ -20,15 +20,15 @@ fields:
       - identifier: title
         type: Textarea
         rows: 1
-        label: Title
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:title'
       - identifier: category
         type: Textarea
         rows: 1
         label: Category
       - identifier: description
         type: Textarea
-        label: Description
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
         rows: 2
       - identifier: link
         type: Link
-        label: Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'

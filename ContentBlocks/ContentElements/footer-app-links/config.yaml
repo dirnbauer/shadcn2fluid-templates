@@ -7,10 +7,10 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 2
   - identifier: appstore_link
     type: Link
@@ -26,4 +26,4 @@ fields:
   - identifier: copyright
     type: Textarea
     rows: 1
-    label: Copyright Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:copyright_text'

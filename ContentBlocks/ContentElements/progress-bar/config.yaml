@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: items
     type: Collection
     label: Progress Items
@@ -16,7 +16,7 @@ fields:
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
         required: true
       - identifier: target_value
         type: Number
@@ -25,17 +25,17 @@ fields:
       - identifier: color
         type: Select
         renderType: selectSingle
-        label: Color
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:color_field'
         items:
-          - label: Primary
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.primary'
             value: primary
-          - label: Green
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.green'
             value: green
-          - label: Blue
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.blue'
             value: blue
-          - label: Orange
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.orange'
             value: orange
-          - label: Red
+          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.red'
             value: red
         default: primary
   - identifier: show_value

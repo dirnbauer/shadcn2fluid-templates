@@ -7,15 +7,15 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 3
   - identifier: badge_text
     type: Textarea
     rows: 1
-    label: Badge Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:badge_text'
   - identifier: hero_image
     type: File
     label: Hero Image
@@ -24,14 +24,14 @@ fields:
   - identifier: primary_button_text
     type: Textarea
     rows: 1
-    label: Primary Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:primary_button_text'
   - identifier: primary_button_link
     type: Link
-    label: Primary Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:primary_button_link'
   - identifier: secondary_button_text
     type: Textarea
     rows: 1
-    label: Secondary Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:secondary_button_text'
   - identifier: secondary_button_link
     type: Link
-    label: Secondary Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:secondary_button_link'

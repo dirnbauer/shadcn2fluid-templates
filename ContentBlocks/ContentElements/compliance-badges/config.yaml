@@ -7,17 +7,17 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: alignment
     type: Select
     renderType: selectSingle
-    label: Alignment
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:alignment'
     items:
-      - label: Left
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.left'
         value: left
-      - label: Center
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.center'
         value: center
-      - label: Right
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.right'
         value: right
     default: center
   - identifier: items
@@ -33,8 +33,8 @@ fields:
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
         required: true
       - identifier: link
         type: Link
-        label: Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'

@@ -7,24 +7,24 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: image
     type: File
-    label: Product Image
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:product_image'
     allowed: common-image-types
     maxitems: 1
 
   - identifier: badge
     type: Textarea
     rows: 1
-    label: Badge Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:badge_text'
     description: e.g. New, Sale, Popular
 
   - identifier: price
     type: Textarea
     rows: 1
-    label: Price
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:price'
     required: true
 
   - identifier: original_price
@@ -34,15 +34,15 @@ fields:
 
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 2
 
   - identifier: button_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
     default: Add to Cart
 
   - identifier: button_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'

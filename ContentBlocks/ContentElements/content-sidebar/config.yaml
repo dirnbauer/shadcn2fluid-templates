@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: content
     type: Textarea
     label: Main Content
@@ -23,8 +23,8 @@ fields:
     renderType: selectSingle
     label: Sidebar Position
     items:
-      - label: Right
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.right'
         value: right
-      - label: Left
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.left'
         value: left
     default: right

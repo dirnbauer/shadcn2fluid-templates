@@ -7,11 +7,11 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 2
 
   - identifier: items
@@ -28,20 +28,20 @@ fields:
       - identifier: title
         type: Textarea
         rows: 1
-        label: Title
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:title'
         required: true
 
       - identifier: content
         type: Textarea
-        label: Content
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:content'
         rows: 4
         enableRichtext: true
 
       - identifier: link_text
         type: Textarea
         rows: 1
-        label: Link Text
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link_text'
 
       - identifier: link
         type: Link
-        label: Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'

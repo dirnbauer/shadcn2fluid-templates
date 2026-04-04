@@ -7,12 +7,12 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: layout
     type: Select
     renderType: selectSingle
-    label: Layout
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:layout'
     items:
       - label: Media Right
         value: media-right
@@ -26,12 +26,12 @@ fields:
 
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 2
 
   - identifier: content
     type: Textarea
-    label: Content
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:content'
     enableRichtext: true
     rows: 6
 
@@ -49,8 +49,8 @@ fields:
   - identifier: button_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
 
   - identifier: button_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'

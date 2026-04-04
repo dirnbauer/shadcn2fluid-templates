@@ -7,30 +7,30 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 3
   - identifier: image
     type: File
-    label: Image
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:image'
     allowed: common-image-types
     maxitems: 1
   - identifier: cta_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
   - identifier: cta_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'
   - identifier: image_position
     type: Select
     renderType: selectSingle
-    label: Image Position
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:image_position'
     items:
-      - label: Left
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.left'
         value: left
-      - label: Right
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.right'
         value: right
     default: right

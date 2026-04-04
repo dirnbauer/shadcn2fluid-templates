@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: quote
     type: Textarea
@@ -29,13 +29,13 @@ fields:
   - identifier: author_name
     type: Textarea
     rows: 1
-    label: Author Name
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_name'
     required: true
 
   - identifier: author_title
     type: Textarea
     rows: 1
-    label: Author Title
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_title'
 
   - identifier: author_company
     type: Textarea

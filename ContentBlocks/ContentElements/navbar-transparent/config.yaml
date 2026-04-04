@@ -7,31 +7,31 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: brand
     type: Textarea
     rows: 1
-    label: Brand
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:brand'
     required: true
 
   - identifier: nav_items
     type: Collection
-    label: Navigation Items
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:navigation_items'
     fields:
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
       - identifier: link
         type: Link
-        label: Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'
 
   - identifier: button_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
 
   - identifier: button_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'

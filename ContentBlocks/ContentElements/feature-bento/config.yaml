@@ -7,10 +7,10 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 2
   - identifier: items
     type: Collection
@@ -20,11 +20,11 @@ fields:
       - identifier: title
         type: Textarea
         rows: 1
-        label: Title
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:title'
         required: true
       - identifier: description
         type: Textarea
-        label: Description
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
         rows: 2
       - identifier: size
         type: Select
@@ -40,6 +40,6 @@ fields:
         default: small
       - identifier: image
         type: File
-        label: Background Image
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:background_image'
         allowed: common-image-types
         maxitems: 1

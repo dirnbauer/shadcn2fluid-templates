@@ -7,18 +7,18 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: variant
     type: Select
     renderType: selectSingle
-    label: Card Style
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:card_style'
     items:
-      - label: Basic
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.basic'
         value: basic
-      - label: With Image
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.with_image'
         value: image
-      - label: Horizontal
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.horizontal'
         value: horizontal
     default: basic
 
@@ -37,7 +37,7 @@ fields:
   - identifier: badge_text
     type: Textarea
     rows: 1
-    label: Badge Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:badge_text'
 
   - identifier: link
     type: Link
@@ -46,9 +46,9 @@ fields:
   - identifier: button_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
 
   - identifier: button_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'
     displayCond: 'FIELD:button_text:!=:'

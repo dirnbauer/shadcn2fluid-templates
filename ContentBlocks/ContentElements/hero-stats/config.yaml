@@ -7,22 +7,22 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 3
   - identifier: primary_button_text
     type: Textarea
     rows: 1
-    label: Primary Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:primary_button_text'
   - identifier: primary_button_link
     type: Link
-    label: Primary Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:primary_button_link'
   - identifier: stats
     type: Collection
     label: Stats
@@ -31,8 +31,8 @@ fields:
       - identifier: value
         type: Textarea
         rows: 1
-        label: Value
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:value'
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'

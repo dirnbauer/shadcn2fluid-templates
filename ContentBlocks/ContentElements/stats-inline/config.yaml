@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: show_separator
     type: Checkbox
@@ -22,11 +22,11 @@ fields:
       - identifier: value
         type: Textarea
         rows: 1
-        label: Value
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:value'
         required: true
 
       - identifier: label
         type: Textarea
         rows: 1
-        label: Label
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
         required: true

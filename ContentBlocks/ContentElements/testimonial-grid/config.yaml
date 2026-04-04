@@ -7,21 +7,21 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: columns
     type: Select
     renderType: selectSingle
-    label: Columns
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:columns'
     items:
-      - label: 2 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.2_columns'
         value: '2'
-      - label: 3 Columns
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.3_columns'
         value: '3'
     default: '3'
 
@@ -39,16 +39,16 @@ fields:
       - identifier: author_name
         type: Textarea
         rows: 1
-        label: Author Name
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_name'
         required: true
 
       - identifier: author_title
         type: Textarea
         rows: 1
-        label: Author Title
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_title'
 
       - identifier: author_image
         type: File
-        label: Author Photo
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:author_photo'
         allowed: common-image-types
         maxitems: 1

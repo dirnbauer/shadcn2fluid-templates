@@ -7,21 +7,21 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: subheadline
     type: Textarea
-    label: Subheadline
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
     rows: 2
 
   - identifier: plans
     type: Collection
-    label: Plans
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:plans'
     minItems: 1
     fields:
       - identifier: name
@@ -50,7 +50,7 @@ fields:
 
       - identifier: features_list
         type: Textarea
-        label: Features (one per line)
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:features_one_per_line'
         rows: 5
 
       - identifier: is_featured
@@ -60,9 +60,9 @@ fields:
       - identifier: button_text
         type: Textarea
         rows: 1
-        label: Button Text
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
         default: Get Started
 
       - identifier: button_link
         type: Link
-        label: Button Link
+        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'

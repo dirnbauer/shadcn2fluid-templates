@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: content
     type: Textarea
     label: Message
@@ -18,11 +18,11 @@ fields:
     renderType: selectSingle
     label: Type
     items:
-      - label: Info
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.info'
         value: info
-      - label: Success
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.success'
         value: success
-      - label: Warning
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.warning'
         value: warning
       - label: Error
         value: error

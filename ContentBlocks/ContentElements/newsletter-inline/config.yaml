@@ -7,14 +7,14 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: description_text
     type: Textarea
     rows: 1
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
   - identifier: form_action
     type: Link
-    label: Form Action
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:form_action'
   - identifier: placeholder
     type: Textarea
     rows: 1
@@ -22,4 +22,4 @@ fields:
   - identifier: button_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'

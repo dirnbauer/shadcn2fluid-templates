@@ -7,18 +7,18 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: cta_text
     type: Textarea
     rows: 1
-    label: Button Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_text'
   - identifier: cta_link
     type: Link
-    label: Button Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:button_link'
   - identifier: position
     type: Select
     renderType: selectSingle
-    label: Position
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:position'
     items:
       - label: Bottom
         value: bottom

@@ -7,16 +7,16 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: eyebrow
     type: Textarea
     rows: 1
-    label: Eyebrow
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:eyebrow'
 
   - identifier: description
     type: Textarea
-    label: Description
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
     rows: 2
 
   - identifier: specs
@@ -38,6 +38,6 @@ fields:
 
   - identifier: image
     type: File
-    label: Product Image
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:product_image'
     allowed: common-image-types
     maxitems: 1

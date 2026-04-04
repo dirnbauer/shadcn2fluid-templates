@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: description
     type: Textarea
@@ -16,7 +16,7 @@ fields:
 
   - identifier: chart_data
     type: Textarea
-    label: Chart Data (JSON)
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:chart_data_json'
     description: |
       Enter data as JSON array, e.g.:
       [{"label": "Jan", "value": 186}, {"label": "Feb", "value": 305}]
@@ -28,15 +28,15 @@ fields:
     renderType: selectSingle
     label: Chart Color
     items:
-      - label: Primary
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.primary'
         value: primary
-      - label: Blue
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.blue'
         value: blue
-      - label: Green
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.green'
         value: green
-      - label: Orange
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.orange'
         value: orange
-      - label: Red
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.red'
         value: red
     default: primary
 

@@ -7,7 +7,7 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
   - identifier: label
     type: Textarea
     rows: 1
@@ -20,7 +20,7 @@ fields:
   - identifier: position
     type: Select
     renderType: selectSingle
-    label: Position
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:position'
     items:
       - label: Bottom Right
         value: bottom-right

@@ -7,18 +7,18 @@ prefixFields: false
 fields:
   - identifier: header
     useExistingField: true
-    label: Heading
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
   - identifier: variant
     type: Select
     renderType: selectSingle
-    label: Style
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:style'
     items:
-      - label: Default
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
         value: default
-      - label: Accent
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.accent'
         value: accent
-      - label: Outline
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.outline'
         value: outline
     default: default
 
@@ -36,8 +36,8 @@ fields:
   - identifier: link_text
     type: Textarea
     rows: 1
-    label: Link Text
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link_text'
 
   - identifier: link
     type: Link
-    label: Link
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'
