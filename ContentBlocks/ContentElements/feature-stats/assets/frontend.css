@@ -23,14 +23,14 @@
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .feature-stats__label {
     font-weight: 600;
     margin-top: var(--s2f-spacing-xs);
 }
 .feature-stats__detail {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
     margin-top: var(--s2f-spacing-xs);
 }

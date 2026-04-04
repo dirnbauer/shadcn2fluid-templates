@@ -6,7 +6,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .resource-library__grid {
     display: grid;
@@ -20,7 +20,7 @@
     font-size: var(--s2f-text-xs);
     font-weight: 600;
     text-transform: uppercase;
-    color: hsl(var(--primary));
+    color: var(--primary);
     margin-block-end: var(--s2f-spacing-xs);
 }
 .resource-library__title {
@@ -28,12 +28,12 @@
     margin-block-end: var(--s2f-spacing-xs);
 }
 .resource-library__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
     margin-block-end: var(--s2f-spacing-sm);
 }
 .resource-library__link {
     font-size: var(--s2f-text-sm);
     font-weight: 500;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }

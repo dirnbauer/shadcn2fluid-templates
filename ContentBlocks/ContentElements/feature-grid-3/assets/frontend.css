@@ -20,8 +20,8 @@
     margin-block-end: var(--s2f-spacing-xs);
 }
 .feature-grid-3__title a { color: inherit; text-decoration: none; }
-.feature-grid-3__title a:hover { color: hsl(var(--primary)); }
+.feature-grid-3__title a:hover { color: var(--primary); }
 .feature-grid-3__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

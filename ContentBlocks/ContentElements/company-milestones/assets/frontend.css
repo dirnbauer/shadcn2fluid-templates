@@ -15,12 +15,12 @@
     display: block;
     font-size: var(--s2f-text-3xl);
     font-weight: 700;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .company-milestones__year {
     display: block;
     font-size: var(--s2f-text-xs);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin-block-end: var(--s2f-spacing-xs);
 }
 .company-milestones__title {
@@ -29,5 +29,5 @@
 }
 .company-milestones__description {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }

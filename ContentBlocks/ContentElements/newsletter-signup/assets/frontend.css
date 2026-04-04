@@ -7,7 +7,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .newsletter-signup__body {
     display: grid;
@@ -27,12 +27,12 @@
 .newsletter-signup__label { font-size: var(--s2f-text-sm); font-weight: 500; }
 .newsletter-signup__input {
     padding: var(--s2f-spacing-xs) var(--s2f-spacing-sm);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     font-size: var(--s2f-text-sm);
     background: transparent;
 }
-.newsletter-signup__privacy { font-size: var(--s2f-text-xs); color: hsl(var(--muted-foreground)); margin-block-start: var(--s2f-spacing-sm); }
+.newsletter-signup__privacy { font-size: var(--s2f-text-xs); color: var(--muted-foreground); margin-block-start: var(--s2f-spacing-sm); }
 .newsletter-signup__points { display: flex; flex-direction: column; gap: var(--s2f-spacing-sm); }
 .newsletter-signup__point { display: flex; gap: var(--s2f-spacing-xs); font-size: var(--s2f-text-sm); }
-.newsletter-signup__check { color: hsl(var(--primary)); font-weight: 700; }
+.newsletter-signup__check { color: var(--primary); font-weight: 700; }

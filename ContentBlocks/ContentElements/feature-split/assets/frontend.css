@@ -18,13 +18,13 @@
 }
 .feature-split__item {
     padding-left: var(--s2f-spacing-md);
-    border-left: 2px solid hsl(var(--primary));
+    border-left: 2px solid var(--primary);
 }
 .feature-split__title {
     font-weight: 600;
 }
 .feature-split__detail {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
     margin-top: var(--s2f-spacing-xs);
 }

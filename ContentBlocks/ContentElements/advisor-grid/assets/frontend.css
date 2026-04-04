@@ -15,7 +15,7 @@
     gap: var(--s2f-spacing-md);
     align-items: center;
     padding: var(--s2f-spacing-md);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius);
 }
 .advisor-grid__avatar {
@@ -26,5 +26,5 @@
     flex-shrink: 0;
 }
 .advisor-grid__name { font-weight: 600; font-size: var(--s2f-text-sm); }
-.advisor-grid__expertise { font-size: var(--s2f-text-xs); color: hsl(var(--primary)); }
-.advisor-grid__company { font-size: var(--s2f-text-xs); color: hsl(var(--muted-foreground)); }
+.advisor-grid__expertise { font-size: var(--s2f-text-xs); color: var(--primary); }
+.advisor-grid__company { font-size: var(--s2f-text-xs); color: var(--muted-foreground); }

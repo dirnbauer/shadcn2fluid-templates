@@ -21,11 +21,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 0;
-    border-bottom: 1px solid hsl(var(--border));
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 50;
-    background-color: hsl(var(--background));
+    background-color: var(--background);
 }
 
 .styleguide__header-left {
@@ -46,8 +46,8 @@
     font-weight: 500;
     padding: 0.125rem 0.5rem;
     border-radius: 9999px;
-    background-color: hsl(var(--muted));
-    color: hsl(var(--muted-foreground));
+    background-color: var(--muted);
+    color: var(--muted-foreground);
 }
 
 /* Sidebar Navigation */
@@ -70,7 +70,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin: 0 0 0.5rem;
     padding: 0 0.5rem;
 }
@@ -86,14 +86,14 @@
     padding: 0.375rem 0.5rem;
     border-radius: var(--radius, 0.375rem);
     font-size: 0.875rem;
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     text-decoration: none;
     transition: color 150ms ease, background-color 150ms ease;
 }
 
 .styleguide__nav-link:hover {
-    color: hsl(var(--foreground));
-    background-color: hsl(var(--accent));
+    color: var(--foreground);
+    background-color: var(--accent);
 }
 
 /* Main Content */
@@ -113,12 +113,12 @@
     letter-spacing: -0.025em;
     margin: 0 0 0.25rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid hsl(var(--border));
+    border-bottom: 1px solid var(--border);
 }
 
 .styleguide__component-desc {
     font-size: 0.875rem;
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin: 0.5rem 0 1rem;
     line-height: 1.5;
 }
@@ -131,15 +131,15 @@
     font-size: 0.875rem;
     font-weight: 600;
     margin: 0 0 0.75rem;
-    color: hsl(var(--foreground));
+    color: var(--foreground);
 }
 
 /* Preview Box */
 .styleguide__preview {
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius, 0.375rem);
     padding: 1.5rem;
-    background-color: hsl(var(--background));
+    background-color: var(--background);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -157,7 +157,7 @@
 }
 
 .styleguide__preview--muted {
-    background-color: hsl(var(--muted) / 0.3);
+    background-color: color-mix(in oklch, var(--muted) 30%, transparent);
 }
 
 .styleguide__preview--typography {
@@ -169,7 +169,7 @@
 /* Code Block */
 .styleguide__code {
     margin-top: 0.5rem;
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius, 0.375rem);
     overflow: hidden;
 }
@@ -179,11 +179,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 0.75rem;
-    background-color: hsl(var(--muted));
-    border-bottom: 1px solid hsl(var(--border));
+    background-color: var(--muted);
+    border-bottom: 1px solid var(--border);
     font-size: 0.75rem;
     font-weight: 500;
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 
 .styleguide__code pre {
@@ -193,8 +193,8 @@
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
     font-size: 0.8125rem;
     line-height: 1.6;
-    color: hsl(var(--foreground));
-    background-color: hsl(var(--muted) / 0.3);
+    color: var(--foreground);
+    background-color: color-mix(in oklch, var(--muted) 30%, transparent);
     scrollbar-width: thin;
 }
 
@@ -208,7 +208,7 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     text-align: center;
 }
 
@@ -228,7 +228,7 @@
         position: relative;
         top: 0;
         max-height: none;
-        border-bottom: 1px solid hsl(var(--border));
+        border-bottom: 1px solid var(--border);
         padding-bottom: 1rem;
         margin-bottom: 1rem;
     }
@@ -776,21 +776,21 @@
                 <div class="styleguide__preview styleguide__preview--grid" style="grid-template-columns: repeat(3, 1fr);">
                     <div>
                         <s2f:atom.aspectRatio ratio="16/9">
-                            <div style="background: hsl(var(--muted)); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius, 0.375rem);">
+                            <div style="background: var(--muted); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius, 0.375rem);">
                                 <span class="styleguide__label">16 / 9</span>
                             </div>
                         </s2f:atom.aspectRatio>
                     </div>
                     <div>
                         <s2f:atom.aspectRatio ratio="4/3">
-                            <div style="background: hsl(var(--muted)); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius, 0.375rem);">
+                            <div style="background: var(--muted); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius, 0.375rem);">
                                 <span class="styleguide__label">4 / 3</span>
                             </div>
                         </s2f:atom.aspectRatio>
                     </div>
                     <div>
                         <s2f:atom.aspectRatio ratio="1/1">
-                            <div style="background: hsl(var(--muted)); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius, 0.375rem);">
+                            <div style="background: var(--muted); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius, 0.375rem);">
                                 <span class="styleguide__label">1 / 1</span>
                             </div>
                         </s2f:atom.aspectRatio>
@@ -1130,22 +1130,22 @@
                 <h3 class="styleguide__subsection-title">Sizes</h3>
                 <div class="styleguide__preview styleguide__preview--col styleguide__preview--muted" style="padding: 1rem 0;">
                     <s2f:layout.container size="sm">
-                        <div style="padding: 0.75rem; background: hsl(var(--background)); border: 1px solid hsl(var(--border)); border-radius: var(--radius, 0.375rem); text-align: center;">
+                        <div style="padding: 0.75rem; background: var(--background); border: 1px solid var(--border); border-radius: var(--radius, 0.375rem); text-align: center;">
                             <span class="styleguide__label">sm</span>
                         </div>
                     </s2f:layout.container>
                     <s2f:layout.container size="default">
-                        <div style="padding: 0.75rem; background: hsl(var(--background)); border: 1px solid hsl(var(--border)); border-radius: var(--radius, 0.375rem); text-align: center;">
+                        <div style="padding: 0.75rem; background: var(--background); border: 1px solid var(--border); border-radius: var(--radius, 0.375rem); text-align: center;">
                             <span class="styleguide__label">default</span>
                         </div>
                     </s2f:layout.container>
                     <s2f:layout.container size="lg">
-                        <div style="padding: 0.75rem; background: hsl(var(--background)); border: 1px solid hsl(var(--border)); border-radius: var(--radius, 0.375rem); text-align: center;">
+                        <div style="padding: 0.75rem; background: var(--background); border: 1px solid var(--border); border-radius: var(--radius, 0.375rem); text-align: center;">
                             <span class="styleguide__label">lg</span>
                         </div>
                     </s2f:layout.container>
                     <s2f:layout.container size="full">
-                        <div style="padding: 0.75rem; background: hsl(var(--background)); border: 1px solid hsl(var(--border)); border-radius: var(--radius, 0.375rem); text-align: center;">
+                        <div style="padding: 0.75rem; background: var(--background); border: 1px solid var(--border); border-radius: var(--radius, 0.375rem); text-align: center;">
                             <span class="styleguide__label">full</span>
                         </div>
                     </s2f:layout.container>
@@ -1172,23 +1172,23 @@
                 <div class="styleguide__preview styleguide__preview--col">
                     <s2f:atom.typography tag="p" variant="small" class="styleguide__label">2 columns</s2f:atom.typography>
                     <s2f:layout.grid cols="2">
-                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">1</div>
-                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">2</div>
+                        <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">1</div>
+                        <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">2</div>
                     </s2f:layout.grid>
 
                     <s2f:atom.typography tag="p" variant="small" class="styleguide__label">3 columns</s2f:atom.typography>
                     <s2f:layout.grid cols="3">
-                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">1</div>
-                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">2</div>
-                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">3</div>
+                        <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">1</div>
+                        <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">2</div>
+                        <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">3</div>
                     </s2f:layout.grid>
 
                     <s2f:atom.typography tag="p" variant="small" class="styleguide__label">4 columns</s2f:atom.typography>
                     <s2f:layout.grid cols="4">
-                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">1</div>
-                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">2</div>
-                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">3</div>
-                        <div style="padding: 1rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">4</div>
+                        <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">1</div>
+                        <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">2</div>
+                        <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">3</div>
+                        <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">4</div>
                     </s2f:layout.grid>
                 </div>
             </div>
@@ -1214,9 +1214,9 @@
                 <h3 class="styleguide__subsection-title">Vertical</h3>
                 <div class="styleguide__preview" style="max-width: 20rem;">
                     <s2f:layout.stack direction="vertical" gap="default">
-                        <div style="padding: 0.75rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 1</div>
-                        <div style="padding: 0.75rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 2</div>
-                        <div style="padding: 0.75rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 3</div>
+                        <div style="padding: 0.75rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">Item 1</div>
+                        <div style="padding: 0.75rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">Item 2</div>
+                        <div style="padding: 0.75rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">Item 3</div>
                     </s2f:layout.stack>
                 </div>
             </div>
@@ -1225,9 +1225,9 @@
                 <h3 class="styleguide__subsection-title">Horizontal</h3>
                 <div class="styleguide__preview">
                     <s2f:layout.stack direction="horizontal" gap="default" align="center">
-                        <div style="padding: 0.75rem 1.5rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 1</div>
-                        <div style="padding: 0.75rem 1.5rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 2</div>
-                        <div style="padding: 0.75rem 1.5rem; background: hsl(var(--muted)); border-radius: var(--radius, 0.375rem); text-align: center;">Item 3</div>
+                        <div style="padding: 0.75rem 1.5rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">Item 1</div>
+                        <div style="padding: 0.75rem 1.5rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">Item 2</div>
+                        <div style="padding: 0.75rem 1.5rem; background: var(--muted); border-radius: var(--radius, 0.375rem); text-align: center;">Item 3</div>
                     </s2f:layout.stack>
                 </div>
             </div>

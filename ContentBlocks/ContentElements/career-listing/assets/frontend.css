@@ -7,7 +7,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .career-listing__jobs {
     display: flex;
@@ -19,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--s2f-spacing-md) 0;
-    border-bottom: 1px solid hsl(var(--border));
+    border-bottom: 1px solid var(--border);
 }
 .career-listing__title { font-weight: 600; }
 .career-listing__meta {
@@ -27,7 +27,7 @@
     gap: var(--s2f-spacing-md);
     margin-block-start: var(--s2f-spacing-2xs);
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 @media (max-width: 768px) {
     .career-listing__job { flex-direction: column; align-items: flex-start; gap: var(--s2f-spacing-sm); }

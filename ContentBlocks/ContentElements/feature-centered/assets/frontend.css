@@ -9,7 +9,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .feature-centered__items {
     display: flex;
@@ -31,6 +31,6 @@
     margin-block-end: var(--s2f-spacing-xs);
 }
 .feature-centered__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

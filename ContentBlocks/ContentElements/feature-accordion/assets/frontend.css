@@ -11,7 +11,7 @@
     margin-top: var(--s2f-spacing-lg);
 }
 .feature-accordion__item {
-    border-bottom: 1px solid hsl(var(--border));
+    border-bottom: 1px solid var(--border);
 }
 .feature-accordion__trigger {
     display: flex;
@@ -27,7 +27,7 @@
 details[open] .feature-accordion__chevron { transform: rotate(180deg); }
 .feature-accordion__content {
     padding-block-end: var(--s2f-spacing-md);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }
 .feature-accordion__image {

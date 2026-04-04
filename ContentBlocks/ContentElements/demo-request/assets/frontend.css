@@ -12,7 +12,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
     display: block;
     margin-block-end: var(--s2f-spacing-xs);
 }
@@ -26,7 +26,7 @@
 .demo-request__label { font-size: var(--s2f-text-sm); font-weight: 500; }
 .demo-request__input, .demo-request__textarea {
     padding: var(--s2f-spacing-xs) var(--s2f-spacing-sm);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     font-size: var(--s2f-text-sm);
     background: transparent;

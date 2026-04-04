@@ -1,7 +1,7 @@
 .logo-cloud__intro { text-align: center; margin-block-end: var(--s2f-spacing-xl); }
-.logo-cloud__eyebrow { font-size: var(--s2f-text-sm); text-transform: uppercase; letter-spacing: 0.05em; color: hsl(var(--primary)); font-weight: 600; }
+.logo-cloud__eyebrow { font-size: var(--s2f-text-sm); text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); font-weight: 600; }
 .logo-cloud__headline { margin-block-start: var(--s2f-spacing-xs); }
-.logo-cloud__description { color: hsl(var(--muted-foreground)); max-width: 40rem; margin-inline: auto; }
+.logo-cloud__description { color: var(--muted-foreground); max-width: 40rem; margin-inline: auto; }
 .logo-cloud__grid { display: grid; gap: var(--s2f-spacing-lg); align-items: center; justify-items: center; }
 .logo-cloud__grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
 .logo-cloud__grid--cols-4 { grid-template-columns: repeat(4, 1fr); }

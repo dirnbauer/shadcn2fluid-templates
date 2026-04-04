@@ -10,7 +10,7 @@
 .download-form__resource {
     font-weight: 600;
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--primary));
+    color: var(--primary);
     margin-block-start: var(--s2f-spacing-md);
 }
 .download-form__preview { margin-block-end: var(--s2f-spacing-md); }
@@ -20,7 +20,7 @@
 .download-form__label { font-size: var(--s2f-text-sm); font-weight: 500; }
 .download-form__input {
     padding: var(--s2f-spacing-xs) var(--s2f-spacing-sm);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     font-size: var(--s2f-text-sm);
     background: transparent;

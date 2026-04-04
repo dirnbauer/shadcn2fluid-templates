@@ -15,7 +15,7 @@
 }
 .directions__description {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     line-height: 1.6;
     white-space: pre-line;
 }

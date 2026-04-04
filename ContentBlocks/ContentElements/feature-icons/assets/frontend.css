@@ -23,7 +23,7 @@
     font-size: var(--s2f-text-sm);
 }
 .feature-icons__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-xs);
     margin-top: var(--s2f-spacing-xs);
 }

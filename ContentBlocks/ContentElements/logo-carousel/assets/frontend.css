@@ -1,5 +1,5 @@
 .logo-carousel__intro { text-align: center; margin-block-end: var(--s2f-spacing-lg); }
-.logo-carousel__eyebrow { font-size: var(--s2f-text-sm); text-transform: uppercase; letter-spacing: 0.05em; color: hsl(var(--primary)); font-weight: 600; }
+.logo-carousel__eyebrow { font-size: var(--s2f-text-sm); text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); font-weight: 600; }
 .logo-carousel__headline { margin-block-start: var(--s2f-spacing-xs); }
 .logo-carousel__track { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
 .logo-carousel__slide-group { display: flex; gap: var(--s2f-spacing-xl); animation: logo-carousel-scroll 30s linear infinite; }

@@ -1,6 +1,6 @@
 .badge-grid__intro { margin-block-end: var(--s2f-spacing-lg); }
 .badge-grid__headline { font-size: var(--s2f-text-xl); font-weight: 700; }
-.badge-grid__description { color: hsl(var(--muted-foreground)); margin-block-start: var(--s2f-spacing-xs); }
+.badge-grid__description { color: var(--muted-foreground); margin-block-start: var(--s2f-spacing-xs); }
 .badge-grid__list { display: flex; flex-wrap: wrap; gap: var(--s2f-spacing-sm); }
 .badge-grid__badge {
     display: inline-flex; align-items: center; padding: 4px 12px;
@@ -8,9 +8,9 @@
     text-decoration: none; transition: opacity 0.15s;
 }
 a.badge-grid__badge:hover { opacity: 0.8; }
-.badge-grid__badge--default { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
-.badge-grid__badge--outline { background: transparent; border: 1px solid hsl(var(--border)); color: hsl(var(--foreground)); }
-.badge-grid__badge--secondary { background: hsl(var(--secondary)); color: hsl(var(--secondary-foreground)); }
+.badge-grid__badge--default { background: var(--primary); color: var(--primary-foreground); }
+.badge-grid__badge--outline { background: transparent; border: 1px solid var(--border); color: var(--foreground); }
+.badge-grid__badge--secondary { background: var(--secondary); color: var(--secondary-foreground); }
 .badge-grid__badge--blue { background: hsl(210 100% 50%); color: #fff; }
 .badge-grid__badge--green { background: hsl(142 70% 40%); color: #fff; }
 .badge-grid__badge--red { background: hsl(0 80% 50%); color: #fff; }

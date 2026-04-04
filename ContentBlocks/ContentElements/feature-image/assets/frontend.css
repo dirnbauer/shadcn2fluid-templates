@@ -14,7 +14,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
     display: block;
     margin-block-end: var(--s2f-spacing-sm);
 }
@@ -24,8 +24,8 @@
 .feature-image__cta {
     display: inline-flex;
     padding: var(--s2f-spacing-sm) var(--s2f-spacing-lg);
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: var(--primary);
+    color: var(--primary-foreground);
     border-radius: var(--s2f-radius-md);
     font-weight: 500;
     text-decoration: none;

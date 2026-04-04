@@ -11,26 +11,26 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: hsl(var(--border));
+    background: var(--border);
 }
 .content-divider__rule--dashed::before,
 .content-divider__rule--dashed::after {
-    border-top: 1px dashed hsl(var(--border));
+    border-top: 1px dashed var(--border);
     background: none;
 }
 .content-divider__rule--dotted::before,
 .content-divider__rule--dotted::after {
-    border-top: 2px dotted hsl(var(--border));
+    border-top: 2px dotted var(--border);
     background: none;
 }
 .content-divider__rule--gradient::before,
 .content-divider__rule--gradient::after {
     height: 2px;
-    background: linear-gradient(to right, transparent, hsl(var(--border)), transparent);
+    background: linear-gradient(to right, transparent, var(--border), transparent);
 }
 .content-divider__label {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     white-space: nowrap;
 }
 .content-divider__rule:not(:has(.content-divider__label))::after {

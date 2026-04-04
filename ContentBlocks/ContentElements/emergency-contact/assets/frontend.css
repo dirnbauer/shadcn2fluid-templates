@@ -14,7 +14,7 @@
 }
 .emergency-contact__description {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin-block-start: var(--s2f-spacing-xs);
 }
 .emergency-contact__phone { margin-block-start: var(--s2f-spacing-lg); }
@@ -26,6 +26,6 @@
 }
 .emergency-contact__available {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin-block-start: var(--s2f-spacing-sm);
 }

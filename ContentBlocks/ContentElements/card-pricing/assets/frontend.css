@@ -1,25 +1,25 @@
 .card-pricing {
-    border: 1px solid hsl(var(--border)); border-radius: var(--radius);
-    background: hsl(var(--card)); padding: var(--s2f-spacing-xl);
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--card); padding: var(--s2f-spacing-xl);
     display: flex; flex-direction: column; gap: var(--s2f-spacing-lg);
 }
 .card-pricing--highlighted {
-    border-color: hsl(var(--primary)); box-shadow: 0 0 0 1px hsl(var(--primary));
+    border-color: var(--primary); box-shadow: 0 0 0 1px var(--primary);
 }
 .card-pricing__title { font-size: var(--s2f-text-lg); font-weight: 600; }
-.card-pricing__description { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); margin-block-start: var(--s2f-spacing-xs); }
+.card-pricing__description { font-size: var(--s2f-text-sm); color: var(--muted-foreground); margin-block-start: var(--s2f-spacing-xs); }
 .card-pricing__price { margin-block-start: var(--s2f-spacing-md); }
 .card-pricing__amount { font-size: var(--s2f-text-3xl); font-weight: 700; }
-.card-pricing__period { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); }
+.card-pricing__period { font-size: var(--s2f-text-sm); color: var(--muted-foreground); }
 .card-pricing__features { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--s2f-spacing-sm); }
 .card-pricing__feature { display: flex; align-items: center; gap: var(--s2f-spacing-xs); font-size: var(--s2f-text-sm); }
 .card-pricing__feature svg { flex-shrink: 0; color: hsl(142 70% 40%); }
-.card-pricing__feature--excluded { color: hsl(var(--muted-foreground)); }
-.card-pricing__feature--excluded svg { color: hsl(var(--muted-foreground)); }
+.card-pricing__feature--excluded { color: var(--muted-foreground); }
+.card-pricing__feature--excluded svg { color: var(--muted-foreground); }
 .card-pricing__action { margin-block-start: auto; }
 .card-pricing__button {
     display: block; text-align: center; padding: var(--s2f-spacing-sm) var(--s2f-spacing-lg);
     border-radius: var(--radius); font-weight: 500; text-decoration: none;
-    background: hsl(var(--primary)); color: hsl(var(--primary-foreground));
+    background: var(--primary); color: var(--primary-foreground);
 }
 .card-pricing__button:hover { opacity: 0.9; }

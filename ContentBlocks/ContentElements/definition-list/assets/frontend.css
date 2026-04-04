@@ -8,14 +8,14 @@
     padding-block: var(--s2f-spacing-md);
 }
 .definition-list__entry + .definition-list__entry {
-    border-top: 1px solid hsl(var(--border));
+    border-top: 1px solid var(--border);
 }
 .definition-list__term {
     font-weight: 600;
     margin-block-end: var(--s2f-spacing-xs);
 }
 .definition-list__definition {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
     margin: 0;
 }
@@ -34,11 +34,11 @@
 }
 .definition-list--grid .definition-list__entry {
     padding: var(--s2f-spacing-md);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--s2f-radius-md);
 }
 .definition-list--grid .definition-list__entry + .definition-list__entry {
-    border-top: 1px solid hsl(var(--border));
+    border-top: 1px solid var(--border);
 }
 @media (max-width: 768px) {
     .definition-list--inline .definition-list__entry { grid-template-columns: 1fr; }

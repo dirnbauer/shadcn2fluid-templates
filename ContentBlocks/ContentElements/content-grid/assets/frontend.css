@@ -15,7 +15,7 @@
     margin-block-end: var(--s2f-spacing-sm);
 }
 .content-grid__content {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }
 .content-grid__content > *:first-child { margin-top: 0; }
@@ -25,5 +25,5 @@
     margin-top: var(--s2f-spacing-sm);
     font-size: var(--s2f-text-sm);
     font-weight: 500;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }

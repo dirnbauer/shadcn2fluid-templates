@@ -3,7 +3,7 @@
 @media (max-width: 768px) { .testimonial-video__layout { grid-template-columns: 1fr; } }
 .testimonial-video__embed { position: relative; padding-block-end: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); }
 .testimonial-video__embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.testimonial-video__quote { font-size: var(--s2f-text-xl); font-style: italic; line-height: 1.6; margin-block-end: var(--s2f-spacing-lg); color: hsl(var(--foreground)); }
-.testimonial-video__author { border-block-start: 1px solid hsl(var(--border)); padding-block-start: var(--s2f-spacing-md); }
+.testimonial-video__quote { font-size: var(--s2f-text-xl); font-style: italic; line-height: 1.6; margin-block-end: var(--s2f-spacing-lg); color: var(--foreground); }
+.testimonial-video__author { border-block-start: 1px solid var(--border); padding-block-start: var(--s2f-spacing-md); }
 .testimonial-video__name { font-weight: 600; font-style: normal; display: block; font-size: var(--s2f-text-base); }
-.testimonial-video__role { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); }
+.testimonial-video__role { font-size: var(--s2f-text-sm); color: var(--muted-foreground); }

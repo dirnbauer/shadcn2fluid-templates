@@ -14,7 +14,7 @@
 .company-stats__value {
     font-size: var(--s2f-text-4xl);
     font-weight: 700;
-    color: hsl(var(--primary));
+    color: var(--primary);
     line-height: 1;
 }
 .company-stats__label {
@@ -23,6 +23,6 @@
 }
 .company-stats__description {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin-block-start: var(--s2f-spacing-2xs);
 }

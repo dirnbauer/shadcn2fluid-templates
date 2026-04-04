@@ -16,7 +16,7 @@
 }
 .textmedia__richtext {
     margin-block: var(--s2f-spacing-md);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 .textmedia__actions {
     margin-top: var(--s2f-spacing-md);
@@ -24,8 +24,8 @@
 .textmedia__button {
     display: inline-flex;
     padding: var(--s2f-spacing-sm) var(--s2f-spacing-lg);
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: var(--primary);
+    color: var(--primary-foreground);
     border-radius: var(--s2f-radius-md);
     font-weight: 500;
     text-decoration: none;

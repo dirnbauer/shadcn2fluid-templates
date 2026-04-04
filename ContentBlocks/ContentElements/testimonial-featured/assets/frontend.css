@@ -8,4 +8,4 @@
 .testimonial-featured__author { display: flex; align-items: center; justify-content: center; gap: var(--s2f-spacing-sm); }
 .testimonial-featured__avatar { width: 4rem; height: 4rem; border-radius: 9999px; object-fit: cover; }
 .testimonial-featured__name { font-weight: 700; font-style: normal; display: block; font-size: var(--s2f-text-lg); }
-.testimonial-featured__role { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); }
+.testimonial-featured__role { font-size: var(--s2f-text-sm); color: var(--muted-foreground); }

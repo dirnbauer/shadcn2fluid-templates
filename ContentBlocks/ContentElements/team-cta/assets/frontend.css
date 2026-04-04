@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     border-radius: var(--radius);
-    background: hsl(var(--muted));
+    background: var(--muted);
     padding: var(--s2f-spacing-2xl);
     text-align: center;
 }
@@ -19,8 +19,8 @@
     display: inline-block;
     font-size: var(--s2f-text-sm);
     font-weight: 600;
-    color: hsl(var(--primary));
-    background: hsl(var(--primary) / 0.1);
+    color: var(--primary);
+    background: color-mix(in oklch, var(--primary) 10%, transparent);
     padding: 2px 12px;
     border-radius: 9999px;
     margin-block-end: var(--s2f-spacing-sm);

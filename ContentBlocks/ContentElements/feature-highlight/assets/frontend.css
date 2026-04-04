@@ -1,9 +1,9 @@
 .feature-highlight--muted {
-    background: hsl(var(--muted));
+    background: var(--muted);
 }
 .feature-highlight--primary {
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: var(--primary);
+    color: var(--primary-foreground);
 }
 .feature-highlight__grid {
     display: grid;
@@ -19,12 +19,12 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
     display: block;
     margin-block-end: var(--s2f-spacing-sm);
 }
 .feature-highlight--primary .feature-highlight__eyebrow {
-    color: hsl(var(--primary-foreground) / 0.7);
+    color: color-mix(in oklch, var(--primary-foreground) 70%, transparent);
 }
 .feature-highlight__description {
     margin-block: var(--s2f-spacing-md);

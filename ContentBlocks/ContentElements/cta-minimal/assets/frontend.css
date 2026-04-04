@@ -7,7 +7,7 @@
     display: inline-block;
     margin-block-start: var(--s2f-spacing-md);
     font-weight: 600;
-    color: hsl(var(--primary));
+    color: var(--primary);
     text-decoration: none;
     font-size: var(--s2f-text-base);
     transition: opacity 0.15s;

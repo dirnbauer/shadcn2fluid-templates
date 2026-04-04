@@ -7,7 +7,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .team-with-bio__list {
     display: flex;
@@ -30,10 +30,10 @@
     border-radius: var(--radius);
 }
 .team-with-bio__name { font-weight: 600; }
-.team-with-bio__role { font-size: var(--s2f-text-sm); color: hsl(var(--primary)); font-weight: 500; }
+.team-with-bio__role { font-size: var(--s2f-text-sm); color: var(--primary); font-weight: 500; }
 .team-with-bio__bio {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     line-height: 1.7;
     margin-block-start: var(--s2f-spacing-sm);
 }

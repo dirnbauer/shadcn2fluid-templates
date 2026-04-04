@@ -29,15 +29,15 @@
 }
 .blog-teasers__category {
     font-weight: 600;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .blog-teasers__meta {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 .blog-teasers__title { font-weight: 600; margin-block-end: var(--s2f-spacing-xs); }
 .blog-teasers__title a { color: inherit; text-decoration: none; }
-.blog-teasers__title a:hover { color: hsl(var(--primary)); }
+.blog-teasers__title a:hover { color: var(--primary); }
 .blog-teasers__excerpt {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

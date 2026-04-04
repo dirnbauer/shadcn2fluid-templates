@@ -7,7 +7,7 @@
     margin-inline: auto;
 }
 .accordion__item {
-    border-bottom: 1px solid hsl(var(--border));
+    border-bottom: 1px solid var(--border);
 }
 .accordion__trigger {
     display: flex;
@@ -32,6 +32,6 @@ details[open] > .accordion__trigger > .accordion__icon {
 }
 .accordion__content {
     padding-block-end: var(--s2f-spacing-md);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

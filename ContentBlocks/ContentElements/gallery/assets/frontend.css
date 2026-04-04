@@ -18,7 +18,7 @@
 .gallery__item {
     border-radius: var(--s2f-radius-lg);
     overflow: hidden;
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
 }
 .gallery__image {
     width: 100%;
@@ -35,7 +35,7 @@
     font-size: var(--s2f-text-sm);
 }
 .gallery__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-xs);
     margin-top: var(--s2f-spacing-xs);
 }

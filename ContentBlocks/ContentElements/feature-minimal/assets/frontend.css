@@ -14,13 +14,13 @@
     padding-block: var(--s2f-spacing-md);
 }
 .feature-minimal__item + .feature-minimal__item {
-    border-top: 1px solid hsl(var(--border));
+    border-top: 1px solid var(--border);
 }
 .feature-minimal__title {
     font-weight: 600;
 }
 .feature-minimal__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
     margin-top: var(--s2f-spacing-xs);
 }

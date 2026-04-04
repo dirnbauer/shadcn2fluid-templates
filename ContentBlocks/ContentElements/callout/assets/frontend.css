@@ -20,8 +20,8 @@
     border-left-color: hsl(0 80% 50%);
 }
 .callout--note {
-    background: hsl(var(--muted));
-    border-left-color: hsl(var(--border));
+    background: var(--muted);
+    border-left-color: var(--border);
 }
 .callout__title {
     font-weight: 600;

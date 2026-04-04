@@ -6,7 +6,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .feature-list__items {
     display: grid;
@@ -28,13 +28,13 @@
 .feature-list__icon {
     flex-shrink: 0;
     font-size: 1.25rem;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .feature-list__title {
     font-weight: 600;
     margin-block-end: var(--s2f-spacing-xs);
 }
 .feature-list__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

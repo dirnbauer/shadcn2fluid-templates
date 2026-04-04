@@ -1,12 +1,12 @@
 .content-highlight--muted {
-    background: hsl(var(--muted));
+    background: var(--muted);
 }
 .content-highlight--primary {
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: var(--primary);
+    color: var(--primary-foreground);
 }
 .content-highlight--bordered .content-highlight__inner {
-    border: 2px solid hsl(var(--border));
+    border: 2px solid var(--border);
     border-radius: var(--s2f-radius-lg);
     padding: var(--s2f-spacing-xl);
 }
@@ -40,8 +40,8 @@
     color: inherit;
 }
 .content-highlight--primary .content-highlight__cta {
-    background: hsl(var(--primary-foreground));
-    color: hsl(var(--primary));
+    background: var(--primary-foreground);
+    color: var(--primary);
     border-color: transparent;
 }
 .content-highlight__cta:hover { opacity: 0.9; }

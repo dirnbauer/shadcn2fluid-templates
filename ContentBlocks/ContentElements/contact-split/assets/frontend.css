@@ -17,7 +17,7 @@
 .contact-split__label { font-size: var(--s2f-text-sm); font-weight: 500; }
 .contact-split__input, .contact-split__textarea {
     padding: var(--s2f-spacing-xs) var(--s2f-spacing-sm);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     font-size: var(--s2f-text-sm);
     background: transparent;

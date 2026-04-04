@@ -10,7 +10,7 @@
     margin-block-end: var(--s2f-spacing-xs);
 }
 .audio-player__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }
 .audio-player__audio {

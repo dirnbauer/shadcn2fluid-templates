@@ -8,7 +8,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
     display: block;
     margin-block-end: var(--s2f-spacing-sm);
 }
@@ -16,7 +16,7 @@
     font-size: var(--s2f-text-2xl);
     font-weight: 300;
     line-height: 1.4;
-    color: hsl(var(--foreground));
+    color: var(--foreground);
     margin-block-start: var(--s2f-spacing-md);
     border: none;
     padding: 0;
@@ -26,5 +26,5 @@
     margin-block-start: var(--s2f-spacing-md);
     font-size: var(--s2f-text-sm);
     font-style: normal;
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }

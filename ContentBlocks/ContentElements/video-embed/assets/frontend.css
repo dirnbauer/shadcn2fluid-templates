@@ -6,7 +6,7 @@
     height: 0;
     overflow: hidden;
     border-radius: var(--s2f-radius-lg);
-    background: hsl(var(--muted));
+    background: var(--muted);
 }
 .video-embed__wrapper--16-9 { padding-bottom: 56.25%; }
 .video-embed__wrapper--4-3 { padding-bottom: 75%; }
@@ -20,11 +20,11 @@
 .video-embed__native {
     width: 100%;
     border-radius: var(--s2f-radius-lg);
-    background: hsl(var(--muted));
+    background: var(--muted);
 }
 .video-embed__caption {
     margin-top: var(--s2f-spacing-sm);
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     text-align: center;
 }

@@ -19,8 +19,8 @@ body {
   font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
   font-size: 1rem;
   line-height: 1.5;
-  color: hsl(var(--foreground));
-  background-color: hsl(var(--background));
+  color: var(--foreground);
+  background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -56,7 +56,7 @@ video {
 }
 
 .btn:focus-visible {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
@@ -69,56 +69,56 @@ video {
 /* -- Variants -- */
 
 .btn--default {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .btn--default:hover {
-  background-color: hsl(var(--primary) / 0.9);
+  background-color: color-mix(in oklch, var(--primary) 90%, transparent);
 }
 
 .btn--secondary {
-  background-color: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
 }
 
 .btn--secondary:hover {
-  background-color: hsl(var(--secondary) / 0.8);
+  background-color: color-mix(in oklch, var(--secondary) 80%, transparent);
 }
 
 .btn--outline {
   background-color: transparent;
-  border-color: hsl(var(--input));
-  color: hsl(var(--foreground));
+  border-color: var(--input);
+  color: var(--foreground);
 }
 
 .btn--outline:hover {
-  background-color: hsl(var(--accent));
-  color: hsl(var(--accent-foreground));
+  background-color: var(--accent);
+  color: var(--accent-foreground);
 }
 
 .btn--ghost {
   background-color: transparent;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .btn--ghost:hover {
-  background-color: hsl(var(--accent));
-  color: hsl(var(--accent-foreground));
+  background-color: var(--accent);
+  color: var(--accent-foreground);
 }
 
 .btn--destructive {
-  background-color: hsl(var(--destructive));
-  color: hsl(var(--destructive-foreground));
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
 }
 
 .btn--destructive:hover {
-  background-color: hsl(var(--destructive) / 0.9);
+  background-color: color-mix(in oklch, var(--destructive) 90%, transparent);
 }
 
 .btn--link {
   background-color: transparent;
-  color: hsl(var(--primary));
+  color: var(--primary);
   text-decoration: underline;
   text-underline-offset: 4px;
   height: auto;
@@ -179,36 +179,36 @@ video {
 }
 
 .badge--default {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .badge--default:hover {
-  background-color: hsl(var(--primary) / 0.8);
+  background-color: color-mix(in oklch, var(--primary) 80%, transparent);
 }
 
 .badge--secondary {
-  background-color: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
 }
 
 .badge--secondary:hover {
-  background-color: hsl(var(--secondary) / 0.8);
+  background-color: color-mix(in oklch, var(--secondary) 80%, transparent);
 }
 
 .badge--outline {
   background-color: transparent;
-  border-color: hsl(var(--border));
-  color: hsl(var(--foreground));
+  border-color: var(--border);
+  color: var(--foreground);
 }
 
 .badge--destructive {
-  background-color: hsl(var(--destructive));
-  color: hsl(var(--destructive-foreground));
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
 }
 
 .badge--destructive:hover {
-  background-color: hsl(var(--destructive) / 0.8);
+  background-color: color-mix(in oklch, var(--destructive) 80%, transparent);
 }
 
 /* ==========================================================================
@@ -216,9 +216,9 @@ video {
    ========================================================================== */
 
 .card {
-  background-color: hsl(var(--card));
-  color: hsl(var(--card-foreground));
-  border: 1px solid hsl(var(--border));
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
   border-radius: calc(var(--radius, 0.375rem) + 4px);
   box-shadow: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
   overflow: hidden;
@@ -244,7 +244,7 @@ video {
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.5;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .card__content {
@@ -269,7 +269,7 @@ video {
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.025em;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .typography--h2 {
@@ -278,7 +278,7 @@ video {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .typography--h3 {
@@ -287,7 +287,7 @@ video {
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.015em;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .typography--h4 {
@@ -296,21 +296,21 @@ video {
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .typography--p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.625;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .typography--lead {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.6;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .typography--large {
@@ -318,7 +318,7 @@ video {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .typography--small {
@@ -326,14 +326,14 @@ video {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.5;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .typography--muted {
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.5;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 /* ==========================================================================
@@ -342,7 +342,7 @@ video {
 
 .separator {
   flex-shrink: 0;
-  background-color: hsl(var(--border));
+  background-color: var(--border);
 }
 
 .separator--horizontal {
@@ -365,10 +365,10 @@ video {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem 0.75rem;
-  border: 1px solid hsl(var(--input));
+  border: 1px solid var(--input);
   border-radius: var(--radius, 0.375rem);
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: inherit;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -376,17 +376,17 @@ video {
 }
 
 .input::placeholder {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .input:focus {
   outline: none;
-  border-color: hsl(var(--ring));
-  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--ring) 20%, transparent);
 }
 
 .input:focus-visible {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
@@ -404,10 +404,10 @@ video {
   width: 100%;
   min-height: 5rem;
   padding: 0.5rem 0.75rem;
-  border: 1px solid hsl(var(--input));
+  border: 1px solid var(--input);
   border-radius: var(--radius, 0.375rem);
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: inherit;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -416,17 +416,17 @@ video {
 }
 
 .textarea::placeholder {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 .textarea:focus {
   outline: none;
-  border-color: hsl(var(--ring));
-  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--ring) 20%, transparent);
 }
 
 .textarea:focus-visible {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
@@ -444,7 +444,7 @@ video {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
   cursor: default;
 }
 
@@ -462,10 +462,10 @@ video {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem 2rem 0.5rem 0.75rem;
-  border: 1px solid hsl(var(--input));
+  border: 1px solid var(--input);
   border-radius: var(--radius, 0.375rem);
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: inherit;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -480,12 +480,12 @@ video {
 
 .select:focus {
   outline: none;
-  border-color: hsl(var(--ring));
-  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--ring) 20%, transparent);
 }
 
 .select:focus-visible {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
@@ -508,7 +508,7 @@ video {
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 9999px;
-  background-color: hsl(var(--muted));
+  background-color: var(--muted);
 }
 
 .avatar--sm {
@@ -534,8 +534,8 @@ video {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: hsl(var(--muted));
-  color: hsl(var(--muted-foreground));
+  background-color: var(--muted);
+  color: var(--muted-foreground);
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -599,7 +599,7 @@ video {
    ========================================================================== */
 
 .link {
-  color: hsl(var(--primary));
+  color: var(--primary);
   text-decoration: underline;
   text-underline-offset: 4px;
   font-weight: 500;
@@ -608,16 +608,16 @@ video {
 }
 
 .link:hover {
-  color: hsl(var(--primary) / 0.8);
+  color: color-mix(in oklch, var(--primary) 80%, transparent);
 }
 
 .link--muted {
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   text-decoration: none;
 }
 
 .link--muted:hover {
-  color: hsl(var(--foreground));
+  color: var(--foreground);
   text-decoration: underline;
 }
 
@@ -632,12 +632,12 @@ video {
   gap: 0.25rem;
   width: 100%;
   padding: 1rem;
-  border: 1px solid hsl(var(--border));
+  border: 1px solid var(--border);
   border-radius: calc(var(--radius, 0.375rem) + 2px);
   font-size: 0.875rem;
   line-height: 1.5;
-  color: hsl(var(--foreground));
-  background-color: hsl(var(--background));
+  color: var(--foreground);
+  background-color: var(--background);
 }
 
 .alert[data-icon]::before {
@@ -662,12 +662,12 @@ video {
 /* -- Alert variants -- */
 
 .alert--destructive {
-  border-color: hsl(var(--destructive));
-  color: hsl(var(--destructive));
+  border-color: var(--destructive);
+  color: var(--destructive);
 }
 
 .alert--destructive .alert__title {
-  color: hsl(var(--destructive));
+  color: var(--destructive);
 }
 
 .alert--info {
@@ -709,7 +709,7 @@ video {
 }
 
 .accordion__item {
-  border-bottom: 1px solid hsl(var(--border));
+  border-bottom: 1px solid var(--border);
 }
 
 .accordion__trigger {
@@ -724,7 +724,7 @@ video {
   font-size: 0.9375rem;
   font-weight: 500;
   line-height: 1.4;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
   cursor: pointer;
   text-align: left;
   transition: color 150ms ease;
@@ -735,7 +735,7 @@ video {
 }
 
 .accordion__trigger:focus-visible {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -769,7 +769,7 @@ video {
   padding-bottom: 1rem;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
 }
 
 /* ==========================================================================
@@ -787,7 +787,7 @@ video {
   padding: 0.25rem;
   margin: 0;
   list-style: none;
-  background-color: hsl(var(--muted));
+  background-color: var(--muted);
   border-radius: var(--radius, 0.375rem);
 }
 
@@ -804,23 +804,23 @@ video {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   cursor: pointer;
   transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
 }
 
 .tabs__trigger:hover {
-  color: hsl(var(--foreground));
+  color: var(--foreground);
 }
 
 .tabs__trigger:focus-visible {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
 .tabs__trigger--active {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background-color: var(--background);
+  color: var(--foreground);
   box-shadow: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
 }
 
@@ -842,14 +842,14 @@ video {
   height: 0.625rem;
   overflow: hidden;
   border-radius: 9999px;
-  background-color: hsl(var(--secondary));
+  background-color: var(--secondary);
 }
 
 .progress__indicator {
   height: 100%;
   width: 0%;
   border-radius: 9999px;
-  background-color: hsl(var(--primary));
+  background-color: var(--primary);
   transition: width 500ms ease;
 }
 
@@ -858,7 +858,7 @@ video {
    ========================================================================== */
 
 .skeleton {
-  background-color: hsl(var(--muted));
+  background-color: var(--muted);
   border-radius: var(--radius, 0.375rem);
   animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -880,7 +880,7 @@ video {
   position: relative;
   width: 100%;
   overflow: auto;
-  border: 1px solid hsl(var(--border));
+  border: 1px solid var(--border);
   border-radius: calc(var(--radius, 0.375rem) + 2px);
 }
 
@@ -893,11 +893,11 @@ video {
 }
 
 .table__header {
-  background-color: hsl(var(--muted) / 0.5);
+  background-color: color-mix(in oklch, var(--muted) 50%, transparent);
 }
 
 .table__row {
-  border-bottom: 1px solid hsl(var(--border));
+  border-bottom: 1px solid var(--border);
   transition: background-color 150ms ease;
 }
 
@@ -906,19 +906,19 @@ video {
 }
 
 tbody .table__row:hover {
-  background-color: hsl(var(--muted) / 0.5);
+  background-color: color-mix(in oklch, var(--muted) 50%, transparent);
 }
 
 .table__head {
   padding: 0.75rem 1rem;
   font-weight: 500;
-  color: hsl(var(--muted-foreground));
+  color: var(--muted-foreground);
   white-space: nowrap;
 }
 
 .table__cell {
   padding: 0.75rem 1rem;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
   vertical-align: middle;
 }
 
@@ -969,7 +969,7 @@ tbody .table__row:hover {
   height: 100%;
   overflow: auto;
   scrollbar-width: thin;
-  scrollbar-color: hsl(var(--border)) transparent;
+  scrollbar-color: var(--border) transparent;
 }
 
 .scroll-area__viewport::-webkit-scrollbar {
@@ -982,14 +982,14 @@ tbody .table__row:hover {
 }
 
 .scroll-area__viewport::-webkit-scrollbar-thumb {
-  background-color: hsl(var(--border));
+  background-color: var(--border);
   border-radius: 9999px;
   border: 2px solid transparent;
   background-clip: content-box;
 }
 
 .scroll-area__viewport::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(var(--muted-foreground) / 0.5);
+  background-color: color-mix(in oklch, var(--muted-foreground) 50%, transparent);
 }
 
 /* ==========================================================================
@@ -1003,23 +1003,23 @@ tbody .table__row:hover {
 /* -- Background variants -- */
 
 .section--bg-default {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .section--bg-muted {
-  background-color: hsl(var(--muted));
-  color: hsl(var(--foreground));
+  background-color: var(--muted);
+  color: var(--foreground);
 }
 
 .section--bg-primary {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .section--bg-card {
-  background-color: hsl(var(--card));
-  color: hsl(var(--card-foreground));
+  background-color: var(--card);
+  color: var(--card-foreground);
 }
 
 /* -- Spacing variants -- */

@@ -23,8 +23,8 @@
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 9999px;
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: var(--primary);
+    color: var(--primary-foreground);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +36,7 @@
     margin-block-end: var(--s2f-spacing-xs);
 }
 .how-to-steps__text {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }
 .how-to-steps__image {

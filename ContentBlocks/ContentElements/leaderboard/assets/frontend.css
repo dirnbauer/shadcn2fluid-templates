@@ -1,22 +1,22 @@
 .leaderboard {
-    border: 1px solid hsl(var(--border)); border-radius: var(--radius);
-    background: hsl(var(--card)); overflow: hidden;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--card); overflow: hidden;
 }
 .leaderboard__header { padding: var(--s2f-spacing-lg) var(--s2f-spacing-lg) 0; }
 .leaderboard__title { font-size: var(--s2f-text-lg); font-weight: 600; }
-.leaderboard__description { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); margin-block-start: var(--s2f-spacing-xs); }
+.leaderboard__description { font-size: var(--s2f-text-sm); color: var(--muted-foreground); margin-block-start: var(--s2f-spacing-xs); }
 .leaderboard__list { list-style: none; padding: 0; margin: 0; }
 .leaderboard__item {
     display: flex; align-items: center; gap: var(--s2f-spacing-sm);
     padding: var(--s2f-spacing-sm) var(--s2f-spacing-lg);
-    border-bottom: 1px solid hsl(var(--border));
+    border-bottom: 1px solid var(--border);
 }
 .leaderboard__item:last-child { border-bottom: none; }
-.leaderboard__item:hover { background: hsl(var(--muted) / 0.3); }
+.leaderboard__item:hover { background: hsl(color-mix(in oklch, var(--muted) 30%, transparent); }
 .leaderboard__rank {
     width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
     font-size: var(--s2f-text-sm); font-weight: 700; flex-shrink: 0;
-    border-radius: 50%; background: hsl(var(--muted));
+    border-radius: 50%; background: var(--muted);
 }
 .leaderboard__item:nth-child(1) .leaderboard__rank { background: hsl(45 100% 50%); color: hsl(0 0% 10%); }
 .leaderboard__item:nth-child(2) .leaderboard__rank { background: hsl(0 0% 75%); color: hsl(0 0% 10%); }
@@ -24,5 +24,5 @@
 .leaderboard__avatar img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
 .leaderboard__info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .leaderboard__name { font-weight: 500; font-size: var(--s2f-text-sm); }
-.leaderboard__subtitle { font-size: var(--s2f-text-xs); color: hsl(var(--muted-foreground)); }
+.leaderboard__subtitle { font-size: var(--s2f-text-xs); color: var(--muted-foreground); }
 .leaderboard__value { font-weight: 700; font-size: var(--s2f-text-sm); white-space: nowrap; }

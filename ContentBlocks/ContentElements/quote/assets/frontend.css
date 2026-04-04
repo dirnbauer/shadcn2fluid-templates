@@ -6,7 +6,7 @@
     margin-inline: auto;
 }
 .quote--bordered {
-    border-left: 4px solid hsl(var(--primary));
+    border-left: 4px solid var(--primary);
     padding-left: var(--s2f-spacing-lg);
 }
 .quote--large .quote__text p {
@@ -15,14 +15,14 @@
     line-height: 1.4;
 }
 .quote--card {
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--s2f-radius-lg);
     padding: var(--s2f-spacing-xl);
-    background: hsl(var(--muted) / 0.3);
+    background: hsl(color-mix(in oklch, var(--muted) 30%, transparent);
 }
 .quote__text p {
     font-style: italic;
-    color: hsl(var(--foreground));
+    color: var(--foreground);
 }
 .quote__attribution {
     margin-top: var(--s2f-spacing-md);
@@ -34,6 +34,6 @@
     font-weight: 600;
 }
 .quote__role {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

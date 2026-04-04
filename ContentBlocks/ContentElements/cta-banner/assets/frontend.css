@@ -2,11 +2,11 @@
     padding: var(--s2f-spacing-2xl) 0;
 }
 .cta-banner--primary {
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: var(--primary);
+    color: var(--primary-foreground);
 }
-.cta-banner--muted { background: hsl(var(--muted)); }
-.cta-banner--dark { background: hsl(var(--foreground)); color: hsl(var(--background)); }
+.cta-banner--muted { background: var(--muted); }
+.cta-banner--dark { background: var(--foreground); color: var(--background); }
 .cta-banner__content {
     display: flex;
     align-items: center;

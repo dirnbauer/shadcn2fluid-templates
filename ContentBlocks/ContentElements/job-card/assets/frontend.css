@@ -9,12 +9,12 @@
     font-size: var(--s2f-text-xs);
     padding: 2px 10px;
     border-radius: 9999px;
-    background: hsl(var(--muted));
-    color: hsl(var(--muted-foreground));
+    background: var(--muted);
+    color: var(--muted-foreground);
     font-weight: 500;
 }
 .job-card__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     line-height: 1.7;
     margin-block-start: var(--s2f-spacing-md);
 }

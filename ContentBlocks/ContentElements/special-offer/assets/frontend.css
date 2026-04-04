@@ -1,10 +1,10 @@
-.special-offer__banner { text-align: center; padding: var(--s2f-spacing-xl); border: 2px solid hsl(var(--primary)); border-radius: var(--radius); background: hsl(var(--primary) / 0.03); }
-.special-offer__eyebrow { font-size: var(--s2f-text-sm); text-transform: uppercase; letter-spacing: 0.1em; color: hsl(var(--primary)); font-weight: 700; }
-.special-offer__discount { font-size: var(--s2f-text-4xl); font-weight: 900; color: hsl(var(--primary)); margin-block-start: var(--s2f-spacing-sm); line-height: 1.1; }
+.special-offer__banner { text-align: center; padding: var(--s2f-spacing-xl); border: 2px solid var(--primary); border-radius: var(--radius); background: color-mix(in oklch, var(--primary) 3%, transparent); }
+.special-offer__eyebrow { font-size: var(--s2f-text-sm); text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); font-weight: 700; }
+.special-offer__discount { font-size: var(--s2f-text-4xl); font-weight: 900; color: var(--primary); margin-block-start: var(--s2f-spacing-sm); line-height: 1.1; }
 .special-offer__headline { margin-block-start: var(--s2f-spacing-sm); }
-.special-offer__description { color: hsl(var(--muted-foreground)); max-width: 32rem; margin-inline: auto; margin-block-start: var(--s2f-spacing-xs); }
+.special-offer__description { color: var(--muted-foreground); max-width: 32rem; margin-inline: auto; margin-block-start: var(--s2f-spacing-xs); }
 .special-offer__prices { display: flex; align-items: baseline; justify-content: center; gap: var(--s2f-spacing-md); margin-block-start: var(--s2f-spacing-lg); }
-.special-offer__original { font-size: var(--s2f-text-xl); color: hsl(var(--muted-foreground)); text-decoration: line-through; }
-.special-offer__sale { font-size: var(--s2f-text-3xl); font-weight: 800; color: hsl(var(--primary)); }
-.special-offer__button { display: inline-flex; align-items: center; padding: 0.75rem 2.5rem; border-radius: var(--radius); font-weight: 600; font-size: var(--s2f-text-lg); text-decoration: none; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); margin-block-start: var(--s2f-spacing-lg); transition: opacity 0.2s; }
+.special-offer__original { font-size: var(--s2f-text-xl); color: var(--muted-foreground); text-decoration: line-through; }
+.special-offer__sale { font-size: var(--s2f-text-3xl); font-weight: 800; color: var(--primary); }
+.special-offer__button { display: inline-flex; align-items: center; padding: 0.75rem 2.5rem; border-radius: var(--radius); font-weight: 600; font-size: var(--s2f-text-lg); text-decoration: none; background: var(--primary); color: var(--primary-foreground); margin-block-start: var(--s2f-spacing-lg); transition: opacity 0.2s; }
 .special-offer__button:hover { opacity: 0.9; }

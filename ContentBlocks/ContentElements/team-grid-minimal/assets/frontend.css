@@ -22,4 +22,4 @@
     margin-block-end: var(--s2f-spacing-sm);
 }
 .team-grid-minimal__name { font-weight: 600; font-size: var(--s2f-text-sm); }
-.team-grid-minimal__role { font-size: var(--s2f-text-xs); color: hsl(var(--muted-foreground)); }
+.team-grid-minimal__role { font-size: var(--s2f-text-xs); color: var(--muted-foreground); }

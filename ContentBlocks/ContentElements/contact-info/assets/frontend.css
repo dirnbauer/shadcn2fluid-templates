@@ -22,9 +22,9 @@
 }
 .contact-info__value {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 .contact-info__value--link {
-    color: hsl(var(--primary));
+    color: var(--primary);
     text-decoration: underline;
 }

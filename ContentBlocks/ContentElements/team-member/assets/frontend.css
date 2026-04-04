@@ -15,11 +15,11 @@
 }
 .team-member__role {
     font-size: var(--s2f-text-lg);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin-block-end: var(--s2f-spacing-sm);
 }
 .team-member__bio {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     line-height: 1.7;
 }
 .team-member__contact {
@@ -27,7 +27,7 @@
     gap: var(--s2f-spacing-md);
     margin-block-start: var(--s2f-spacing-md);
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 .team-member__socials {
     display: flex;
@@ -36,6 +36,6 @@
 }
 .team-member__social-link {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--primary));
+    color: var(--primary);
     text-decoration: underline;
 }

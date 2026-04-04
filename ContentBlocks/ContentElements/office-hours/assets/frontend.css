@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     padding: var(--s2f-spacing-xs) 0;
-    border-bottom: 1px solid hsl(var(--border));
+    border-bottom: 1px solid var(--border);
 }
 .office-hours__row:last-child { border-bottom: none; }
 .office-hours__day {
@@ -15,6 +15,6 @@
 }
 .office-hours__time {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin: 0;
 }

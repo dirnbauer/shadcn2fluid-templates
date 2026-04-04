@@ -7,7 +7,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .use-case-grid__grid {
     display: grid;
@@ -26,9 +26,9 @@
     text-decoration: none;
 }
 .use-case-grid__title a:hover {
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .use-case-grid__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

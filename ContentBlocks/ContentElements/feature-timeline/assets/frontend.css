@@ -22,8 +22,8 @@
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 9999px;
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: var(--primary);
+    color: var(--primary-foreground);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,13 +34,13 @@
 .feature-timeline__line {
     width: 2px;
     flex: 1;
-    background: hsl(var(--border));
+    background: var(--border);
 }
 .feature-timeline__title {
     font-weight: 600;
     margin-block-end: var(--s2f-spacing-xs);
 }
 .feature-timeline__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

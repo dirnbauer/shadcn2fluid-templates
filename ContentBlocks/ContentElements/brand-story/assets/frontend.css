@@ -12,7 +12,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
     display: block;
     margin-block-end: var(--s2f-spacing-xs);
 }
@@ -23,7 +23,7 @@
     margin-block-start: var(--s2f-spacing-md);
 }
 .brand-story__body {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     line-height: 1.7;
     margin-block-start: var(--s2f-spacing-md);
 }

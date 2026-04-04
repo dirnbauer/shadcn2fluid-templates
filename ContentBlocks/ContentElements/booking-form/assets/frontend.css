@@ -12,7 +12,7 @@
 .booking-form__label { font-size: var(--s2f-text-sm); font-weight: 500; }
 .booking-form__input, .booking-form__textarea {
     padding: var(--s2f-spacing-xs) var(--s2f-spacing-sm);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     font-size: var(--s2f-text-sm);
     background: transparent;

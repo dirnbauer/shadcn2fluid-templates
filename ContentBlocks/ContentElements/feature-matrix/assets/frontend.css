@@ -7,7 +7,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .feature-matrix__table {
     max-width: 48rem;
@@ -23,17 +23,17 @@
 }
 .feature-matrix__head {
     font-weight: 600;
-    border-bottom: 2px solid hsl(var(--border));
+    border-bottom: 2px solid var(--border);
 }
 .feature-matrix__row + .feature-matrix__row {
-    border-top: 1px solid hsl(var(--border));
+    border-top: 1px solid var(--border);
 }
 .feature-matrix__label {
     font-weight: 500;
 }
 .feature-matrix__value {
     text-align: center;
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 .feature-matrix__head .feature-matrix__value {
     color: inherit;

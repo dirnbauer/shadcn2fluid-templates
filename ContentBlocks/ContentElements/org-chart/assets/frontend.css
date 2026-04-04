@@ -14,7 +14,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin-block-end: var(--s2f-spacing-sm);
 }
 .org-chart__row {
@@ -28,4 +28,4 @@
     text-align: center;
 }
 .org-chart__name { font-weight: 600; font-size: var(--s2f-text-sm); }
-.org-chart__role { font-size: var(--s2f-text-xs); color: hsl(var(--muted-foreground)); }
+.org-chart__role { font-size: var(--s2f-text-xs); color: var(--muted-foreground); }

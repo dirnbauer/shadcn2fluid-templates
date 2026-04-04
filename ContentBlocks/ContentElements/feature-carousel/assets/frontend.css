@@ -15,7 +15,7 @@
     height: 4px;
 }
 .feature-carousel__track::-webkit-scrollbar-thumb {
-    background: hsl(var(--border));
+    background: var(--border);
     border-radius: 2px;
 }
 .feature-carousel__slide {
@@ -35,8 +35,8 @@
 }
 .feature-carousel__title { font-weight: 600; margin-block-end: var(--s2f-spacing-xs); }
 .feature-carousel__title a { color: inherit; text-decoration: none; }
-.feature-carousel__title a:hover { color: hsl(var(--primary)); }
+.feature-carousel__title a:hover { color: var(--primary); }
 .feature-carousel__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

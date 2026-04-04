@@ -12,7 +12,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
     margin-block-end: var(--s2f-spacing-xs);
     display: block;
 }

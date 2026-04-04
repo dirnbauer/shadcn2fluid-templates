@@ -21,6 +21,6 @@
 }
 .cta-split__description {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 .cta-split__actions { margin-block-start: var(--s2f-spacing-lg); }

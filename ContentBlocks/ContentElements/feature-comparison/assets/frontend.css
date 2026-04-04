@@ -16,18 +16,18 @@
 }
 .feature-comparison__head {
     font-weight: 600;
-    border-bottom: 2px solid hsl(var(--border));
+    border-bottom: 2px solid var(--border);
 }
 .feature-comparison__row + .feature-comparison__row {
-    border-top: 1px solid hsl(var(--border));
+    border-top: 1px solid var(--border);
 }
 .feature-comparison__check-col {
     text-align: center;
 }
 .feature-comparison__yes {
-    color: hsl(var(--primary));
+    color: var(--primary);
     font-weight: 700;
 }
 .feature-comparison__no {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }

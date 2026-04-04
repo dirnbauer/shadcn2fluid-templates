@@ -37,6 +37,6 @@
 }
 .feature-bento__title { font-weight: 600; margin-block-end: var(--s2f-spacing-xs); }
 .feature-bento__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

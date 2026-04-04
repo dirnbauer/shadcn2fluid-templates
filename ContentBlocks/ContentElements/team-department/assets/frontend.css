@@ -10,7 +10,7 @@
     font-weight: 600;
     margin-block-end: var(--s2f-spacing-md);
     padding-block-end: var(--s2f-spacing-xs);
-    border-bottom: 1px solid hsl(var(--border));
+    border-bottom: 1px solid var(--border);
 }
 .team-department__grid {
     display: grid;
@@ -24,4 +24,4 @@
 .team-department__image { width: 100%; aspect-ratio: 1; object-fit: cover; }
 .team-department__content { padding: var(--s2f-spacing-sm); text-align: center; }
 .team-department__name { font-weight: 600; font-size: var(--s2f-text-sm); }
-.team-department__role { font-size: var(--s2f-text-xs); color: hsl(var(--muted-foreground)); }
+.team-department__role { font-size: var(--s2f-text-xs); color: var(--muted-foreground); }

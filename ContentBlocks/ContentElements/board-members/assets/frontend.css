@@ -16,15 +16,15 @@
 .board-members__name { font-weight: 600; }
 .board-members__title {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--primary));
+    color: var(--primary);
     font-weight: 500;
 }
 .board-members__affiliation {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 .board-members__bio {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin-block-start: var(--s2f-spacing-xs);
 }

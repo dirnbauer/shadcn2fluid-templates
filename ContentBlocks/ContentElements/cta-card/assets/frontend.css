@@ -10,8 +10,8 @@
     font-weight: 600;
     padding: 2px 10px;
     border-radius: 9999px;
-    background: hsl(var(--primary) / 0.1);
-    color: hsl(var(--primary));
+    background: color-mix(in oklch, var(--primary) 10%, transparent);
+    color: var(--primary);
     margin-block-end: var(--s2f-spacing-sm);
 }
 .cta-card__actions { margin-block-start: var(--s2f-spacing-lg); }

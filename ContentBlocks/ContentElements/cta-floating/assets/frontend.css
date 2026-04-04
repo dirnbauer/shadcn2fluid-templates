@@ -3,13 +3,13 @@
     left: 0;
     right: 0;
     z-index: 50;
-    background: hsl(var(--card));
-    border-top: 1px solid hsl(var(--border));
+    background: var(--card);
+    border-top: 1px solid var(--border);
     padding: var(--s2f-spacing-sm) 0;
-    box-shadow: 0 -2px 8px hsl(var(--foreground) / 0.05);
+    box-shadow: 0 -2px 8px color-mix(in oklch, var(--foreground) 5%, transparent);
 }
 .cta-floating--bottom { bottom: 0; }
-.cta-floating--top { top: 0; border-top: none; border-bottom: 1px solid hsl(var(--border)); }
+.cta-floating--top { top: 0; border-top: none; border-bottom: 1px solid var(--border); }
 .cta-floating__bar {
     display: flex;
     align-items: center;

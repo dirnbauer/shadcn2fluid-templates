@@ -4,9 +4,9 @@
     justify-content: space-between;
     gap: var(--s2f-spacing-lg);
     padding: var(--s2f-spacing-lg);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius);
-    background: hsl(var(--card));
+    background: var(--card);
 }
 .cta-inline__headline {
     font-weight: 600;
@@ -14,7 +14,7 @@
 }
 .cta-inline__description {
     font-size: var(--s2f-text-sm);
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
 }
 @media (max-width: 768px) {
     .cta-inline__bar {

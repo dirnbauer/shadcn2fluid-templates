@@ -4,18 +4,18 @@
     justify-content: space-between;
     gap: var(--s2f-spacing-lg);
     padding: var(--s2f-spacing-lg);
-    background: hsl(var(--muted));
+    background: var(--muted);
     border-radius: var(--radius);
 }
 .newsletter-inline__headline { font-weight: 600; }
-.newsletter-inline__description { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); }
+.newsletter-inline__description { font-size: var(--s2f-text-sm); color: var(--muted-foreground); }
 .newsletter-inline__form { display: flex; gap: var(--s2f-spacing-sm); }
 .newsletter-inline__input {
     padding: var(--s2f-spacing-xs) var(--s2f-spacing-sm);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     font-size: var(--s2f-text-sm);
-    background: hsl(var(--background));
+    background: var(--background);
     min-width: 240px;
 }
 @media (max-width: 768px) {

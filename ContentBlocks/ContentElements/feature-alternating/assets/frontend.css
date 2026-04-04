@@ -26,12 +26,12 @@
     margin-block-end: var(--s2f-spacing-sm);
 }
 .feature-alternating__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     margin-block-end: var(--s2f-spacing-md);
 }
 .feature-alternating__link {
     font-weight: 500;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .feature-alternating__image {
     border-radius: var(--s2f-radius-lg);

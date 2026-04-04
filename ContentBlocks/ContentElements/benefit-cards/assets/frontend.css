@@ -7,7 +7,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: hsl(var(--primary));
+    color: var(--primary);
 }
 .benefit-cards__grid {
     display: grid;
@@ -28,8 +28,8 @@
     margin-block-end: var(--s2f-spacing-xs);
 }
 .benefit-cards__title a { color: inherit; text-decoration: none; }
-.benefit-cards__title a:hover { color: hsl(var(--primary)); }
+.benefit-cards__title a:hover { color: var(--primary); }
 .benefit-cards__description {
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-size: var(--s2f-text-sm);
 }

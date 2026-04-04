@@ -5,7 +5,7 @@
 .counter__grid--cols-4 { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 768px) { .counter__grid { grid-template-columns: repeat(2, 1fr); } }
 .counter__item { text-align: center; padding: var(--s2f-spacing-lg); }
-.counter__value { font-size: var(--s2f-text-3xl); font-weight: 700; color: hsl(var(--primary)); }
+.counter__value { font-size: var(--s2f-text-3xl); font-weight: 700; color: var(--primary); }
 .counter__prefix,
 .counter__suffix { font-size: var(--s2f-text-2xl); }
-.counter__label { font-size: var(--s2f-text-sm); color: hsl(var(--muted-foreground)); margin-block-start: var(--s2f-spacing-xs); }
+.counter__label { font-size: var(--s2f-text-sm); color: var(--muted-foreground); margin-block-start: var(--s2f-spacing-xs); }
