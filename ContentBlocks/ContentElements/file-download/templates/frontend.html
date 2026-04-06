@@ -8,7 +8,7 @@
 <s2f:layout.section class="file-download">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <s2f:atom.typography tag="h2" variant="h2" class="file-download__headline">{data.header}</s2f:atom.typography>
+            <s2f:atom.typography tag="h2" variant="h2" class="file-download__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
         </f:if>
 
         <div class="file-download__list">
@@ -18,12 +18,12 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     </div>
                     <div class="file-download__info">
-                        <h3 class="file-download__title">{item.title}</h3>
+                        <h3 class="file-download__title">{item -> f:render.text(field: 'title')}</h3>
                         <f:if condition="{item.description_text}">
-                            <p class="file-download__description">{item.description_text}</p>
+                            <p class="file-download__description">{item -> f:render.text(field: 'description_text')}</p>
                         </f:if>
                         <div class="file-download__meta">
-                            <f:if condition="{item.file_size}"><span class="file-download__size">{item.file_size}</span></f:if>
+                            <f:if condition="{item.file_size}"><span class="file-download__size">{item -> f:render.text(field: 'file_size')}</span></f:if>
                         </div>
                     </div>
                     <f:if condition="{item.file.0}">

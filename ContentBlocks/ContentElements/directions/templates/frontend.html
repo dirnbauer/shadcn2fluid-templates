@@ -9,16 +9,16 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="directions__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
         <div class="directions__list">
             <f:for each="{data.routes}" as="route">
                 <s2f:molecule.card class="directions__route">
-                    <h3 class="directions__mode">{route.mode}</h3>
-                    <p class="directions__description">{route.description}</p>
+                    <h3 class="directions__mode">{route -> f:render.text(field: 'mode')}</h3>
+                    <p class="directions__description">{route -> f:render.text(field: 'description')}</p>
                 </s2f:molecule.card>
             </f:for>
         </div>

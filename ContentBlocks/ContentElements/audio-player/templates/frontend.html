@@ -10,10 +10,10 @@
         <s2f:molecule.card class="audio-player__card">
             <div class="audio-player__info">
                 <f:if condition="{data.header}">
-                    <h3 class="audio-player__title">{data.header}</h3>
+                    <h3 class="audio-player__title">{data -> f:render.text(field: 'header')}</h3>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="audio-player__description">{data.description}</p>
+                    <p class="audio-player__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
             </div>
             <f:if condition="{data.audio_file.0}">

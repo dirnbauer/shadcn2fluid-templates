@@ -10,10 +10,10 @@
         <f:if condition="{data.eyebrow} || {data.header}">
             <header class="case-study-grid__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="case-study-grid__eyebrow">{data.eyebrow}</span>
+                    <span class="case-study-grid__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="case-study-grid__headline">{data.header}</h2>
+                    <h2 class="case-study-grid__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
             </header>
         </f:if>
@@ -24,17 +24,17 @@
                     <f:if condition="{item.image}">
                         <div class="case-study-grid__media">
                             <f:for each="{item.image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 480)}" alt="{item.client_name}" class="case-study-grid__image"/>
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 480)}" alt="{item -> f:render.text(field: 'client_name')}" class="case-study-grid__image"/>
                             </f:for>
                         </div>
                     </f:if>
                     <div class="case-study-grid__body">
-                        <h3 class="case-study-grid__client">{item.client_name}</h3>
+                        <h3 class="case-study-grid__client">{item -> f:render.text(field: 'client_name')}</h3>
                         <f:if condition="{item.summary}">
-                            <p class="case-study-grid__summary">{item.summary}</p>
+                            <p class="case-study-grid__summary">{item -> f:render.text(field: 'summary')}</p>
                         </f:if>
                         <f:if condition="{item.result}">
-                            <span class="case-study-grid__result">{item.result}</span>
+                            <span class="case-study-grid__result">{item -> f:render.text(field: 'result')}</span>
                         </f:if>
                         <f:if condition="{item.link.url}">
                             <f:link.typolink parameter="{item.link}" class="case-study-grid__link">

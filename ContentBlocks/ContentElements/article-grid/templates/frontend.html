@@ -8,15 +8,15 @@
 <s2f:layout.section class="article-grid">
     <s2f:layout.container>
         <header class="article-grid__intro">
-            <f:if condition="{data.eyebrow}"><span class="article-grid__eyebrow">{data.eyebrow}</span></f:if>
-            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
+            <f:if condition="{data.eyebrow}"><span class="article-grid__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
         </header>
         <div class="article-grid__grid">
             <f:for each="{data.items}" as="item">
                 <s2f:molecule.card class="article-grid__item">
-                    <f:if condition="{item.category}"><p class="article-grid__category">{item.category}</p></f:if>
-                    <h3 class="article-grid__title">{item.title}</h3>
-                    <p class="article-grid__description">{item.description}</p>
+                    <f:if condition="{item.category}"><p class="article-grid__category">{item -> f:render.text(field: 'category')}</p></f:if>
+                    <h3 class="article-grid__title">{item -> f:render.text(field: 'title')}</h3>
+                    <p class="article-grid__description">{item -> f:render.text(field: 'description')}</p>
                     <f:if condition="{item.link.url}">
                         <f:link.typolink parameter="{item.link}" class="article-grid__link">Read more</f:link.typolink>
                     </f:if>

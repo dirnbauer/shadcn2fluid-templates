@@ -10,10 +10,10 @@
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="trust-badges__intro">
                 <f:if condition="{data.header}">
-                    <h2 class="trust-badges__headline">{data.header}</h2>
+                    <h2 class="trust-badges__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="trust-badges__description">{data.subheadline}</p>
+                    <p class="trust-badges__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -24,13 +24,13 @@
                     <f:if condition="{badge.image}">
                         <div class="trust-badges__icon">
                             <f:for each="{badge.image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 64)}" alt="{badge.label}" class="trust-badges__icon-img"/>
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 64)}" alt="{badge -> f:render.text(field: 'label')}" class="trust-badges__icon-img"/>
                             </f:for>
                         </div>
                     </f:if>
-                    <span class="trust-badges__label">{badge.label}</span>
+                    <span class="trust-badges__label">{badge -> f:render.text(field: 'label')}</span>
                     <f:if condition="{badge.description_text}">
-                        <span class="trust-badges__desc">{badge.description_text}</span>
+                        <span class="trust-badges__desc">{badge -> f:render.text(field: 'description_text')}</span>
                     </f:if>
                 </div>
             </f:for>

@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="board-members__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -20,15 +20,15 @@
                     <f:if condition="{member.image}">
                         <div class="board-members__image-wrapper">
                             <f:for each="{member.image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 400)}" alt="{member.name}" class="board-members__image"/>
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 400)}" alt="{member -> f:render.text(field: 'name')}" class="board-members__image"/>
                             </f:for>
                         </div>
                     </f:if>
                     <div class="board-members__content">
-                        <h3 class="board-members__name">{member.name}</h3>
-                        <f:if condition="{member.title}"><p class="board-members__title">{member.title}</p></f:if>
-                        <f:if condition="{member.affiliation}"><p class="board-members__affiliation">{member.affiliation}</p></f:if>
-                        <f:if condition="{member.bio}"><p class="board-members__bio">{member.bio}</p></f:if>
+                        <h3 class="board-members__name">{member -> f:render.text(field: 'name')}</h3>
+                        <f:if condition="{member.title}"><p class="board-members__title">{member -> f:render.text(field: 'title')}</p></f:if>
+                        <f:if condition="{member.affiliation}"><p class="board-members__affiliation">{member -> f:render.text(field: 'affiliation')}</p></f:if>
+                        <f:if condition="{member.bio}"><p class="board-members__bio">{member -> f:render.text(field: 'bio')}</p></f:if>
                     </div>
                 </s2f:molecule.card>
             </f:for>

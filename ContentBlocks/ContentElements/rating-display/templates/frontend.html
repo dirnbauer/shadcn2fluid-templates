@@ -10,10 +10,10 @@
         <f:if condition="{data.eyebrow} || {data.header}">
             <header class="rating-display__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="rating-display__eyebrow">{data.eyebrow}</span>
+                    <span class="rating-display__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="rating-display__headline">{data.header}</h2>
+                    <h2 class="rating-display__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
             </header>
         </f:if>
@@ -24,11 +24,11 @@
                     <f:if condition="{rating.logo}">
                         <div class="rating-display__logo">
                             <f:for each="{rating.logo}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 120)}" alt="{rating.platform}" class="rating-display__logo-img"/>
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 120)}" alt="{rating -> f:render.text(field: 'platform')}" class="rating-display__logo-img"/>
                             </f:for>
                         </div>
                     </f:if>
-                    <div class="rating-display__score">{rating.score}</div>
+                    <div class="rating-display__score">{rating -> f:render.text(field: 'score')}</div>
                     <div class="rating-display__stars">
                         <f:for each="{0: 1, 1: 2, 2: 3, 3: 4, 4: 5}" as="star">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="rating-display__star">
@@ -37,9 +37,9 @@
                         </f:for>
                     </div>
                     <f:if condition="{rating.review_count}">
-                        <span class="rating-display__count">{rating.review_count}</span>
+                        <span class="rating-display__count">{rating -> f:render.text(field: 'review_count')}</span>
                     </f:if>
-                    <span class="rating-display__platform">{rating.platform}</span>
+                    <span class="rating-display__platform">{rating -> f:render.text(field: 'platform')}</span>
                     <f:if condition="{rating.link.url}">
                         <f:link.typolink parameter="{rating.link}" class="rating-display__link">
                             View reviews &rarr;

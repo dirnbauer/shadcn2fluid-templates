@@ -12,7 +12,7 @@
                 <f:for each="{data.step_items}" as="step" iteration="iterator">
                     <li class="nav-steps__item nav-steps__item--{step.status -> f:or(alternative: 'pending')}">
                         <span class="nav-steps__indicator">{iterator.cycle}</span>
-                        <span class="nav-steps__label">{step.label}</span>
+                        <span class="nav-steps__label">{step -> f:render.text(field: 'label')}</span>
                     </li>
                 </f:for>
             </ol>

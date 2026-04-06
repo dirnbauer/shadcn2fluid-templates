@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="pricing-annual-monthly__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="pricing-annual-monthly__eyebrow">{data.eyebrow}</span>
+                    <span class="pricing-annual-monthly__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="pricing-annual-monthly__headline">{data.header}</h2>
+                    <h2 class="pricing-annual-monthly__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="pricing-annual-monthly__description">{data.subheadline}</p>
+                    <p class="pricing-annual-monthly__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -24,17 +24,17 @@
         <div class="pricing-annual-monthly__grid">
             <f:for each="{data.plans}" as="plan">
                 <article class="pricing-annual-monthly__plan {f:if(condition: plan.is_featured, then: 'pricing-annual-monthly__plan--featured')}">
-                    <h3 class="pricing-annual-monthly__name">{plan.name}</h3>
+                    <h3 class="pricing-annual-monthly__name">{plan -> f:render.text(field: 'name')}</h3>
 
                     <div class="pricing-annual-monthly__prices">
                         <div class="pricing-annual-monthly__price-block">
-                            <span class="pricing-annual-monthly__price">{plan.monthly_price}</span>
+                            <span class="pricing-annual-monthly__price">{plan -> f:render.text(field: 'monthly_price')}</span>
                             <span class="pricing-annual-monthly__period">/month</span>
                         </div>
                         <div class="pricing-annual-monthly__annual">
-                            <span class="pricing-annual-monthly__annual-price">{plan.annual_price}/year</span>
+                            <span class="pricing-annual-monthly__annual-price">{plan -> f:render.text(field: 'annual_price')}/year</span>
                             <f:if condition="{plan.savings}">
-                                <span class="pricing-annual-monthly__savings">{plan.savings}</span>
+                                <span class="pricing-annual-monthly__savings">{plan -> f:render.text(field: 'savings')}</span>
                             </f:if>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
 
                     <f:if condition="{plan.button_text} && {plan.button_link.url}">
                         <f:link.typolink parameter="{plan.button_link}" class="pricing-annual-monthly__button {f:if(condition: plan.is_featured, then: 'pricing-annual-monthly__button--primary', else: 'pricing-annual-monthly__button--outline')}">
-                            {plan.button_text}
+                            {plan -> f:render.text(field: 'button_text')}
                         </f:link.typolink>
                     </f:if>
                 </article>

@@ -8,8 +8,8 @@
 <s2f:layout.section class="feature-matrix">
     <s2f:layout.container>
         <header class="feature-matrix__intro">
-            <f:if condition="{data.eyebrow}"><span class="feature-matrix__eyebrow">{data.eyebrow}</span></f:if>
-            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
+            <f:if condition="{data.eyebrow}"><span class="feature-matrix__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
         </header>
         <s2f:molecule.card class="feature-matrix__table" role="table">
             <div class="feature-matrix__head" role="row">
@@ -19,9 +19,9 @@
             </div>
             <f:for each="{data.rows}" as="row">
                 <div class="feature-matrix__row" role="row">
-                    <span class="feature-matrix__label" role="cell">{row.label}</span>
-                    <span class="feature-matrix__value" role="cell">{row.left_value}</span>
-                    <span class="feature-matrix__value" role="cell">{row.right_value}</span>
+                    <span class="feature-matrix__label" role="cell">{row -> f:render.text(field: 'label')}</span>
+                    <span class="feature-matrix__value" role="cell">{row -> f:render.text(field: 'left_value')}</span>
+                    <span class="feature-matrix__value" role="cell">{row -> f:render.text(field: 'right_value')}</span>
                 </div>
             </f:for>
         </s2f:molecule.card>

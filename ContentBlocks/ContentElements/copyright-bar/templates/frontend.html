@@ -8,15 +8,15 @@
 <div class="copyright-bar copyright-bar--{data.alignment -> f:or(alternative: 'between')}">
     <s2f:layout.container>
         <div class="copyright-bar__inner">
-            <p class="copyright-bar__text">{data.copyright}</p>
+            <p class="copyright-bar__text">{data -> f:render.text(field: 'copyright')}</p>
             <f:if condition="{data.link_items}">
                 <nav aria-label="Legal links">
                     <ul class="copyright-bar__links">
                         <f:for each="{data.link_items}" as="item">
                             <li>
                                 <f:if condition="{item.link}">
-                                    <f:then><f:link.typolink parameter="{item.link}" class="copyright-bar__link">{item.label}</f:link.typolink></f:then>
-                                    <f:else><span class="copyright-bar__link">{item.label}</span></f:else>
+                                    <f:then><f:link.typolink parameter="{item.link}" class="copyright-bar__link">{item -> f:render.text(field: 'label')}</f:link.typolink></f:then>
+                                    <f:else><span class="copyright-bar__link">{item -> f:render.text(field: 'label')}</span></f:else>
                                 </f:if>
                             </li>
                         </f:for>

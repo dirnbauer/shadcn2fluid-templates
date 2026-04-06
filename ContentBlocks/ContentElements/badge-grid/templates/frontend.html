@@ -10,10 +10,10 @@
         <f:if condition="{data.header} || {data.description}">
             <header class="badge-grid__intro">
                 <f:if condition="{data.header}">
-                    <h2 class="badge-grid__headline">{data.header}</h2>
+                    <h2 class="badge-grid__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="badge-grid__description">{data.description}</p>
+                    <p class="badge-grid__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -21,10 +21,10 @@
             <f:for each="{data.items}" as="item">
                 <f:if condition="{item.link}">
                     <f:then>
-                        <f:link.typolink parameter="{item.link}" class="badge-grid__badge badge-grid__badge--{data.variant -> f:or(alternative: 'default')} badge-grid__badge--{item.color -> f:or(alternative: 'default')}">{item.text}</f:link.typolink>
+                        <f:link.typolink parameter="{item.link}" class="badge-grid__badge badge-grid__badge--{data.variant -> f:or(alternative: 'default')} badge-grid__badge--{item.color -> f:or(alternative: 'default')}">{item -> f:render.text(field: 'text')}</f:link.typolink>
                     </f:then>
                     <f:else>
-                        <span class="badge-grid__badge badge-grid__badge--{data.variant -> f:or(alternative: 'default')} badge-grid__badge--{item.color -> f:or(alternative: 'default')}">{item.text}</span>
+                        <span class="badge-grid__badge badge-grid__badge--{data.variant -> f:or(alternative: 'default')} badge-grid__badge--{item.color -> f:or(alternative: 'default')}">{item -> f:render.text(field: 'text')}</span>
                     </f:else>
                 </f:if>
             </f:for>

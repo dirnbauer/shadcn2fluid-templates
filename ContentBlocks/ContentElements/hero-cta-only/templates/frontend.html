@@ -6,13 +6,13 @@
 <s2f:layout.section class="hero-cta-only">
     <s2f:layout.container>
         <div class="hero-cta-only__content">
-            <f:if condition="{data.header}"><h1 class="hero-cta-only__headline">{data.header}</h1></f:if>
+            <f:if condition="{data.header}"><h1 class="hero-cta-only__headline">{data -> f:render.text(field: 'header')}</h1></f:if>
             <div class="hero-cta-only__actions">
                 <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                    <s2f:atom.button link="{data.primary_button_link}" size="lg">{data.primary_button_text}</s2f:atom.button>
+                    <s2f:atom.button link="{data.primary_button_link}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
                 </f:if>
                 <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                    <s2f:atom.button link="{data.secondary_button_link}" variant="outline" size="lg">{data.secondary_button_text}</s2f:atom.button>
+                    <s2f:atom.button link="{data.secondary_button_link}" variant="outline" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
                 </f:if>
             </div>
         </div>

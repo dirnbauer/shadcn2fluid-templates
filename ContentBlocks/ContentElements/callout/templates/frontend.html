@@ -9,10 +9,10 @@
     <s2f:layout.container>
         <div class="callout callout--{data.variant -> f:or(alternative: 'info')}" role="alert">
             <f:if condition="{data.header}">
-                <h3 class="callout__title">{data.header}</h3>
+                <h3 class="callout__title">{data -> f:render.text(field: 'header')}</h3>
             </f:if>
             <div class="callout__content">
-                <f:format.html>{data.content}</f:format.html>
+                {data -> f:render.text(field: 'content')}
             </div>
         </div>
     </s2f:layout.container>

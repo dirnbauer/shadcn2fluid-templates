@@ -9,16 +9,16 @@
     <s2f:layout.container>
         <div class="feature-split__grid">
             <div class="feature-split__copy">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
                 <f:if condition="{data.description}">
-                    <s2f:atom.typography variant="muted" class="feature-split__description">{data.description}</s2f:atom.typography>
+                    <s2f:atom.typography variant="muted" class="feature-split__description">{data -> f:render.text(field: 'description')}</s2f:atom.typography>
                 </f:if>
                 <div class="feature-split__list">
                     <f:for each="{data.items}" as="item">
                         <div class="feature-split__item">
-                            <h3 class="feature-split__title">{item.title}</h3>
+                            <h3 class="feature-split__title">{item -> f:render.text(field: 'title')}</h3>
                             <f:if condition="{item.description_text}">
-                                <p class="feature-split__detail">{item.description_text}</p>
+                                <p class="feature-split__detail">{item -> f:render.text(field: 'description_text')}</p>
                             </f:if>
                         </div>
                     </f:for>
@@ -26,7 +26,7 @@
             </div>
             <f:if condition="{data.image.0}">
                 <div class="feature-split__media">
-                    <f:image image="{data.image.0}" alt="{data.header}" maxWidth="640" class="feature-split__image"/>
+                    <f:image image="{data.image.0}" alt="{data -> f:render.text(field: 'header')}" maxWidth="640" class="feature-split__image"/>
                 </div>
             </f:if>
         </div>

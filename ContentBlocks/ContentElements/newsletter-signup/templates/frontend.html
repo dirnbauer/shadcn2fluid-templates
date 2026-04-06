@@ -9,9 +9,9 @@
     <s2f:layout.container>
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="newsletter-signup__intro">
-                <f:if condition="{data.eyebrow}"><span class="newsletter-signup__eyebrow">{data.eyebrow}</span></f:if>
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.eyebrow}"><span class="newsletter-signup__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -25,7 +25,7 @@
                     <s2f:atom.button type="submit">{data.button_text -> f:or(alternative: 'Subscribe')}</s2f:atom.button>
                 </form>
                 <f:if condition="{data.privacy_text}">
-                    <p class="newsletter-signup__privacy">{data.privacy_text}</p>
+                    <p class="newsletter-signup__privacy">{data -> f:render.text(field: 'privacy_text')}</p>
                 </f:if>
             </s2f:molecule.card>
 
@@ -34,7 +34,7 @@
                     <f:for each="{data.points}" as="point">
                         <div class="newsletter-signup__point">
                             <span class="newsletter-signup__check">+</span>
-                            <span>{point.text}</span>
+                            <span>{point -> f:render.text(field: 'text')}</span>
                         </div>
                     </f:for>
                 </div>

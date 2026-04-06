@@ -8,18 +8,18 @@
 <s2f:layout.section class="navbar-transparent">
     <s2f:layout.container>
         <nav class="navbar-transparent__inner" aria-label="Transparent navigation">
-            <div class="navbar-transparent__brand">{data.brand}</div>
+            <div class="navbar-transparent__brand">{data -> f:render.text(field: 'brand')}</div>
             <ul class="navbar-transparent__nav">
                 <f:for each="{data.nav_items}" as="item">
                     <li>
                         <f:if condition="{item.link.url}">
-                            <f:link.typolink parameter="{item.link}" class="navbar-transparent__link">{item.label}</f:link.typolink>
+                            <f:link.typolink parameter="{item.link}" class="navbar-transparent__link">{item -> f:render.text(field: 'label')}</f:link.typolink>
                         </f:if>
                     </li>
                 </f:for>
             </ul>
             <f:if condition="{data.button_text} && {data.button_link.url}">
-                <s2f:atom.button link="{data.button_link}" variant="outline" size="sm">{data.button_text}</s2f:atom.button>
+                <s2f:atom.button link="{data.button_link}" variant="outline" size="sm">{data -> f:render.text(field: 'button_text')}</s2f:atom.button>
             </f:if>
         </nav>
     </s2f:layout.container>

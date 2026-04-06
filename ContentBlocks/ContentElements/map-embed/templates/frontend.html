@@ -9,13 +9,13 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.address}">
             <header class="map-embed__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.address}"><p class="map-embed__address">{data.address}</p></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.address}"><p class="map-embed__address">{data -> f:render.text(field: 'address')}</p></f:if>
             </header>
         </f:if>
         <f:if condition="{data.embed_url}">
             <div class="map-embed__frame" style="height: {data.height -> f:or(alternative: '400')}px">
-                <iframe src="{data.embed_url}" class="map-embed__iframe" allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="{data -> f:render.text(field: 'embed_url')}" class="map-embed__iframe" allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </f:if>
     </s2f:layout.container>

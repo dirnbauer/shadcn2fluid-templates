@@ -8,14 +8,14 @@
 <s2f:layout.section class="definition-list-section">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <s2f:atom.typography tag="h2" variant="h2" class="definition-list-section__headline">{data.header}</s2f:atom.typography>
+            <s2f:atom.typography tag="h2" variant="h2" class="definition-list-section__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
         </f:if>
 
         <dl class="definition-list definition-list--{data.layout -> f:or(alternative: 'stacked')}">
             <f:for each="{data.items}" as="item">
                 <div class="definition-list__entry">
-                    <dt class="definition-list__term">{item.term}</dt>
-                    <dd class="definition-list__definition">{item.definition}</dd>
+                    <dt class="definition-list__term">{item -> f:render.text(field: 'term')}</dt>
+                    <dd class="definition-list__definition">{item -> f:render.text(field: 'definition')}</dd>
                 </div>
             </f:for>
         </dl>

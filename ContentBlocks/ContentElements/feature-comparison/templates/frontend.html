@@ -9,7 +9,7 @@
     <s2f:layout.container>
         <f:if condition="{data.header}">
             <header class="feature-comparison__intro">
-                <s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography>
+                <s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
             </header>
         </f:if>
 
@@ -21,7 +21,7 @@
             </div>
             <f:for each="{data.items}" as="item">
                 <div class="feature-comparison__row">
-                    <span class="feature-comparison__feature-col">{item.feature}</span>
+                    <span class="feature-comparison__feature-col">{item -> f:render.text(field: 'feature')}</span>
                     <span class="feature-comparison__check-col">
                         <f:if condition="{item.left_supported}">
                             <f:then><span class="feature-comparison__yes" aria-label="Yes">&#10003;</span></f:then>

@@ -9,20 +9,20 @@
     <s2f:layout.container>
         <div class="privacy-notice">
             <f:if condition="{data.header}">
-                <h2 class="privacy-notice__title">{data.header}</h2>
+                <h2 class="privacy-notice__title">{data -> f:render.text(field: 'header')}</h2>
             </f:if>
             <f:if condition="{data.last_updated}">
-                <p class="privacy-notice__updated">Last updated: {data.last_updated}</p>
+                <p class="privacy-notice__updated">Last updated: {data -> f:render.text(field: 'last_updated')}</p>
             </f:if>
             <f:if condition="{data.intro}">
-                <p class="privacy-notice__intro">{data.intro}</p>
+                <p class="privacy-notice__intro">{data -> f:render.text(field: 'intro')}</p>
             </f:if>
             <div class="privacy-notice__sections">
                 <f:for each="{data.sections}" as="section">
                     <details class="privacy-notice__section">
-                        <summary class="privacy-notice__section-title">{section.title}</summary>
+                        <summary class="privacy-notice__section-title">{section -> f:render.text(field: 'title')}</summary>
                         <div class="privacy-notice__section-content">
-                            <f:format.html>{section.content}</f:format.html>
+                            {section -> f:render.text(field: 'content')}
                         </div>
                     </details>
                 </f:for>

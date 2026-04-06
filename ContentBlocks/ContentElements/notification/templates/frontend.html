@@ -27,12 +27,12 @@
             </div>
             <div class="notification__body">
                 <f:if condition="{data.header}">
-                    <h4 class="notification__title">{data.header}</h4>
+                    <h4 class="notification__title">{data -> f:render.text(field: 'header')}</h4>
                 </f:if>
-                <p class="notification__message">{data.content}</p>
+                <p class="notification__message">{data -> f:render.text(field: 'content')}</p>
                 <f:if condition="{data.action_text}">
                     <div class="notification__actions">
-                        <f:link.typolink parameter="{data.action_link}" class="notification__action">{data.action_text}</f:link.typolink>
+                        <f:link.typolink parameter="{data.action_link}" class="notification__action">{data -> f:render.text(field: 'action_text')}</f:link.typolink>
                     </div>
                 </f:if>
             </div>

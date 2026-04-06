@@ -10,22 +10,22 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="compare__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="compare__eyebrow">{data.eyebrow}</span>
+                    <span class="compare__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="compare__headline">{data.header}</h2>
+                    <h2 class="compare__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="compare__description">{data.subheadline}</p>
+                    <p class="compare__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
 
         <div class="compare__grid">
             <article class="compare__panel">
-                <h3 class="compare__title">{data.left_title}</h3>
+                <h3 class="compare__title">{data -> f:render.text(field: 'left_title')}</h3>
                 <f:if condition="{data.left_description}">
-                    <p class="compare__panel-description">{data.left_description}</p>
+                    <p class="compare__panel-description">{data -> f:render.text(field: 'left_description')}</p>
                 </f:if>
                 <f:if condition="{data.left_points}">
                     <ul class="compare__points">
@@ -39,7 +39,7 @@
                 <f:if condition="{data.left_button_text} && {data.left_button_link.url}">
                     <div class="compare__actions">
                         <f:link.typolink parameter="{data.left_button_link}" class="compare__button compare__button--outline">
-                            {data.left_button_text}
+                            {data -> f:render.text(field: 'left_button_text')}
                         </f:link.typolink>
                     </div>
                 </f:if>
@@ -47,11 +47,11 @@
 
             <article class="compare__panel compare__panel--accent">
                 <f:if condition="{data.right_badge}">
-                    <span class="compare__badge">{data.right_badge}</span>
+                    <span class="compare__badge">{data -> f:render.text(field: 'right_badge')}</span>
                 </f:if>
-                <h3 class="compare__title">{data.right_title}</h3>
+                <h3 class="compare__title">{data -> f:render.text(field: 'right_title')}</h3>
                 <f:if condition="{data.right_description}">
-                    <p class="compare__panel-description">{data.right_description}</p>
+                    <p class="compare__panel-description">{data -> f:render.text(field: 'right_description')}</p>
                 </f:if>
                 <f:if condition="{data.right_points}">
                     <ul class="compare__points">
@@ -65,7 +65,7 @@
                 <f:if condition="{data.right_button_text} && {data.right_button_link.url}">
                     <div class="compare__actions">
                         <f:link.typolink parameter="{data.right_button_link}" class="compare__button">
-                            {data.right_button_text}
+                            {data -> f:render.text(field: 'right_button_text')}
                         </f:link.typolink>
                     </div>
                 </f:if>

@@ -9,18 +9,18 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="company-history__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
         <div class="company-history__timeline">
             <f:for each="{data.events}" as="event">
                 <article class="company-history__event">
-                    <span class="company-history__year">{event.year}</span>
+                    <span class="company-history__year">{event -> f:render.text(field: 'year')}</span>
                     <div class="company-history__body">
-                        <h3 class="company-history__title">{event.title}</h3>
-                        <f:if condition="{event.description}"><p class="company-history__description">{event.description}</p></f:if>
+                        <h3 class="company-history__title">{event -> f:render.text(field: 'title')}</h3>
+                        <f:if condition="{event.description}"><p class="company-history__description">{event -> f:render.text(field: 'description')}</p></f:if>
                     </div>
                 </article>
             </f:for>

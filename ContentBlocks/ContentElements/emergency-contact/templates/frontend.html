@@ -8,21 +8,21 @@
 <s2f:layout.section class="emergency-contact">
     <s2f:layout.container>
         <div class="emergency-contact__card">
-            <f:if condition="{data.header}"><h2 class="emergency-contact__headline">{data.header}</h2></f:if>
-            <f:if condition="{data.description_text}"><p class="emergency-contact__description">{data.description_text}</p></f:if>
+            <f:if condition="{data.header}"><h2 class="emergency-contact__headline">{data -> f:render.text(field: 'header')}</h2></f:if>
+            <f:if condition="{data.description_text}"><p class="emergency-contact__description">{data -> f:render.text(field: 'description_text')}</p></f:if>
             <f:if condition="{data.phone}">
                 <div class="emergency-contact__phone">
                     <f:if condition="{data.phone_link.url}">
                         <f:then>
-                            <f:link.typolink parameter="{data.phone_link}" class="emergency-contact__number">{data.phone}</f:link.typolink>
+                            <f:link.typolink parameter="{data.phone_link}" class="emergency-contact__number">{data -> f:render.text(field: 'phone')}</f:link.typolink>
                         </f:then>
                         <f:else>
-                            <span class="emergency-contact__number">{data.phone}</span>
+                            <span class="emergency-contact__number">{data -> f:render.text(field: 'phone')}</span>
                         </f:else>
                     </f:if>
                 </div>
             </f:if>
-            <f:if condition="{data.available}"><p class="emergency-contact__available">{data.available}</p></f:if>
+            <f:if condition="{data.available}"><p class="emergency-contact__available">{data -> f:render.text(field: 'available')}</p></f:if>
         </div>
     </s2f:layout.container>
 </s2f:layout.section>

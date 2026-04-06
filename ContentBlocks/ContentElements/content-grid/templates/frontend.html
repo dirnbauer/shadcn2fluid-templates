@@ -8,15 +8,15 @@
 <s2f:layout.section class="content-grid">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <s2f:atom.typography tag="h2" variant="h2" class="content-grid__headline">{data.header}</s2f:atom.typography>
+            <s2f:atom.typography tag="h2" variant="h2" class="content-grid__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
         </f:if>
 
         <div class="content-grid__grid content-grid__grid--cols-{data.columns -> f:or(alternative: '2')}">
             <f:for each="{data.items}" as="item">
                 <s2f:molecule.card class="content-grid__item">
-                    <f:if condition="{item.title}"><h3 class="content-grid__title">{item.title}</h3></f:if>
+                    <f:if condition="{item.title}"><h3 class="content-grid__title">{item -> f:render.text(field: 'title')}</h3></f:if>
                     <f:if condition="{item.content}">
-                        <div class="content-grid__content"><f:format.html>{item.content}</f:format.html></div>
+                        <div class="content-grid__content">{item -> f:render.text(field: 'content')}</div>
                     </f:if>
                     <f:if condition="{item.link.url}">
                         <f:link.typolink parameter="{item.link}" class="content-grid__link">Read more</f:link.typolink>

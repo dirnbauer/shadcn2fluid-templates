@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.description}">
             <header class="pricing-calculator__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="pricing-calculator__eyebrow">{data.eyebrow}</span>
+                    <span class="pricing-calculator__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="pricing-calculator__headline">{data.header}</h2>
+                    <h2 class="pricing-calculator__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="pricing-calculator__description">{data.description}</p>
+                    <p class="pricing-calculator__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -40,9 +40,9 @@
                     <tbody>
                         <f:for each="{data.tiers}" as="tier">
                             <tr>
-                                <td>{tier.label}</td>
-                                <td>{tier.up_to} {data.unit_label -> f:or(alternative: 'units')}</td>
-                                <td>{tier.price_per_unit}</td>
+                                <td>{tier -> f:render.text(field: 'label')}</td>
+                                <td>{tier -> f:render.text(field: 'up_to')} {data.unit_label -> f:or(alternative: 'units')}</td>
+                                <td>{tier -> f:render.text(field: 'price_per_unit')}</td>
                             </tr>
                         </f:for>
                     </tbody>

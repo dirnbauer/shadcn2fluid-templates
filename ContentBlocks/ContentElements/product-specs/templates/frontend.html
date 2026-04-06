@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.description}">
             <header class="product-specs__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="product-specs__eyebrow">{data.eyebrow}</span>
+                    <span class="product-specs__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="product-specs__headline">{data.header}</h2>
+                    <h2 class="product-specs__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="product-specs__description">{data.description}</p>
+                    <p class="product-specs__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -27,8 +27,8 @@
                     <tbody>
                         <f:for each="{data.specs}" as="spec">
                             <tr>
-                                <th class="product-specs__label">{spec.label}</th>
-                                <td class="product-specs__value">{spec.value}</td>
+                                <th class="product-specs__label">{spec -> f:render.text(field: 'label')}</th>
+                                <td class="product-specs__value">{spec -> f:render.text(field: 'value')}</td>
                             </tr>
                         </f:for>
                     </tbody>
@@ -38,7 +38,7 @@
             <f:if condition="{data.image}">
                 <div class="product-specs__media">
                     <f:for each="{data.image}" as="fileReference">
-                        <img src="{f:uri.image(image: fileReference, maxWidth: 480)}" alt="{data.header}" class="product-specs__image"/>
+                        <img src="{f:uri.image(image: fileReference, maxWidth: 480)}" alt="{data -> f:render.text(field: 'header')}" class="product-specs__image"/>
                     </f:for>
                 </div>
             </f:if>

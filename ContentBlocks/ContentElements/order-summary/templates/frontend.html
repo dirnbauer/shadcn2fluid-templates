@@ -9,19 +9,19 @@
     <s2f:layout.container>
         <div class="order-summary__card">
             <f:if condition="{data.header}">
-                <h2 class="order-summary__heading">{data.header}</h2>
+                <h2 class="order-summary__heading">{data -> f:render.text(field: 'header')}</h2>
             </f:if>
 
             <div class="order-summary__items">
                 <f:for each="{data.items}" as="item">
                     <div class="order-summary__line">
                         <div class="order-summary__line-info">
-                            <span class="order-summary__line-name">{item.name}</span>
+                            <span class="order-summary__line-name">{item -> f:render.text(field: 'name')}</span>
                             <f:if condition="{item.quantity}">
-                                <span class="order-summary__line-qty">x{item.quantity}</span>
+                                <span class="order-summary__line-qty">x{item -> f:render.text(field: 'quantity')}</span>
                             </f:if>
                         </div>
-                        <span class="order-summary__line-price">{item.price}</span>
+                        <span class="order-summary__line-price">{item -> f:render.text(field: 'price')}</span>
                     </div>
                 </f:for>
             </div>
@@ -30,24 +30,24 @@
                 <f:if condition="{data.subtotal}">
                     <div class="order-summary__row">
                         <span>Subtotal</span>
-                        <span>{data.subtotal}</span>
+                        <span>{data -> f:render.text(field: 'subtotal')}</span>
                     </div>
                 </f:if>
                 <f:if condition="{data.discount_label} && {data.discount_value}">
                     <div class="order-summary__row order-summary__row--discount">
-                        <span>{data.discount_label}</span>
-                        <span>{data.discount_value}</span>
+                        <span>{data -> f:render.text(field: 'discount_label')}</span>
+                        <span>{data -> f:render.text(field: 'discount_value')}</span>
                     </div>
                 </f:if>
                 <div class="order-summary__row order-summary__row--total">
                     <span>Total</span>
-                    <span>{data.total}</span>
+                    <span>{data -> f:render.text(field: 'total')}</span>
                 </div>
             </div>
 
             <f:if condition="{data.button_text} && {data.button_link.url}">
                 <f:link.typolink parameter="{data.button_link}" class="order-summary__button">
-                    {data.button_text}
+                    {data -> f:render.text(field: 'button_text')}
                 </f:link.typolink>
             </f:if>
         </div>

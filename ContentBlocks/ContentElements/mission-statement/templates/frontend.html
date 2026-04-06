@@ -8,10 +8,10 @@
 <s2f:layout.section class="mission-statement">
     <s2f:layout.container>
         <div class="mission-statement__content">
-            <f:if condition="{data.eyebrow}"><span class="mission-statement__eyebrow">{data.eyebrow}</span></f:if>
-            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-            <f:if condition="{data.statement}"><blockquote class="mission-statement__quote">{data.statement}</blockquote></f:if>
-            <f:if condition="{data.attribution}"><cite class="mission-statement__attribution">{data.attribution}</cite></f:if>
+            <f:if condition="{data.eyebrow}"><span class="mission-statement__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+            <f:if condition="{data.statement}"><blockquote class="mission-statement__quote">{data -> f:render.text(field: 'statement')}</blockquote></f:if>
+            <f:if condition="{data.attribution}"><cite class="mission-statement__attribution">{data -> f:render.text(field: 'attribution')}</cite></f:if>
         </div>
     </s2f:layout.container>
 </s2f:layout.section>

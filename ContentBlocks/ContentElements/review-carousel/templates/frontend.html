@@ -10,10 +10,10 @@
         <f:if condition="{data.eyebrow} || {data.header}">
             <header class="review-carousel__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="review-carousel__eyebrow">{data.eyebrow}</span>
+                    <span class="review-carousel__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="review-carousel__headline">{data.header}</h2>
+                    <h2 class="review-carousel__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
             </header>
         </f:if>
@@ -32,19 +32,19 @@
                         </f:for>
                     </div>
                     <f:if condition="{review.title}">
-                        <h3 class="review-carousel__title">{review.title}</h3>
+                        <h3 class="review-carousel__title">{review -> f:render.text(field: 'title')}</h3>
                     </f:if>
-                    <p class="review-carousel__text">{review.review_text}</p>
+                    <p class="review-carousel__text">{review -> f:render.text(field: 'review_text')}</p>
                     <div class="review-carousel__reviewer">
                         <f:if condition="{review.reviewer_image}">
                             <f:for each="{review.reviewer_image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, width: 40, height: 40)}" alt="{review.reviewer_name}" class="review-carousel__avatar"/>
+                                <img src="{f:uri.image(image: fileReference, width: 40, height: 40)}" alt="{review -> f:render.text(field: 'reviewer_name')}" class="review-carousel__avatar"/>
                             </f:for>
                         </f:if>
                         <div>
-                            <span class="review-carousel__name">{review.reviewer_name}</span>
+                            <span class="review-carousel__name">{review -> f:render.text(field: 'reviewer_name')}</span>
                             <f:if condition="{review.date}">
-                                <span class="review-carousel__date">{review.date}</span>
+                                <span class="review-carousel__date">{review -> f:render.text(field: 'date')}</span>
                             </f:if>
                         </div>
                     </div>

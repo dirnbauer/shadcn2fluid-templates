@@ -8,12 +8,12 @@
 <s2f:layout.section class="product-reviews">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <h2 class="product-reviews__heading">{data.header}</h2>
+            <h2 class="product-reviews__heading">{data -> f:render.text(field: 'header')}</h2>
         </f:if>
 
         <f:if condition="{data.average_score}">
             <div class="product-reviews__summary">
-                <span class="product-reviews__avg-score">{data.average_score}</span>
+                <span class="product-reviews__avg-score">{data -> f:render.text(field: 'average_score')}</span>
                 <div class="product-reviews__stars">
                     <f:for each="{0: 1, 1: 2, 2: 3, 3: 4, 4: 5}" as="star">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="product-reviews__star">
@@ -22,7 +22,7 @@
                     </f:for>
                 </div>
                 <f:if condition="{data.total_reviews}">
-                    <span class="product-reviews__total">{data.total_reviews}</span>
+                    <span class="product-reviews__total">{data -> f:render.text(field: 'total_reviews')}</span>
                 </f:if>
             </div>
         </f:if>
@@ -42,14 +42,14 @@
                             </f:for>
                         </div>
                         <f:if condition="{review.date}">
-                            <span class="product-reviews__review-date">{review.date}</span>
+                            <span class="product-reviews__review-date">{review -> f:render.text(field: 'date')}</span>
                         </f:if>
                     </div>
                     <f:if condition="{review.title}">
-                        <h3 class="product-reviews__review-title">{review.title}</h3>
+                        <h3 class="product-reviews__review-title">{review -> f:render.text(field: 'title')}</h3>
                     </f:if>
-                    <p class="product-reviews__review-text">{review.review_text}</p>
-                    <span class="product-reviews__review-author">{review.author}</span>
+                    <p class="product-reviews__review-text">{review -> f:render.text(field: 'review_text')}</p>
+                    <span class="product-reviews__review-author">{review -> f:render.text(field: 'author')}</span>
                 </article>
             </f:for>
         </div>

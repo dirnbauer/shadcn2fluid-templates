@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <f:if condition="{data.header}">
             <header class="feature-numbered__intro">
-                <s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -18,9 +18,9 @@
             <f:for each="{data.items}" as="item" iteration="iter">
                 <div class="feature-numbered__item">
                     <span class="feature-numbered__number" aria-hidden="true">{f:format.padding(padLength: 2, padString: '0')}{iter.cycle}</span>
-                    <h3 class="feature-numbered__title">{item.title}</h3>
+                    <h3 class="feature-numbered__title">{item -> f:render.text(field: 'title')}</h3>
                     <f:if condition="{item.description}">
-                        <p class="feature-numbered__description">{item.description}</p>
+                        <p class="feature-numbered__description">{item -> f:render.text(field: 'description')}</p>
                     </f:if>
                 </div>
             </f:for>

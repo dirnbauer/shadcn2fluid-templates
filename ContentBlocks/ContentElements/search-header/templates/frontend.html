@@ -9,13 +9,13 @@
     <s2f:layout.container>
         <header class="search-header__intro">
             <f:if condition="{data.eyebrow}">
-                <span class="search-header__eyebrow">{data.eyebrow}</span>
+                <span class="search-header__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
             </f:if>
             <f:if condition="{data.header}">
-                <h2 class="search-header__headline">{data.header}</h2>
+                <h2 class="search-header__headline">{data -> f:render.text(field: 'header')}</h2>
             </f:if>
             <f:if condition="{data.subheadline}">
-                <p class="search-header__description">{data.subheadline}</p>
+                <p class="search-header__description">{data -> f:render.text(field: 'subheadline')}</p>
             </f:if>
         </header>
         <div class="search-header__body">

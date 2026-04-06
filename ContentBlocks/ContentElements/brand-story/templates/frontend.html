@@ -9,10 +9,10 @@
     <s2f:layout.container>
         <div class="brand-story__layout">
             <div class="brand-story__text">
-                <f:if condition="{data.eyebrow}"><span class="brand-story__eyebrow">{data.eyebrow}</span></f:if>
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.lead}"><p class="brand-story__lead">{data.lead}</p></f:if>
-                <f:if condition="{data.body}"><div class="brand-story__body">{data.body}</div></f:if>
+                <f:if condition="{data.eyebrow}"><span class="brand-story__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.lead}"><p class="brand-story__lead">{data -> f:render.text(field: 'lead')}</p></f:if>
+                <f:if condition="{data.body}"><div class="brand-story__body">{data -> f:render.text(field: 'body')}</div></f:if>
             </div>
             <f:if condition="{data.image}">
                 <div class="brand-story__image-wrapper">

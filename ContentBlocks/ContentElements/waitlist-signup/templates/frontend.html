@@ -8,14 +8,14 @@
 <s2f:layout.section class="waitlist-signup">
     <s2f:layout.container>
         <div class="waitlist-signup__content">
-            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-            <f:if condition="{data.description}"><s2f:atom.typography variant="muted">{data.description}</s2f:atom.typography></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+            <f:if condition="{data.description}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'description')}</s2f:atom.typography></f:if>
             <form class="waitlist-signup__form" action="{data.form_action.url}" method="post">
                 <input class="waitlist-signup__input" type="email" name="email" placeholder="Enter your email" required="required"/>
                 <s2f:atom.button type="submit" size="lg">{data.button_text -> f:or(alternative: 'Join the waitlist')}</s2f:atom.button>
             </form>
             <f:if condition="{data.count_text}">
-                <p class="waitlist-signup__count">{data.count_text}</p>
+                <p class="waitlist-signup__count">{data -> f:render.text(field: 'count_text')}</p>
             </f:if>
         </div>
     </s2f:layout.container>

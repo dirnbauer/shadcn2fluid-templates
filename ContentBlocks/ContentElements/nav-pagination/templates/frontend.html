@@ -16,11 +16,11 @@
                     <li>
                         <f:if condition="{item.active}">
                             <f:then>
-                                <span class="nav-pagination__page nav-pagination__page--active" aria-current="page">{item.label}</span>
+                                <span class="nav-pagination__page nav-pagination__page--active" aria-current="page">{item -> f:render.text(field: 'label')}</span>
                             </f:then>
                             <f:else>
                                 <f:if condition="{item.link.url}">
-                                    <f:link.typolink parameter="{item.link}" class="nav-pagination__page">{item.label}</f:link.typolink>
+                                    <f:link.typolink parameter="{item.link}" class="nav-pagination__page">{item -> f:render.text(field: 'label')}</f:link.typolink>
                                 </f:if>
                             </f:else>
                         </f:if>

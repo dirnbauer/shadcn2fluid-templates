@@ -10,10 +10,10 @@
         <f:if condition="{data.header} || {data.subheadline}">
             <div class="features__header">
                 <f:if condition="{data.header}">
-                    <s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography>
+                    <s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <s2f:atom.typography variant="muted" class="features__subheadline">{data.subheadline}</s2f:atom.typography>
+                    <s2f:atom.typography variant="muted" class="features__subheadline">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography>
                 </f:if>
             </div>
         </f:if>
@@ -28,15 +28,15 @@
                         <h3 class="features__title">
                             <f:if condition="{feature.link.url}">
                                 <f:then>
-                                    <f:link.typolink parameter="{feature.link}">{feature.title}</f:link.typolink>
+                                    <f:link.typolink parameter="{feature.link}">{feature -> f:render.text(field: 'title')}</f:link.typolink>
                                 </f:then>
                                 <f:else>
-                                    {feature.title}
+                                    {feature -> f:render.text(field: 'title')}
                                 </f:else>
                             </f:if>
                         </h3>
                         <f:if condition="{feature.description}">
-                            <p class="features__description">{feature.description}</p>
+                            <p class="features__description">{feature -> f:render.text(field: 'description')}</p>
                         </f:if>
                     </div>
                 </div>

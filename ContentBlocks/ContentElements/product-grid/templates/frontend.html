@@ -10,10 +10,10 @@
         <f:if condition="{data.eyebrow} || {data.header}">
             <header class="product-grid__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="product-grid__eyebrow">{data.eyebrow}</span>
+                    <span class="product-grid__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="product-grid__headline">{data.header}</h2>
+                    <h2 class="product-grid__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
             </header>
         </f:if>
@@ -24,15 +24,15 @@
                     <f:if condition="{product.image}">
                         <div class="product-grid__media">
                             <f:for each="{product.image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 400)}" alt="{product.name}" class="product-grid__image"/>
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 400)}" alt="{product -> f:render.text(field: 'name')}" class="product-grid__image"/>
                             </f:for>
                         </div>
                     </f:if>
                     <div class="product-grid__body">
-                        <h3 class="product-grid__name">{product.name}</h3>
-                        <span class="product-grid__price">{product.price}</span>
+                        <h3 class="product-grid__name">{product -> f:render.text(field: 'name')}</h3>
+                        <span class="product-grid__price">{product -> f:render.text(field: 'price')}</span>
                         <f:if condition="{product.description_text}">
-                            <p class="product-grid__desc">{product.description_text}</p>
+                            <p class="product-grid__desc">{product -> f:render.text(field: 'description_text')}</p>
                         </f:if>
                         <f:if condition="{product.link.url}">
                             <f:link.typolink parameter="{product.link}" class="product-grid__link">

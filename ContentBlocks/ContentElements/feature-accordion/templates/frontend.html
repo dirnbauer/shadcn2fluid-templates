@@ -9,20 +9,20 @@
     <s2f:layout.container>
         <div class="feature-accordion__grid">
             <div class="feature-accordion__copy">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
 
                 <div class="feature-accordion__list">
                     <f:for each="{data.items}" as="item" iteration="iter">
                         <details class="feature-accordion__item" {f:if(condition: iter.isFirst, then: 'open')}>
                             <summary class="feature-accordion__trigger">
-                                <span class="feature-accordion__title">{item.title}</span>
+                                <span class="feature-accordion__title">{item -> f:render.text(field: 'title')}</span>
                                 <span class="feature-accordion__chevron" aria-hidden="true">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                                 </span>
                             </summary>
                             <div class="feature-accordion__content">
-                                <f:format.html>{item.content}</f:format.html>
+                                {item -> f:render.text(field: 'content')}
                             </div>
                         </details>
                     </f:for>
@@ -30,7 +30,7 @@
             </div>
             <f:if condition="{data.image.0}">
                 <div class="feature-accordion__media">
-                    <f:image image="{data.image.0}" alt="{data.header}" maxWidth="640" class="feature-accordion__image"/>
+                    <f:image image="{data.image.0}" alt="{data -> f:render.text(field: 'header')}" maxWidth="640" class="feature-accordion__image"/>
                 </div>
             </f:if>
         </div>

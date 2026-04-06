@@ -9,18 +9,18 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="office-locations__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
         <div class="office-locations__grid">
             <f:for each="{data.location_items}" as="loc">
                 <s2f:molecule.card class="office-locations__item">
-                    <h3 class="office-locations__city">{loc.city}</h3>
-                    <f:if condition="{loc.address}"><p class="office-locations__address">{loc.address}</p></f:if>
-                    <f:if condition="{loc.phone}"><p class="office-locations__phone">{loc.phone}</p></f:if>
-                    <f:if condition="{loc.email}"><p class="office-locations__email">{loc.email}</p></f:if>
+                    <h3 class="office-locations__city">{loc -> f:render.text(field: 'city')}</h3>
+                    <f:if condition="{loc.address}"><p class="office-locations__address">{loc -> f:render.text(field: 'address')}</p></f:if>
+                    <f:if condition="{loc.phone}"><p class="office-locations__phone">{loc -> f:render.text(field: 'phone')}</p></f:if>
+                    <f:if condition="{loc.email}"><p class="office-locations__email">{loc -> f:render.text(field: 'email')}</p></f:if>
                     <f:if condition="{loc.map_link.url}">
                         <s2f:atom.button link="{loc.map_link}" variant="outline" size="sm">View on map</s2f:atom.button>
                     </f:if>

@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="stats__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="stats__eyebrow">{data.eyebrow}</span>
+                    <span class="stats__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="stats__headline">{data.header}</h2>
+                    <h2 class="stats__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="stats__description">{data.subheadline}</p>
+                    <p class="stats__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -24,10 +24,10 @@
         <div class="stats__grid stats__grid--cols-{data.columns -> f:or(alternative: '4')}">
             <f:for each="{data.stats}" as="stat">
                 <article class="stats__item">
-                    <div class="stats__value">{stat.value}</div>
-                    <h3 class="stats__label">{stat.label}</h3>
+                    <div class="stats__value">{stat -> f:render.text(field: 'value')}</div>
+                    <h3 class="stats__label">{stat -> f:render.text(field: 'label')}</h3>
                     <f:if condition="{stat.description}">
-                        <p class="stats__item-description">{stat.description}</p>
+                        <p class="stats__item-description">{stat -> f:render.text(field: 'description')}</p>
                     </f:if>
                 </article>
             </f:for>

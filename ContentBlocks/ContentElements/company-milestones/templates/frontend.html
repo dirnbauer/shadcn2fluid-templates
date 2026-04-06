@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="company-milestones__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -18,9 +18,9 @@
             <f:for each="{data.milestones}" as="ms" iteration="i">
                 <article class="company-milestones__item">
                     <span class="company-milestones__number">{i.cycle}</span>
-                    <f:if condition="{ms.year}"><span class="company-milestones__year">{ms.year}</span></f:if>
-                    <h3 class="company-milestones__title">{ms.title}</h3>
-                    <f:if condition="{ms.description}"><p class="company-milestones__description">{ms.description}</p></f:if>
+                    <f:if condition="{ms.year}"><span class="company-milestones__year">{ms -> f:render.text(field: 'year')}</span></f:if>
+                    <h3 class="company-milestones__title">{ms -> f:render.text(field: 'title')}</h3>
+                    <f:if condition="{ms.description}"><p class="company-milestones__description">{ms -> f:render.text(field: 'description')}</p></f:if>
                 </article>
             </f:for>
         </div>

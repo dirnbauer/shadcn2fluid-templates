@@ -14,13 +14,13 @@
     <s2f:layout.container>
         <header class="header-banner__inner">
             <f:if condition="{data.header}">
-                <h1 class="header-banner__title">{data.header}</h1>
+                <h1 class="header-banner__title">{data -> f:render.text(field: 'header')}</h1>
             </f:if>
             <f:if condition="{data.subheadline}">
-                <p class="header-banner__description">{data.subheadline}</p>
+                <p class="header-banner__description">{data -> f:render.text(field: 'subheadline')}</p>
             </f:if>
             <f:if condition="{data.button_text} && {data.button_link.url}">
-                <s2f:atom.button link="{data.button_link}" size="lg">{data.button_text}</s2f:atom.button>
+                <s2f:atom.button link="{data.button_link}" size="lg">{data -> f:render.text(field: 'button_text')}</s2f:atom.button>
             </f:if>
         </header>
     </s2f:layout.container>

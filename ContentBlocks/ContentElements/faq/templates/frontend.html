@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="faq__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -18,13 +18,13 @@
             <f:for each="{data.items}" as="item">
                 <details class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <summary class="faq__question">
-                        <span itemprop="name">{item.question}</span>
+                        <span itemprop="name">{item -> f:render.text(field: 'question')}</span>
                         <span class="faq__chevron" aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                         </span>
                     </summary>
                     <div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <div itemprop="text"><f:format.html>{item.answer}</f:format.html></div>
+                        <div itemprop="text">{item -> f:render.text(field: 'answer')}</div>
                     </div>
                 </details>
             </f:for>

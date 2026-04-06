@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="testimonial-wall__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="testimonial-wall__eyebrow">{data.eyebrow}</span>
+                    <span class="testimonial-wall__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="testimonial-wall__headline">{data.header}</h2>
+                    <h2 class="testimonial-wall__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="testimonial-wall__description">{data.subheadline}</p>
+                    <p class="testimonial-wall__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -24,17 +24,17 @@
         <div class="testimonial-wall__masonry">
             <f:for each="{data.testimonials}" as="item">
                 <article class="testimonial-wall__card">
-                    <blockquote class="testimonial-wall__quote">{item.quote}</blockquote>
+                    <blockquote class="testimonial-wall__quote">{item -> f:render.text(field: 'quote')}</blockquote>
                     <div class="testimonial-wall__author">
                         <f:if condition="{item.author_image}">
                             <f:for each="{item.author_image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, width: 40, height: 40)}" alt="{item.author_name}" class="testimonial-wall__avatar"/>
+                                <img src="{f:uri.image(image: fileReference, width: 40, height: 40)}" alt="{item -> f:render.text(field: 'author_name')}" class="testimonial-wall__avatar"/>
                             </f:for>
                         </f:if>
                         <div>
-                            <cite class="testimonial-wall__name">{item.author_name}</cite>
+                            <cite class="testimonial-wall__name">{item -> f:render.text(field: 'author_name')}</cite>
                             <f:if condition="{item.author_title}">
-                                <span class="testimonial-wall__role">{item.author_title}</span>
+                                <span class="testimonial-wall__role">{item -> f:render.text(field: 'author_title')}</span>
                             </f:if>
                         </div>
                     </div>

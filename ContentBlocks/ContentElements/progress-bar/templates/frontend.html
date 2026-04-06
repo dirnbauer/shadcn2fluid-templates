@@ -8,13 +8,13 @@
 <s2f:layout.section class="progress-bar-section">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <h2 class="progress-bar__headline">{data.header}</h2>
+            <h2 class="progress-bar__headline">{data -> f:render.text(field: 'header')}</h2>
         </f:if>
         <div class="progress-bar__list">
             <f:for each="{data.items}" as="item">
                 <div class="progress-bar__item">
                     <div class="progress-bar__meta">
-                        <span class="progress-bar__label">{item.label}</span>
+                        <span class="progress-bar__label">{item -> f:render.text(field: 'label')}</span>
                         <f:if condition="{data.show_value}">
                             <span class="progress-bar__value">{item.target_value}%</span>
                         </f:if>

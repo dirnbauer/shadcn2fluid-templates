@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="logo-cloud__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="logo-cloud__eyebrow">{data.eyebrow}</span>
+                    <span class="logo-cloud__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="logo-cloud__headline">{data.header}</h2>
+                    <h2 class="logo-cloud__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="logo-cloud__description">{data.subheadline}</p>
+                    <p class="logo-cloud__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -26,16 +26,16 @@
                 <div class="logo-cloud__item">
                     <f:if condition="{logo.link.url}">
                         <f:then>
-                            <f:link.typolink parameter="{logo.link}" class="logo-cloud__link" title="{logo.name}">
+                            <f:link.typolink parameter="{logo.link}" class="logo-cloud__link" title="{logo -> f:render.text(field: 'name')}">
                                 <f:for each="{logo.image}" as="fileReference">
-                                    <img src="{f:uri.image(image: fileReference, maxWidth: 220)}" alt="{logo.name}" class="logo-cloud__image"/>
+                                    <img src="{f:uri.image(image: fileReference, maxWidth: 220)}" alt="{logo -> f:render.text(field: 'name')}" class="logo-cloud__image"/>
                                 </f:for>
                             </f:link.typolink>
                         </f:then>
                         <f:else>
-                            <div class="logo-cloud__link" title="{logo.name}">
+                            <div class="logo-cloud__link" title="{logo -> f:render.text(field: 'name')}">
                                 <f:for each="{logo.image}" as="fileReference">
-                                    <img src="{f:uri.image(image: fileReference, maxWidth: 220)}" alt="{logo.name}" class="logo-cloud__image"/>
+                                    <img src="{f:uri.image(image: fileReference, maxWidth: 220)}" alt="{logo -> f:render.text(field: 'name')}" class="logo-cloud__image"/>
                                 </f:for>
                             </div>
                         </f:else>

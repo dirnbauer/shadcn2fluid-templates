@@ -11,10 +11,10 @@
             <f:if condition="{data.header} || {data.description}">
                 <div class="leaderboard__header">
                     <f:if condition="{data.header}">
-                        <h2 class="leaderboard__title">{data.header}</h2>
+                        <h2 class="leaderboard__title">{data -> f:render.text(field: 'header')}</h2>
                     </f:if>
                     <f:if condition="{data.description}">
-                        <p class="leaderboard__description">{data.description}</p>
+                        <p class="leaderboard__description">{data -> f:render.text(field: 'description')}</p>
                     </f:if>
                 </div>
             </f:if>
@@ -27,17 +27,17 @@
                         <f:if condition="{item.image}">
                             <div class="leaderboard__avatar">
                                 <f:for each="{item.image}" as="file">
-                                    <f:image image="{file}" alt="{item.name}" width="40" height="40"/>
+                                    <f:image image="{file}" alt="{item -> f:render.text(field: 'name')}" width="40" height="40"/>
                                 </f:for>
                             </div>
                         </f:if>
                         <div class="leaderboard__info">
-                            <span class="leaderboard__name">{item.name}</span>
+                            <span class="leaderboard__name">{item -> f:render.text(field: 'name')}</span>
                             <f:if condition="{item.subtitle}">
-                                <span class="leaderboard__subtitle">{item.subtitle}</span>
+                                <span class="leaderboard__subtitle">{item -> f:render.text(field: 'subtitle')}</span>
                             </f:if>
                         </div>
-                        <span class="leaderboard__value">{item.value}</span>
+                        <span class="leaderboard__value">{item -> f:render.text(field: 'value')}</span>
                     </li>
                 </f:for>
             </ol>

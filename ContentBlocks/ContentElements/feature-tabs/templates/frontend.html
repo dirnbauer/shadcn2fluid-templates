@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <f:if condition="{data.header}">
             <header class="feature-tabs__intro">
-                <s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -19,7 +19,7 @@
                 <button class="feature-tabs__trigger {f:if(condition: iter.isFirst, then: 'feature-tabs__trigger--active')}"
                         role="tab"
                         aria-selected="{f:if(condition: iter.isFirst, then: 'true', else: 'false')}"
-                        data-tab="tab-{data.uid}-{iter.index}">{item.tab_label}</button>
+                        data-tab="tab-{data.uid}-{iter.index}">{item -> f:render.text(field: 'tab_label')}</button>
             </f:for>
         </div>
 
@@ -29,12 +29,12 @@
                  id="tab-{data.uid}-{iter.index}">
                 <div class="feature-tabs__content">
                     <div class="feature-tabs__copy">
-                        <f:if condition="{item.title}"><h3 class="feature-tabs__title">{item.title}</h3></f:if>
-                        <f:if condition="{item.description}"><p class="feature-tabs__description">{item.description}</p></f:if>
+                        <f:if condition="{item.title}"><h3 class="feature-tabs__title">{item -> f:render.text(field: 'title')}</h3></f:if>
+                        <f:if condition="{item.description}"><p class="feature-tabs__description">{item -> f:render.text(field: 'description')}</p></f:if>
                     </div>
                     <f:if condition="{item.image.0}">
                         <div class="feature-tabs__media">
-                            <f:image image="{item.image.0}" alt="{item.title}" maxWidth="800" class="feature-tabs__image"/>
+                            <f:image image="{item.image.0}" alt="{item -> f:render.text(field: 'title')}" maxWidth="800" class="feature-tabs__image"/>
                         </div>
                     </f:if>
                 </div>

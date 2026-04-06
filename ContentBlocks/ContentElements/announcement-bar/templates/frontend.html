@@ -9,14 +9,14 @@
     <s2f:layout.container>
         <div class="announcement-bar__inner">
             <p class="announcement-bar__message">
-                <span>{data.message}</span>
+                <span>{data -> f:render.text(field: 'message')}</span>
                 <f:if condition="{data.supporting_text}">
-                    <small class="announcement-bar__supporting">{data.supporting_text}</small>
+                    <small class="announcement-bar__supporting">{data -> f:render.text(field: 'supporting_text')}</small>
                 </f:if>
             </p>
             <f:if condition="{data.link_text} && {data.link.url}">
                 <f:link.typolink parameter="{data.link}" class="announcement-bar__link">
-                    {data.link_text}
+                    {data -> f:render.text(field: 'link_text')}
                 </f:link.typolink>
             </f:if>
         </div>

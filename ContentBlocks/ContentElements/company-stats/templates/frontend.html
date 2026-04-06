@@ -9,17 +9,17 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="company-stats__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
         <div class="company-stats__grid">
             <f:for each="{data.stats}" as="stat">
                 <article class="company-stats__item">
-                    <div class="company-stats__value">{stat.value}</div>
-                    <h3 class="company-stats__label">{stat.label}</h3>
-                    <f:if condition="{stat.description_text}"><p class="company-stats__description">{stat.description_text}</p></f:if>
+                    <div class="company-stats__value">{stat -> f:render.text(field: 'value')}</div>
+                    <h3 class="company-stats__label">{stat -> f:render.text(field: 'label')}</h3>
+                    <f:if condition="{stat.description_text}"><p class="company-stats__description">{stat -> f:render.text(field: 'description_text')}</p></f:if>
                 </article>
             </f:for>
         </div>

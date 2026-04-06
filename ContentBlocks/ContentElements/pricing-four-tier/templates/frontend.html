@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="pricing-four-tier__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="pricing-four-tier__eyebrow">{data.eyebrow}</span>
+                    <span class="pricing-four-tier__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="pricing-four-tier__headline">{data.header}</h2>
+                    <h2 class="pricing-four-tier__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="pricing-four-tier__description">{data.subheadline}</p>
+                    <p class="pricing-four-tier__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -24,10 +24,10 @@
         <div class="pricing-four-tier__grid">
             <f:for each="{data.plans}" as="plan">
                 <article class="pricing-four-tier__plan {f:if(condition: plan.featured, then: 'pricing-four-tier__plan--featured')}">
-                    <h3 class="pricing-four-tier__title">{plan.title}</h3>
-                    <p class="pricing-four-tier__price">{plan.price}</p>
+                    <h3 class="pricing-four-tier__title">{plan -> f:render.text(field: 'title')}</h3>
+                    <p class="pricing-four-tier__price">{plan -> f:render.text(field: 'price')}</p>
                     <f:if condition="{plan.description}">
-                        <p class="pricing-four-tier__plan-desc">{plan.description}</p>
+                        <p class="pricing-four-tier__plan-desc">{plan -> f:render.text(field: 'description')}</p>
                     </f:if>
                     <f:if condition="{plan.features_list}">
                         <ul class="pricing-four-tier__features">
@@ -43,7 +43,7 @@
                     </f:if>
                     <f:if condition="{plan.button_text} && {plan.button_link.url}">
                         <f:link.typolink parameter="{plan.button_link}" class="pricing-four-tier__button {f:if(condition: plan.featured, then: 'pricing-four-tier__button--primary', else: 'pricing-four-tier__button--outline')}">
-                            {plan.button_text}
+                            {plan -> f:render.text(field: 'button_text')}
                         </f:link.typolink>
                     </f:if>
                 </article>

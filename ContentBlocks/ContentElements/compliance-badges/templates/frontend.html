@@ -9,7 +9,7 @@
     <s2f:layout.container>
         <div class="compliance-badges compliance-badges--{data.alignment -> f:or(alternative: 'center')}">
             <f:if condition="{data.header}">
-                <h2 class="compliance-badges__title">{data.header}</h2>
+                <h2 class="compliance-badges__title">{data -> f:render.text(field: 'header')}</h2>
             </f:if>
             <div class="compliance-badges__list">
                 <f:for each="{data.items}" as="item">
@@ -19,19 +19,19 @@
                                 <f:link.typolink parameter="{item.link}" class="compliance-badges__link" target="_blank">
                                     <f:if condition="{item.image}">
                                         <f:for each="{item.image}" as="file">
-                                            <f:image image="{file}" alt="{item.label}" height="48" class="compliance-badges__image"/>
+                                            <f:image image="{file}" alt="{item -> f:render.text(field: 'label')}" height="48" class="compliance-badges__image"/>
                                         </f:for>
                                     </f:if>
-                                    <span class="compliance-badges__label">{item.label}</span>
+                                    <span class="compliance-badges__label">{item -> f:render.text(field: 'label')}</span>
                                 </f:link.typolink>
                             </f:then>
                             <f:else>
                                 <f:if condition="{item.image}">
                                     <f:for each="{item.image}" as="file">
-                                        <f:image image="{file}" alt="{item.label}" height="48" class="compliance-badges__image"/>
+                                        <f:image image="{file}" alt="{item -> f:render.text(field: 'label')}" height="48" class="compliance-badges__image"/>
                                     </f:for>
                                 </f:if>
-                                <span class="compliance-badges__label">{item.label}</span>
+                                <span class="compliance-badges__label">{item -> f:render.text(field: 'label')}</span>
                             </f:else>
                         </f:if>
                     </div>

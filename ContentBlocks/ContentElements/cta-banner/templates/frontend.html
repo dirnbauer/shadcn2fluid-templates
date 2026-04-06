@@ -8,10 +8,10 @@
 <s2f:layout.section class="cta-banner cta-banner--{data.bg_style -> f:or(alternative: 'primary')}">
     <s2f:layout.container>
         <div class="cta-banner__content">
-            <f:if condition="{data.header}"><h2 class="cta-banner__headline">{data.header}</h2></f:if>
-            <f:if condition="{data.description}"><p class="cta-banner__description">{data.description}</p></f:if>
+            <f:if condition="{data.header}"><h2 class="cta-banner__headline">{data -> f:render.text(field: 'header')}</h2></f:if>
+            <f:if condition="{data.description}"><p class="cta-banner__description">{data -> f:render.text(field: 'description')}</p></f:if>
             <f:if condition="{data.cta_text} && {data.cta_link.url}">
-                <s2f:atom.button link="{data.cta_link}" variant="secondary" size="lg">{data.cta_text}</s2f:atom.button>
+                <s2f:atom.button link="{data.cta_link}" variant="secondary" size="lg">{data -> f:render.text(field: 'cta_text')}</s2f:atom.button>
             </f:if>
         </div>
     </s2f:layout.container>

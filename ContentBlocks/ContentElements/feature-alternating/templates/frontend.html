@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <f:if condition="{data.header}">
             <header class="feature-alternating__intro">
-                <s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -18,9 +18,9 @@
             <f:for each="{data.items}" as="item" iteration="iter">
                 <div class="feature-alternating__row {f:if(condition: iter.isEven, then: 'feature-alternating__row--reverse')}">
                     <div class="feature-alternating__copy">
-                        <h3 class="feature-alternating__title">{item.title}</h3>
+                        <h3 class="feature-alternating__title">{item -> f:render.text(field: 'title')}</h3>
                         <f:if condition="{item.description}">
-                            <p class="feature-alternating__description">{item.description}</p>
+                            <p class="feature-alternating__description">{item -> f:render.text(field: 'description')}</p>
                         </f:if>
                         <f:if condition="{item.link.url}">
                             <f:link.typolink parameter="{item.link}" class="feature-alternating__link">Learn more</f:link.typolink>
@@ -28,7 +28,7 @@
                     </div>
                     <f:if condition="{item.image.0}">
                         <div class="feature-alternating__media">
-                            <f:image image="{item.image.0}" alt="{item.title}" maxWidth="640" class="feature-alternating__image"/>
+                            <f:image image="{item.image.0}" alt="{item -> f:render.text(field: 'title')}" maxWidth="640" class="feature-alternating__image"/>
                         </div>
                     </f:if>
                 </div>

@@ -8,8 +8,8 @@
 <s2f:layout.section class="feature-checklist">
     <s2f:layout.container>
         <header class="feature-checklist__intro">
-            <f:if condition="{data.eyebrow}"><span class="feature-checklist__eyebrow">{data.eyebrow}</span></f:if>
-            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
+            <f:if condition="{data.eyebrow}"><span class="feature-checklist__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
         </header>
         <div class="feature-checklist__body">
             <s2f:molecule.card class="feature-checklist__list">
@@ -19,9 +19,9 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                         </span>
                         <div>
-                            <h3 class="feature-checklist__title">{item.title}</h3>
+                            <h3 class="feature-checklist__title">{item -> f:render.text(field: 'title')}</h3>
                             <f:if condition="{item.description_text}">
-                                <p class="feature-checklist__description">{item.description_text}</p>
+                                <p class="feature-checklist__description">{item -> f:render.text(field: 'description_text')}</p>
                             </f:if>
                         </div>
                     </div>

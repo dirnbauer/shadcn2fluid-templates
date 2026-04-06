@@ -9,15 +9,15 @@
     <s2f:layout.container>
         <div class="feature-minimal__layout">
             <header class="feature-minimal__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
             <div class="feature-minimal__list">
                 <f:for each="{data.items}" as="item">
                     <div class="feature-minimal__item">
-                        <h3 class="feature-minimal__title">{item.title}</h3>
+                        <h3 class="feature-minimal__title">{item -> f:render.text(field: 'title')}</h3>
                         <f:if condition="{item.description_text}">
-                            <p class="feature-minimal__description">{item.description_text}</p>
+                            <p class="feature-minimal__description">{item -> f:render.text(field: 'description_text')}</p>
                         </f:if>
                     </div>
                 </f:for>

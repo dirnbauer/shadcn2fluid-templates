@@ -10,10 +10,10 @@
         <f:if condition="{data.eyebrow} || {data.header}">
             <header class="pricing-comparison__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="pricing-comparison__eyebrow">{data.eyebrow}</span>
+                    <span class="pricing-comparison__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="pricing-comparison__headline">{data.header}</h2>
+                    <h2 class="pricing-comparison__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
             </header>
         </f:if>
@@ -25,9 +25,9 @@
                         <th class="pricing-comparison__feature-col">Feature</th>
                         <f:for each="{data.plans}" as="plan">
                             <th class="pricing-comparison__plan-col">
-                                <span class="pricing-comparison__plan-name">{plan.name}</span>
+                                <span class="pricing-comparison__plan-name">{plan -> f:render.text(field: 'name')}</span>
                                 <f:if condition="{plan.price}">
-                                    <span class="pricing-comparison__plan-price">{plan.price}</span>
+                                    <span class="pricing-comparison__plan-price">{plan -> f:render.text(field: 'price')}</span>
                                 </f:if>
                             </th>
                         </f:for>
@@ -36,7 +36,7 @@
                 <tbody>
                     <f:for each="{data.feature_items}" as="row">
                         <tr>
-                            <td class="pricing-comparison__feature-name">{row.feature_name}</td>
+                            <td class="pricing-comparison__feature-name">{row -> f:render.text(field: 'feature_name')}</td>
                             <f:for each="{row.tier_values -> f:split(separator: ',')}" as="val">
                                 <td class="pricing-comparison__cell">{val -> f:format.trim()}</td>
                             </f:for>

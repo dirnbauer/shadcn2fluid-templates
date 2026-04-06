@@ -10,10 +10,10 @@
         <div class="footer-app-links__inner">
             <div class="footer-app-links__content">
                 <f:if condition="{data.header}">
-                    <h2 class="footer-app-links__title">{data.header}</h2>
+                    <h2 class="footer-app-links__title">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="footer-app-links__description">{data.description}</p>
+                    <p class="footer-app-links__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
                 <div class="footer-app-links__buttons">
                     <f:if condition="{data.appstore_link}">
@@ -40,7 +40,7 @@
         </div>
         <f:if condition="{data.copyright}">
             <div class="footer-app-links__bottom">
-                <p class="footer-app-links__copyright">{data.copyright}</p>
+                <p class="footer-app-links__copyright">{data -> f:render.text(field: 'copyright')}</p>
             </div>
         </f:if>
     </s2f:layout.container>

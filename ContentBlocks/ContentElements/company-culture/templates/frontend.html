@@ -9,9 +9,9 @@
     <s2f:layout.container>
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="company-culture__intro">
-                <f:if condition="{data.eyebrow}"><span class="company-culture__eyebrow">{data.eyebrow}</span></f:if>
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.eyebrow}"><span class="company-culture__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -21,12 +21,12 @@
                     <f:if condition="{item.image}">
                         <div class="company-culture__image-wrapper">
                             <f:for each="{item.image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 640)}" alt="{item.title}" class="company-culture__image"/>
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 640)}" alt="{item -> f:render.text(field: 'title')}" class="company-culture__image"/>
                             </f:for>
                         </div>
                     </f:if>
-                    <f:if condition="{item.title}"><h3 class="company-culture__title">{item.title}</h3></f:if>
-                    <f:if condition="{item.description}"><p class="company-culture__description">{item.description}</p></f:if>
+                    <f:if condition="{item.title}"><h3 class="company-culture__title">{item -> f:render.text(field: 'title')}</h3></f:if>
+                    <f:if condition="{item.description}"><p class="company-culture__description">{item -> f:render.text(field: 'description')}</p></f:if>
                 </article>
             </f:for>
         </div>

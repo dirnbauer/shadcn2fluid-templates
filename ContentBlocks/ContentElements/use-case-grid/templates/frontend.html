@@ -8,20 +8,20 @@
 <s2f:layout.section class="use-case-grid">
     <s2f:layout.container>
         <header class="use-case-grid__intro">
-            <f:if condition="{data.eyebrow}"><span class="use-case-grid__eyebrow">{data.eyebrow}</span></f:if>
-            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-            <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+            <f:if condition="{data.eyebrow}"><span class="use-case-grid__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+            <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
         </header>
         <div class="use-case-grid__grid">
             <f:for each="{data.items}" as="item">
                 <s2f:molecule.card class="use-case-grid__item">
                     <h3 class="use-case-grid__title">
                         <f:if condition="{item.link.url}">
-                            <f:then><f:link.typolink parameter="{item.link}">{item.title}</f:link.typolink></f:then>
-                            <f:else>{item.title}</f:else>
+                            <f:then><f:link.typolink parameter="{item.link}">{item -> f:render.text(field: 'title')}</f:link.typolink></f:then>
+                            <f:else>{item -> f:render.text(field: 'title')}</f:else>
                         </f:if>
                     </h3>
-                    <p class="use-case-grid__description">{item.description}</p>
+                    <p class="use-case-grid__description">{item -> f:render.text(field: 'description')}</p>
                 </s2f:molecule.card>
             </f:for>
         </div>

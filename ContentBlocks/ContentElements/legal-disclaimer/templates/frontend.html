@@ -9,10 +9,10 @@
     <s2f:layout.container>
         <div class="legal-disclaimer legal-disclaimer--{data.variant -> f:or(alternative: 'default')}">
             <f:if condition="{data.header}">
-                <h2 class="legal-disclaimer__title">{data.header}</h2>
+                <h2 class="legal-disclaimer__title">{data -> f:render.text(field: 'header')}</h2>
             </f:if>
             <div class="legal-disclaimer__content">
-                <f:format.html>{data.content}</f:format.html>
+                {data -> f:render.text(field: 'content')}
             </div>
         </div>
     </s2f:layout.container>

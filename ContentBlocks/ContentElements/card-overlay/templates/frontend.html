@@ -17,14 +17,14 @@
             </f:if>
             <div class="card-overlay__content">
                 <f:if condition="{data.header}">
-                    <h3 class="card-overlay__title">{data.header}</h3>
+                    <h3 class="card-overlay__title">{data -> f:render.text(field: 'header')}</h3>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="card-overlay__description">{data.description}</p>
+                    <p class="card-overlay__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
             </div>
             <f:if condition="{data.link}">
-                <f:link.typolink parameter="{data.link}" class="card-overlay__link" aria-label="{data.header}"/>
+                <f:link.typolink parameter="{data.link}" class="card-overlay__link" aria-label="{data -> f:render.text(field: 'header')}"/>
             </f:if>
         </div>
     </s2f:layout.container>

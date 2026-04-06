@@ -11,26 +11,26 @@
             <f:if condition="{data.avatar}">
                 <div class="header-profile__avatar">
                     <f:for each="{data.avatar}" as="image">
-                        <f:image image="{image}" width="96" height="96" class="header-profile__avatar-img" alt="{data.header}"/>
+                        <f:image image="{image}" width="96" height="96" class="header-profile__avatar-img" alt="{data -> f:render.text(field: 'header')}"/>
                     </f:for>
                 </div>
             </f:if>
             <div class="header-profile__info">
                 <f:if condition="{data.header}">
-                    <h1 class="header-profile__name">{data.header}</h1>
+                    <h1 class="header-profile__name">{data -> f:render.text(field: 'header')}</h1>
                 </f:if>
                 <f:if condition="{data.role}">
-                    <p class="header-profile__role">{data.role}</p>
+                    <p class="header-profile__role">{data -> f:render.text(field: 'role')}</p>
                 </f:if>
                 <f:if condition="{data.bio}">
-                    <p class="header-profile__bio">{data.bio}</p>
+                    <p class="header-profile__bio">{data -> f:render.text(field: 'bio')}</p>
                 </f:if>
                 <div class="header-profile__actions">
                     <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                        <s2f:atom.button link="{data.primary_button_link}" size="sm">{data.primary_button_text}</s2f:atom.button>
+                        <s2f:atom.button link="{data.primary_button_link}" size="sm">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
                     </f:if>
                     <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                        <s2f:atom.button link="{data.secondary_button_link}" variant="outline" size="sm">{data.secondary_button_text}</s2f:atom.button>
+                        <s2f:atom.button link="{data.secondary_button_link}" variant="outline" size="sm">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
                     </f:if>
                 </div>
             </div>

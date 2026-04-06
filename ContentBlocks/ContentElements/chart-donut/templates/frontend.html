@@ -15,10 +15,10 @@
                 <f:if condition="{data.header} || {data.description}">
                     <div class="chart-donut__header">
                         <f:if condition="{data.header}">
-                            <h3 class="chart-donut__title">{data.header}</h3>
+                            <h3 class="chart-donut__title">{data -> f:render.text(field: 'header')}</h3>
                         </f:if>
                         <f:if condition="{data.description}">
-                            <p class="chart-donut__description">{data.description}</p>
+                            <p class="chart-donut__description">{data -> f:render.text(field: 'description')}</p>
                         </f:if>
                     </div>
                 </f:if>
@@ -28,10 +28,10 @@
                         <f:if condition="{data.center_value} || {data.center_label}">
                             <div class="chart-donut__center">
                                 <f:if condition="{data.center_value}">
-                                    <span class="chart-donut__center-value">{data.center_value}</span>
+                                    <span class="chart-donut__center-value">{data -> f:render.text(field: 'center_value')}</span>
                                 </f:if>
                                 <f:if condition="{data.center_label}">
-                                    <span class="chart-donut__center-label">{data.center_label}</span>
+                                    <span class="chart-donut__center-label">{data -> f:render.text(field: 'center_label')}</span>
                                 </f:if>
                             </div>
                         </f:if>

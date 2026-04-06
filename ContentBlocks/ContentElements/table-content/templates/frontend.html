@@ -8,28 +8,28 @@
 <s2f:layout.section class="table-content">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <s2f:atom.typography tag="h2" variant="h2" class="table-content__headline">{data.header}</s2f:atom.typography>
+            <s2f:atom.typography tag="h2" variant="h2" class="table-content__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
         </f:if>
 
         <div class="table-content__wrapper">
             <table class="table-content__table">
                 <f:if condition="{data.caption}">
-                    <caption class="table-content__caption">{data.caption}</caption>
+                    <caption class="table-content__caption">{data -> f:render.text(field: 'caption')}</caption>
                 </f:if>
                 <thead>
                     <tr>
                         <f:for each="{data.column_items}" as="col">
-                            <th class="table-content__th">{col.label}</th>
+                            <th class="table-content__th">{col -> f:render.text(field: 'label')}</th>
                         </f:for>
                     </tr>
                 </thead>
                 <tbody>
                     <f:for each="{data.rows}" as="row">
                         <tr>
-                            <f:if condition="{row.col1}"><td class="table-content__td">{row.col1}</td></f:if>
-                            <f:if condition="{row.col2}"><td class="table-content__td">{row.col2}</td></f:if>
-                            <f:if condition="{row.col3}"><td class="table-content__td">{row.col3}</td></f:if>
-                            <f:if condition="{row.col4}"><td class="table-content__td">{row.col4}</td></f:if>
+                            <f:if condition="{row.col1}"><td class="table-content__td">{row -> f:render.text(field: 'col1')}</td></f:if>
+                            <f:if condition="{row.col2}"><td class="table-content__td">{row -> f:render.text(field: 'col2')}</td></f:if>
+                            <f:if condition="{row.col3}"><td class="table-content__td">{row -> f:render.text(field: 'col3')}</td></f:if>
+                            <f:if condition="{row.col4}"><td class="table-content__td">{row -> f:render.text(field: 'col4')}</td></f:if>
                         </tr>
                     </f:for>
                 </tbody>

@@ -9,16 +9,16 @@
     <s2f:layout.container>
         <div class="pricing-simple__card">
             <f:if condition="{data.header}">
-                <h2 class="pricing-simple__headline">{data.header}</h2>
+                <h2 class="pricing-simple__headline">{data -> f:render.text(field: 'header')}</h2>
             </f:if>
             <div class="pricing-simple__price-row">
-                <span class="pricing-simple__price">{data.price}</span>
+                <span class="pricing-simple__price">{data -> f:render.text(field: 'price')}</span>
                 <f:if condition="{data.billing_period}">
-                    <span class="pricing-simple__period">{data.billing_period}</span>
+                    <span class="pricing-simple__period">{data -> f:render.text(field: 'billing_period')}</span>
                 </f:if>
             </div>
             <f:if condition="{data.description}">
-                <p class="pricing-simple__description">{data.description}</p>
+                <p class="pricing-simple__description">{data -> f:render.text(field: 'description')}</p>
             </f:if>
             <f:if condition="{data.features_list}">
                 <ul class="pricing-simple__features">
@@ -34,7 +34,7 @@
             </f:if>
             <f:if condition="{data.button_text} && {data.button_link.url}">
                 <f:link.typolink parameter="{data.button_link}" class="pricing-simple__button">
-                    {data.button_text}
+                    {data -> f:render.text(field: 'button_text')}
                 </f:link.typolink>
             </f:if>
         </div>

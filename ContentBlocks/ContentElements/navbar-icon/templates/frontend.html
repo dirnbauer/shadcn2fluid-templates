@@ -10,24 +10,24 @@
         <nav class="navbar-icon__inner" aria-label="Icon navigation">
             <div class="navbar-icon__brand">
                 <f:if condition="{data.brand_link.url}">
-                    <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-icon__brand-link">{data.brand}</f:link.typolink></f:then>
-                    <f:else><span class="navbar-icon__brand-link">{data.brand}</span></f:else>
+                    <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-icon__brand-link">{data -> f:render.text(field: 'brand')}</f:link.typolink></f:then>
+                    <f:else><span class="navbar-icon__brand-link">{data -> f:render.text(field: 'brand')}</span></f:else>
                 </f:if>
             </div>
             <ul class="navbar-icon__nav">
                 <f:for each="{data.nav_items}" as="item">
                     <li>
                         <f:if condition="{item.link.url}">
-                            <f:link.typolink parameter="{item.link}" class="navbar-icon__link" title="{item.label}">
-                                <span class="navbar-icon__icon" aria-hidden="true">{item.icon}</span>
-                                <span class="navbar-icon__label">{item.label}</span>
+                            <f:link.typolink parameter="{item.link}" class="navbar-icon__link" title="{item -> f:render.text(field: 'label')}">
+                                <span class="navbar-icon__icon" aria-hidden="true">{item -> f:render.text(field: 'icon')}</span>
+                                <span class="navbar-icon__label">{item -> f:render.text(field: 'label')}</span>
                             </f:link.typolink>
                         </f:if>
                     </li>
                 </f:for>
             </ul>
             <f:if condition="{data.button_text} && {data.button_link.url}">
-                <s2f:atom.button link="{data.button_link}" size="sm">{data.button_text}</s2f:atom.button>
+                <s2f:atom.button link="{data.button_link}" size="sm">{data -> f:render.text(field: 'button_text')}</s2f:atom.button>
             </f:if>
         </nav>
     </s2f:layout.container>

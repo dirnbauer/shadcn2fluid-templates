@@ -9,22 +9,22 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="contact-info__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
         <div class="contact-info__grid">
             <f:for each="{data.items}" as="item">
                 <s2f:molecule.card class="contact-info__item">
-                    <f:if condition="{item.icon}"><span class="contact-info__icon">{item.icon}</span></f:if>
-                    <h3 class="contact-info__label">{item.label}</h3>
+                    <f:if condition="{item.icon}"><span class="contact-info__icon">{item -> f:render.text(field: 'icon')}</span></f:if>
+                    <h3 class="contact-info__label">{item -> f:render.text(field: 'label')}</h3>
                     <f:if condition="{item.link.url}">
                         <f:then>
-                            <f:link.typolink parameter="{item.link}" class="contact-info__value contact-info__value--link">{item.value}</f:link.typolink>
+                            <f:link.typolink parameter="{item.link}" class="contact-info__value contact-info__value--link">{item -> f:render.text(field: 'value')}</f:link.typolink>
                         </f:then>
                         <f:else>
-                            <p class="contact-info__value">{item.value}</p>
+                            <p class="contact-info__value">{item -> f:render.text(field: 'value')}</p>
                         </f:else>
                     </f:if>
                 </s2f:molecule.card>

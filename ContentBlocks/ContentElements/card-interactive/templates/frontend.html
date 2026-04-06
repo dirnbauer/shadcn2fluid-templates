@@ -9,7 +9,7 @@
     <s2f:layout.container>
         <div class="card-interactive">
             <f:if condition="{data.badge_text}">
-                <span class="card-interactive__badge">{data.badge_text}</span>
+                <span class="card-interactive__badge">{data -> f:render.text(field: 'badge_text')}</span>
             </f:if>
             <div class="card-interactive__icon">
                 <f:switch expression="{data.icon_style}">
@@ -21,13 +21,13 @@
                 </f:switch>
             </div>
             <f:if condition="{data.header}">
-                <h3 class="card-interactive__title">{data.header}</h3>
+                <h3 class="card-interactive__title">{data -> f:render.text(field: 'header')}</h3>
             </f:if>
             <f:if condition="{data.description}">
-                <p class="card-interactive__description">{data.description}</p>
+                <p class="card-interactive__description">{data -> f:render.text(field: 'description')}</p>
             </f:if>
             <f:if condition="{data.link}">
-                <f:link.typolink parameter="{data.link}" class="card-interactive__link" aria-label="{data.header}"/>
+                <f:link.typolink parameter="{data.link}" class="card-interactive__link" aria-label="{data -> f:render.text(field: 'header')}"/>
             </f:if>
         </div>
     </s2f:layout.container>

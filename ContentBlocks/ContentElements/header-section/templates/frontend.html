@@ -9,13 +9,13 @@
     <s2f:layout.container>
         <header class="header-section__inner">
             <f:if condition="{data.eyebrow}">
-                <span class="header-section__eyebrow">{data.eyebrow}</span>
+                <span class="header-section__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
             </f:if>
             <f:if condition="{data.header}">
-                <h2 class="header-section__title">{data.header}</h2>
+                <h2 class="header-section__title">{data -> f:render.text(field: 'header')}</h2>
             </f:if>
             <f:if condition="{data.subheadline}">
-                <p class="header-section__subtitle">{data.subheadline}</p>
+                <p class="header-section__subtitle">{data -> f:render.text(field: 'subheadline')}</p>
             </f:if>
         </header>
     </s2f:layout.container>

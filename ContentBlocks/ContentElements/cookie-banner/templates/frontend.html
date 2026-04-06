@@ -10,10 +10,10 @@
         <div class="cookie-banner__inner">
             <div class="cookie-banner__content">
                 <f:if condition="{data.header}">
-                    <h3 class="cookie-banner__title">{data.header}</h3>
+                    <h3 class="cookie-banner__title">{data -> f:render.text(field: 'header')}</h3>
                 </f:if>
                 <div class="cookie-banner__message">
-                    <f:format.html>{data.content}</f:format.html>
+                    {data -> f:render.text(field: 'content')}
                 </div>
             </div>
             <div class="cookie-banner__actions">

@@ -20,22 +20,22 @@
 
             <div class="card__body">
                 <f:if condition="{data.badge_text}">
-                    <span class="card__badge">{data.badge_text}</span>
+                    <span class="card__badge">{data -> f:render.text(field: 'badge_text')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
                     <h3 class="card__title">
                         <f:if condition="{data.link}">
-                            <f:then><f:link.typolink parameter="{data.link}">{data.header}</f:link.typolink></f:then>
-                            <f:else>{data.header}</f:else>
+                            <f:then><f:link.typolink parameter="{data.link}">{data -> f:render.text(field: 'header')}</f:link.typolink></f:then>
+                            <f:else>{data -> f:render.text(field: 'header')}</f:else>
                         </f:if>
                     </h3>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="card__description">{data.description}</p>
+                    <p class="card__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
                 <f:if condition="{data.button_text}">
                     <div class="card__actions">
-                        <f:link.typolink parameter="{data.button_link}" class="card__button">{data.button_text}</f:link.typolink>
+                        <f:link.typolink parameter="{data.button_link}" class="card__button">{data -> f:render.text(field: 'button_text')}</f:link.typolink>
                     </div>
                 </f:if>
             </div>

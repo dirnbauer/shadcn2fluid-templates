@@ -12,21 +12,21 @@
                 <div class="hero__grid">
                     <div class="hero__content">
                         <f:if condition="{data.badge_text}">
-                            <s2f:atom.badge variant="secondary">{data.badge_text}</s2f:atom.badge>
+                            <s2f:atom.badge variant="secondary">{data -> f:render.text(field: 'badge_text')}</s2f:atom.badge>
                         </f:if>
                         <f:if condition="{data.header}">
-                            <h1 class="hero__headline">{data.header}</h1>
+                            <h1 class="hero__headline">{data -> f:render.text(field: 'header')}</h1>
                         </f:if>
                         <f:if condition="{data.subheadline}">
-                            <p class="hero__subheadline">{data.subheadline}</p>
+                            <p class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</p>
                         </f:if>
                         <f:if condition="{data.primary_button_text} || {data.secondary_button_text}">
                             <div class="hero__actions">
                                 <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                                    <s2f:atom.button link="{data.primary_button_link}" variant="{data.primary_button_variant}" size="lg">{data.primary_button_text}</s2f:atom.button>
+                                    <s2f:atom.button link="{data.primary_button_link}" variant="{data.primary_button_variant}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
                                 </f:if>
                                 <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                                    <s2f:atom.button link="{data.secondary_button_link}" variant="{data.secondary_button_variant}" size="lg">{data.secondary_button_text}</s2f:atom.button>
+                                    <s2f:atom.button link="{data.secondary_button_link}" variant="{data.secondary_button_variant}" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
                                 </f:if>
                             </div>
                         </f:if>
@@ -34,7 +34,7 @@
                     <div class="hero__media">
                         <f:if condition="{data.hero_image}">
                             <f:for each="{data.hero_image}" as="image">
-                                <f:image image="{image}" class="hero__image" alt="{data.header}"/>
+                                <f:image image="{image}" class="hero__image" alt="{data -> f:render.text(field: 'header')}"/>
                             </f:for>
                         </f:if>
                     </div>
@@ -53,21 +53,21 @@
             <s2f:layout.container>
                 <div class="hero__content hero__content--over">
                     <f:if condition="{data.badge_text}">
-                        <s2f:atom.badge variant="secondary">{data.badge_text}</s2f:atom.badge>
+                        <s2f:atom.badge variant="secondary">{data -> f:render.text(field: 'badge_text')}</s2f:atom.badge>
                     </f:if>
                     <f:if condition="{data.header}">
-                        <h1 class="hero__headline">{data.header}</h1>
+                        <h1 class="hero__headline">{data -> f:render.text(field: 'header')}</h1>
                     </f:if>
                     <f:if condition="{data.subheadline}">
-                        <p class="hero__subheadline">{data.subheadline}</p>
+                        <p class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</p>
                     </f:if>
                     <f:if condition="{data.primary_button_text} || {data.secondary_button_text}">
                         <div class="hero__actions">
                             <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                                <s2f:atom.button link="{data.primary_button_link}" variant="{data.primary_button_variant}" size="lg">{data.primary_button_text}</s2f:atom.button>
+                                <s2f:atom.button link="{data.primary_button_link}" variant="{data.primary_button_variant}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
                             </f:if>
                             <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                                <s2f:atom.button link="{data.secondary_button_link}" variant="{data.secondary_button_variant}" size="lg">{data.secondary_button_text}</s2f:atom.button>
+                                <s2f:atom.button link="{data.secondary_button_link}" variant="{data.secondary_button_variant}" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
                             </f:if>
                         </div>
                     </f:if>
@@ -80,21 +80,21 @@
             <s2f:layout.container>
                 <div class="hero__content hero__content--centered">
                     <f:if condition="{data.badge_text}">
-                        <s2f:atom.badge variant="secondary">{data.badge_text}</s2f:atom.badge>
+                        <s2f:atom.badge variant="secondary">{data -> f:render.text(field: 'badge_text')}</s2f:atom.badge>
                     </f:if>
                     <f:if condition="{data.header}">
-                        <h1 class="hero__headline">{data.header}</h1>
+                        <h1 class="hero__headline">{data -> f:render.text(field: 'header')}</h1>
                     </f:if>
                     <f:if condition="{data.subheadline}">
-                        <p class="hero__subheadline">{data.subheadline}</p>
+                        <p class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</p>
                     </f:if>
                     <f:if condition="{data.primary_button_text} || {data.secondary_button_text}">
                         <div class="hero__actions">
                             <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                                <s2f:atom.button link="{data.primary_button_link}" variant="{data.primary_button_variant}" size="lg">{data.primary_button_text}</s2f:atom.button>
+                                <s2f:atom.button link="{data.primary_button_link}" variant="{data.primary_button_variant}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
                             </f:if>
                             <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                                <s2f:atom.button link="{data.secondary_button_link}" variant="{data.secondary_button_variant}" size="lg">{data.secondary_button_text}</s2f:atom.button>
+                                <s2f:atom.button link="{data.secondary_button_link}" variant="{data.secondary_button_variant}" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
                             </f:if>
                         </div>
                     </f:if>

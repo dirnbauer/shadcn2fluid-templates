@@ -12,19 +12,19 @@
                 <div class="hero-carousel__slide{f:if(condition: iter.isFirst, then: ' hero-carousel__slide--active')}">
                     <div class="hero-carousel__content">
                         <f:if condition="{slide.title}">
-                            <h2 class="hero-carousel__title">{slide.title}</h2>
+                            <h2 class="hero-carousel__title">{slide -> f:render.text(field: 'title')}</h2>
                         </f:if>
                         <f:if condition="{slide.description}">
-                            <p class="hero-carousel__description">{slide.description}</p>
+                            <p class="hero-carousel__description">{slide -> f:render.text(field: 'description')}</p>
                         </f:if>
                         <f:if condition="{slide.button_text} && {slide.button_link.url}">
-                            <s2f:atom.button link="{slide.button_link}" size="lg">{slide.button_text}</s2f:atom.button>
+                            <s2f:atom.button link="{slide.button_link}" size="lg">{slide -> f:render.text(field: 'button_text')}</s2f:atom.button>
                         </f:if>
                     </div>
                     <f:if condition="{slide.image}">
                         <div class="hero-carousel__media">
                             <f:for each="{slide.image}" as="image">
-                                <f:image image="{image}" class="hero-carousel__image" alt="{slide.title}"/>
+                                <f:image image="{image}" class="hero-carousel__image" alt="{slide -> f:render.text(field: 'title')}"/>
                             </f:for>
                         </div>
                     </f:if>

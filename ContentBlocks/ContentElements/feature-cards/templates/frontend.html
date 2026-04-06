@@ -8,15 +8,15 @@
 <s2f:layout.section class="feature-cards">
     <s2f:layout.container>
         <header class="feature-cards__intro">
-            <f:if condition="{data.eyebrow}"><span class="feature-cards__eyebrow">{data.eyebrow}</span></f:if>
-            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-            <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+            <f:if condition="{data.eyebrow}"><span class="feature-cards__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+            <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
         </header>
         <div class="feature-cards__grid">
             <f:for each="{data.items}" as="item">
                 <s2f:molecule.card class="feature-cards__item">
-                    <h3 class="feature-cards__title">{item.title}</h3>
-                    <p class="feature-cards__description">{item.description}</p>
+                    <h3 class="feature-cards__title">{item -> f:render.text(field: 'title')}</h3>
+                    <p class="feature-cards__description">{item -> f:render.text(field: 'description')}</p>
                 </s2f:molecule.card>
             </f:for>
         </div>

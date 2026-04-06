@@ -10,10 +10,10 @@
         <div class="gdpr-banner__inner">
             <div class="gdpr-banner__content">
                 <f:if condition="{data.header}">
-                    <h3 class="gdpr-banner__title">{data.header}</h3>
+                    <h3 class="gdpr-banner__title">{data -> f:render.text(field: 'header')}</h3>
                 </f:if>
                 <div class="gdpr-banner__message">
-                    <f:format.html>{data.content}</f:format.html>
+                    {data -> f:render.text(field: 'content')}
                 </div>
                 <f:if condition="{data.privacy_link}">
                     <f:link.typolink parameter="{data.privacy_link}" class="gdpr-banner__privacy-link">Privacy Policy</f:link.typolink>
@@ -24,9 +24,9 @@
                     <f:for each="{data.categories}" as="cat">
                         <label class="gdpr-banner__category">
                             <input type="checkbox" {f:if(condition: cat.required, then: 'checked disabled')} class="gdpr-banner__checkbox"/>
-                            <span class="gdpr-banner__cat-name">{cat.name}</span>
+                            <span class="gdpr-banner__cat-name">{cat -> f:render.text(field: 'name')}</span>
                             <f:if condition="{cat.description_text}">
-                                <span class="gdpr-banner__cat-desc">{cat.description_text}</span>
+                                <span class="gdpr-banner__cat-desc">{cat -> f:render.text(field: 'description_text')}</span>
                             </f:if>
                         </label>
                     </f:for>

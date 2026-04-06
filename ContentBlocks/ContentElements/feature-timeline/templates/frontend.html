@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <f:if condition="{data.header}">
             <header class="feature-timeline__intro">
-                <s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -18,15 +18,15 @@
             <f:for each="{data.items}" as="item" iteration="iter">
                 <div class="feature-timeline__item">
                     <div class="feature-timeline__marker" aria-hidden="true">
-                        <span class="feature-timeline__dot">{item.step}</span>
+                        <span class="feature-timeline__dot">{item -> f:render.text(field: 'step')}</span>
                         <f:if condition="{iter.isLast} == 0">
                             <span class="feature-timeline__line"></span>
                         </f:if>
                     </div>
                     <s2f:molecule.card class="feature-timeline__content">
-                        <h3 class="feature-timeline__title">{item.title}</h3>
+                        <h3 class="feature-timeline__title">{item -> f:render.text(field: 'title')}</h3>
                         <f:if condition="{item.description}">
-                            <p class="feature-timeline__description">{item.description}</p>
+                            <p class="feature-timeline__description">{item -> f:render.text(field: 'description')}</p>
                         </f:if>
                     </s2f:molecule.card>
                 </div>

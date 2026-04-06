@@ -8,25 +8,25 @@
 <s2f:layout.section class="testimonial-video">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <h2 class="testimonial-video__heading">{data.header}</h2>
+            <h2 class="testimonial-video__heading">{data -> f:render.text(field: 'header')}</h2>
         </f:if>
 
         <div class="testimonial-video__layout">
             <div class="testimonial-video__player">
                 <div class="testimonial-video__embed">
-                    <iframe src="{data.video_url}" allowfullscreen loading="lazy" title="Video testimonial from {data.author_name}"></iframe>
+                    <iframe src="{data -> f:render.text(field: 'video_url')}" allowfullscreen loading="lazy" title="Video testimonial from {data -> f:render.text(field: 'author_name')}"></iframe>
                 </div>
             </div>
 
             <div class="testimonial-video__content">
                 <f:if condition="{data.quote}">
-                    <blockquote class="testimonial-video__quote">&ldquo;{data.quote}&rdquo;</blockquote>
+                    <blockquote class="testimonial-video__quote">&ldquo;{data -> f:render.text(field: 'quote')}&rdquo;</blockquote>
                 </f:if>
                 <div class="testimonial-video__author">
-                    <cite class="testimonial-video__name">{data.author_name}</cite>
+                    <cite class="testimonial-video__name">{data -> f:render.text(field: 'author_name')}</cite>
                     <f:if condition="{data.author_title} || {data.author_company}">
                         <span class="testimonial-video__role">
-                            {data.author_title}<f:if condition="{data.author_title} && {data.author_company}">, </f:if>{data.author_company}
+                            {data -> f:render.text(field: 'author_title')}<f:if condition="{data.author_title} && {data.author_company}">, </f:if>{data -> f:render.text(field: 'author_company')}
                         </span>
                     </f:if>
                 </div>

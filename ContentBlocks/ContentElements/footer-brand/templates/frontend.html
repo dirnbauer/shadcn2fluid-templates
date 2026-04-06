@@ -12,15 +12,15 @@
                 <f:if condition="{data.logo}">
                     <div class="footer-brand__logo">
                         <f:for each="{data.logo}" as="file">
-                            <f:image image="{file}" alt="{data.brand}" height="48"/>
+                            <f:image image="{file}" alt="{data -> f:render.text(field: 'brand')}" height="48"/>
                         </f:for>
                     </div>
                 </f:if>
                 <f:if condition="{data.brand}">
-                    <h2 class="footer-brand__name">{data.brand}</h2>
+                    <h2 class="footer-brand__name">{data -> f:render.text(field: 'brand')}</h2>
                 </f:if>
                 <f:if condition="{data.tagline}">
-                    <p class="footer-brand__tagline">{data.tagline}</p>
+                    <p class="footer-brand__tagline">{data -> f:render.text(field: 'tagline')}</p>
                 </f:if>
             </div>
             <f:if condition="{data.link_items}">
@@ -29,8 +29,8 @@
                         <f:for each="{data.link_items}" as="item">
                             <li>
                                 <f:if condition="{item.link}">
-                                    <f:then><f:link.typolink parameter="{item.link}" class="footer-brand__link">{item.label}</f:link.typolink></f:then>
-                                    <f:else><span class="footer-brand__link">{item.label}</span></f:else>
+                                    <f:then><f:link.typolink parameter="{item.link}" class="footer-brand__link">{item -> f:render.text(field: 'label')}</f:link.typolink></f:then>
+                                    <f:else><span class="footer-brand__link">{item -> f:render.text(field: 'label')}</span></f:else>
                                 </f:if>
                             </li>
                         </f:for>
@@ -40,7 +40,7 @@
         </div>
         <f:if condition="{data.copyright}">
             <div class="footer-brand__bottom">
-                <p class="footer-brand__copyright">{data.copyright}</p>
+                <p class="footer-brand__copyright">{data -> f:render.text(field: 'copyright')}</p>
             </div>
         </f:if>
     </s2f:layout.container>

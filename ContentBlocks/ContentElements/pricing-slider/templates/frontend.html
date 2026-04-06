@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.description}">
             <header class="pricing-slider__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="pricing-slider__eyebrow">{data.eyebrow}</span>
+                    <span class="pricing-slider__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="pricing-slider__headline">{data.header}</h2>
+                    <h2 class="pricing-slider__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="pricing-slider__description">{data.description}</p>
+                    <p class="pricing-slider__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -29,10 +29,10 @@
             <div class="pricing-slider__tiers">
                 <f:for each="{data.tiers}" as="tier" iteration="iter">
                     <div class="pricing-slider__tier {f:if(condition: iter.isFirst, then: 'pricing-slider__tier--active')}">
-                        <span class="pricing-slider__volume">{tier.volume} {data.unit_label -> f:or(alternative: 'requests')}</span>
-                        <span class="pricing-slider__price">{tier.price}</span>
+                        <span class="pricing-slider__volume">{tier -> f:render.text(field: 'volume')} {data.unit_label -> f:or(alternative: 'requests')}</span>
+                        <span class="pricing-slider__price">{tier -> f:render.text(field: 'price')}</span>
                         <f:if condition="{tier.included_features}">
-                            <span class="pricing-slider__features">{tier.included_features}</span>
+                            <span class="pricing-slider__features">{tier -> f:render.text(field: 'included_features')}</span>
                         </f:if>
                     </div>
                 </f:for>

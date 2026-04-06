@@ -9,11 +9,11 @@
     <s2f:layout.container>
         <div class="cta-with-image__layout">
             <div class="cta-with-image__content">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.description}"><s2f:atom.typography variant="muted">{data.description}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.description}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'description')}</s2f:atom.typography></f:if>
                 <f:if condition="{data.cta_text} && {data.cta_link.url}">
                     <div class="cta-with-image__actions">
-                        <s2f:atom.button link="{data.cta_link}" size="lg">{data.cta_text}</s2f:atom.button>
+                        <s2f:atom.button link="{data.cta_link}" size="lg">{data -> f:render.text(field: 'cta_text')}</s2f:atom.button>
                     </div>
                 </f:if>
             </div>

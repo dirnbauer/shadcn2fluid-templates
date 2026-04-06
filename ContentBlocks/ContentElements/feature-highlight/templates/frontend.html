@@ -9,20 +9,20 @@
     <s2f:layout.container>
         <div class="feature-highlight__grid">
             <div class="feature-highlight__copy">
-                <f:if condition="{data.eyebrow}"><span class="feature-highlight__eyebrow">{data.eyebrow}</span></f:if>
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
+                <f:if condition="{data.eyebrow}"><span class="feature-highlight__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
                 <f:if condition="{data.description}">
-                    <s2f:atom.typography class="feature-highlight__description">{data.description}</s2f:atom.typography>
+                    <s2f:atom.typography class="feature-highlight__description">{data -> f:render.text(field: 'description')}</s2f:atom.typography>
                 </f:if>
                 <f:if condition="{data.link.url} && {data.link_text}">
                     <div class="feature-highlight__actions">
-                        <f:link.typolink parameter="{data.link}" class="feature-highlight__cta">{data.link_text}</f:link.typolink>
+                        <f:link.typolink parameter="{data.link}" class="feature-highlight__cta">{data -> f:render.text(field: 'link_text')}</f:link.typolink>
                     </div>
                 </f:if>
             </div>
             <f:if condition="{data.image.0}">
                 <div class="feature-highlight__media">
-                    <f:image image="{data.image.0}" alt="{data.header}" maxWidth="640" class="feature-highlight__image"/>
+                    <f:image image="{data.image.0}" alt="{data -> f:render.text(field: 'header')}" maxWidth="640" class="feature-highlight__image"/>
                 </div>
             </f:if>
         </div>

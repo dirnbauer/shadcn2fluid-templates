@@ -9,7 +9,7 @@
     <s2f:layout.container>
         <div class="content-divider__rule content-divider__rule--{data.variant -> f:or(alternative: 'line')}">
             <f:if condition="{data.label}">
-                <span class="content-divider__label">{data.label}</span>
+                <span class="content-divider__label">{data -> f:render.text(field: 'label')}</span>
             </f:if>
         </div>
     </s2f:layout.container>

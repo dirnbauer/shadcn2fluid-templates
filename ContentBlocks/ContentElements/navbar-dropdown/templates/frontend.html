@@ -10,15 +10,15 @@
         <nav class="navbar-dropdown__inner" aria-label="Dropdown navigation">
             <div class="navbar-dropdown__brand">
                 <f:if condition="{data.brand_link.url}">
-                    <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-dropdown__brand-link">{data.brand}</f:link.typolink></f:then>
-                    <f:else><span class="navbar-dropdown__brand-link">{data.brand}</span></f:else>
+                    <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-dropdown__brand-link">{data -> f:render.text(field: 'brand')}</f:link.typolink></f:then>
+                    <f:else><span class="navbar-dropdown__brand-link">{data -> f:render.text(field: 'brand')}</span></f:else>
                 </f:if>
             </div>
             <ul class="navbar-dropdown__nav">
                 <f:for each="{data.nav_items}" as="item">
                     <li class="navbar-dropdown__item">
                         <f:if condition="{item.link.url}">
-                            <f:link.typolink parameter="{item.link}" class="navbar-dropdown__link">{item.label}</f:link.typolink>
+                            <f:link.typolink parameter="{item.link}" class="navbar-dropdown__link">{item -> f:render.text(field: 'label')}</f:link.typolink>
                         </f:if>
                         <f:if condition="{item.children}">
                             <ul class="navbar-dropdown__submenu">
@@ -34,7 +34,7 @@
                 </f:for>
             </ul>
             <f:if condition="{data.button_text} && {data.button_link.url}">
-                <s2f:atom.button link="{data.button_link}" size="sm">{data.button_text}</s2f:atom.button>
+                <s2f:atom.button link="{data.button_link}" size="sm">{data -> f:render.text(field: 'button_text')}</s2f:atom.button>
             </f:if>
         </nav>
     </s2f:layout.container>

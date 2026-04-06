@@ -8,25 +8,25 @@
 <s2f:layout.section class="benefit-cards">
     <s2f:layout.container>
         <header class="benefit-cards__intro">
-            <f:if condition="{data.eyebrow}"><span class="benefit-cards__eyebrow">{data.eyebrow}</span></f:if>
-            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-            <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+            <f:if condition="{data.eyebrow}"><span class="benefit-cards__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+            <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
         </header>
 
         <div class="benefit-cards__grid benefit-cards__grid--cols-{data.columns -> f:or(alternative: '3')}">
             <f:for each="{data.items}" as="item">
                 <s2f:molecule.card class="benefit-cards__item">
                     <f:if condition="{item.icon}">
-                        <span class="benefit-cards__icon" aria-hidden="true">{item.icon}</span>
+                        <span class="benefit-cards__icon" aria-hidden="true">{item -> f:render.text(field: 'icon')}</span>
                     </f:if>
                     <h3 class="benefit-cards__title">
                         <f:if condition="{item.link.url}">
-                            <f:then><f:link.typolink parameter="{item.link}">{item.title}</f:link.typolink></f:then>
-                            <f:else>{item.title}</f:else>
+                            <f:then><f:link.typolink parameter="{item.link}">{item -> f:render.text(field: 'title')}</f:link.typolink></f:then>
+                            <f:else>{item -> f:render.text(field: 'title')}</f:else>
                         </f:if>
                     </h3>
                     <f:if condition="{item.description}">
-                        <p class="benefit-cards__description">{item.description}</p>
+                        <p class="benefit-cards__description">{item -> f:render.text(field: 'description')}</p>
                     </f:if>
                 </s2f:molecule.card>
             </f:for>

@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="category-cards__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="category-cards__eyebrow">{data.eyebrow}</span>
+                    <span class="category-cards__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="category-cards__headline">{data.header}</h2>
+                    <h2 class="category-cards__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="category-cards__description">{data.subheadline}</p>
+                    <p class="category-cards__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -25,13 +25,13 @@
             <f:for each="{data.items}" as="item">
                 <article class="category-cards__card">
                     <div class="category-cards__header">
-                        <h3 class="category-cards__title">{item.title}</h3>
+                        <h3 class="category-cards__title">{item -> f:render.text(field: 'title')}</h3>
                         <f:if condition="{item.count}">
-                            <span class="category-cards__count">{item.count}</span>
+                            <span class="category-cards__count">{item -> f:render.text(field: 'count')}</span>
                         </f:if>
                     </div>
                     <f:if condition="{item.description}">
-                        <p class="category-cards__card-desc">{item.description}</p>
+                        <p class="category-cards__card-desc">{item -> f:render.text(field: 'description')}</p>
                     </f:if>
                     <f:if condition="{item.link.url}">
                         <f:link.typolink parameter="{item.link}" class="category-cards__link">

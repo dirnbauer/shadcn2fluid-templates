@@ -10,10 +10,10 @@
         <div class="footer-newsletter__inner">
             <div class="footer-newsletter__content">
                 <f:if condition="{data.header}">
-                    <h2 class="footer-newsletter__title">{data.header}</h2>
+                    <h2 class="footer-newsletter__title">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="footer-newsletter__description">{data.description}</p>
+                    <p class="footer-newsletter__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
             </div>
             <div class="footer-newsletter__form-wrapper">
@@ -22,13 +22,13 @@
                     <button type="submit" class="footer-newsletter__button">{data.button_text -> f:or(alternative: 'Subscribe')}</button>
                 </form>
                 <f:if condition="{data.privacy_notice}">
-                    <p class="footer-newsletter__privacy">{data.privacy_notice}</p>
+                    <p class="footer-newsletter__privacy">{data -> f:render.text(field: 'privacy_notice')}</p>
                 </f:if>
             </div>
         </div>
         <f:if condition="{data.copyright}">
             <div class="footer-newsletter__bottom">
-                <p class="footer-newsletter__copyright">{data.copyright}</p>
+                <p class="footer-newsletter__copyright">{data -> f:render.text(field: 'copyright')}</p>
             </div>
         </f:if>
     </s2f:layout.container>

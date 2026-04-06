@@ -16,10 +16,10 @@
                 <f:if condition="{data.header} || {data.description}">
                     <div class="chart-line__header">
                         <f:if condition="{data.header}">
-                            <h3 class="chart-line__title">{data.header}</h3>
+                            <h3 class="chart-line__title">{data -> f:render.text(field: 'header')}</h3>
                         </f:if>
                         <f:if condition="{data.description}">
-                            <p class="chart-line__description">{data.description}</p>
+                            <p class="chart-line__description">{data -> f:render.text(field: 'description')}</p>
                         </f:if>
                     </div>
                 </f:if>

@@ -10,10 +10,10 @@
         <f:if condition="{data.header} || {data.description}">
             <header class="comparison-table__intro">
                 <f:if condition="{data.header}">
-                    <h2 class="comparison-table__headline">{data.header}</h2>
+                    <h2 class="comparison-table__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.description}">
-                    <p class="comparison-table__description">{data.description}</p>
+                    <p class="comparison-table__description">{data -> f:render.text(field: 'description')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -23,15 +23,15 @@
                     <tr>
                         <th class="comparison-table__feature-col">Feature</th>
                         <f:for each="{data.column_items}" as="col">
-                            <th class="{f:if(condition: col.highlighted, then: 'comparison-table__col--highlighted')}">{col.name}</th>
+                            <th class="{f:if(condition: col.highlighted, then: 'comparison-table__col--highlighted')}">{col -> f:render.text(field: 'name')}</th>
                         </f:for>
                     </tr>
                 </thead>
                 <tbody>
                     <f:for each="{data.feature_items}" as="feature">
                         <tr>
-                            <td class="comparison-table__feature-name">{feature.name}</td>
-                            <td class="comparison-table__cell" colspan="{f:count(subject: data.column_items)}">{feature.tier_values}</td>
+                            <td class="comparison-table__feature-name">{feature -> f:render.text(field: 'name')}</td>
+                            <td class="comparison-table__cell" colspan="{f:count(subject: data.column_items)}">{feature -> f:render.text(field: 'tier_values')}</td>
                         </tr>
                     </f:for>
                 </tbody>

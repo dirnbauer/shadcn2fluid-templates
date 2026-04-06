@@ -9,9 +9,9 @@
     <s2f:layout.container>
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="team-carousel__intro">
-                <f:if condition="{data.eyebrow}"><span class="team-carousel__eyebrow">{data.eyebrow}</span></f:if>
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.eyebrow}"><span class="team-carousel__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -21,13 +21,13 @@
                     <f:if condition="{member.image}">
                         <div class="team-carousel__image-wrapper">
                             <f:for each="{member.image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 400)}" alt="{member.name}" class="team-carousel__image"/>
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 400)}" alt="{member -> f:render.text(field: 'name')}" class="team-carousel__image"/>
                             </f:for>
                         </div>
                     </f:if>
                     <div class="team-carousel__content">
-                        <h3 class="team-carousel__name">{member.name}</h3>
-                        <f:if condition="{member.role}"><p class="team-carousel__role">{member.role}</p></f:if>
+                        <h3 class="team-carousel__name">{member -> f:render.text(field: 'name')}</h3>
+                        <f:if condition="{member.role}"><p class="team-carousel__role">{member -> f:render.text(field: 'role')}</p></f:if>
                         <f:if condition="{member.profile_link.url}">
                             <s2f:atom.button link="{member.profile_link}" variant="ghost" size="sm">View profile</s2f:atom.button>
                         </f:if>

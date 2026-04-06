@@ -10,21 +10,21 @@
         <div class="analytics-overview__card">
             <div class="analytics-overview__header">
                 <f:if condition="{data.header}">
-                    <h2 class="analytics-overview__title">{data.header}</h2>
+                    <h2 class="analytics-overview__title">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.period_label}">
-                    <span class="analytics-overview__period">{data.period_label}</span>
+                    <span class="analytics-overview__period">{data -> f:render.text(field: 'period_label')}</span>
                 </f:if>
             </div>
 
             <div class="analytics-overview__metrics">
                 <f:for each="{data.items}" as="item">
                     <div class="analytics-overview__metric">
-                        <div class="analytics-overview__metric-label">{item.label}</div>
-                        <div class="analytics-overview__metric-value">{item.value}</div>
+                        <div class="analytics-overview__metric-label">{item -> f:render.text(field: 'label')}</div>
+                        <div class="analytics-overview__metric-value">{item -> f:render.text(field: 'value')}</div>
                         <f:if condition="{item.change}">
                             <div class="analytics-overview__metric-change analytics-overview__metric-change--{item.trend -> f:or(alternative: 'neutral')}">
-                                {item.change}
+                                {item -> f:render.text(field: 'change')}
                             </div>
                         </f:if>
                     </div>
@@ -33,7 +33,7 @@
 
             <f:if condition="{data.summary}">
                 <div class="analytics-overview__summary">
-                    <p>{data.summary}</p>
+                    <p>{data -> f:render.text(field: 'summary')}</p>
                 </div>
             </f:if>
         </div>

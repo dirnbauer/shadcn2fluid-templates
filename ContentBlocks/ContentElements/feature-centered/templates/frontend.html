@@ -8,20 +8,20 @@
 <s2f:layout.section class="feature-centered">
     <s2f:layout.container>
         <header class="feature-centered__intro">
-            <f:if condition="{data.eyebrow}"><span class="feature-centered__eyebrow">{data.eyebrow}</span></f:if>
-            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-            <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+            <f:if condition="{data.eyebrow}"><span class="feature-centered__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+            <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+            <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
         </header>
 
         <div class="feature-centered__items">
             <f:for each="{data.items}" as="item">
                 <div class="feature-centered__item">
                     <f:if condition="{item.icon}">
-                        <span class="feature-centered__icon" aria-hidden="true">{item.icon}</span>
+                        <span class="feature-centered__icon" aria-hidden="true">{item -> f:render.text(field: 'icon')}</span>
                     </f:if>
-                    <h3 class="feature-centered__title">{item.title}</h3>
+                    <h3 class="feature-centered__title">{item -> f:render.text(field: 'title')}</h3>
                     <f:if condition="{item.description}">
-                        <p class="feature-centered__description">{item.description}</p>
+                        <p class="feature-centered__description">{item -> f:render.text(field: 'description')}</p>
                     </f:if>
                 </div>
             </f:for>

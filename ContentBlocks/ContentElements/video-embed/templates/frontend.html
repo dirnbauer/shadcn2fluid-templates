@@ -8,14 +8,14 @@
 <s2f:layout.section class="video-embed">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <s2f:atom.typography tag="h2" variant="h2" class="video-embed__headline">{data.header}</s2f:atom.typography>
+            <s2f:atom.typography tag="h2" variant="h2" class="video-embed__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
         </f:if>
 
         <figure class="video-embed__figure">
             <f:if condition="{data.video_url}">
                 <f:then>
                     <div class="video-embed__wrapper video-embed__wrapper--{data.aspect_ratio -> f:or(alternative: '16-9')}">
-                        <iframe src="{data.video_url}" frameborder="0" allowfullscreen loading="lazy"
+                        <iframe src="{data -> f:render.text(field: 'video_url')}" frameborder="0" allowfullscreen loading="lazy"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </div>
                 </f:then>
@@ -28,7 +28,7 @@
                 </f:else>
             </f:if>
             <f:if condition="{data.caption}">
-                <figcaption class="video-embed__caption">{data.caption}</figcaption>
+                <figcaption class="video-embed__caption">{data -> f:render.text(field: 'caption')}</figcaption>
             </f:if>
         </figure>
     </s2f:layout.container>

@@ -8,15 +8,15 @@
 <footer class="footer-minimal">
     <s2f:layout.container>
         <div class="footer-minimal__inner">
-            <p class="footer-minimal__copyright">{data.copyright}</p>
+            <p class="footer-minimal__copyright">{data -> f:render.text(field: 'copyright')}</p>
             <f:if condition="{data.link_items}">
                 <nav aria-label="Footer links">
                     <ul class="footer-minimal__links">
                         <f:for each="{data.link_items}" as="item">
                             <li>
                                 <f:if condition="{item.link}">
-                                    <f:then><f:link.typolink parameter="{item.link}" class="footer-minimal__link">{item.label}</f:link.typolink></f:then>
-                                    <f:else><span class="footer-minimal__link">{item.label}</span></f:else>
+                                    <f:then><f:link.typolink parameter="{item.link}" class="footer-minimal__link">{item -> f:render.text(field: 'label')}</f:link.typolink></f:then>
+                                    <f:else><span class="footer-minimal__link">{item -> f:render.text(field: 'label')}</span></f:else>
                                 </f:if>
                             </li>
                         </f:for>

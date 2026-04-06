@@ -9,15 +9,15 @@
     <aside class="navbar-sidebar__panel" aria-label="Sidebar navigation">
         <div class="navbar-sidebar__brand">
             <f:if condition="{data.brand_link.url}">
-                <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-sidebar__brand-link">{data.brand}</f:link.typolink></f:then>
-                <f:else><span class="navbar-sidebar__brand-link">{data.brand}</span></f:else>
+                <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-sidebar__brand-link">{data -> f:render.text(field: 'brand')}</f:link.typolink></f:then>
+                <f:else><span class="navbar-sidebar__brand-link">{data -> f:render.text(field: 'brand')}</span></f:else>
             </f:if>
         </div>
         <nav class="navbar-sidebar__nav">
             <f:for each="{data.sections}" as="section">
                 <div class="navbar-sidebar__section">
                     <f:if condition="{section.title}">
-                        <h3 class="navbar-sidebar__section-title">{section.title}</h3>
+                        <h3 class="navbar-sidebar__section-title">{section -> f:render.text(field: 'title')}</h3>
                     </f:if>
                     <ul class="navbar-sidebar__list">
                         <f:for each="{section.links -> f:split(separator: '
@@ -31,7 +31,7 @@
             </f:for>
         </nav>
         <f:if condition="{data.footer_text}">
-            <div class="navbar-sidebar__footer"><p>{data.footer_text}</p></div>
+            <div class="navbar-sidebar__footer"><p>{data -> f:render.text(field: 'footer_text')}</p></div>
         </f:if>
     </aside>
 </s2f:layout.section>

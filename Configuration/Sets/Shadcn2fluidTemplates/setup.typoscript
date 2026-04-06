@@ -21,6 +21,10 @@ page {
     }
 }
 
+# Main column content (TypoScript). In Fluid page templates with PAGEVIEW + Backend Layout,
+# prefer TYPO3 v14 visual editing: <f:render.contentArea contentArea="{content.main}" /> instead
+# of wrapping lib.* CONTENT in f:mark.contentArea (deprecated v13 pattern).
+# See https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render-contentarea
 lib.shadcn2fluid.mainContent = CONTENT
 lib.shadcn2fluid.mainContent {
     table = tt_content

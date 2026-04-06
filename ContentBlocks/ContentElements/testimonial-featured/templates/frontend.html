@@ -16,24 +16,24 @@
             <f:if condition="{data.company_logo}">
                 <div class="testimonial-featured__logo">
                     <f:for each="{data.company_logo}" as="logo">
-                        <img src="{f:uri.image(image: logo, maxWidth: 180)}" alt="{data.author_company}" class="testimonial-featured__logo-img"/>
+                        <img src="{f:uri.image(image: logo, maxWidth: 180)}" alt="{data -> f:render.text(field: 'author_company')}" class="testimonial-featured__logo-img"/>
                     </f:for>
                 </div>
             </f:if>
 
-            <blockquote class="testimonial-featured__quote">&ldquo;{data.quote}&rdquo;</blockquote>
+            <blockquote class="testimonial-featured__quote">&ldquo;{data -> f:render.text(field: 'quote')}&rdquo;</blockquote>
 
             <div class="testimonial-featured__author">
                 <f:if condition="{data.author_image}">
                     <f:for each="{data.author_image}" as="fileReference">
-                        <img src="{f:uri.image(image: fileReference, width: 64, height: 64)}" alt="{data.author_name}" class="testimonial-featured__avatar"/>
+                        <img src="{f:uri.image(image: fileReference, width: 64, height: 64)}" alt="{data -> f:render.text(field: 'author_name')}" class="testimonial-featured__avatar"/>
                     </f:for>
                 </f:if>
                 <div>
-                    <cite class="testimonial-featured__name">{data.author_name}</cite>
+                    <cite class="testimonial-featured__name">{data -> f:render.text(field: 'author_name')}</cite>
                     <f:if condition="{data.author_title} || {data.author_company}">
                         <span class="testimonial-featured__role">
-                            {data.author_title}<f:if condition="{data.author_title} && {data.author_company}">, </f:if>{data.author_company}
+                            {data -> f:render.text(field: 'author_title')}<f:if condition="{data.author_title} && {data.author_company}">, </f:if>{data -> f:render.text(field: 'author_company')}
                         </span>
                     </f:if>
                 </div>

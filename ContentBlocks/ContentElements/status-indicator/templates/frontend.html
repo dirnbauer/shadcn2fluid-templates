@@ -10,7 +10,7 @@
         <div class="status-indicator">
             <div class="status-indicator__header">
                 <f:if condition="{data.header}">
-                    <h2 class="status-indicator__title">{data.header}</h2>
+                    <h2 class="status-indicator__title">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <div class="status-indicator__overall status-indicator__dot--{data.overall_status -> f:or(alternative: 'operational')}">
                     <span class="status-indicator__dot"></span>
@@ -28,9 +28,9 @@
                 <f:for each="{data.items}" as="item">
                     <li class="status-indicator__item">
                         <div class="status-indicator__service">
-                            <span class="status-indicator__service-name">{item.name}</span>
+                            <span class="status-indicator__service-name">{item -> f:render.text(field: 'name')}</span>
                             <f:if condition="{item.detail}">
-                                <span class="status-indicator__detail">{item.detail}</span>
+                                <span class="status-indicator__detail">{item -> f:render.text(field: 'detail')}</span>
                             </f:if>
                         </div>
                         <div class="status-indicator__status status-indicator__dot--{item.status -> f:or(alternative: 'operational')}">

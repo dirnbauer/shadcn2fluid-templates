@@ -9,8 +9,8 @@
     <s2f:layout.container>
         <f:if condition="{data.header} || {data.subheadline}">
             <header class="gallery__intro">
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
@@ -21,21 +21,21 @@
                         <f:then>
                             <f:link.typolink parameter="{item.link}" class="gallery__media-link">
                                 <f:for each="{item.image}" as="fileReference">
-                                    <img src="{f:uri.image(image: fileReference, maxWidth: 960)}" alt="{item.title}" class="gallery__image"/>
+                                    <img src="{f:uri.image(image: fileReference, maxWidth: 960)}" alt="{item -> f:render.text(field: 'title')}" class="gallery__image"/>
                                 </f:for>
                             </f:link.typolink>
                         </f:then>
                         <f:else>
                             <f:for each="{item.image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 960)}" alt="{item.title}" class="gallery__image"/>
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 960)}" alt="{item -> f:render.text(field: 'title')}" class="gallery__image"/>
                             </f:for>
                         </f:else>
                     </f:if>
 
                     <f:if condition="{item.title} || {item.description}">
                         <div class="gallery__caption">
-                            <f:if condition="{item.title}"><h3 class="gallery__title">{item.title}</h3></f:if>
-                            <f:if condition="{item.description}"><p class="gallery__description">{item.description}</p></f:if>
+                            <f:if condition="{item.title}"><h3 class="gallery__title">{item -> f:render.text(field: 'title')}</h3></f:if>
+                            <f:if condition="{item.description}"><p class="gallery__description">{item -> f:render.text(field: 'description')}</p></f:if>
                         </div>
                     </f:if>
                 </article>

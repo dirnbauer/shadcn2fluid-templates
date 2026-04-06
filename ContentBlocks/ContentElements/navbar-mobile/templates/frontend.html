@@ -10,8 +10,8 @@
         <nav class="navbar-mobile__inner" aria-label="Mobile navigation">
             <div class="navbar-mobile__brand">
                 <f:if condition="{data.brand_link.url}">
-                    <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-mobile__brand-link">{data.brand}</f:link.typolink></f:then>
-                    <f:else><span class="navbar-mobile__brand-link">{data.brand}</span></f:else>
+                    <f:then><f:link.typolink parameter="{data.brand_link}" class="navbar-mobile__brand-link">{data -> f:render.text(field: 'brand')}</f:link.typolink></f:then>
+                    <f:else><span class="navbar-mobile__brand-link">{data -> f:render.text(field: 'brand')}</span></f:else>
                 </f:if>
             </div>
             <button class="navbar-mobile__toggle" aria-expanded="false" aria-controls="navbar-mobile-menu" type="button">
@@ -24,13 +24,13 @@
                     <f:for each="{data.nav_items}" as="item">
                         <li>
                             <f:if condition="{item.link.url}">
-                                <f:link.typolink parameter="{item.link}" class="navbar-mobile__link">{item.label}</f:link.typolink>
+                                <f:link.typolink parameter="{item.link}" class="navbar-mobile__link">{item -> f:render.text(field: 'label')}</f:link.typolink>
                             </f:if>
                         </li>
                     </f:for>
                 </ul>
                 <f:if condition="{data.button_text} && {data.button_link.url}">
-                    <s2f:atom.button link="{data.button_link}" class="navbar-mobile__cta">{data.button_text}</s2f:atom.button>
+                    <s2f:atom.button link="{data.button_link}" class="navbar-mobile__cta">{data -> f:render.text(field: 'button_text')}</s2f:atom.button>
                 </f:if>
             </div>
         </nav>

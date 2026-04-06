@@ -9,27 +9,27 @@
     <s2f:layout.container>
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="contact__intro">
-                <f:if condition="{data.eyebrow}"><span class="contact__eyebrow">{data.eyebrow}</span></f:if>
-                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography></f:if>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data.subheadline}</s2f:atom.typography></f:if>
+                <f:if condition="{data.eyebrow}"><span class="contact__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+                <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
+                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
         <div class="contact__grid">
             <s2f:molecule.card class="contact__info">
-                <f:if condition="{data.info_title}"><h3 class="contact__info-title">{data.info_title}</h3></f:if>
-                <f:if condition="{data.info_text}"><p class="contact__info-text">{data.info_text}</p></f:if>
+                <f:if condition="{data.info_title}"><h3 class="contact__info-title">{data -> f:render.text(field: 'info_title')}</h3></f:if>
+                <f:if condition="{data.info_text}"><p class="contact__info-text">{data -> f:render.text(field: 'info_text')}</p></f:if>
                 <f:if condition="{data.contact_items}">
                     <ul class="contact__list">
                         <f:for each="{data.contact_items}" as="item">
                             <li class="contact__list-item">
-                                <span class="contact__list-label">{item.label}</span>
+                                <span class="contact__list-label">{item -> f:render.text(field: 'label')}</span>
                                 <f:if condition="{item.link.url}">
                                     <f:then>
-                                        <f:link.typolink parameter="{item.link}" class="contact__list-value">{item.value}</f:link.typolink>
+                                        <f:link.typolink parameter="{item.link}" class="contact__list-value">{item -> f:render.text(field: 'value')}</f:link.typolink>
                                     </f:then>
                                     <f:else>
-                                        <span class="contact__list-value">{item.value}</span>
+                                        <span class="contact__list-value">{item -> f:render.text(field: 'value')}</span>
                                     </f:else>
                                 </f:if>
                             </li>
@@ -39,7 +39,7 @@
             </s2f:molecule.card>
 
             <s2f:molecule.card class="contact__form-card">
-                <f:if condition="{data.form_title}"><h3 class="contact__form-title">{data.form_title}</h3></f:if>
+                <f:if condition="{data.form_title}"><h3 class="contact__form-title">{data -> f:render.text(field: 'form_title')}</h3></f:if>
                 <form class="contact__form" action="{data.form_action.url}" method="post">
                     <div class="contact__field-grid">
                         <label class="contact__field">

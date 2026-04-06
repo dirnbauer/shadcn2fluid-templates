@@ -9,10 +9,10 @@
     <s2f:layout.container>
         <div class="data-request-form">
             <f:if condition="{data.header}">
-                <h2 class="data-request-form__title">{data.header}</h2>
+                <h2 class="data-request-form__title">{data -> f:render.text(field: 'header')}</h2>
             </f:if>
             <f:if condition="{data.description}">
-                <p class="data-request-form__description">{data.description}</p>
+                <p class="data-request-form__description">{data -> f:render.text(field: 'description')}</p>
             </f:if>
             <form class="data-request-form__form">
                 <div class="data-request-form__field">
@@ -28,7 +28,7 @@
                         <label class="data-request-form__label" for="drf-type-{data.uid}">Request Type</label>
                         <select id="drf-type-{data.uid}" class="data-request-form__select">
                             <f:for each="{data.request_types}" as="type">
-                                <option value="{type.value -> f:or(alternative: type.label)}">{type.label}</option>
+                                <option value="{type.value -> f:or(alternative: type.label)}">{type -> f:render.text(field: 'label')}</option>
                             </f:for>
                         </select>
                     </div>
@@ -38,7 +38,7 @@
                     <textarea id="drf-details-{data.uid}" class="data-request-form__textarea" rows="4"></textarea>
                 </div>
                 <f:if condition="{data.privacy_text}">
-                    <p class="data-request-form__privacy">{data.privacy_text}</p>
+                    <p class="data-request-form__privacy">{data -> f:render.text(field: 'privacy_text')}</p>
                 </f:if>
                 <button type="submit" class="data-request-form__submit">{data.submit_text -> f:or(alternative: 'Submit Request')}</button>
             </form>

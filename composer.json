@@ -15,7 +15,8 @@
         "friendsoftypo3/content-blocks": "^2.2"
     },
     "suggest": {
-        "typo3/cms-workspaces": "Recommended to stage and preview content elements in TYPO3 workspaces."
+        "typo3/cms-workspaces": "Recommended to stage and preview content elements in TYPO3 workspaces.",
+        "friendsoftypo3/visual-editor": "Optional. Inline visual editing when templates use f:render.text for text fields (Content Blocks expose {data} as a Record)."
     },
     "autoload": {
         "psr-4": {

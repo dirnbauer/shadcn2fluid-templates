@@ -9,35 +9,35 @@
     <s2f:layout.container>
         <div class="special-offer__banner">
             <f:if condition="{data.eyebrow}">
-                <span class="special-offer__eyebrow">{data.eyebrow}</span>
+                <span class="special-offer__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
             </f:if>
 
             <f:if condition="{data.discount_text}">
-                <div class="special-offer__discount">{data.discount_text}</div>
+                <div class="special-offer__discount">{data -> f:render.text(field: 'discount_text')}</div>
             </f:if>
 
             <f:if condition="{data.header}">
-                <h2 class="special-offer__headline">{data.header}</h2>
+                <h2 class="special-offer__headline">{data -> f:render.text(field: 'header')}</h2>
             </f:if>
 
             <f:if condition="{data.description}">
-                <p class="special-offer__description">{data.description}</p>
+                <p class="special-offer__description">{data -> f:render.text(field: 'description')}</p>
             </f:if>
 
             <f:if condition="{data.original_price} || {data.sale_price}">
                 <div class="special-offer__prices">
                     <f:if condition="{data.original_price}">
-                        <span class="special-offer__original">{data.original_price}</span>
+                        <span class="special-offer__original">{data -> f:render.text(field: 'original_price')}</span>
                     </f:if>
                     <f:if condition="{data.sale_price}">
-                        <span class="special-offer__sale">{data.sale_price}</span>
+                        <span class="special-offer__sale">{data -> f:render.text(field: 'sale_price')}</span>
                     </f:if>
                 </div>
             </f:if>
 
             <f:if condition="{data.button_text} && {data.button_link.url}">
                 <f:link.typolink parameter="{data.button_link}" class="special-offer__button">
-                    {data.button_text}
+                    {data -> f:render.text(field: 'button_text')}
                 </f:link.typolink>
             </f:if>
         </div>

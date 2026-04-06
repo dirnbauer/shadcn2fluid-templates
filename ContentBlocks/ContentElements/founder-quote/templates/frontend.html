@@ -9,7 +9,7 @@
     <s2f:layout.container>
         <f:if condition="{data.header}">
             <header class="founder-quote__intro">
-                <s2f:atom.typography tag="h2" variant="h2">{data.header}</s2f:atom.typography>
+                <s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
             </header>
         </f:if>
 
@@ -17,14 +17,14 @@
             <f:if condition="{data.image}">
                 <div class="founder-quote__image-wrapper">
                     <f:for each="{data.image}" as="fileReference">
-                        <img src="{f:uri.image(image: fileReference, width: 120, height: 120)}" alt="{data.name}" class="founder-quote__image"/>
+                        <img src="{f:uri.image(image: fileReference, width: 120, height: 120)}" alt="{data -> f:render.text(field: 'name')}" class="founder-quote__image"/>
                     </f:for>
                 </div>
             </f:if>
-            <blockquote class="founder-quote__text">{data.quote}</blockquote>
+            <blockquote class="founder-quote__text">{data -> f:render.text(field: 'quote')}</blockquote>
             <div class="founder-quote__author">
-                <f:if condition="{data.name}"><cite class="founder-quote__name">{data.name}</cite></f:if>
-                <f:if condition="{data.title}"><span class="founder-quote__title">{data.title}</span></f:if>
+                <f:if condition="{data.name}"><cite class="founder-quote__name">{data -> f:render.text(field: 'name')}</cite></f:if>
+                <f:if condition="{data.title}"><span class="founder-quote__title">{data -> f:render.text(field: 'title')}</span></f:if>
             </div>
         </div>
     </s2f:layout.container>

@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="certifications__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="certifications__eyebrow">{data.eyebrow}</span>
+                    <span class="certifications__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="certifications__headline">{data.header}</h2>
+                    <h2 class="certifications__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="certifications__description">{data.subheadline}</p>
+                    <p class="certifications__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -27,16 +27,16 @@
                     <f:if condition="{cert.badge_image}">
                         <div class="certifications__badge">
                             <f:for each="{cert.badge_image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 100)}" alt="{cert.name}" class="certifications__badge-img"/>
+                                <img src="{f:uri.image(image: fileReference, maxWidth: 100)}" alt="{cert -> f:render.text(field: 'name')}" class="certifications__badge-img"/>
                             </f:for>
                         </div>
                     </f:if>
-                    <h3 class="certifications__name">{cert.name}</h3>
+                    <h3 class="certifications__name">{cert -> f:render.text(field: 'name')}</h3>
                     <f:if condition="{cert.issuer}">
-                        <span class="certifications__issuer">{cert.issuer}</span>
+                        <span class="certifications__issuer">{cert -> f:render.text(field: 'issuer')}</span>
                     </f:if>
                     <f:if condition="{cert.description}">
-                        <p class="certifications__cert-description">{cert.description}</p>
+                        <p class="certifications__cert-description">{cert -> f:render.text(field: 'description')}</p>
                     </f:if>
                     <f:if condition="{cert.link.url}">
                         <f:link.typolink parameter="{cert.link}" class="certifications__link">

@@ -10,13 +10,13 @@
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="stats-bar__intro">
                 <f:if condition="{data.eyebrow}">
-                    <span class="stats-bar__eyebrow">{data.eyebrow}</span>
+                    <span class="stats-bar__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span>
                 </f:if>
                 <f:if condition="{data.header}">
-                    <h2 class="stats-bar__headline">{data.header}</h2>
+                    <h2 class="stats-bar__headline">{data -> f:render.text(field: 'header')}</h2>
                 </f:if>
                 <f:if condition="{data.subheadline}">
-                    <p class="stats-bar__description">{data.subheadline}</p>
+                    <p class="stats-bar__description">{data -> f:render.text(field: 'subheadline')}</p>
                 </f:if>
             </header>
         </f:if>
@@ -25,8 +25,8 @@
             <f:for each="{data.items}" as="item">
                 <div class="stats-bar__item">
                     <div class="stats-bar__meta">
-                        <span class="stats-bar__label">{item.label}</span>
-                        <span class="stats-bar__value">{item.value}</span>
+                        <span class="stats-bar__label">{item -> f:render.text(field: 'label')}</span>
+                        <span class="stats-bar__value">{item -> f:render.text(field: 'value')}</span>
                     </div>
                     <div class="stats-bar__track">
                         <div class="stats-bar__fill" style="width: {item.percentage}%"></div>
