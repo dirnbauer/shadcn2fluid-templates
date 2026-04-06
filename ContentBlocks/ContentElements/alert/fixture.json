@@ -1,0 +1,7 @@
+{
+  "_type": "card",
+  "header": "System Maintenance Scheduled",
+  "description": "Our platform will undergo scheduled maintenance on Sunday from 2:00 AM to 4:00 AM UTC. Please save your work beforehand.",
+  "icon": "⚠️",
+  "primaryButton": "Learn More"
+}
