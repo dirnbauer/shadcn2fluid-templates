@@ -22,8 +22,8 @@
                     <ul class="footer-columns__links">
                         <f:for each="{col.links -> f:split(separator: '
 ')}" as="linkLine">
-                            <f:if condition="{linkLine -> f:trim()}">
-                                <li><span class="footer-columns__link">{linkLine -> f:trim()}</span></li>
+                            <f:if condition="{linkLine -> f:format.trim()}">
+                                <li><span class="footer-columns__link">{linkLine -> f:format.trim()}</span></li>
                             </f:if>
                         </f:for>
                     </ul>

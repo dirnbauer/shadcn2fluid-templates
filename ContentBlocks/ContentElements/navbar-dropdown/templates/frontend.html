@@ -24,8 +24,8 @@
                             <ul class="navbar-dropdown__submenu">
                                 <f:for each="{item.children -> f:split(separator: '
 ')}" as="childLine">
-                                    <f:if condition="{childLine -> f:trim()}">
-                                        <li><span class="navbar-dropdown__sublink">{childLine -> f:trim()}</span></li>
+                                    <f:if condition="{childLine -> f:format.trim()}">
+                                        <li><span class="navbar-dropdown__sublink">{childLine -> f:format.trim()}</span></li>
                                     </f:if>
                                 </f:for>
                             </ul>

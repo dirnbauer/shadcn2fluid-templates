@@ -44,10 +44,10 @@
                             <ul class="mega-menu__links">
                                 <f:for each="{group.links -> f:split(separator: '
 ')}" as="linkLine">
-                                    <f:if condition="{linkLine -> f:trim()}">
+                                    <f:if condition="{linkLine -> f:format.trim()}">
                                         <li class="mega-menu__link-item">
                                             <span class="mega-menu__link">
-                                                <span class="mega-menu__link-label">{linkLine -> f:trim()}</span>
+                                                <span class="mega-menu__link-label">{linkLine -> f:format.trim()}</span>
                                             </span>
                                         </li>
                                     </f:if>

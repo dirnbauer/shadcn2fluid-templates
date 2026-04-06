@@ -21,11 +21,11 @@
                     <div class="org-chart__row">
                         <f:for each="{level.people -> f:split(separator: '
 ')}" as="personLine">
-                            <f:if condition="{personLine -> f:trim()}">
+                            <f:if condition="{personLine -> f:format.trim()}">
                                 <f:variable name="personParts" value="{personLine -> f:split(separator: '|')}"/>
                                 <s2f:molecule.card class="org-chart__person">
-                                    <h4 class="org-chart__name">{personParts.0 -> f:trim()}</h4>
-                                    <f:if condition="{personParts.1}"><p class="org-chart__role">{personParts.1 -> f:trim()}</p></f:if>
+                                    <h4 class="org-chart__name">{personParts.0 -> f:format.trim()}</h4>
+                                    <f:if condition="{personParts.1}"><p class="org-chart__role">{personParts.1 -> f:format.trim()}</p></f:if>
                                 </s2f:molecule.card>
                             </f:if>
                         </f:for>

@@ -20,12 +20,12 @@
                 <div class="team-department__grid">
                     <f:for each="{dept.members -> f:split(separator: '
 ')}" as="memberLine">
-                        <f:if condition="{memberLine -> f:trim()}">
+                        <f:if condition="{memberLine -> f:format.trim()}">
                             <f:variable name="memberParts" value="{memberLine -> f:split(separator: '|')}"/>
                             <s2f:molecule.card class="team-department__member">
                                 <div class="team-department__content">
-                                    <h4 class="team-department__name">{memberParts.0 -> f:trim()}</h4>
-                                    <f:if condition="{memberParts.1}"><p class="team-department__role">{memberParts.1 -> f:trim()}</p></f:if>
+                                    <h4 class="team-department__name">{memberParts.0 -> f:format.trim()}</h4>
+                                    <f:if condition="{memberParts.1}"><p class="team-department__role">{memberParts.1 -> f:format.trim()}</p></f:if>
                                 </div>
                             </s2f:molecule.card>
                         </f:if>
