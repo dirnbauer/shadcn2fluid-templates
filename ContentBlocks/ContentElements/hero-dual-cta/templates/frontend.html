@@ -14,14 +14,14 @@
                 <f:if condition="{data.left_title}"><h2 class="hero-dual-cta__card-title">{data -> f:render.text(field: 'left_title')}</h2></f:if>
                 <f:if condition="{data.left_description}"><p class="hero-dual-cta__card-desc">{data -> f:render.text(field: 'left_description')}</p></f:if>
                 <f:if condition="{data.left_button_text} && {data.left_button_link.url}">
-                    <s2f:atom.button link="{data.left_button_link}" size="lg">{data -> f:render.text(field: 'left_button_text')}</s2f:atom.button>
+                    <s2f:atom.button href="{data.left_button_link.url}" target="{data.left_button_link.target}" size="lg">{data -> f:render.text(field: 'left_button_text')}</s2f:atom.button>
                 </f:if>
             </div>
             <div class="hero-dual-cta__card">
                 <f:if condition="{data.right_title}"><h2 class="hero-dual-cta__card-title">{data -> f:render.text(field: 'right_title')}</h2></f:if>
                 <f:if condition="{data.right_description}"><p class="hero-dual-cta__card-desc">{data -> f:render.text(field: 'right_description')}</p></f:if>
                 <f:if condition="{data.right_button_text} && {data.right_button_link.url}">
-                    <s2f:atom.button link="{data.right_button_link}" variant="outline" size="lg">{data -> f:render.text(field: 'right_button_text')}</s2f:atom.button>
+                    <s2f:atom.button href="{data.right_button_link.url}" target="{data.right_button_link.target}" variant="outline" size="lg">{data -> f:render.text(field: 'right_button_text')}</s2f:atom.button>
                 </f:if>
             </div>
         </div>

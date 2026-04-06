@@ -13,7 +13,7 @@
                 <f:if condition="{data.description}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'description')}</s2f:atom.typography></f:if>
                 <f:if condition="{data.cta_text} && {data.cta_link.url}">
                     <div class="cta-with-image__actions">
-                        <s2f:atom.button link="{data.cta_link}" size="lg">{data -> f:render.text(field: 'cta_text')}</s2f:atom.button>
+                        <s2f:atom.button href="{data.cta_link.url}" target="{data.cta_link.target}" size="lg">{data -> f:render.text(field: 'cta_text')}</s2f:atom.button>
                     </div>
                 </f:if>
             </div>

@@ -33,7 +33,7 @@
                         </f:if>
                         <f:if condition="{member.profile_link.url}">
                             <div class="team__actions">
-                                <s2f:atom.button link="{member.profile_link}" variant="ghost">View profile</s2f:atom.button>
+                                <s2f:atom.button href="{member.profile_link.url}" target="{member.profile_link.target}" variant="ghost">View profile</s2f:atom.button>
                             </div>
                         </f:if>
                     </div>

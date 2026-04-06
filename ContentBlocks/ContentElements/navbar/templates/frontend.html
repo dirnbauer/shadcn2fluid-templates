@@ -38,10 +38,10 @@
 
             <div class="navbar__actions">
                 <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                    <s2f:atom.button link="{data.secondary_button_link}" variant="ghost">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                    <s2f:atom.button href="{data.secondary_button_link.url}" target="{data.secondary_button_link.target}" variant="ghost">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
                 </f:if>
                 <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                    <s2f:atom.button link="{data.primary_button_link}" size="sm">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                    <s2f:atom.button href="{data.primary_button_link.url}" target="{data.primary_button_link.target}" size="sm">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
                 </f:if>
             </div>
         </nav>

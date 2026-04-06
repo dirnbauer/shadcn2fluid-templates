@@ -12,7 +12,9 @@
             <f:if condition="{data.description_text}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'description_text')}</s2f:atom.typography></f:if>
             <div class="social-links__list">
                 <f:for each="{data.link_items}" as="link">
-                    <f:link.typolink parameter="{link.url}" class="social-links__item">{link -> f:render.text(field: 'platform')}</f:link.typolink>
+                    <f:if condition="{link.url.url}">
+                        <f:link.typolink parameter="{link.url}" class="social-links__item">{link -> f:render.text(field: 'platform')}</f:link.typolink>
+                    </f:if>
                 </f:for>
             </div>
         </div>

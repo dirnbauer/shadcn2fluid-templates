@@ -135,7 +135,8 @@ vendor/bin/typo3 cache:flush
 Use these `<s2f:*>` tags in your templates:
 
 ### Atoms
-- `<s2f:atom.button variant="default" size="lg" href="...">Text</s2f:atom.button>`
+- `<s2f:atom.button variant="default" size="lg" link="{data.button_link}">Text</s2f:atom.button>`
+- `<s2f:atom.button variant="default" size="lg" href="https://example.com">Text</s2f:atom.button>`
 - `<s2f:atom.badge variant="outline">Label</s2f:atom.badge>`
 - `<s2f:atom.typography tag="h2" variant="h2">Heading</s2f:atom.typography>`
 - `<s2f:atom.input type="email" placeholder="..." />`

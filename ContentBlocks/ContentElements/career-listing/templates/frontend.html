@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <f:if condition="{job.apply_link.url}">
-                        <s2f:atom.button link="{job.apply_link}" variant="outline" size="sm">Apply</s2f:atom.button>
+                        <s2f:atom.button href="{job.apply_link.url}" target="{job.apply_link.target}" variant="outline" size="sm">Apply</s2f:atom.button>
                     </f:if>
                 </article>
             </f:for>

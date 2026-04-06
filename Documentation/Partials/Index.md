@@ -32,7 +32,7 @@ lib.contentElement {
 
 ```html
 <f:render partial="Components/Button" arguments="{
-    link: 'https://example.com',
+    href: 'https://example.com',
     text: 'Click Me',
     variant: 'default',
     size: 'lg'
@@ -51,7 +51,8 @@ A versatile button component that renders as either a link (`<a>`) or button (`<
 
 | Argument | Type | Default | Description |
 |----------|------|---------|-------------|
-| `link` | string | - | URL for anchor element |
+| `link` | mixed | - | TYPO3 link field value rendered via `f:link.typolink` |
+| `href` | string | - | Plain URL for anchor element |
 | `text` | string | - | Button label text |
 | `variant` | string | `default` | Style variant |
 | `size` | string | `default` | Size variant |
@@ -85,7 +86,7 @@ A versatile button component that renders as either a link (`<a>`) or button (`<
 **Primary Link Button:**
 ```html
 <f:render partial="Components/Button" arguments="{
-    link: '/signup',
+    href: '/signup',
     text: 'Get Started',
     variant: 'default',
     size: 'lg'
@@ -95,7 +96,7 @@ A versatile button component that renders as either a link (`<a>`) or button (`<
 **Outline Button:**
 ```html
 <f:render partial="Components/Button" arguments="{
-    link: '/learn-more',
+    href: '/learn-more',
     text: 'Learn More',
     variant: 'outline'
 }"/>
@@ -104,10 +105,17 @@ A versatile button component that renders as either a link (`<a>`) or button (`<
 **Ghost Button:**
 ```html
 <f:render partial="Components/Button" arguments="{
-    link: '/pricing',
+    href: '/pricing',
     text: 'View Pricing',
     variant: 'ghost'
 }"/>
+```
+
+**TYPO3 Link Field:**
+```html
+<s2f:atom.button link="{data.button_link}" size="lg">
+    {data -> f:render.text(field: 'button_text')}
+</s2f:atom.button>
 ```
 
 **Submit Button:**

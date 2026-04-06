@@ -22,7 +22,7 @@
                     <f:if condition="{loc.phone}"><p class="office-locations__phone">{loc -> f:render.text(field: 'phone')}</p></f:if>
                     <f:if condition="{loc.email}"><p class="office-locations__email">{loc -> f:render.text(field: 'email')}</p></f:if>
                     <f:if condition="{loc.map_link.url}">
-                        <s2f:atom.button link="{loc.map_link}" variant="outline" size="sm">View on map</s2f:atom.button>
+                        <s2f:atom.button href="{loc.map_link.url}" target="{loc.map_link.target}" variant="outline" size="sm">View on map</s2f:atom.button>
                     </f:if>
                 </s2f:molecule.card>
             </f:for>

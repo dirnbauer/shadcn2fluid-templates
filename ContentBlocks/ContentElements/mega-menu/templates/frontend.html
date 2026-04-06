@@ -20,7 +20,7 @@
                     </f:if>
                 </div>
                 <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                    <s2f:atom.button link="{data.primary_button_link}" size="sm">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                    <s2f:atom.button href="{data.primary_button_link.url}" target="{data.primary_button_link.target}" size="sm">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
                 </f:if>
             </div>
 

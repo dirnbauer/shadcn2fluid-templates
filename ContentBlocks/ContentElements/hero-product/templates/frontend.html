@@ -20,7 +20,7 @@
                 <div class="hero-product__cta">
                     <f:if condition="{data.price}"><span class="hero-product__price">{data -> f:render.text(field: 'price')}</span></f:if>
                     <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                        <s2f:atom.button link="{data.primary_button_link}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                        <s2f:atom.button href="{data.primary_button_link.url}" target="{data.primary_button_link.target}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
                     </f:if>
                 </div>
             </div>

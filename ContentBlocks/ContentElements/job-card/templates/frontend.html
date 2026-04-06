@@ -19,7 +19,7 @@
             <f:if condition="{data.description}"><p class="job-card__description">{data -> f:render.text(field: 'description')}</p></f:if>
             <f:if condition="{data.apply_link.url}">
                 <div class="job-card__actions">
-                    <s2f:atom.button link="{data.apply_link}" size="lg">Apply now</s2f:atom.button>
+                    <s2f:atom.button href="{data.apply_link.url}" target="{data.apply_link.target}" size="lg">Apply now</s2f:atom.button>
                 </div>
             </f:if>
         </s2f:molecule.card>

@@ -16,7 +16,7 @@
                 <div class="hero-countdown__unit"><span class="hero-countdown__value">00</span><span class="hero-countdown__label">Seconds</span></div>
             </div>
             <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                <s2f:atom.button link="{data.primary_button_link}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                <s2f:atom.button href="{data.primary_button_link.url}" target="{data.primary_button_link.target}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
             </f:if>
         </div>
     </s2f:layout.container>

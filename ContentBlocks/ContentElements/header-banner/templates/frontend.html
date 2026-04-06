@@ -20,7 +20,7 @@
                 <p class="header-banner__description">{data -> f:render.text(field: 'subheadline')}</p>
             </f:if>
             <f:if condition="{data.button_text} && {data.button_link.url}">
-                <s2f:atom.button link="{data.button_link}" size="lg">{data -> f:render.text(field: 'button_text')}</s2f:atom.button>
+                <s2f:atom.button href="{data.button_link.url}" target="{data.button_link.target}" size="lg">{data -> f:render.text(field: 'button_text')}</s2f:atom.button>
             </f:if>
         </header>
     </s2f:layout.container>

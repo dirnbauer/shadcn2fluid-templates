@@ -19,7 +19,7 @@
             </f:if>
             <f:if condition="{data.button_text} && {data.button_link.url}">
                 <div class="header-page__actions">
-                    <s2f:atom.button link="{data.button_link}">{data -> f:render.text(field: 'button_text')}</s2f:atom.button>
+                    <s2f:atom.button href="{data.button_link.url}" target="{data.button_link.target}">{data -> f:render.text(field: 'button_text')}</s2f:atom.button>
                 </div>
             </f:if>
         </header>

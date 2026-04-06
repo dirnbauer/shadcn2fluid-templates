@@ -12,7 +12,7 @@
                 <f:if condition="{data.header}"><h2 class="cta-gradient__headline">{data -> f:render.text(field: 'header')}</h2></f:if>
                 <f:if condition="{data.description}"><p class="cta-gradient__description">{data -> f:render.text(field: 'description')}</p></f:if>
                 <f:if condition="{data.cta_text} && {data.cta_link.url}">
-                    <s2f:atom.button link="{data.cta_link}" variant="secondary" size="lg">{data -> f:render.text(field: 'cta_text')}</s2f:atom.button>
+                    <s2f:atom.button href="{data.cta_link.url}" target="{data.cta_link.target}" variant="secondary" size="lg">{data -> f:render.text(field: 'cta_text')}</s2f:atom.button>
                 </f:if>
             </div>
         </div>

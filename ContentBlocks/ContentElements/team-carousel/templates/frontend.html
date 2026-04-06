@@ -29,7 +29,7 @@
                         <h3 class="team-carousel__name">{member -> f:render.text(field: 'name')}</h3>
                         <f:if condition="{member.role}"><p class="team-carousel__role">{member -> f:render.text(field: 'role')}</p></f:if>
                         <f:if condition="{member.profile_link.url}">
-                            <s2f:atom.button link="{member.profile_link}" variant="ghost" size="sm">View profile</s2f:atom.button>
+                            <s2f:atom.button href="{member.profile_link.url}" target="{member.profile_link.target}" variant="ghost" size="sm">View profile</s2f:atom.button>
                         </f:if>
                     </div>
                 </s2f:molecule.card>

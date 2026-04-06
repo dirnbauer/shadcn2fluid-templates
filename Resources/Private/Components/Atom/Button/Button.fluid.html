@@ -1,19 +1,48 @@
 <f:argument name="variant" type="string" optional="{true}" default="default" />
 <f:argument name="size" type="string" optional="{true}" default="default" />
+<f:argument name="link" optional="{true}" />
 <f:argument name="href" type="string" optional="{true}" />
+<f:argument name="target" type="string" optional="{true}" default="" />
 <f:argument name="class" type="string" optional="{true}" default="" />
 <f:argument name="disabled" type="bool" optional="{true}" default="{false}" />
 <f:argument name="type" type="string" optional="{true}" default="button" />
 
-<f:if condition="{href}">
+<f:if condition="{link}">
     <f:then>
-        <a href="{href}" class="btn btn--{variant} btn--{size} {class}">
+        <f:link.typolink parameter="{link}" class="btn btn--{variant} btn--{size} {class}">
             <f:slot />
-        </a>
+        </f:link.typolink>
     </f:then>
     <f:else>
-        <button type="{type}" disabled="{disabled}" class="btn btn--{variant} btn--{size} {class}">
-            <f:slot />
-        </button>
+        <f:if condition="{href}">
+            <f:then>
+                <f:if condition="{target}">
+                    <f:then>
+                        <f:if condition="{target} == '_blank'">
+                            <f:then>
+                                <a href="{href}" target="{target}" rel="noopener noreferrer" class="btn btn--{variant} btn--{size} {class}">
+                                    <f:slot />
+                                </a>
+                            </f:then>
+                            <f:else>
+                                <a href="{href}" target="{target}" class="btn btn--{variant} btn--{size} {class}">
+                                    <f:slot />
+                                </a>
+                            </f:else>
+                        </f:if>
+                    </f:then>
+                    <f:else>
+                        <a href="{href}" class="btn btn--{variant} btn--{size} {class}">
+                            <f:slot />
+                        </a>
+                    </f:else>
+                </f:if>
+            </f:then>
+            <f:else>
+                <button type="{type}" disabled="{disabled}" class="btn btn--{variant} btn--{size} {class}">
+                    <f:slot />
+                </button>
+            </f:else>
+        </f:if>
     </f:else>
 </f:if>
