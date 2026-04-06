@@ -27,7 +27,7 @@
                 <source>Button Link</source>
                 <target>Lien du bouton</target>
             </trans-unit>
-            <trans-unit id="label_field">
+            <trans-unit id="label">
                 <source>Label</source>
                 <target>Libellé</target>
             </trans-unit>
@@ -105,23 +105,23 @@
             </trans-unit>
             <trans-unit id="background_image">
                 <source>Background Image</source>
-                <target>Image d&#x27;arrière-plan</target>
+                <target>Image d&#039;arrière-plan</target>
             </trans-unit>
             <trans-unit id="author_name">
                 <source>Author Name</source>
-                <target>Nom de l&#x27;auteur</target>
+                <target>Nom de l&#039;auteur</target>
             </trans-unit>
             <trans-unit id="author_role">
                 <source>Author Role</source>
-                <target>Rôle de l&#x27;auteur</target>
+                <target>Rôle de l&#039;auteur</target>
             </trans-unit>
             <trans-unit id="author_title">
                 <source>Author Title</source>
-                <target>Titre de l&#x27;auteur</target>
+                <target>Titre de l&#039;auteur</target>
             </trans-unit>
             <trans-unit id="author_photo">
                 <source>Author Photo</source>
-                <target>Photo de l&#x27;auteur</target>
+                <target>Photo de l&#039;auteur</target>
             </trans-unit>
             <trans-unit id="copyright_text">
                 <source>Copyright Text</source>
@@ -181,7 +181,7 @@
             </trans-unit>
             <trans-unit id="company_name">
                 <source>Company Name</source>
-                <target>Nom de l&#x27;entreprise</target>
+                <target>Nom de l&#039;entreprise</target>
             </trans-unit>
             <trans-unit id="icon_emoji">
                 <source>Icon Emoji or Symbol</source>
@@ -271,7 +271,7 @@
                 <source>Layout Variant</source>
                 <target>Variante de disposition</target>
             </trans-unit>
-            <trans-unit id="color_field">
+            <trans-unit id="color">
                 <source>Color</source>
                 <target>Couleur</target>
             </trans-unit>
@@ -281,7 +281,7 @@
             </trans-unit>
             <trans-unit id="image_position">
                 <source>Image Position</source>
-                <target>Position de l&#x27;image</target>
+                <target>Position de l&#039;image</target>
             </trans-unit>
             <trans-unit id="position">
                 <source>Position</source>

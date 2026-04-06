@@ -27,7 +27,7 @@
                 <source>Button Link</source>
                 <target>Link pulsante</target>
             </trans-unit>
-            <trans-unit id="label_field">
+            <trans-unit id="label">
                 <source>Label</source>
                 <target>Etichetta</target>
             </trans-unit>
@@ -271,7 +271,7 @@
                 <source>Layout Variant</source>
                 <target>Variante layout</target>
             </trans-unit>
-            <trans-unit id="color_field">
+            <trans-unit id="color">
                 <source>Color</source>
                 <target>Colore</target>
             </trans-unit>

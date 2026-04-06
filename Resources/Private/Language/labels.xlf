@@ -21,7 +21,7 @@
             <trans-unit id="button_link">
                 <source>Button Link</source>
             </trans-unit>
-            <trans-unit id="label_field">
+            <trans-unit id="label">
                 <source>Label</source>
             </trans-unit>
             <trans-unit id="link">
@@ -204,7 +204,7 @@
             <trans-unit id="layout_variant">
                 <source>Layout Variant</source>
             </trans-unit>
-            <trans-unit id="color_field">
+            <trans-unit id="color">
                 <source>Color</source>
             </trans-unit>
             <trans-unit id="trend">

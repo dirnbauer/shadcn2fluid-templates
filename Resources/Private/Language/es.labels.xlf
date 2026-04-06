@@ -27,7 +27,7 @@
                 <source>Button Link</source>
                 <target>Enlace del botón</target>
             </trans-unit>
-            <trans-unit id="label_field">
+            <trans-unit id="label">
                 <source>Label</source>
                 <target>Etiqueta</target>
             </trans-unit>
@@ -271,7 +271,7 @@
                 <source>Layout Variant</source>
                 <target>Variante de diseño</target>
             </trans-unit>
-            <trans-unit id="color_field">
+            <trans-unit id="color">
                 <source>Color</source>
                 <target>Color</target>
             </trans-unit>

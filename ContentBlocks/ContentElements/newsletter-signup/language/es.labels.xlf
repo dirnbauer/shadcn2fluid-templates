@@ -5,11 +5,11 @@
         <body>
             <trans-unit id="title">
                 <source>Newsletter Signup</source>
-                <target>Newsletter Signup</target>
+                <target>Boletín Signup</target>
             </trans-unit>
             <trans-unit id="description">
                 <source>Newsletter capture block with signup form and trust copy</source>
-                <target>Newsletter capture block with signup form and trust copy</target>
+                <target>Boletín capture block with signup form and trust copy</target>
             </trans-unit>
         </body>
     </file>

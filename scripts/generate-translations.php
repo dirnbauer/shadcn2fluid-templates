@@ -7,10 +7,14 @@
  * 2. Creates per-element language/labels.xlf + translations
  * 3. Updates config.yaml to use LLL: references for shared labels
  *
- * Usage: php scripts/generate-translations.php
+ * Usage: php scripts/generate-translations.php (requires Composer autoload / symfony/yaml)
  */
 
 declare(strict_types=1);
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+use Symfony\Component\Yaml\Yaml;
 
 $basePath = dirname(__DIR__);
 $contentElementsPath = $basePath . '/ContentBlocks/ContentElements';
@@ -244,10 +248,18 @@ foreach ($elements as $configFile) {
     $elementDir = dirname($configFile);
     $elementName = basename($elementDir);
     $yaml = file_get_contents($configFile);
-    $config = yaml_parse($yaml);
-
-    if ($config === false) {
-        echo "  WARNING: Could not parse $elementName/config.yaml\n";
+    if ($yaml === false) {
+        echo "  WARNING: Could not read $elementName/config.yaml\n";
+        continue;
+    }
+    try {
+        $config = Yaml::parse($yaml);
+    } catch (\Throwable $e) {
+        echo "  WARNING: Could not parse $elementName/config.yaml: {$e->getMessage()}\n";
+        continue;
+    }
+    if (!is_array($config)) {
+        echo "  WARNING: Invalid YAML root in $elementName/config.yaml\n";
         continue;
     }
 
