@@ -1,0 +1,23 @@
+{
+  "_type": "team",
+  "header": "Meet Our Team",
+  "description": "The people behind the platform, united by a passion for building great software.",
+  "members": [
+    {
+      "name": "Alex Rivera",
+      "role": "CEO & Co-Founder"
+    },
+    {
+      "name": "Sarah Chen",
+      "role": "CTO & Co-Founder"
+    },
+    {
+      "name": "Marcus Johnson",
+      "role": "VP of Engineering"
+    },
+    {
+      "name": "Lisa Park",
+      "role": "VP of Product"
+    }
+  ]
+}
