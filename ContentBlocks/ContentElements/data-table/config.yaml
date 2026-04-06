@@ -28,7 +28,7 @@ fields:
     label: Show Header Row
     default: 1
 
-  - identifier: columns
+  - identifier: column_definitions
     type: Collection
     label: Column Definitions
     minItems: 1
