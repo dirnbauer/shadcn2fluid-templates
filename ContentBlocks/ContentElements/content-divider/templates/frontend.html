@@ -5,13 +5,27 @@
 
 <f:asset.css identifier="s2f-content-divider" href="{cb:assetPath()}/frontend.css"/>
 
-<s2f:layout.section class="content-divider content-divider--spacing-{data.spacing -> f:or(alternative: 'md')}">
+<s2f:layout.section class="content-divider content-divider--spacing-{data.spacing -> f:or(alternative: 'default')} content-divider--color-{data.color -> f:or(alternative: 'default')}">
     <s2f:layout.container>
-        <div class="content-divider__rule content-divider__rule--{data.variant -> f:or(alternative: 'line')}">
-            <f:if condition="{data.label}">
-                <span class="content-divider__label">{data -> f:render.text(field: 'label')}</span>
-            </f:if>
-        </div>
+        <f:switch expression="{data.variant}">
+            <f:case value="with-text">
+                <div class="content-divider__row" role="separator">
+                    <s2f:atom.separator class="content-divider__line"/>
+                    <f:if condition="{data.divider_text}">
+                        <span class="content-divider__text">{data -> f:render.text(field: 'divider_text')}</span>
+                    </f:if>
+                    <s2f:atom.separator class="content-divider__line"/>
+                </div>
+            </f:case>
+            <f:case value="decorative">
+                <div class="content-divider__decorative" role="separator">
+                    <s2f:atom.separator class="content-divider__line content-divider__line--decorative"/>
+                </div>
+            </f:case>
+            <f:defaultCase>
+                <s2f:atom.separator class="content-divider__line"/>
+            </f:defaultCase>
+        </f:switch>
     </s2f:layout.container>
 </s2f:layout.section>
 

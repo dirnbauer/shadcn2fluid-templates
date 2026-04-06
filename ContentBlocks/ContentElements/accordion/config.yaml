@@ -9,6 +9,20 @@ fields:
     useExistingField: true
     label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
 
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:style'
+    onChange: reload
+    items:
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
+        value: default
+      - label: Bordered
+        value: bordered
+      - label: Separated
+        value: separated
+    default: default
+
   - identifier: allow_multiple
     type: Checkbox
     label: Allow Multiple Open
@@ -31,7 +45,6 @@ fields:
         label: Answer / Content
         enableRichtext: true
         rows: 5
-        required: true
 
       - identifier: open_by_default
         type: Checkbox

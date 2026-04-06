@@ -13,32 +13,34 @@ fields:
     type: Select
     renderType: selectSingle
     label: Alert Type
+    onChange: reload
     items:
       - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
         value: default
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.destructive'
+        value: destructive
       - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.info'
         value: info
       - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.success'
         value: success
       - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.warning'
         value: warning
-      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.destructive'
-        value: destructive
     default: default
 
-  - identifier: content
+  - identifier: description
     type: Textarea
-    label: Alert Content
+    label: Alert Description
     enableRichtext: true
     rows: 3
     required: true
 
-  - identifier: show_icon
-    type: Checkbox
-    label: Show Icon
-    default: 1
+  - identifier: icon
+    type: Textarea
+    rows: 1
+    label: Icon Name
+    description: Optional icon identifier (e.g. "info", "alert-triangle")
 
-  - identifier: dismissible
+  - identifier: show_close_button
     type: Checkbox
-    label: Dismissible
+    label: Show Close Button
     default: 0

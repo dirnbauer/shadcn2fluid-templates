@@ -13,21 +13,36 @@ fields:
     type: Select
     renderType: selectSingle
     label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:card_style'
+    onChange: reload
     items:
-      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.basic'
-        value: basic
-      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.with_image'
-        value: image
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
+        value: default
       - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.horizontal'
         value: horizontal
-    default: basic
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.with_image'
+        value: with-image
+      - label: Overlay
+        value: overlay
+    default: default
 
-  - identifier: image
+  - identifier: card_image
     type: File
     label: Card Image
     allowed: common-image-types
     maxitems: 1
-    displayCond: 'FIELD:variant:!=:basic'
+    displayCond: 'FIELD:variant:=:with-image,overlay,horizontal'
+
+  - identifier: image_position
+    type: Select
+    renderType: selectSingle
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:image_position'
+    items:
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.left'
+        value: left
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.right'
+        value: right
+    default: left
+    displayCond: 'FIELD:variant:=:horizontal'
 
   - identifier: description
     type: Textarea

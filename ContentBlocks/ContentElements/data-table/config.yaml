@@ -5,25 +5,75 @@ description: Responsive data table with sortable columns and striped rows
 group: data
 prefixFields: false
 fields:
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Table Style
+    onChange: reload
+    items:
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
+        value: default
+      - label: Striped
+        value: striped
+      - label: Bordered
+        value: bordered
+    default: default
+
   - identifier: header
     useExistingField: true
     label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
-  - identifier: description
-    type: Textarea
-    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:description'
-    rows: 2
-  - identifier: table_data
-    type: Textarea
-    label: Table Data (JSON)
-    description: |
-      Enter as JSON: {"columns": ["Name","Value"], "rows": [["Item A","100"],["Item B","200"]]}
-    rows: 8
-    required: true
-  - identifier: striped
+
+  - identifier: show_header_row
     type: Checkbox
-    label: Striped Rows
+    label: Show Header Row
     default: 1
-  - identifier: compact
+
+  - identifier: columns
+    type: Collection
+    label: Column Definitions
+    minItems: 1
+    fields:
+      - identifier: column_label
+        type: Textarea
+        rows: 1
+        label: Column Label
+        required: true
+      - identifier: column_key
+        type: Textarea
+        rows: 1
+        label: Column Key
+        required: true
+      - identifier: column_align
+        type: Select
+        renderType: selectSingle
+        label: Alignment
+        items:
+          - label: Left
+            value: left
+          - label: Center
+            value: center
+          - label: Right
+            value: right
+        default: left
+
+  - identifier: rows
+    type: Collection
+    label: Table Rows
+    minItems: 1
+    fields:
+      - identifier: row_data
+        type: Textarea
+        label: Row Data (columns separated by |)
+        enableRichtext: true
+        rows: 2
+
+  - identifier: show_caption
     type: Checkbox
-    label: Compact Mode
+    label: Show Caption
     default: 0
+
+  - identifier: caption_text
+    type: Textarea
+    rows: 1
+    label: Caption Text
+    displayCond: 'FIELD:show_caption:=:1'

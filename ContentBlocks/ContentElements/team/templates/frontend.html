@@ -5,41 +5,111 @@
 
 <f:asset.css identifier="s2f-team" href="{cb:assetPath()}/frontend.css"/>
 
-<s2f:layout.section class="team">
+<s2f:layout.section class="team team--{data.variant -> f:or(alternative: 'grid')}">
     <s2f:layout.container>
         <f:if condition="{data.eyebrow} || {data.header} || {data.subheadline}">
             <header class="team__intro">
-                <f:if condition="{data.eyebrow}"><span class="team__eyebrow">{data -> f:render.text(field: 'eyebrow')}</span></f:if>
+                <f:if condition="{data.eyebrow}"><s2f:atom.badge variant="secondary">{data -> f:render.text(field: 'eyebrow')}</s2f:atom.badge></f:if>
                 <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
                 <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
-        <div class="team__grid team__grid--cols-{data.columns -> f:or(alternative: '3')}">
-            <f:for each="{data.members}" as="member">
-                <s2f:molecule.card class="team__member">
-                    <f:if condition="{member.image}">
-                        <div class="team__image-wrapper">
-                            <f:for each="{member.image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 640)}" alt="{member -> f:render.text(field: 'name')}" class="team__image"/>
-                            </f:for>
-                        </div>
-                    </f:if>
-                    <div class="team__content">
-                        <h3 class="team__name">{member -> f:render.text(field: 'name')}</h3>
-                        <p class="team__role">{member -> f:render.text(field: 'role')}</p>
-                        <f:if condition="{member.bio}">
-                            <p class="team__bio">{member -> f:render.text(field: 'bio')}</p>
-                        </f:if>
-                        <f:if condition="{member.profile_link.url}">
-                            <div class="team__actions">
-                                <s2f:atom.button href="{member.profile_link.url}" target="{member.profile_link.target}" variant="ghost">View profile</s2f:atom.button>
+        <f:switch expression="{data.variant}">
+
+            <f:case value="list">
+                <div class="team__list">
+                    <f:for each="{data.members}" as="member">
+                        <div class="team__list-item">
+                            <div class="stack stack--horizontal stack--align-center stack--gap-default">
+                                <f:if condition="{member.image}">
+                                    <f:then>
+                                        <f:for each="{member.image}" as="fileReference">
+                                            <s2f:atom.avatar size="lg">
+                                                <img src="{f:uri.image(image: fileReference, maxWidth: 120, maxHeight: 120, cropVariant: 'default')}" alt="{member -> f:render.text(field: 'name')}" class="avatar__image"/>
+                                            </s2f:atom.avatar>
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        <s2f:atom.avatar size="lg">
+                                            <span class="avatar__fallback">{member.name -> f:format.crop(maxCharacters: 1)}</span>
+                                        </s2f:atom.avatar>
+                                    </f:else>
+                                </f:if>
+                                <div class="team__list-info">
+                                    <h3 class="card__title">{member -> f:render.text(field: 'name')}</h3>
+                                    <p class="card__description">{member -> f:render.text(field: 'role')}</p>
+                                    <f:if condition="{member.bio}">
+                                        <p class="typography typography--muted" style="margin-top:0.5rem;">{member -> f:render.text(field: 'bio')}</p>
+                                    </f:if>
+                                </div>
+                                <f:if condition="{member.profile_link.url}">
+                                    <s2f:atom.button href="{member.profile_link.url}" target="{member.profile_link.target}" variant="outline" size="sm">View profile</s2f:atom.button>
+                                </f:if>
                             </div>
-                        </f:if>
-                    </div>
-                </s2f:molecule.card>
-            </f:for>
-        </div>
+                            <s2f:atom.separator orientation="horizontal"/>
+                        </div>
+                    </f:for>
+                </div>
+            </f:case>
+
+            <f:case value="minimal">
+                <div class="team__grid team__grid--cols-{data.columns -> f:or(alternative: '4')}">
+                    <f:for each="{data.members}" as="member">
+                        <div class="team__minimal-item" style="text-align:center;">
+                            <f:if condition="{member.image}">
+                                <f:then>
+                                    <f:for each="{member.image}" as="fileReference">
+                                        <s2f:atom.avatar size="lg" class="team__minimal-avatar">
+                                            <img src="{f:uri.image(image: fileReference, maxWidth: 120, maxHeight: 120, cropVariant: 'default')}" alt="{member -> f:render.text(field: 'name')}" class="avatar__image"/>
+                                        </s2f:atom.avatar>
+                                    </f:for>
+                                </f:then>
+                                <f:else>
+                                    <s2f:atom.avatar size="lg" class="team__minimal-avatar">
+                                        <span class="avatar__fallback">{member.name -> f:format.crop(maxCharacters: 1)}</span>
+                                    </s2f:atom.avatar>
+                                </f:else>
+                            </f:if>
+                            <h3 class="typography typography--small" style="font-weight:600;margin-top:0.75rem;">{member -> f:render.text(field: 'name')}</h3>
+                            <p class="typography typography--muted">{member -> f:render.text(field: 'role')}</p>
+                        </div>
+                    </f:for>
+                </div>
+            </f:case>
+
+            <f:defaultCase>
+                <!-- Grid variant (default) -->
+                <div class="team__grid team__grid--cols-{data.columns -> f:or(alternative: '3')}">
+                    <f:for each="{data.members}" as="member">
+                        <s2f:molecule.card class="team__member">
+                            <f:if condition="{member.image}">
+                                <div class="team__image-wrapper">
+                                    <f:for each="{member.image}" as="fileReference">
+                                        <img src="{f:uri.image(image: fileReference, maxWidth: 640)}" alt="{member -> f:render.text(field: 'name')}" class="team__image"/>
+                                    </f:for>
+                                </div>
+                            </f:if>
+                            <div class="card__header">
+                                <h3 class="card__title">{member -> f:render.text(field: 'name')}</h3>
+                                <p class="card__description">{member -> f:render.text(field: 'role')}</p>
+                            </div>
+                            <f:if condition="{member.bio}">
+                                <div class="card__content">
+                                    <p class="typography typography--muted">{member -> f:render.text(field: 'bio')}</p>
+                                </div>
+                            </f:if>
+                            <f:if condition="{member.profile_link.url}">
+                                <div class="card__footer">
+                                    <s2f:atom.button href="{member.profile_link.url}" target="{member.profile_link.target}" variant="ghost" size="sm">View profile</s2f:atom.button>
+                                </div>
+                            </f:if>
+                        </s2f:molecule.card>
+                    </f:for>
+                </div>
+            </f:defaultCase>
+
+        </f:switch>
     </s2f:layout.container>
 </s2f:layout.section>
 

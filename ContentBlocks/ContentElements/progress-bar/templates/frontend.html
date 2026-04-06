@@ -5,25 +5,37 @@
 
 <f:asset.css identifier="s2f-progress-bar" href="{cb:assetPath()}/frontend.css"/>
 
-<s2f:layout.section class="progress-bar-section">
+<s2f:layout.section class="progress-bar-section progress-bar-section--{data.variant -> f:or(alternative: 'default')}">
     <s2f:layout.container>
         <f:if condition="{data.header}">
-            <h2 class="progress-bar__headline">{data -> f:render.text(field: 'header')}</h2>
+            <s2f:atom.typography tag="h2" variant="h2" class="progress-bar-section__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
         </f:if>
-        <div class="progress-bar__list">
-            <f:for each="{data.items}" as="item">
-                <div class="progress-bar__item">
-                    <div class="progress-bar__meta">
-                        <span class="progress-bar__label">{item -> f:render.text(field: 'label')}</span>
-                        <f:if condition="{data.show_value}">
-                            <span class="progress-bar__value">{item.target_value}%</span>
+
+        <div class="progress progress--{data.variant -> f:or(alternative: 'default')} progress--{data.color -> f:or(alternative: 'primary')}">
+            <f:if condition="{data.variant} == 'labeled'">
+                <f:then>
+                    <div class="progress__meta">
+                        <f:if condition="{data.header}">
+                            <span class="progress__label">{data -> f:render.text(field: 'header')}</span>
+                        </f:if>
+                        <f:if condition="{data.show_percentage}">
+                            <span class="progress__value">{data.progress_value}%</span>
                         </f:if>
                     </div>
-                    <div class="progress-bar__track" role="progressbar" aria-valuenow="{item.target_value}" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar__fill progress-bar__fill--{item.color -> f:or(alternative: 'primary')}" style="width: {item.target_value}%"></div>
-                    </div>
+                </f:then>
+            </f:if>
+            <s2f:atom.progress value="{data.progress_value}" class="progress__track">
+                <div class="progress__indicator progress__indicator--{data.color -> f:or(alternative: 'primary')}{f:if(condition: '{data.variant} == {s:}striped{s:}', then: ' progress__indicator--striped')}"
+                     role="progressbar"
+                     aria-valuenow="{data.progress_value}"
+                     aria-valuemin="0"
+                     aria-valuemax="100"
+                     style="width: {data.progress_value}%">
+                    <f:if condition="{data.show_percentage} && {data.variant} != 'labeled'">
+                        <span class="progress__text">{data.progress_value}%</span>
+                    </f:if>
                 </div>
-            </f:for>
+            </s2f:atom.progress>
         </div>
     </s2f:layout.container>
 </s2f:layout.section>

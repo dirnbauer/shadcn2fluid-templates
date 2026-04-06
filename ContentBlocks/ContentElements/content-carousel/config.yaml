@@ -5,32 +5,62 @@ description: Horizontally scrollable content cards with snap scroll
 group: content
 prefixFields: false
 fields:
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Carousel Style
+    onChange: reload
+    items:
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
+        value: default
+      - label: Autoplay
+        value: autoplay
+      - label: Thumbnails
+        value: thumbnails
+      - label: Cards
+        value: cards
+    default: default
+
   - identifier: header
     useExistingField: true
     label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
-  - identifier: subheadline
-    type: Textarea
-    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:subheadline'
-    rows: 2
+
   - identifier: items
     type: Collection
     label: Slides
-    minItems: 3
+    minItems: 2
     fields:
-      - identifier: title
-        type: Textarea
-        rows: 1
-        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:title'
-        required: true
-      - identifier: content
-        type: Textarea
-        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:content'
-        rows: 3
-      - identifier: image
+      - identifier: slide_image
         type: File
-        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:image'
+        label: Slide Image
         allowed: common-image-types
         maxitems: 1
-      - identifier: link
+        required: true
+      - identifier: slide_title
+        type: Textarea
+        rows: 1
+        label: Slide Title
+      - identifier: slide_description
+        type: Textarea
+        rows: 3
+        label: Slide Description
+      - identifier: slide_link
         type: Link
-        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:link'
+        label: Slide Link
+
+  - identifier: autoplay_interval
+    type: Number
+    label: Autoplay Interval (ms)
+    description: Time between slides in milliseconds
+    default: 5000
+    displayCond: 'FIELD:variant:=:autoplay'
+
+  - identifier: show_navigation
+    type: Checkbox
+    label: Show Navigation Arrows
+    default: 1
+
+  - identifier: show_pagination
+    type: Checkbox
+    label: Show Pagination Dots
+    default: 1

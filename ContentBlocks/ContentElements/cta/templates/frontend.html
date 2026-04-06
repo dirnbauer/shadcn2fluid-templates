@@ -5,54 +5,121 @@
 
 <f:asset.css identifier="s2f-cta" href="{cb:assetPath()}/frontend.css"/>
 
-<s2f:layout.section class="cta cta--{data.variant -> f:or(alternative: 'centered')}">
-    <s2f:layout.container>
-        <f:if condition="{data.variant} == 'split'">
-            <f:then>
-                <div class="cta__split">
+<f:switch expression="{data.variant}">
+
+    <f:case value="split">
+        <s2f:layout.section class="cta cta--split cta--bg-{data.background_style -> f:or(alternative: 'default')}">
+            <s2f:layout.container>
+                <div class="cta__grid">
                     <div class="cta__content">
-                        <f:if condition="{data.badge_text}"><span class="cta__badge">{data -> f:render.text(field: 'badge_text')}</span></f:if>
-                        <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
-                        <f:if condition="{data.description}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'description')}</s2f:atom.typography></f:if>
+                        <f:if condition="{data.header}">
+                            <s2f:atom.typography tag="h2" variant="h2" class="cta__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+                        </f:if>
+                        <f:if condition="{data.subheadline}">
+                            <s2f:atom.typography variant="muted" class="cta__description">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography>
+                        </f:if>
                         <f:if condition="{data.primary_button_text} || {data.secondary_button_text}">
                             <div class="cta__actions">
-                                <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                                    <s2f:atom.button href="{data.primary_button_link.url}" target="{data.primary_button_link.target}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                                <f:if condition="{data.primary_button_text}">
+                                    <f:link.typolink parameter="{data.primary_button_link}">
+                                        <s2f:atom.button variant="default" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                                    </f:link.typolink>
                                 </f:if>
-                                <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                                    <s2f:atom.button href="{data.secondary_button_link.url}" target="{data.secondary_button_link.target}" variant="outline" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                                <f:if condition="{data.secondary_button_text}">
+                                    <f:link.typolink parameter="{data.secondary_button_link}">
+                                        <s2f:atom.button variant="outline" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                                    </f:link.typolink>
                                 </f:if>
                             </div>
                         </f:if>
                     </div>
-                    <f:if condition="{data.image}">
-                        <div class="cta__image-wrapper">
-                            <f:for each="{data.image}" as="fileReference">
-                                <img src="{f:uri.image(image: fileReference, maxWidth: 600)}" alt="" class="cta__image"/>
+                    <f:if condition="{data.cta_image}">
+                        <div class="cta__media">
+                            <f:for each="{data.cta_image}" as="file">
+                                <f:image image="{file}" alt="" class="cta__image" width="600"/>
                             </f:for>
                         </div>
                     </f:if>
                 </div>
-            </f:then>
-            <f:else>
-                <div class="cta__content">
-                    <f:if condition="{data.badge_text}"><span class="cta__badge">{data -> f:render.text(field: 'badge_text')}</span></f:if>
-                    <f:if condition="{data.header}"><s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography></f:if>
-                    <f:if condition="{data.description}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'description')}</s2f:atom.typography></f:if>
+            </s2f:layout.container>
+        </s2f:layout.section>
+    </f:case>
+
+    <f:case value="banner">
+        <s2f:layout.section class="cta cta--banner cta--bg-{data.background_style -> f:or(alternative: 'default')}">
+            <s2f:layout.container>
+                <div class="cta__banner">
+                    <div class="cta__content">
+                        <f:if condition="{data.header}">
+                            <s2f:atom.typography tag="h2" variant="h3" class="cta__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+                        </f:if>
+                        <f:if condition="{data.subheadline}">
+                            <s2f:atom.typography variant="muted" class="cta__description">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography>
+                        </f:if>
+                    </div>
+                    <div class="cta__actions">
+                        <f:if condition="{data.primary_button_text}">
+                            <f:link.typolink parameter="{data.primary_button_link}">
+                                <s2f:atom.button variant="default" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                            </f:link.typolink>
+                        </f:if>
+                    </div>
+                </div>
+            </s2f:layout.container>
+        </s2f:layout.section>
+    </f:case>
+
+    <f:case value="minimal">
+        <s2f:layout.section class="cta cta--minimal">
+            <s2f:layout.container>
+                <div class="cta__content cta__content--inline">
+                    <f:if condition="{data.header}">
+                        <s2f:atom.typography tag="h2" variant="h3" class="cta__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+                    </f:if>
+                    <f:if condition="{data.subheadline}">
+                        <s2f:atom.typography variant="muted" class="cta__description">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography>
+                    </f:if>
+                    <f:if condition="{data.primary_button_text}">
+                        <div class="cta__actions">
+                            <f:link.typolink parameter="{data.primary_button_link}">
+                                <s2f:atom.button variant="default">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                            </f:link.typolink>
+                        </div>
+                    </f:if>
+                </div>
+            </s2f:layout.container>
+        </s2f:layout.section>
+    </f:case>
+
+    <f:defaultCase>
+        <s2f:layout.section class="cta cta--centered cta--bg-{data.background_style -> f:or(alternative: 'default')}">
+            <s2f:layout.container>
+                <div class="cta__content cta__content--centered">
+                    <f:if condition="{data.header}">
+                        <s2f:atom.typography tag="h2" variant="h2" class="cta__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+                    </f:if>
+                    <f:if condition="{data.subheadline}">
+                        <s2f:atom.typography variant="muted" class="cta__description">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography>
+                    </f:if>
                     <f:if condition="{data.primary_button_text} || {data.secondary_button_text}">
                         <div class="cta__actions">
-                            <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                                <s2f:atom.button href="{data.primary_button_link.url}" target="{data.primary_button_link.target}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                            <f:if condition="{data.primary_button_text}">
+                                <f:link.typolink parameter="{data.primary_button_link}">
+                                    <s2f:atom.button variant="default" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                                </f:link.typolink>
                             </f:if>
-                            <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                                <s2f:atom.button href="{data.secondary_button_link.url}" target="{data.secondary_button_link.target}" variant="outline" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                            <f:if condition="{data.secondary_button_text}">
+                                <f:link.typolink parameter="{data.secondary_button_link}">
+                                    <s2f:atom.button variant="outline" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                                </f:link.typolink>
                             </f:if>
                         </div>
                     </f:if>
                 </div>
-            </f:else>
-        </f:if>
-    </s2f:layout.container>
-</s2f:layout.section>
+            </s2f:layout.container>
+        </s2f:layout.section>
+    </f:defaultCase>
+
+</f:switch>
 
 </html>

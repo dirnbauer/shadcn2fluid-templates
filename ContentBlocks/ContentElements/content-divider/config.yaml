@@ -5,28 +5,27 @@ description: Decorative section divider with optional label
 group: content
 prefixFields: false
 fields:
-  - identifier: header
-    useExistingField: true
-    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
-  - identifier: label
-    type: Textarea
-    rows: 1
-    label: Divider Label
-    description: Optional text displayed on the divider line
   - identifier: variant
     type: Select
     renderType: selectSingle
-    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:style'
+    label: Divider Style
+    onChange: reload
     items:
-      - label: Line
-        value: line
-      - label: Dashed
-        value: dashed
-      - label: Dotted
-        value: dotted
-      - label: Gradient
-        value: gradient
-    default: line
+      - label: Horizontal
+        value: horizontal
+      - label: With Text
+        value: with-text
+      - label: Decorative
+        value: decorative
+    default: horizontal
+
+  - identifier: divider_text
+    type: Textarea
+    rows: 1
+    label: Divider Text
+    description: Text displayed on the divider line
+    displayCond: 'FIELD:variant:=:with-text'
+
   - identifier: spacing
     type: Select
     renderType: selectSingle
@@ -34,8 +33,21 @@ fields:
     items:
       - label: Small
         value: sm
-      - label: Medium
-        value: md
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
+        value: default
       - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.large'
         value: lg
-    default: md
+    default: default
+
+  - identifier: color
+    type: Select
+    renderType: selectSingle
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:color_field'
+    items:
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
+        value: default
+      - label: Muted
+        value: muted
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.primary'
+        value: primary
+    default: default

@@ -1,6 +1,10 @@
 {
-  "_type": "section",
-  "header": "Explore by Use Case",
-  "description": "See how different teams use our platform to achieve their goals.",
-  "content": "Whether you are in engineering, marketing, sales, or operations, our platform adapts to your workflow. Switch between use cases to see relevant features, integrations, and customer stories tailored to your role."
+  "_type": "list",
+  "header": "Platform Features",
+  "description": "Everything you need in one place.",
+  "items": [
+    { "title": "Analytics", "description": "Real-time dashboards with custom metrics and alerts." },
+    { "title": "Integrations", "description": "Connect with 50+ tools including Slack, GitHub, and Jira." },
+    { "title": "Security", "description": "SOC 2 Type II certified with SSO and audit logs." }
+  ]
 }

@@ -7,26 +7,35 @@
 
 <s2f:layout.section class="data-table-section">
     <s2f:layout.container>
-        <div class="data-table {f:if(condition: data.striped, then: 'data-table--striped')} {f:if(condition: data.compact, then: 'data-table--compact')}"
-             data-table-data="{data.table_data -> f:format.htmlspecialchars()}">
-            <f:if condition="{data.header} || {data.description}">
-                <div class="data-table__header">
-                    <f:if condition="{data.header}">
-                        <h3 class="data-table__title">{data -> f:render.text(field: 'header')}</h3>
-                    </f:if>
-                    <f:if condition="{data.description}">
-                        <p class="data-table__description">{data -> f:render.text(field: 'description')}</p>
-                    </f:if>
-                </div>
-            </f:if>
-            <div class="data-table__wrapper">
-                <table class="data-table__table" id="data-table-{data.uid}">
-                    <tbody>
-                        <tr><td>Table renders from JSON data</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <f:if condition="{data.header}">
+            <s2f:atom.typography tag="h2" variant="h2" class="data-table-section__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+        </f:if>
+
+        <s2f:molecule.table class="table-wrapper table-wrapper--{data.variant -> f:or(alternative: 'default')}">
+            <table class="table table--{data.variant -> f:or(alternative: 'default')}">
+                <f:if condition="{data.show_header_row} && {data.columns}">
+                    <thead class="table__header">
+                        <tr class="table__row">
+                            <f:for each="{data.columns}" as="col">
+                                <th class="table__head table__head--{col.column_align -> f:or(alternative: 'left')}">{col -> f:render.text(field: 'column_label')}</th>
+                            </f:for>
+                        </tr>
+                    </thead>
+                </f:if>
+                <tbody>
+                    <f:for each="{data.rows}" as="row">
+                        <tr class="table__row">
+                            <f:for each="{data.columns}" as="col" iteration="colIter">
+                                <td class="table__cell table__cell--{col.column_align -> f:or(alternative: 'left')}">{row -> f:render.text(field: 'row_data')}</td>
+                            </f:for>
+                        </tr>
+                    </f:for>
+                </tbody>
+                <f:if condition="{data.show_caption} && {data.caption_text}">
+                    <caption class="table__caption">{data -> f:render.text(field: 'caption_text')}</caption>
+                </f:if>
+            </table>
+        </s2f:molecule.table>
     </s2f:layout.container>
 </s2f:layout.section>
 

@@ -5,37 +5,116 @@
 
 <f:asset.css identifier="s2f-content-carousel" href="{cb:assetPath()}/frontend.css"/>
 
-<s2f:layout.section class="content-carousel">
+<s2f:layout.section class="content-carousel content-carousel--{data.variant -> f:or(alternative: 'default')}">
     <s2f:layout.container>
         <f:if condition="{data.header}">
             <header class="content-carousel__intro">
                 <s2f:atom.typography tag="h2" variant="h2">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
-                <f:if condition="{data.subheadline}"><s2f:atom.typography variant="muted">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography></f:if>
             </header>
         </f:if>
 
-        <div class="content-carousel__track">
-            <f:for each="{data.items}" as="item">
-                <s2f:molecule.card class="content-carousel__slide">
-                    <f:if condition="{item.image.0}">
-                        <div class="content-carousel__image-wrapper">
-                            <f:image image="{item.image.0}" alt="{item -> f:render.text(field: 'title')}" maxWidth="480" class="content-carousel__image"/>
-                        </div>
-                    </f:if>
-                    <div class="content-carousel__body">
-                        <h3 class="content-carousel__title">
-                            <f:if condition="{item.link.url}">
-                                <f:then><f:link.typolink parameter="{item.link}">{item -> f:render.text(field: 'title')}</f:link.typolink></f:then>
-                                <f:else>{item -> f:render.text(field: 'title')}</f:else>
-                            </f:if>
-                        </h3>
-                        <f:if condition="{item.content}">
-                            <p class="content-carousel__text">{item -> f:render.text(field: 'content')}</p>
-                        </f:if>
-                    </div>
-                </s2f:molecule.card>
-            </f:for>
+        <div class="content-carousel__viewport"
+             data-carousel="true"
+             data-carousel-variant="{data.variant -> f:or(alternative: 'default')}"
+             data-carousel-autoplay="{f:if(condition: '{data.variant} == {s:}autoplay{s:}', then: 'true', else: 'false')}"
+             data-carousel-interval="{data.autoplay_interval -> f:or(alternative: '5000')}">
+
+            <div class="content-carousel__track">
+                <f:for each="{data.items}" as="item" iteration="iter">
+                    <f:switch expression="{data.variant}">
+                        <f:case value="cards">
+                            <s2f:molecule.card class="content-carousel__slide card">
+                                <f:if condition="{item.slide_image}">
+                                    <div class="card__image-wrapper">
+                                        <f:for each="{item.slide_image}" as="image">
+                                            <f:image image="{image}" alt="{item -> f:render.text(field: 'slide_title')}" maxWidth="480" class="card__image"/>
+                                        </f:for>
+                                    </div>
+                                </f:if>
+                                <div class="card__body">
+                                    <f:if condition="{item.slide_title}">
+                                        <h3 class="card__title">
+                                            <f:if condition="{item.slide_link.url}">
+                                                <f:then><f:link.typolink parameter="{item.slide_link}">{item -> f:render.text(field: 'slide_title')}</f:link.typolink></f:then>
+                                                <f:else>{item -> f:render.text(field: 'slide_title')}</f:else>
+                                            </f:if>
+                                        </h3>
+                                    </f:if>
+                                    <f:if condition="{item.slide_description}">
+                                        <p class="card__description">{item -> f:render.text(field: 'slide_description')}</p>
+                                    </f:if>
+                                </div>
+                            </s2f:molecule.card>
+                        </f:case>
+                        <f:defaultCase>
+                            <div class="content-carousel__slide{f:if(condition: iter.isFirst, then: ' content-carousel__slide--active')}">
+                                <f:if condition="{item.slide_image}">
+                                    <div class="content-carousel__image-wrapper">
+                                        <f:for each="{item.slide_image}" as="image">
+                                            <f:image image="{image}" alt="{item -> f:render.text(field: 'slide_title')}" maxWidth="960" class="content-carousel__image"/>
+                                        </f:for>
+                                    </div>
+                                </f:if>
+                                <f:if condition="{item.slide_title} || {item.slide_description}">
+                                    <div class="content-carousel__body">
+                                        <f:if condition="{item.slide_title}">
+                                            <h3 class="content-carousel__title">
+                                                <f:if condition="{item.slide_link.url}">
+                                                    <f:then><f:link.typolink parameter="{item.slide_link}">{item -> f:render.text(field: 'slide_title')}</f:link.typolink></f:then>
+                                                    <f:else>{item -> f:render.text(field: 'slide_title')}</f:else>
+                                                </f:if>
+                                            </h3>
+                                        </f:if>
+                                        <f:if condition="{item.slide_description}">
+                                            <p class="content-carousel__description">{item -> f:render.text(field: 'slide_description')}</p>
+                                        </f:if>
+                                    </div>
+                                </f:if>
+                            </div>
+                        </f:defaultCase>
+                    </f:switch>
+                </f:for>
+            </div>
+
+            <f:if condition="{data.show_navigation}">
+                <div class="content-carousel__navigation">
+                    <button class="content-carousel__prev" type="button" aria-label="Previous slide" data-carousel-prev>
+                        <span class="content-carousel__arrow content-carousel__arrow--prev"></span>
+                    </button>
+                    <button class="content-carousel__next" type="button" aria-label="Next slide" data-carousel-next>
+                        <span class="content-carousel__arrow content-carousel__arrow--next"></span>
+                    </button>
+                </div>
+            </f:if>
+
+            <f:if condition="{data.show_pagination}">
+                <div class="content-carousel__pagination">
+                    <f:for each="{data.items}" as="item" iteration="iter">
+                        <button class="content-carousel__dot{f:if(condition: iter.isFirst, then: ' content-carousel__dot--active')}"
+                                type="button"
+                                aria-label="Go to slide {iter.cycle}"
+                                data-carousel-dot="{iter.index}"></button>
+                    </f:for>
+                </div>
+            </f:if>
         </div>
+
+        <f:if condition="{data.variant} == 'thumbnails'">
+            <div class="content-carousel__thumbnails">
+                <f:for each="{data.items}" as="item" iteration="iter">
+                    <button class="content-carousel__thumb{f:if(condition: iter.isFirst, then: ' content-carousel__thumb--active')}"
+                            type="button"
+                            aria-label="Go to slide {iter.cycle}"
+                            data-carousel-thumb="{iter.index}">
+                        <f:if condition="{item.slide_image}">
+                            <f:for each="{item.slide_image}" as="image">
+                                <f:image image="{image}" alt="" maxWidth="120" class="content-carousel__thumb-image"/>
+                            </f:for>
+                        </f:if>
+                    </button>
+                </f:for>
+            </div>
+        </f:if>
     </s2f:layout.container>
 </s2f:layout.section>
 

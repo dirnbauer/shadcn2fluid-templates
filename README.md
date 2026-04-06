@@ -91,7 +91,7 @@ Custom theme override via site set settings:
 ```yaml
 settings:
   'shadcn2fluid.themeCss': 'EXT:site_package/Resources/Public/Css/shadcn-theme.css'
-  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create#b2D0wqNxT'
+  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create?preset=b2D0wqNxT'
 ```
 
 ### Creating a custom theme

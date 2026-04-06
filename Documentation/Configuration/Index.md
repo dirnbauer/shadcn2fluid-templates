@@ -33,7 +33,7 @@ Example:
 ```yaml
 settings:
   'shadcn2fluid.themeCss': 'EXT:site_package/Resources/Public/Css/shadcn-theme.css'
-  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create#b2D0wqNxT'
+  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create?preset=b2D0wqNxT'
 ```
 
 `shadcn2fluid.themeCss` controls which CSS file is loaded in the frontend. `shadcn2fluid.themeSourceUrl` is an optional reference to the [ui.shadcn.com/create](https://ui.shadcn.com/create) preset used to generate that CSS — stored for traceability, does not affect rendering.

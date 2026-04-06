@@ -110,7 +110,7 @@ Store the exported CSS path and optional reference URL in your site `config.yaml
 ```yaml
 settings:
   'shadcn2fluid.themeCss': 'fileadmin/css/custom-shadcn-theme.css'
-  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create#yourPresetId'
+  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create?preset=yourPresetId'
 ```
 
 #### 6. Clear Cache
@@ -149,7 +149,7 @@ The theme creator supports shareable preset URLs. Save your preset ID in the sit
 
 ```yaml
 settings:
-  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create#b2D0wqNxT'
+  'shadcn2fluid.themeSourceUrl': 'https://ui.shadcn.com/create?preset=b2D0wqNxT'
 ```
 
 This does not affect rendering — it is stored for reference so your team knows which preset was used.

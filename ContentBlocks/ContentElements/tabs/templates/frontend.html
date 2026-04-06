@@ -11,24 +11,32 @@
             <s2f:atom.typography tag="h2" variant="h2" class="tabs-section__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
         </f:if>
 
-        <div class="tabs" role="tablist">
-            <div class="tabs__list">
+        <s2f:molecule.tabs class="tabs tabs--{data.variant -> f:or(alternative: 'default')}" data-tabs-default="{data.default_tab -> f:or(alternative: '0')}">
+            <div class="tabs__list" role="tablist">
                 <f:for each="{data.items}" as="item" iteration="iter">
-                    <button class="tabs__trigger {f:if(condition: iter.isFirst, then: 'tabs__trigger--active')}"
+                    <button class="tabs__trigger{f:if(condition: '{data.default_tab} == {iter.index}', then: ' tabs__trigger--active')}{f:if(condition: '!{data.default_tab} && {iter.isFirst}', then: ' tabs__trigger--active')}"
                             role="tab"
+                            type="button"
                             aria-selected="{f:if(condition: iter.isFirst, then: 'true', else: 'false')}"
-                            data-tab="tab-{data.uid}-{iter.index}">{item -> f:render.text(field: 'tab_label')}</button>
+                            aria-controls="tab-panel-{data.uid}-{iter.index}"
+                            data-tab-trigger="tab-{data.uid}-{iter.index}">
+                        <f:if condition="{item.tab_icon}">
+                            <span class="tabs__icon">{item -> f:render.text(field: 'tab_icon')}</span>
+                        </f:if>
+                        <span class="tabs__label">{item -> f:render.text(field: 'tab_label')}</span>
+                    </button>
                 </f:for>
             </div>
 
             <f:for each="{data.items}" as="item" iteration="iter">
-                <div class="tabs__panel {f:if(condition: iter.isFirst, then: 'tabs__panel--active')}"
+                <div class="tabs__content{f:if(condition: '{data.default_tab} == {iter.index}', then: ' tabs__content--active')}{f:if(condition: '!{data.default_tab} && {iter.isFirst}', then: ' tabs__content--active')}"
                      role="tabpanel"
-                     id="tab-{data.uid}-{iter.index}">
-                    {item -> f:render.text(field: 'content')}
+                     id="tab-panel-{data.uid}-{iter.index}"
+                     data-tab-content="tab-{data.uid}-{iter.index}">
+                    {item -> f:render.text(field: 'tab_content')}
                 </div>
             </f:for>
-        </div>
+        </s2f:molecule.tabs>
     </s2f:layout.container>
 </s2f:layout.section>
 

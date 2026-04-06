@@ -1,8 +1,8 @@
 {
   "_type": "hero",
-  "header": "Start Building Today",
-  "description": "Get instant access to all features. No credit card required.",
-  "badge": "Limited Time Offer",
+  "header": "Ready to Get Started?",
+  "description": "Join thousands of teams already building with our platform.",
   "primaryButton": "Start Free Trial",
-  "secondaryButton": "Watch Demo"
+  "secondaryButton": "Talk to Sales",
+  "badge": "No credit card required"
 }

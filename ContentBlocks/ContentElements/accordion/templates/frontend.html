@@ -11,7 +11,8 @@
             <s2f:atom.typography tag="h2" variant="h2" class="accordion-section__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
         </f:if>
 
-        <div class="accordion" data-allow-multiple="{f:if(condition: data.allow_multiple, then: 'true', else: 'false')}">
+        <s2f:molecule.accordion class="accordion accordion--{data.variant -> f:or(alternative: 'default')}"
+                                data-allow-multiple="{f:if(condition: data.allow_multiple, then: 'true', else: 'false')}">
             <f:for each="{data.items}" as="item" iteration="iter">
                 <details class="accordion__item" {f:if(condition: item.open_by_default, then: 'open')}>
                     <summary class="accordion__trigger">
@@ -27,7 +28,7 @@
                     </div>
                 </details>
             </f:for>
-        </div>
+        </s2f:molecule.accordion>
     </s2f:layout.container>
 </s2f:layout.section>
 

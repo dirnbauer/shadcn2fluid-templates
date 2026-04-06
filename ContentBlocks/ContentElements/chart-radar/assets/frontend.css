@@ -1,0 +1,31 @@
+.chart-radar__card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--card);
+}
+.chart-radar__header {
+    padding: var(--s2f-spacing-lg) var(--s2f-spacing-lg) 0;
+}
+.chart-radar__title {
+    font-size: var(--s2f-text-lg);
+    font-weight: 600;
+}
+.chart-radar__description {
+    font-size: var(--s2f-text-sm);
+    color: var(--muted-foreground);
+    margin-block-start: var(--s2f-spacing-xs);
+}
+.chart-radar__plot {
+    padding: var(--s2f-spacing-lg);
+    color: var(--muted-foreground);
+}
+.chart-radar__svg {
+    width: 100%;
+    max-width: 420px;
+    margin-inline: auto;
+    display: block;
+    height: auto;
+}
+.chart-radar__label {
+    font-size: 11px;
+}

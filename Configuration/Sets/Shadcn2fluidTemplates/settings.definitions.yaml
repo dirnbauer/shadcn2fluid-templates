@@ -15,4 +15,4 @@ settings:
     category: Shadcn2fluid
     description: 'Optional reference URL of the ui.shadcn.com/create preset used to generate the exported CSS. Stored in site config for traceability only — does not affect frontend rendering.'
     type: string
-    default: 'https://ui.shadcn.com/create#b2D0wqNxT'
+    default: 'https://ui.shadcn.com/create?preset=b2D0wqNxT'

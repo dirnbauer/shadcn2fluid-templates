@@ -5,40 +5,45 @@ description: Visual progress indicator with label and percentage
 group: data
 prefixFields: false
 fields:
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Progress Style
+    onChange: reload
+    items:
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.default'
+        value: default
+      - label: Labeled
+        value: labeled
+      - label: Striped
+        value: striped
+    default: default
+
   - identifier: header
     useExistingField: true
     label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
-  - identifier: items
-    type: Collection
-    label: Progress Items
-    minItems: 1
-    fields:
-      - identifier: label
-        type: Textarea
-        rows: 1
-        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:label_field'
-        required: true
-      - identifier: target_value
-        type: Number
-        label: Percentage (0-100)
-        required: true
-      - identifier: color
-        type: Select
-        renderType: selectSingle
-        label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:color_field'
-        items:
-          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.primary'
-            value: primary
-          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.green'
-            value: green
-          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.blue'
-            value: blue
-          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.orange'
-            value: orange
-          - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.red'
-            value: red
-        default: primary
-  - identifier: show_value
+
+  - identifier: progress_value
+    type: Number
+    label: Progress Value (0-100)
+    required: true
+
+  - identifier: show_percentage
     type: Checkbox
     label: Show Percentage
     default: 1
+
+  - identifier: color
+    type: Select
+    renderType: selectSingle
+    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:color_field'
+    items:
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.primary'
+        value: primary
+      - label: Success
+        value: success
+      - label: Warning
+        value: warning
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.destructive'
+        value: destructive
+    default: primary

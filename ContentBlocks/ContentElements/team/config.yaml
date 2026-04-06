@@ -8,6 +8,19 @@ fields:
   - identifier: header
     useExistingField: true
     label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:heading'
+  - identifier: variant
+    type: Select
+    renderType: selectSingle
+    label: Layout Variant
+    items:
+      - label: Grid
+        value: grid
+      - label: List
+        value: list
+      - label: Minimal
+        value: minimal
+    default: grid
+    onChange: reload
   - identifier: eyebrow
     type: Textarea
     rows: 1
@@ -20,6 +33,7 @@ fields:
     type: Select
     renderType: selectSingle
     label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:columns'
+    displayCond: 'FIELD:variant:=:grid'
     items:
       - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.2_columns'
         value: '2'

@@ -22,6 +22,8 @@ fields:
         value: split
       - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:background_image'
         value: background
+      - label: Gradient
+        value: gradient
     default: centered
 
   - identifier: badge_text
@@ -67,22 +69,6 @@ fields:
     type: Link
     label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:secondary_button_link'
 
-  - identifier: secondary_button_variant
-    type: Select
-    renderType: selectSingle
-    label: Secondary Button Style
-    items:
-      - label: Default (Filled)
-        value: default
-      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.secondary'
-        value: secondary
-      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.outline'
-        value: outline
-      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.ghost'
-        value: ghost
-    default: outline
-    displayCond: 'FIELD:secondary_button_text:!=:'
-
   - identifier: hero_image
     type: File
     label: Hero Image
@@ -95,10 +81,10 @@ fields:
     renderType: selectSingle
     label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:image_position'
     items:
-      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.right'
-        value: right
       - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.left'
         value: left
+      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.right'
+        value: right
     default: right
     displayCond: 'FIELD:variant:=:split'
 
@@ -115,19 +101,5 @@ fields:
         value: '0.5'
       - label: Heavy (70%)
         value: '0.7'
-      - label: Dark (85%)
-        value: '0.85'
     default: '0.5'
-    displayCond: 'FIELD:variant:=:background'
-
-  - identifier: text_alignment
-    type: Select
-    renderType: selectSingle
-    label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:text_alignment'
-    items:
-      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.left'
-        value: left
-      - label: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:item.center'
-        value: center
-    default: left
     displayCond: 'FIELD:variant:=:background'

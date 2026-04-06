@@ -6,6 +6,7 @@
 <f:asset.css identifier="s2f-hero" href="{cb:assetPath()}/frontend.css"/>
 
 <f:switch expression="{data.variant}">
+
     <f:case value="split">
         <s2f:layout.section class="hero hero--split hero--image-{data.image_position -> f:or(alternative: 'right')}">
             <s2f:layout.container>
@@ -15,18 +16,22 @@
                             <s2f:atom.badge variant="secondary">{data -> f:render.text(field: 'badge_text')}</s2f:atom.badge>
                         </f:if>
                         <f:if condition="{data.header}">
-                            <h1 class="hero__headline">{data -> f:render.text(field: 'header')}</h1>
+                            <s2f:atom.typography tag="h1" variant="h1" class="hero__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
                         </f:if>
                         <f:if condition="{data.subheadline}">
-                            <p class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</p>
+                            <s2f:atom.typography variant="lead" class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography>
                         </f:if>
                         <f:if condition="{data.primary_button_text} || {data.secondary_button_text}">
                             <div class="hero__actions">
-                                <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                                    <s2f:atom.button href="{data.primary_button_link.url}" target="{data.primary_button_link.target}" variant="{data.primary_button_variant}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                                <f:if condition="{data.primary_button_text}">
+                                    <f:link.typolink parameter="{data.primary_button_link}">
+                                        <s2f:atom.button variant="{data.primary_button_variant -> f:or(alternative: 'default')}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                                    </f:link.typolink>
                                 </f:if>
-                                <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                                    <s2f:atom.button href="{data.secondary_button_link.url}" target="{data.secondary_button_link.target}" variant="{data.secondary_button_variant}" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                                <f:if condition="{data.secondary_button_text}">
+                                    <f:link.typolink parameter="{data.secondary_button_link}">
+                                        <s2f:atom.button variant="outline" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                                    </f:link.typolink>
                                 </f:if>
                             </div>
                         </f:if>
@@ -42,8 +47,9 @@
             </s2f:layout.container>
         </s2f:layout.section>
     </f:case>
+
     <f:case value="background">
-        <s2f:layout.section class="hero hero--background hero--align-{data.text_alignment -> f:or(alternative: 'left')}">
+        <s2f:layout.section class="hero hero--background">
             <f:if condition="{data.hero_image}">
                 <f:for each="{data.hero_image}" as="image">
                     <f:image image="{image}" class="hero__bg-image" alt=""/>
@@ -56,18 +62,22 @@
                         <s2f:atom.badge variant="secondary">{data -> f:render.text(field: 'badge_text')}</s2f:atom.badge>
                     </f:if>
                     <f:if condition="{data.header}">
-                        <h1 class="hero__headline">{data -> f:render.text(field: 'header')}</h1>
+                        <s2f:atom.typography tag="h1" variant="h1" class="hero__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
                     </f:if>
                     <f:if condition="{data.subheadline}">
-                        <p class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</p>
+                        <s2f:atom.typography variant="lead" class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography>
                     </f:if>
                     <f:if condition="{data.primary_button_text} || {data.secondary_button_text}">
                         <div class="hero__actions">
-                            <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                                <s2f:atom.button href="{data.primary_button_link.url}" target="{data.primary_button_link.target}" variant="{data.primary_button_variant}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                            <f:if condition="{data.primary_button_text}">
+                                <f:link.typolink parameter="{data.primary_button_link}">
+                                    <s2f:atom.button variant="{data.primary_button_variant -> f:or(alternative: 'default')}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                                </f:link.typolink>
                             </f:if>
-                            <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                                <s2f:atom.button href="{data.secondary_button_link.url}" target="{data.secondary_button_link.target}" variant="{data.secondary_button_variant}" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                            <f:if condition="{data.secondary_button_text}">
+                                <f:link.typolink parameter="{data.secondary_button_link}">
+                                    <s2f:atom.button variant="outline" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                                </f:link.typolink>
                             </f:if>
                         </div>
                     </f:if>
@@ -75,6 +85,39 @@
             </s2f:layout.container>
         </s2f:layout.section>
     </f:case>
+
+    <f:case value="gradient">
+        <s2f:layout.section class="hero hero--gradient">
+            <s2f:layout.container>
+                <div class="hero__content hero__content--centered">
+                    <f:if condition="{data.badge_text}">
+                        <s2f:atom.badge variant="secondary">{data -> f:render.text(field: 'badge_text')}</s2f:atom.badge>
+                    </f:if>
+                    <f:if condition="{data.header}">
+                        <s2f:atom.typography tag="h1" variant="h1" class="hero__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
+                    </f:if>
+                    <f:if condition="{data.subheadline}">
+                        <s2f:atom.typography variant="lead" class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography>
+                    </f:if>
+                    <f:if condition="{data.primary_button_text} || {data.secondary_button_text}">
+                        <div class="hero__actions">
+                            <f:if condition="{data.primary_button_text}">
+                                <f:link.typolink parameter="{data.primary_button_link}">
+                                    <s2f:atom.button variant="{data.primary_button_variant -> f:or(alternative: 'default')}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                                </f:link.typolink>
+                            </f:if>
+                            <f:if condition="{data.secondary_button_text}">
+                                <f:link.typolink parameter="{data.secondary_button_link}">
+                                    <s2f:atom.button variant="outline" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                                </f:link.typolink>
+                            </f:if>
+                        </div>
+                    </f:if>
+                </div>
+            </s2f:layout.container>
+        </s2f:layout.section>
+    </f:case>
+
     <f:defaultCase>
         <s2f:layout.section class="hero hero--centered">
             <s2f:layout.container>
@@ -83,18 +126,22 @@
                         <s2f:atom.badge variant="secondary">{data -> f:render.text(field: 'badge_text')}</s2f:atom.badge>
                     </f:if>
                     <f:if condition="{data.header}">
-                        <h1 class="hero__headline">{data -> f:render.text(field: 'header')}</h1>
+                        <s2f:atom.typography tag="h1" variant="h1" class="hero__headline">{data -> f:render.text(field: 'header')}</s2f:atom.typography>
                     </f:if>
                     <f:if condition="{data.subheadline}">
-                        <p class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</p>
+                        <s2f:atom.typography variant="lead" class="hero__subheadline">{data -> f:render.text(field: 'subheadline')}</s2f:atom.typography>
                     </f:if>
                     <f:if condition="{data.primary_button_text} || {data.secondary_button_text}">
                         <div class="hero__actions">
-                            <f:if condition="{data.primary_button_text} && {data.primary_button_link.url}">
-                                <s2f:atom.button href="{data.primary_button_link.url}" target="{data.primary_button_link.target}" variant="{data.primary_button_variant}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                            <f:if condition="{data.primary_button_text}">
+                                <f:link.typolink parameter="{data.primary_button_link}">
+                                    <s2f:atom.button variant="{data.primary_button_variant -> f:or(alternative: 'default')}" size="lg">{data -> f:render.text(field: 'primary_button_text')}</s2f:atom.button>
+                                </f:link.typolink>
                             </f:if>
-                            <f:if condition="{data.secondary_button_text} && {data.secondary_button_link.url}">
-                                <s2f:atom.button href="{data.secondary_button_link.url}" target="{data.secondary_button_link.target}" variant="{data.secondary_button_variant}" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                            <f:if condition="{data.secondary_button_text}">
+                                <f:link.typolink parameter="{data.secondary_button_link}">
+                                    <s2f:atom.button variant="outline" size="lg">{data -> f:render.text(field: 'secondary_button_text')}</s2f:atom.button>
+                                </f:link.typolink>
                             </f:if>
                         </div>
                     </f:if>
@@ -102,6 +149,7 @@
             </s2f:layout.container>
         </s2f:layout.section>
     </f:defaultCase>
+
 </f:switch>
 
 </html>
