@@ -7,10 +7,9 @@
 
 <s2f:layout.section class="alert-section">
     <s2f:layout.container>
-        <s2f:molecule.alert variant="{data.variant -> f:or(alternative: 'default')}"
-                            class="alert alert--{data.variant -> f:or(alternative: 'default')}"
-                            role="alert"
-                            {f:if(condition: data.show_close_button, then: 'data-dismissible="true"')}>
+        <div class="alert alert--{data.variant -> f:or(alternative: 'default')}"
+             role="alert"
+             data-dismissible="{f:if(condition: data.show_close_button, then: 'true', else: 'false')}">
 
             <f:if condition="{data.icon}">
                 <span class="alert__icon" aria-hidden="true">
@@ -49,7 +48,7 @@
                 </button>
             </f:if>
 
-        </s2f:molecule.alert>
+        </div>
     </s2f:layout.container>
 </s2f:layout.section>
 
