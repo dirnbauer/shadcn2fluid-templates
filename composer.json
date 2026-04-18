@@ -9,11 +9,13 @@
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "typo3/cms-core": "^14.3@dev",
         "typo3/cms-fluid": "^14.3@dev",
         "friendsoftypo3/content-blocks": "^2.2"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "suggest": {
         "typo3/cms-workspaces": "Recommended to stage and preview content elements in TYPO3 workspaces.",
         "friendsoftypo3/visual-editor": "Optional. Inline visual editing when templates use f:render.text for text fields (Content Blocks expose {data} as a Record)."
@@ -43,6 +45,9 @@
         "allow-plugins": {
             "typo3/class-alias-loader": true,
             "typo3/cms-composer-installers": true
+        },
+        "platform": {
+            "php": "8.3"
         },
         "sort-packages": true
     },
