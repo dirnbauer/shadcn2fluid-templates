@@ -1,0 +1,14 @@
+<f:variable name="subMenu" value="{f:menu.subPages(entryLevel: 1, includeSpacer: false, as: 'subMenu')}" />
+<f:if condition="{subMenu}">
+    <aside class="s2f-subnav" aria-label="{f:translate(key: 'LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.subnav.aria', default: 'Section navigation')}">
+        <nav>
+            <ul class="s2f-subnav__list">
+                <f:for each="{subMenu}" as="item">
+                    <li class="s2f-subnav__item {f:if(condition: item.current, then: 's2f-subnav__item--current')}">
+                        <s2f:atom.link href="{item.link}" class="s2f-subnav__link">{item.title}</s2f:atom.link>
+                    </li>
+                </f:for>
+            </ul>
+        </nav>
+    </aside>
+</f:if>

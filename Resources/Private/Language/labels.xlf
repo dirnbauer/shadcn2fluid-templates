@@ -354,6 +354,26 @@
             <trans-unit id="item.none">
                 <source>None</source>
             </trans-unit>
+
+            <!-- Page templates (Backend Layouts + Fluid layouts) -->
+            <trans-unit id="page.layout.home">
+                <source>Home</source>
+            </trans-unit>
+            <trans-unit id="page.layout.sub">
+                <source>Subpage</source>
+            </trans-unit>
+            <trans-unit id="page.layout.sub_nav">
+                <source>Subpage with Navigation</source>
+            </trans-unit>
+            <trans-unit id="page.layout.news">
+                <source>News Article</source>
+            </trans-unit>
+            <trans-unit id="page.column.main">
+                <source>Main Content</source>
+            </trans-unit>
+            <trans-unit id="page.subnav.aria">
+                <source>Section navigation</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

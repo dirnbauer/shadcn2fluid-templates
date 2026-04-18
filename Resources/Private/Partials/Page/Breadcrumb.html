@@ -1,0 +1,19 @@
+<f:variable name="trail" value="{f:menu.breadcrumb(excludeCurrentPage: false)}" />
+<f:if condition="{trail}">
+    <nav aria-label="Breadcrumb" class="s2f-breadcrumb">
+        <ol class="s2f-breadcrumb__list">
+            <f:for each="{trail}" as="item" iteration="i">
+                <li class="s2f-breadcrumb__item">
+                    <f:if condition="{i.isLast}">
+                        <f:then>
+                            <span aria-current="page">{item.title}</span>
+                        </f:then>
+                        <f:else>
+                            <s2f:atom.link href="{item.link}">{item.title}</s2f:atom.link>
+                        </f:else>
+                    </f:if>
+                </li>
+            </f:for>
+        </ol>
+    </nav>
+</f:if>

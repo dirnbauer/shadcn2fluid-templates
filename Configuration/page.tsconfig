@@ -5,3 +5,68 @@
 # on their source page in TYPO3 14.
 
 options.workspaces.previewPageId.tt_content = field:pid
+
+# ---------------------------------------------------------------------------
+# Backend Layouts
+# ---------------------------------------------------------------------------
+# Four ready-made page layouts. Each maps to a Fluid template with the same
+# camel-cased name in EXT:shadcn2fluid_templates/Resources/Private/Templates/Pages/.
+# Selection is done via TypoScript CASE in Configuration/Sets/Shadcn2fluidTemplates/setup.typoscript.
+
+mod.web_layout.BackendLayouts {
+    shadcn2fluid_home {
+        title = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.layout.home
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 1
+                rows.1.columns.1 {
+                    name = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.column.main
+                    colPos = 0
+                }
+            }
+        }
+    }
+
+    shadcn2fluid_sub {
+        title = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.layout.sub
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 1
+                rows.1.columns.1 {
+                    name = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.column.main
+                    colPos = 0
+                }
+            }
+        }
+    }
+
+    shadcn2fluid_sub_nav {
+        title = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.layout.sub_nav
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 1
+                rows.1.columns.1 {
+                    name = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.column.main
+                    colPos = 0
+                }
+            }
+        }
+    }
+
+    shadcn2fluid_news {
+        title = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.layout.news
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 1
+                rows.1.columns.1 {
+                    name = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.column.main
+                    colPos = 0
+                }
+            }
+        }
+    }
+}

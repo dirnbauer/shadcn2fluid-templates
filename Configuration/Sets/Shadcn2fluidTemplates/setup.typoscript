@@ -1,11 +1,13 @@
 #
-# shadcn2fluid v3 - Fluid 5 Components for TYPO3
+# shadcn2fluid v3 — Fluid 5 Components + Page Templates for TYPO3 14
 #
-# Theme CSS is configurable via site set setting "shadcn2fluid.themeCss".
+# Theme CSS is configurable via the site set setting "shadcn2fluid.themeCss".
 # Override per site to use a custom theme exported from ui.shadcn.com/create.
 #
 
 page = PAGE
+page.typeNum = 0
+
 page {
     includeCSS {
         s2fTheme = {$shadcn2fluid.themeCss}
@@ -19,19 +21,34 @@ page {
         s2fLib = EXT:shadcn2fluid_templates/Resources/Public/Js/s2f.js
         s2fLib.async = 1
     }
-}
 
-# Main column content (TypoScript). In Fluid page templates with PAGEVIEW + Backend Layout,
-# prefer TYPO3 v14 visual editing: <f:render.contentArea contentArea="{content.main}" /> instead
-# of wrapping lib.* CONTENT in f:mark.contentArea (deprecated v13 pattern).
-# See https://docs.typo3.org/permalink/t3viewhelper:typo3-fluid-render-contentarea
-lib.shadcn2fluid.mainContent = CONTENT
-lib.shadcn2fluid.mainContent {
-    table = tt_content
-    select {
-        pidInList.data = TSFE:id
-        where = {#colPos}=0
-        orderBy = sorting
-        languageField = sys_language_uid
+    # TYPO3 v14 PAGEVIEW. Renders Fluid page templates and exposes
+    # {content.main} / {content.header} / {content.footer} via <f:render.contentArea>.
+    # Template file is picked from the Backend Layout via CASE on pagelayout.
+    10 = PAGEVIEW
+    10 {
+        paths.100 = EXT:shadcn2fluid_templates/Resources/Private/Templates/Pages/
+        layoutRootPaths.100 = EXT:shadcn2fluid_templates/Resources/Private/Layouts/
+        partialRootPaths.100 = EXT:shadcn2fluid_templates/Resources/Private/Partials/
+
+        templateName.stdWrap.cObject = CASE
+        templateName.stdWrap.cObject {
+            key.data = pagelayout
+
+            default = TEXT
+            default.value = Sub
+
+            pagets__shadcn2fluid_home = TEXT
+            pagets__shadcn2fluid_home.value = Home
+
+            pagets__shadcn2fluid_sub = TEXT
+            pagets__shadcn2fluid_sub.value = Sub
+
+            pagets__shadcn2fluid_sub_nav = TEXT
+            pagets__shadcn2fluid_sub_nav.value = SubWithNav
+
+            pagets__shadcn2fluid_news = TEXT
+            pagets__shadcn2fluid_news.value = News
+        }
     }
 }

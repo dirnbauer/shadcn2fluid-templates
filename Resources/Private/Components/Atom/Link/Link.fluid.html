@@ -1,27 +1,19 @@
-<f:argument name="link" type="mixed" optional="{true}" />
-<f:argument name="href" type="string" optional="{true}" />
+<f:argument name="href" type="string" optional="{true}" default="" />
 <f:argument name="variant" type="string" optional="{true}" default="default" />
 <f:argument name="external" type="bool" optional="{true}" default="{false}" />
 <f:argument name="class" type="string" optional="{true}" default="" />
 
-<f:if condition="{link}">
+<f:variable name="linkClass" value="link link--{variant} {class}" />
+
+<f:if condition="{external}">
     <f:then>
-        <f:link.typolink parameter="{link}" class="link link--{variant} {class}">
+        <a href="{href}" class="{linkClass -> f:format.trim()}" target="_blank" rel="noopener noreferrer">
             <f:slot />
-        </f:link.typolink>
+        </a>
     </f:then>
     <f:else>
-        <f:if condition="{external}">
-            <f:then>
-                <a href="{href}" class="link link--{variant} {class}" target="_blank" rel="noopener noreferrer">
-                    <f:slot />
-                </a>
-            </f:then>
-            <f:else>
-                <a href="{href}" class="link link--{variant} {class}">
-                    <f:slot />
-                </a>
-            </f:else>
-        </f:if>
+        <a href="{href}" class="{linkClass -> f:format.trim()}">
+            <f:slot />
+        </a>
     </f:else>
 </f:if>

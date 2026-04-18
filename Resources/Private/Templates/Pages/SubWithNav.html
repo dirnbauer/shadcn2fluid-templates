@@ -1,0 +1,22 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="s2f-page s2f-page--sub-nav">
+        <s2f:layout.container>
+            <f:render partial="Page/Breadcrumb" arguments="{_all}" optional="{true}" />
+            <h1 class="s2f-page__title">{page.title}</h1>
+            <f:if condition="{page.subtitle}">
+                <p class="s2f-page__lead">{page.subtitle}</p>
+            </f:if>
+        </s2f:layout.container>
+
+        <s2f:layout.container class="s2f-page__body">
+            <div class="s2f-page__grid">
+                <f:render partial="Page/SubNav" arguments="{_all}" optional="{true}" />
+                <div class="s2f-page__content">
+                    <f:render.contentArea contentArea="{content.main}" />
+                </div>
+            </div>
+        </s2f:layout.container>
+    </div>
+</f:section>

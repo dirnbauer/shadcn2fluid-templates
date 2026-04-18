@@ -1,0 +1,40 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <article class="s2f-page s2f-page--news" itemscope="itemscope" itemtype="https://schema.org/NewsArticle">
+        <s2f:layout.container>
+            <f:render partial="Page/Breadcrumb" arguments="{_all}" optional="{true}" />
+
+            <header class="s2f-news-header">
+                <f:if condition="{page.categories}">
+                    <div class="s2f-news-header__meta">
+                        <f:for each="{page.categories}" as="category">
+                            <s2f:atom.badge variant="secondary">{category.title}</s2f:atom.badge>
+                        </f:for>
+                    </div>
+                </f:if>
+
+                <h1 class="s2f-page__title" itemprop="headline">{page.title}</h1>
+
+                <f:if condition="{page.subtitle}">
+                    <p class="s2f-page__lead" itemprop="description">{page.subtitle}</p>
+                </f:if>
+
+                <div class="s2f-news-header__byline">
+                    <f:if condition="{page.author}">
+                        <span itemprop="author">{page.author}</span>
+                    </f:if>
+                    <f:if condition="{page.lastUpdated}">
+                        <time datetime="{page.lastUpdated -> f:format.date(format: 'c')}" itemprop="datePublished">
+                            <f:format.date format="F j, Y">{page.lastUpdated}</f:format.date>
+                        </time>
+                    </f:if>
+                </div>
+            </header>
+        </s2f:layout.container>
+
+        <div class="s2f-news-body" itemprop="articleBody">
+            <f:render.contentArea contentArea="{content.main}" />
+        </div>
+    </article>
+</f:section>

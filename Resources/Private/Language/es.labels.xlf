@@ -471,6 +471,32 @@
                 <source>None</source>
                 <target>Ninguno</target>
             </trans-unit>
+
+            <!-- Page templates (Backend Layouts + Fluid layouts) -->
+            <trans-unit id="page.layout.home">
+                <source>Home</source>
+                <target>Inicio</target>
+            </trans-unit>
+            <trans-unit id="page.layout.sub">
+                <source>Subpage</source>
+                <target>Subpágina</target>
+            </trans-unit>
+            <trans-unit id="page.layout.sub_nav">
+                <source>Subpage with Navigation</source>
+                <target>Subpágina con navegación</target>
+            </trans-unit>
+            <trans-unit id="page.layout.news">
+                <source>News Article</source>
+                <target>Artículo de noticias</target>
+            </trans-unit>
+            <trans-unit id="page.column.main">
+                <source>Main Content</source>
+                <target>Contenido principal</target>
+            </trans-unit>
+            <trans-unit id="page.subnav.aria">
+                <source>Section navigation</source>
+                <target>Navegación de sección</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
