@@ -12,7 +12,7 @@
         </f:if>
 
         <s2f:molecule.accordion class="accordion accordion--{data.variant -> f:or(alternative: 'default')}"
-                                data-allow-multiple="{f:if(condition: data.allow_multiple, then: 'true', else: 'false')}">
+                                type="{f:if(condition: data.allow_multiple, then: 'multiple', else: 'single')}">
             <f:for each="{data.items}" as="item" iteration="iter">
                 <details class="accordion__item" {f:if(condition: item.open_by_default, then: 'open')}>
                     <summary class="accordion__trigger">
