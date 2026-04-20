@@ -1,22 +1,27 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
-    <div class="s2f-page s2f-page--sub-nav">
-        <s2f:layout.container>
+    <div class="min-h-screen bg-background text-foreground font-sans antialiased">
+        <div class="container mx-auto px-4 pt-8 md:pt-12">
             <f:render partial="Page/Breadcrumb" arguments="{_all}" optional="{true}" />
-            <h1 class="s2f-page__title">{page.title}</h1>
-            <f:if condition="{page.subtitle}">
-                <p class="s2f-page__lead">{page.subtitle}</p>
-            </f:if>
-        </s2f:layout.container>
+        </div>
 
-        <s2f:layout.container class="s2f-page__body">
-            <div class="s2f-page__grid">
-                <f:render partial="Page/SubNav" arguments="{_all}" optional="{true}" />
-                <div class="s2f-page__content">
+        <header class="container mx-auto px-4 py-8 md:py-12">
+            <h1 class="text-4xl font-bold tracking-tight md:text-5xl">{page.title}</h1>
+            <f:if condition="{page.subtitle}">
+                <p class="mt-3 text-lg text-muted-foreground">{page.subtitle}</p>
+            </f:if>
+        </header>
+
+        <div class="container mx-auto px-4 pb-16">
+            <div class="grid gap-8 md:grid-cols-[240px_minmax(0,1fr)] lg:gap-12">
+                <aside class="md:sticky md:top-20 md:self-start">
+                    <f:render partial="Page/SubNav" arguments="{_all}" optional="{true}" />
+                </aside>
+                <main class="min-w-0">
                     <f:render.contentArea contentArea="{content.main}" />
-                </div>
+                </main>
             </div>
-        </s2f:layout.container>
+        </div>
     </div>
 </f:section>
