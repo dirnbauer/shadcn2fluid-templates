@@ -1,45 +1,37 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
       xmlns:s2f="http://typo3.org/ns/Webconsulting/Shadcn2fluidTemplates/Components/ComponentCollection"
+      xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<f:asset.css identifier="s2f-chart-donut" href="{cb:assetPath()}/frontend.css"/>
+<vac:asset.vite entry="src/main.ts"
+                manifest="EXT:shadcn2fluid_templates/Resources/Public/Vite/.vite/manifest.json" />
+<vac:asset.vite entry="src/ce/chart-donut.ts"
+                manifest="EXT:shadcn2fluid_templates/Resources/Public/Vite/.vite/manifest.json" />
 
-<s2f:layout.section class="chart-donut-section">
-    <s2f:layout.container>
-        <div class="chart-donut"
+<section class="py-8 md:py-12">
+    <div class="container mx-auto px-4">
+        <div data-ce="chart-donut"
              data-chart-data="{data.chart_data -> f:format.htmlspecialchars()}"
              data-show-legend="{f:if(condition: data.show_legend, then: 'true', else: 'false')}"
-             data-chart-id="chart-donut-{data.uid}">
-            <div class="chart-donut__card">
-                <f:if condition="{data.header} || {data.description}">
-                    <div class="chart-donut__header">
-                        <f:if condition="{data.header}">
-                            <h3 class="chart-donut__title">{data -> f:render.text(field: 'header')}</h3>
-                        </f:if>
-                        <f:if condition="{data.description}">
-                            <p class="chart-donut__description">{data -> f:render.text(field: 'description')}</p>
-                        </f:if>
-                    </div>
-                </f:if>
-                <div class="chart-donut__content">
-                    <div class="chart-donut__wrapper">
-                        <svg class="chart-donut__canvas" id="chart-donut-{data.uid}"></svg>
-                        <f:if condition="{data.center_value} || {data.center_label}">
-                            <div class="chart-donut__center">
-                                <f:if condition="{data.center_value}">
-                                    <span class="chart-donut__center-value">{data -> f:render.text(field: 'center_value')}</span>
-                                </f:if>
-                                <f:if condition="{data.center_label}">
-                                    <span class="chart-donut__center-label">{data -> f:render.text(field: 'center_label')}</span>
-                                </f:if>
-                            </div>
-                        </f:if>
-                    </div>
+             data-center-label="{data.center_label}"
+             data-center-value="{data.center_value}"
+             class="mx-auto max-w-xl rounded-lg border bg-card text-card-foreground shadow-sm">
+            <f:if condition="{data.header} || {data.description}">
+                <div class="flex flex-col gap-1.5 p-6">
+                    <f:if condition="{data.header}">
+                        <h3 class="text-lg font-semibold leading-none tracking-tight">{data -> f:render.text(field: 'header')}</h3>
+                    </f:if>
+                    <f:if condition="{data.description}">
+                        <p class="text-sm text-muted-foreground">{data -> f:render.text(field: 'description')}</p>
+                    </f:if>
                 </div>
+            </f:if>
+            <div class="p-6 pt-0">
+                <div data-chart-donut-canvas class="flex min-h-[300px] items-center justify-center"></div>
             </div>
         </div>
-    </s2f:layout.container>
-</s2f:layout.section>
+    </div>
+</section>
 
 </html>
