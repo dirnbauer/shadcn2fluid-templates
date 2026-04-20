@@ -13,11 +13,17 @@ page {
         s2fTheme = {$shadcn2fluid.themeCss}
         s2fTheme.media = all
 
+        s2fTailwind = EXT:shadcn2fluid_templates/Resources/Public/Vite/assets/main.css
+        s2fTailwind.media = all
+
         s2fComponents = EXT:shadcn2fluid_templates/Resources/Public/Css/components.css
         s2fComponents.media = all
     }
 
     includeJSFooter {
+        s2fMain = EXT:shadcn2fluid_templates/Resources/Public/Vite/assets/main.js
+        s2fMain.type = module
+
         s2fLib = EXT:shadcn2fluid_templates/Resources/Public/Js/s2f.js
         s2fLib.async = 1
     }
