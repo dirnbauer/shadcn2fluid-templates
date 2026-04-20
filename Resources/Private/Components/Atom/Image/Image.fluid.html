@@ -8,14 +8,14 @@
 
 <f:if condition="{aspectRatio}">
     <f:then>
-        <div class="aspect-ratio" style="aspect-ratio: {aspectRatio}">
+        <div class="relative w-full" style="aspect-ratio: {aspectRatio}">
             <img
                 src="{src}"
                 alt="{alt}"
                 width="{width}"
                 height="{height}"
                 loading="{loading}"
-                class="image {class}"
+                class="absolute inset-0 h-full w-full object-cover {class}"
             />
         </div>
     </f:then>
@@ -26,7 +26,7 @@
             width="{width}"
             height="{height}"
             loading="{loading}"
-            class="image {class}"
+            class="max-w-full h-auto {class}"
         />
     </f:else>
 </f:if>

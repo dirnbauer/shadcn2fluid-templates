@@ -1,6 +1,11 @@
 <f:argument name="defaultValue" type="string" optional="{true}" />
 <f:argument name="class" type="string" optional="{true}" default="" />
 
-<div class="tabs {class}" data-s2f-tabs data-default="{defaultValue}">
+<div
+    x-data="{ active: '{defaultValue}' }"
+    class="{class}"
+    data-s2f-tabs
+    data-default="{defaultValue}"
+>
     <f:slot />
 </div>

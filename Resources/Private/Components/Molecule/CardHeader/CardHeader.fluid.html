@@ -2,12 +2,12 @@
 <f:argument name="description" type="string" optional="{true}" />
 <f:argument name="class" type="string" optional="{true}" default="" />
 
-<div class="card__header {class}">
+<div class="flex flex-col space-y-1.5 p-6 {class}">
     <f:if condition="{title}">
-        <h3 class="card__title">{title}</h3>
+        <h3 class="text-2xl font-semibold leading-none tracking-tight">{title}</h3>
     </f:if>
     <f:if condition="{description}">
-        <p class="card__description">{description}</p>
+        <p class="text-sm text-muted-foreground">{description}</p>
     </f:if>
     <f:slot />
 </div>

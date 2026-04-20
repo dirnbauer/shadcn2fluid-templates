@@ -3,7 +3,9 @@
 
 <div
     role="tabpanel"
-    class="tabs__content {class}"
+    x-show="active === '{value}'"
+    x-bind:data-state="active === '{value}' ? 'active' : 'inactive'"
+    class="mt-2 ring-offset-background focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-ring focus-visible:ring-offset-2 {class}"
     data-s2f-tabs-content
     data-value="{value}"
 >

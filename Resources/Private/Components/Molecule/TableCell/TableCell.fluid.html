@@ -3,9 +3,9 @@
 
 <f:if condition="{header}">
     <f:then>
-        <th class="table__head {class}"><f:slot /></th>
+        <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 {class}"><f:slot /></th>
     </f:then>
     <f:else>
-        <td class="table__cell {class}"><f:slot /></td>
+        <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 {class}"><f:slot /></td>
     </f:else>
 </f:if>
