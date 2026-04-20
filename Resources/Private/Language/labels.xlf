@@ -357,16 +357,16 @@
 
             <!-- Page templates (Backend Layouts + Fluid layouts) -->
             <trans-unit id="page.layout.home">
-                <source>Home</source>
+                <source>shadcn/ui — Home</source>
             </trans-unit>
             <trans-unit id="page.layout.sub">
-                <source>Subpage</source>
+                <source>shadcn/ui — Subpage</source>
             </trans-unit>
             <trans-unit id="page.layout.sub_nav">
-                <source>Subpage with Navigation</source>
+                <source>shadcn/ui — Subpage with Navigation</source>
             </trans-unit>
             <trans-unit id="page.layout.news">
-                <source>News Article</source>
+                <source>shadcn/ui — News Article</source>
             </trans-unit>
             <trans-unit id="page.column.main">
                 <source>Main Content</source>

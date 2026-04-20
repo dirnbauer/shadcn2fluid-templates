@@ -474,20 +474,20 @@
 
             <!-- Page templates (Backend Layouts + Fluid layouts) -->
             <trans-unit id="page.layout.home">
-                <source>Home</source>
-                <target>Inicio</target>
+                <source>shadcn/ui — Home</source>
+                <target>shadcn/ui — Inicio</target>
             </trans-unit>
             <trans-unit id="page.layout.sub">
-                <source>Subpage</source>
-                <target>Subpágina</target>
+                <source>shadcn/ui — Subpage</source>
+                <target>shadcn/ui — Subpágina</target>
             </trans-unit>
             <trans-unit id="page.layout.sub_nav">
-                <source>Subpage with Navigation</source>
-                <target>Subpágina con navegación</target>
+                <source>shadcn/ui — Subpage with Navigation</source>
+                <target>shadcn/ui — Subpágina con navegación</target>
             </trans-unit>
             <trans-unit id="page.layout.news">
-                <source>News Article</source>
-                <target>Artículo de noticias</target>
+                <source>shadcn/ui — News Article</source>
+                <target>shadcn/ui — Artículo de noticias</target>
             </trans-unit>
             <trans-unit id="page.column.main">
                 <source>Main Content</source>
