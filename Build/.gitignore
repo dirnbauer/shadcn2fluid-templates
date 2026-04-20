@@ -1,0 +1,4 @@
+node_modules/
+.next/
+shadcn-source/.next/
+shadcn-source/node_modules/

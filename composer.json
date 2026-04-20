@@ -12,7 +12,8 @@
         "php": "^8.3",
         "typo3/cms-core": "^14.3@dev",
         "typo3/cms-fluid": "^14.3@dev",
-        "friendsoftypo3/content-blocks": "^2.2"
+        "friendsoftypo3/content-blocks": "^2.2",
+        "praetorius/vite-asset-collector": "^1.7"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
