@@ -1,0 +1,13 @@
+#
+# shadcn/ui page templates bridge
+#
+# Desiderio's "page" set defines lib.fluidPage = PAGEVIEW and assigns
+# page.10 =< lib.fluidPage. This set depends on desiderio, so it loads after
+# desiderio's reset and can safely append our template path.
+#
+# TYPO3 v13+ PAGEVIEW strips the "pagets__" prefix from the pagelayout value,
+# so pagets__shadcn2fluid_home resolves to the template filename
+# "shadcn2fluid_home.html" under paths/<Pages>/.
+#
+
+lib.fluidPage.paths.200 = EXT:shadcn2fluid_templates/Resources/Private/Templates/

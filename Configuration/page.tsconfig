@@ -23,6 +23,7 @@ mod.web_layout.BackendLayouts {
                 rows.1.columns.1 {
                     name = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.column.main
                     colPos = 0
+                    identifier = main
                 }
             }
         }
@@ -37,6 +38,7 @@ mod.web_layout.BackendLayouts {
                 rows.1.columns.1 {
                     name = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.column.main
                     colPos = 0
+                    identifier = main
                 }
             }
         }
@@ -51,6 +53,7 @@ mod.web_layout.BackendLayouts {
                 rows.1.columns.1 {
                     name = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.column.main
                     colPos = 0
+                    identifier = main
                 }
             }
         }
@@ -65,6 +68,7 @@ mod.web_layout.BackendLayouts {
                 rows.1.columns.1 {
                     name = LLL:EXT:shadcn2fluid_templates/Resources/Private/Language/labels.xlf:page.column.main
                     colPos = 0
+                    identifier = main
                 }
             }
         }

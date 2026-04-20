@@ -4,6 +4,10 @@
 # Theme CSS is configurable via the site set setting "shadcn2fluid.themeCss".
 # Override per site to use a custom theme exported from ui.shadcn.com/create.
 #
+# Page template wiring (lib.fluidPage.paths.200) lives in the sibling set
+# "webconsulting/shadcn2fluid-pages", which depends on webconsulting/desiderio.
+# Enable that set in your site config.yaml to use the shadcn/ui page templates.
+#
 
 page = PAGE
 page.typeNum = 0
@@ -26,35 +30,5 @@ page {
 
         s2fLib = EXT:shadcn2fluid_templates/Resources/Public/Js/s2f.js
         s2fLib.async = 1
-    }
-
-    # TYPO3 v14 PAGEVIEW. Renders Fluid page templates and exposes
-    # {content.main} / {content.header} / {content.footer} via <f:render.contentArea>.
-    # Template file is picked from the Backend Layout via CASE on pagelayout.
-    10 = PAGEVIEW
-    10 {
-        paths.100 = EXT:shadcn2fluid_templates/Resources/Private/Templates/Pages/
-        layoutRootPaths.100 = EXT:shadcn2fluid_templates/Resources/Private/Layouts/
-        partialRootPaths.100 = EXT:shadcn2fluid_templates/Resources/Private/Partials/
-
-        templateName.stdWrap.cObject = CASE
-        templateName.stdWrap.cObject {
-            key.data = pagelayout
-
-            default = TEXT
-            default.value = Sub
-
-            pagets__shadcn2fluid_home = TEXT
-            pagets__shadcn2fluid_home.value = Home
-
-            pagets__shadcn2fluid_sub = TEXT
-            pagets__shadcn2fluid_sub.value = Sub
-
-            pagets__shadcn2fluid_sub_nav = TEXT
-            pagets__shadcn2fluid_sub_nav.value = SubWithNav
-
-            pagets__shadcn2fluid_news = TEXT
-            pagets__shadcn2fluid_news.value = News
-        }
     }
 }
