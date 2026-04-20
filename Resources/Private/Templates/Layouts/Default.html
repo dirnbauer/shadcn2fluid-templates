@@ -6,12 +6,14 @@
 <vac:asset.vite entry="src/main.ts"
                 manifest="EXT:shadcn2fluid_templates/Resources/Public/Vite/.vite/manifest.json" />
 
-<f:render partial="Page/Header" arguments="{_all}" optional="{true}" />
+<div class="flex min-h-screen flex-col bg-background text-foreground font-sans antialiased">
+    <f:render partial="Page/Header" arguments="{_all}" optional="{true}" />
 
-<main id="main" class="s2f-main" role="main">
-    <f:render section="Main" />
-</main>
+    <main id="main" class="flex-1" role="main">
+        <f:render section="Main" />
+    </main>
 
-<f:render partial="Page/Footer" arguments="{_all}" optional="{true}" />
+    <f:render partial="Page/Footer" arguments="{_all}" optional="{true}" />
+</div>
 
 </html>

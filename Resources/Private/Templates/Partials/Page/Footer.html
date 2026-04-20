@@ -1,5 +1,23 @@
-<footer id="site-footer" class="s2f-site-footer" role="contentinfo">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:variable name="siteTitle" value="{breadcrumb.0.title -> f:or(alternative: 'shadcn/ui')}" />
+
+<footer id="site-footer" class="mt-16 border-t bg-background" role="contentinfo">
     <f:if condition="{content.footer}">
         <f:render.contentArea contentArea="{content.footer}" />
     </f:if>
+
+    <div class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-muted-foreground sm:px-6 md:flex-row lg:px-8">
+        <p>
+            &copy; {f:format.date(date: 'now', format: 'Y')} {siteTitle}. Built with <a href="https://ui.shadcn.com" class="underline underline-offset-4 hover:text-foreground" target="_blank" rel="noopener noreferrer">shadcn/ui</a> + TYPO3.
+        </p>
+
+        <f:if condition="{mainMenu}">
+            <nav class="flex flex-wrap items-center gap-4" aria-label="Footer navigation">
+                <f:for each="{mainMenu}" as="item">
+                    <a href="{item.link}" class="transition-colors hover:text-foreground">{item.title}</a>
+                </f:for>
+            </nav>
+        </f:if>
+    </div>
 </footer>
+</html>

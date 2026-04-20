@@ -1,5 +1,69 @@
-<header id="site-header" class="s2f-site-header" role="banner">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<header id="site-header"
+        class="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+        role="banner"
+        x-data="{ open: false }">
+    <div class="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <f:link.typolink parameter="{breadcrumb.0.link}" class="flex items-center gap-2 font-bold tracking-tight">
+            <span>{breadcrumb.0.title -> f:or(alternative: 'shadcn/ui')}</span>
+        </f:link.typolink>
+
+        <nav class="hidden items-center gap-6 md:flex" aria-label="Main navigation">
+            <f:for each="{mainMenu}" as="item">
+                <a href="{item.link}"
+                   class="text-sm font-medium transition-colors hover:text-foreground {f:if(condition: item.active, then: 'text-foreground', else: 'text-foreground/60')}">
+                    {item.title}
+                </a>
+            </f:for>
+        </nav>
+
+        <div class="flex items-center gap-2">
+            <f:if condition="{languageNavigation -> f:count()} > 1">
+                <div class="hidden items-center gap-1 md:flex">
+                    <f:for each="{languageNavigation}" as="lang">
+                        <a href="{lang.link}"
+                           class="rounded-md px-2 py-1 text-xs font-medium uppercase transition-colors hover:bg-accent hover:text-accent-foreground {f:if(condition: lang.active, then: 'text-foreground', else: 'text-muted-foreground')}">
+                            {lang.twoLetterIsoCode}
+                        </a>
+                    </f:for>
+                </div>
+            </f:if>
+
+            <button type="button"
+                    x-data="{ dark: document.documentElement.classList.contains('dark') }"
+                    x-on:click="dark = !dark; document.documentElement.classList.toggle('dark', dark); localStorage.setItem('theme', dark ? 'dark' : 'light')"
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-input bg-background text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                    aria-label="Toggle theme">
+                <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+
+            <button type="button"
+                    x-on:click="open = !open"
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-input bg-background text-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:hidden"
+                    aria-label="Toggle menu"
+                    x-bind:aria-expanded="open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <div x-show="open"
+         x-collapse
+         class="border-t bg-background md:hidden"
+         style="display:none">
+        <nav class="container mx-auto flex flex-col gap-2 px-4 py-4" aria-label="Mobile navigation">
+            <f:for each="{mainMenu}" as="item">
+                <a href="{item.link}"
+                   class="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground {f:if(condition: item.active, then: 'bg-accent text-accent-foreground', else: 'text-foreground/70')}">
+                    {item.title}
+                </a>
+            </f:for>
+        </nav>
+    </div>
+
     <f:if condition="{content.header}">
         <f:render.contentArea contentArea="{content.header}" />
     </f:if>
 </header>
+</html>
